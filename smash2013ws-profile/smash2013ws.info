@@ -15,7 +15,6 @@ dependencies[] = field_sql_storage
 dependencies[] = field_ui
 
 ; Core
-dependencies[] = comment
 dependencies[] = help
 dependencies[] = menu
 dependencies[] = path
@@ -38,6 +37,7 @@ dependencies[] = ctools
 dependencies[] = libraries
 dependencies[] = token
 dependencies[] = entity
+dependencies[] = transliteration
     
 ; Contrib
 dependencies[] = views
@@ -51,6 +51,10 @@ dependencies[] = webform
 dependencies[] = webform_conditional
 dependencies[] = webform_multifile
 dependencies[] = registration
+dependencies[] = ctools_custom_content
+dependencies[] = views_content
+dependencies[] = page_manager
+dependencies[] = panels
 dependencies[] = features
 dependencies[] = diff
 dependencies[] = strongarm
@@ -62,11 +66,16 @@ dependencies[] = date_api
 dependencies[] = date
 dependencies[] = date_popup
 dependencies[] = date_tools
+dependencies[] = date_views
 dependencies[] = markdown
 dependencies[] = globalredirect
 dependencies[] = redirect
 dependencies[] = pathauto
 dependencies[] = xmlsitemap
+dependencies[] = xmlsitemap_node
+dependencies[] = xmlsitemap_taxonomy
+dependencies[] = xmlsitemap_menu
+dependencies[] = xmlsitemap_engines
 dependencies[] = mailchimp
 dependencies[] = workbench
 dependencies[] = workbench_access

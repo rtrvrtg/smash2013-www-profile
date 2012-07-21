@@ -40,11 +40,23 @@ projects[entity][download][type] = "git"
 projects[entity][download][url] = "http://git.drupal.org/project/entity.git"
 projects[entity][download][revision] = "7.x-1.x"
 
+;Transliteration
+projects[transliteration][install_path] = sites/all/modules/contrib
+projects[transliteration][download][type] = "git"
+projects[transliteration][download][url] = "http://git.drupal.org/project/transliteration.git"
+projects[transliteration][download][revision] = "7.x-3.x"
+
 ;Entity Reference
 projects[entityreference][install_path] = sites/all/modules/contrib
 projects[entityreference][download][type] = "git"
 projects[entityreference][download][url] = "http://git.drupal.org/project/entityreference.git"
 projects[entityreference][download][revision] = "7.x-1.x"
+
+;Panels
+projects[panels][install_path] = sites/all/modules/contrib
+projects[panels][download][type] = "git"
+projects[panels][download][url] = "http://git.drupal.org/project/panels.git"
+projects[panels][download][revision] = "7.x-3.x"
 
 ;Field Collection
 projects[field_collection][install_path] = sites/all/modules/contrib
