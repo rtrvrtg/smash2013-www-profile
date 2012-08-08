@@ -58,6 +58,12 @@ projects[panels][download][type] = "git"
 projects[panels][download][url] = "http://git.drupal.org/project/panels.git"
 projects[panels][download][revision] = "7.x-3.x"
 
+;Display Suite
+projects[ds][install_path] = sites/all/modules/contrib
+projects[ds][download][type] = "git"
+projects[ds][download][url] = "http://git.drupal.org/project/ds.git"
+projects[ds][download][revision] = "7.x-1.x"
+
 ;Field Collection
 projects[field_collection][install_path] = sites/all/modules/contrib
 projects[field_collection][download][type] = "git"
