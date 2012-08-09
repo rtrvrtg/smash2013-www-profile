@@ -216,11 +216,11 @@ projects[workbench_moderation][download][type] = "git"
 projects[workbench_moderation][download][url] = "http://git.drupal.org/project/workbench_moderation.git"
 projects[workbench_moderation][download][revision] = "7.x-1.x"
 
-;;Special Menu Items
-;projects[special_menu_items][install_path] = sites/all/modules/contrib
-;projects[special_menu_items][download][type] = "git"
-;projects[special_menu_items][download][url] = "http://git.drupal.org/project/special_menu_items.git"
-;projects[special_menu_items][download][revision] = "7.x-1.x"
+;Special Menu Items
+projects[special_menu_items][install_path] = sites/all/modules/contrib
+projects[special_menu_items][download][type] = "git"
+projects[special_menu_items][download][url] = "http://git.drupal.org/project/special_menu_items.git"
+projects[special_menu_items][download][revision] = "7.x-1.x"
 
 ;Menu Views
 projects[menu_views][install_path] = sites/all/modules/contrib

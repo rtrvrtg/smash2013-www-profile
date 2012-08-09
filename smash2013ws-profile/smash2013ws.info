@@ -88,6 +88,7 @@ dependencies[] = migrate_ui
 dependencies[] = migrate_extras
 dependencies[] = wordpress_migrate
 dependencies[] = backup_migrate
+dependencies[] = special_menu_items
 
 
 
