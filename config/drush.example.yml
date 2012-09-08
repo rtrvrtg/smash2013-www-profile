@@ -1,0 +1,26 @@
+development:
+  db_sqlite_scheme: false
+  db_url: mysql://root:password@localhost/smash_development
+  db_su: root
+  db_su_pw: password
+  account_name: admin
+  account_mail: admin@example.com
+  site_mail: admin@example.com
+
+testing:
+  db_sqlite_scheme: false
+  db_url: mysql://root:password@localhost/smash_testing
+  db_su: root
+  db_su_pw: password
+  account_name: admin
+  account_mail: admin@example.com
+  site_mail: admin@example.com
+
+production:
+  db_sqlite_scheme: FALSE
+  db_url: mysql://root:password@localhost/smash_production
+  db_su: root
+  db_su_pw: password
+  account_name: admin
+  account_mail: admin@example.com
+  site_mail: admin@example.com
