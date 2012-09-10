@@ -1,3 +1,4 @@
+require 'rails'
 require 'active_record'
 require 'yaml'
 require 'fileutils'
@@ -16,15 +17,16 @@ end
 
 namespace :dev do
   
-  task :config_files do
+  task :config_files, :env do |cmd, args|
+    root = File.dirname(__FILE__)
     config_files = [
       ['config/drush.example.yml', 'config/drush.yml']
     ]
     config_files.each do |pair|
-      source = Rails.root.join(pair.first)
-      target = Rails.root.join(pair.last)
+      source = File.join(root, pair.first)
+      target = File.join(root, pair.last)
 
-      unless File.exist?(Rails.root.join(source))
+      unless File.exist?(File.join(root, source))
         `cp #{source} #{target}`
       end
     end
@@ -51,7 +53,7 @@ namespace :drush do
     env = args[:env] || "development"
     Rake::Task['environment'].invoke(env)
     
-    sh "drush make smash.make ."
+    sh "drush make joinus.make ."
   end
   
   desc "Nukes Drupal site"

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SMASH Basic Config feature.
+ */
+
+include_once 'smash_basic_config.features.inc';

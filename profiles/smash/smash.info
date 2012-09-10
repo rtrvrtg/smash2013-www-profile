@@ -1,0 +1,104 @@
+name = SMASH! 2013
+description = Event info site
+version = 0.1
+core = 7.x
+
+; Core prerequisites
+dependencies[] = system
+dependencies[] = block
+dependencies[] = filter
+dependencies[] = node
+dependencies[] = user
+dependencies[] = taxonomy
+dependencies[] = field
+dependencies[] = field_sql_storage
+dependencies[] = field_ui
+
+; Core
+dependencies[] = help
+dependencies[] = menu
+dependencies[] = path
+dependencies[] = toolbar
+dependencies[] = overlay
+dependencies[] = options
+dependencies[] = number
+dependencies[] = list
+dependencies[] = file
+dependencies[] = image
+dependencies[] = contextual
+dependencies[] = dblog
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = dashboard
+dependencies[] = rdf
+
+; Contrib prerequisites
+dependencies[] = ctools
+dependencies[] = libraries
+dependencies[] = token
+dependencies[] = entity
+dependencies[] = transliteration
+    
+; Contrib
+dependencies[] = views
+dependencies[] = views_ui
+dependencies[] = views_bulk_operations
+dependencies[] = entityreference
+dependencies[] = field_collection
+dependencies[] = wysiwyg
+dependencies[] = media
+dependencies[] = webform
+dependencies[] = webform_conditional
+dependencies[] = webform_multifile
+dependencies[] = registration
+dependencies[] = ctools_custom_content
+dependencies[] = views_content
+dependencies[] = page_manager
+dependencies[] = panels
+dependencies[] = ds
+dependencies[] = ds_extras
+dependencies[] = features
+dependencies[] = diff
+dependencies[] = strongarm
+dependencies[] = uuid
+dependencies[] = uuid_features
+dependencies[] = field_group
+dependencies[] = link
+dependencies[] = date_api
+dependencies[] = date
+dependencies[] = date_popup
+dependencies[] = date_tools
+dependencies[] = date_views
+dependencies[] = markdown
+dependencies[] = globalredirect
+dependencies[] = redirect
+dependencies[] = pathauto
+dependencies[] = xmlsitemap
+dependencies[] = xmlsitemap_node
+dependencies[] = xmlsitemap_taxonomy
+dependencies[] = xmlsitemap_menu
+dependencies[] = xmlsitemap_engines
+dependencies[] = mailchimp
+dependencies[] = workbench
+dependencies[] = workbench_access
+dependencies[] = workbench_moderation
+dependencies[] = menu_views
+dependencies[] = migrate
+dependencies[] = migrate_ui
+dependencies[] = migrate_extras
+dependencies[] = wordpress_migrate
+dependencies[] = backup_migrate
+dependencies[] = special_menu_items
+
+
+
+
+
+
+
+
+
+
+
+
+

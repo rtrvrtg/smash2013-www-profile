@@ -1,0 +1,10 @@
+name = SMASH Migration
+core = 7.x
+package = SMASH!
+version = 7.x-0.1
+project = smash_migration
+dependencies[] = migrate
+dependencies[] = migrate_extras
+dependencies[] = migrate_ui
+dependencies[] = wordpress_migrate
+features[features_api][] = api:1

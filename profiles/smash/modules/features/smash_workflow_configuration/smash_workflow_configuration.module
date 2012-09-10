@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SMASH Workflow Configuration feature.
+ */
+
+include_once 'smash_workflow_configuration.features.inc';
