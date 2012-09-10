@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SMASH News feature.
+ */
+
+include_once 'smash_news.features.inc';

@@ -4,10 +4,13 @@ core = 7.x
 api = 2
 projects[drupal][version] = "7.x"
 
-; Profiles
-projects[smash][type] = "profile"
-
 ; Modules
+; Please fill the following out. Type may be one of get, git, bzr or svn,
+; and url is the url of the download.
+projects[smash][download][type] = ""
+projects[smash][download][url] = ""
+projects[smash][type] = "module"
+
 projects[views_bulk_operations][version] = "3.0-rc1"
 
 projects[backup_migrate][version] = "2.4"
@@ -55,6 +58,62 @@ projects[pathauto][version] = "1.2"
 projects[redirect][version] = "1.0-beta4"
 
 projects[registration][version] = "1.0-beta3"
+
+; Please fill the following out. Type may be one of get, git, bzr or svn,
+; and url is the url of the download.
+projects[smash_basic_config][download][type] = ""
+projects[smash_basic_config][download][url] = ""
+projects[smash_basic_config][type] = "module"
+projects[smash_basic_config][version] = "0.1"
+
+; Please fill the following out. Type may be one of get, git, bzr or svn,
+; and url is the url of the download.
+projects[smash_events][download][type] = ""
+projects[smash_events][download][url] = ""
+projects[smash_events][type] = "module"
+projects[smash_events][version] = "0.1"
+
+; Please fill the following out. Type may be one of get, git, bzr or svn,
+; and url is the url of the download.
+projects[smash_guests][download][type] = ""
+projects[smash_guests][download][url] = ""
+projects[smash_guests][type] = "module"
+projects[smash_guests][version] = "0.1"
+
+; Please fill the following out. Type may be one of get, git, bzr or svn,
+; and url is the url of the download.
+projects[smash_locations][download][type] = ""
+projects[smash_locations][download][url] = ""
+projects[smash_locations][type] = "module"
+projects[smash_locations][version] = "0.2"
+
+; Please fill the following out. Type may be one of get, git, bzr or svn,
+; and url is the url of the download.
+projects[smash_migration][download][type] = ""
+projects[smash_migration][download][url] = ""
+projects[smash_migration][type] = "module"
+projects[smash_migration][version] = "0.1"
+
+; Please fill the following out. Type may be one of get, git, bzr or svn,
+; and url is the url of the download.
+projects[smash_news][download][type] = ""
+projects[smash_news][download][url] = ""
+projects[smash_news][type] = "module"
+projects[smash_news][version] = "0.1"
+
+; Please fill the following out. Type may be one of get, git, bzr or svn,
+; and url is the url of the download.
+projects[smash_vendors][download][type] = ""
+projects[smash_vendors][download][url] = ""
+projects[smash_vendors][type] = "module"
+projects[smash_vendors][version] = "0.1"
+
+; Please fill the following out. Type may be one of get, git, bzr or svn,
+; and url is the url of the download.
+projects[smash_workflow_configuration][download][type] = ""
+projects[smash_workflow_configuration][download][url] = ""
+projects[smash_workflow_configuration][type] = "module"
+projects[smash_workflow_configuration][version] = "0.2"
 
 projects[strongarm][version] = "2.0"
 

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SMASH Vendors feature.
+ */
+
+include_once 'smash_vendors.features.inc';

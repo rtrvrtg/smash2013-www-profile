@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SMASH Events feature.
+ */
+
+include_once 'smash_events.features.inc';

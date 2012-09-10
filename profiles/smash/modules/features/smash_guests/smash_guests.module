@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SMASH Guests feature.
+ */
+
+include_once 'smash_guests.features.inc';
