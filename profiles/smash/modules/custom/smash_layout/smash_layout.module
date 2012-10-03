@@ -1,0 +1,105 @@
+<?php
+
+/**
+ * Implements hook_ds_layout_info().
+ */
+function smash_layout_ds_layout_info() {
+  $path = drupal_get_path('module', 'smash_layout');
+  $layouts = array(
+    'smash_layout_node' => array(
+      'label' => t('SMASH! Node'),
+      'path' => $path . '/layouts/smash_layout_node',
+      'module' => 'smash_layout',
+      'regions' => array(
+        'smash_layout_node_main' => t('Main content'),
+        'smash_layout_node_sidebar' => t('Sidebar'),
+      ),
+      'css' => TRUE,
+    ),
+  );
+
+  // Support for panels.
+  
+  /*
+  if (module_exists('panels')) {
+    ctools_include('plugins', 'panels');
+    $panel_layouts = panels_get_layouts();
+    foreach ($panel_layouts as $key => $layout) {
+      // The easy ones.
+      if (isset($layout['regions'])) {
+        $layouts['panels-' . $key] = array(
+          'label' => $layout['title'],
+          'path' => $layout['path'],
+          'module' => 'panels',
+          'flexible' => FALSE,
+          'regions' => $layout['regions'],
+        );
+        if (!empty($layout['css'])) {
+          $layouts['panels-' . $key]['css'] = TRUE;
+        }
+      }
+      // Flexible panel layouts, ignore the default flexible.
+      else {
+        if ($layout['name'] != 'flexible') {
+          $regions = panels_flexible_panels(array(), array(), $layout);
+          $layouts['panels-' . $key] = array(
+            'label' => $layout['title'],
+            'path' => $layout['path'],
+            'module' => 'panels',
+            'flexible' => TRUE,
+            'regions' => $regions,
+          );
+        }
+      }
+    }
+  }
+  */
+  // drupal_set_message('<pre>'.print_r($layouts,1).'</pre>');
+  return $layouts;
+}
+
+/**
+ * Layout & panel definitions
+ */
+function smash_layout_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'panels' && $plugin == 'layouts') {
+    return 'layouts';
+  }
+}
+
+/**
+ * Preprocess HTML
+ * Add 
+ */
+function smash_layout_preprocess_html(&$variables) {
+  $body_classes = &$variables['classes_array'];
+  
+  /*
+  $node_types = array(
+  	'brand_profile',
+  	'page',
+  	'media'
+  );
+  
+  $node_uses_layout = false;
+  foreach ($node_types as $type) {
+  	$node_uses_layout = in_array('node-type-'.str_replace('_', '-', $type), $body_classes);
+  	if ($node_uses_layout === true) break;
+  }
+  
+  if ($node_uses_layout === true) {
+    array_push($body_classes, 'uses-smash-layout');
+  }
+  */
+  $node = menu_get_object();
+  if ($node) {
+    array_push($body_classes, 'uses-smash-layout');
+  }
+  
+  $panel = panels_get_current_page_display();
+  if (!is_null($panel)) {
+    if ($panel->layout == 'smash_layout_node') {
+      array_push($body_classes, 'uses-smash-layout');
+    }
+  }
+}
