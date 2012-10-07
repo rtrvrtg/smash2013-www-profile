@@ -5,8 +5,6 @@ api = 2
 projects[drupal][version] = "7.15"
 projects[drupal][patch][] = http://drupal.org/files/core-js-drupal-log-1232416-100-D7.patch
 
-projects[views_bulk_operations][version] = "3.0-rc1"
-
 projects[backup_migrate][version] = "2.4"
 
 projects[ctools][version] = "1.2"
@@ -51,13 +49,13 @@ projects[panels][version] = "3.3"
 
 projects[pathauto][version] = "1.2"
 
-projects[redirect][version] = "1.0-beta4"
+projects[redirect][version] = "1.0-rc1"
 
 projects[registration][version] = "1.0-beta3"
 
 projects[strongarm][version] = "2.0"
 
-projects[token][version] = "1.2"
+projects[token][version] = "1.4"
 
 projects[transliteration][version] = "3.1"
 
@@ -67,6 +65,8 @@ projects[uuid_features][version] = "1.0-alpha1"
 
 projects[views][version] = "3.5"
 projects[views][patch][] = "http://drupal.org/files/views_ajax_submit_back_2.patch"
+
+projects[views_bulk_operations][version] = "3.0"
 
 projects[webform][version] = "3.18"
 
@@ -82,7 +82,7 @@ projects[workbench_access][version] = "1.0"
 
 projects[workbench_moderation][version] = "1.2"
 
-projects[wysiwyg][version] = "2.1"
+projects[wysiwyg][version] = "2.2"
 
 projects[xmlsitemap][version] = "2.0-rc1"
 
