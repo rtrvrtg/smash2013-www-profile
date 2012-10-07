@@ -2,7 +2,8 @@
 core = 7.x
 
 api = 2
-projects[drupal][version] = "7.x"
+projects[drupal][version] = "7.15"
+projects[drupal][patch][] = http://drupal.org/files/core-js-drupal-log-1232416-100-D7.patch
 
 projects[views_bulk_operations][version] = "3.0-rc1"
 
@@ -14,11 +15,11 @@ projects[date][version] = "2.6"
 
 projects[diff][version] = "2.0"
 
-projects[ds][version] = "1.5"
+projects[ds][version] = "2.0"
 
 projects[entity][version] = "1.0-rc3"
 
-projects[entityreference][version] = "1.0-rc3+2-dev"
+projects[entityreference][version] = "1.0-rc5"
 
 projects[features][version] = "1.0"
 
@@ -65,6 +66,7 @@ projects[uuid][version] = "1.0-alpha3"
 projects[uuid_features][version] = "1.0-alpha1"
 
 projects[views][version] = "3.5"
+projects[views][patch][] = "http://drupal.org/files/views_ajax_submit_back_2.patch"
 
 projects[webform][version] = "3.18"
 
