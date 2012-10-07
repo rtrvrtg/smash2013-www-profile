@@ -53,7 +53,7 @@ namespace :drush do
     env = args[:env] || "development"
     Rake::Task['environment'].invoke(env)
     
-    sh "drush make joinus.make ."
+    sh "drush make smash.make ."
   end
   
   desc "Nukes Drupal site"
