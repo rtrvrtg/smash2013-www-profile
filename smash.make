@@ -43,7 +43,7 @@ projects[mailchimp][version] = "2.7"
 
 projects[markdown][version] = "1.0"
 
-projects[menu_views][version] = "1.3"
+projects[menu_views][version] = "1.4"
 
 projects[migrate][version] = "2.4"
 
@@ -56,6 +56,8 @@ projects[pathauto][version] = "1.2"
 projects[redirect][version] = "1.0-rc1"
 
 projects[registration][version] = "1.0-beta3"
+
+projects[special_menu_items][version] = "1.0"
 
 projects[strongarm][version] = "2.0"
 
