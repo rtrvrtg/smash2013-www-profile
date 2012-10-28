@@ -2,10 +2,14 @@
 core = 7.x
 
 api = 2
-projects[drupal][version] = "7.15"
+projects[drupal][version] = "7.16"
 projects[drupal][patch][] = http://drupal.org/files/core-js-drupal-log-1232416-100-D7.patch
 
 projects[backup_migrate][version] = "2.4"
+
+projects[colorbox][version] = "1.4"
+
+projects[context][version] = "3.0-beta4"
 
 projects[ctools][version] = "1.2"
 
@@ -35,7 +39,7 @@ projects[libraries][version] = "1.0"
 
 projects[link][version] = "1.0"
 
-projects[mailchimp][version] = "2.6"
+projects[mailchimp][version] = "2.7"
 
 projects[markdown][version] = "1.0"
 
