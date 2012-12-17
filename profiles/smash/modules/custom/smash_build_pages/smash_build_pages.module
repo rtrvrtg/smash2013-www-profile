@@ -1,0 +1,121 @@
+<?php
+
+function smash_build_pages_structure() {
+  $struct = array();
+  
+  $struct['Home'] = array(
+    '#page_name' => 'Home',
+  );
+  $struct['News'] = array(
+    '#page_name' => 'News',
+    'blog' => array('#page_name' => 'Blog'),
+    'newsletter' => array('#page_name' => 'Newsletter'),
+  );
+  $struct['Community'] = array(
+    '#page_name' => 'Community',
+  );
+  $struct['Details'] = array(
+    '#page_name' => 'Details',
+    
+    'smash-2012' => array(
+      '#is_link' => FALSE,
+      '#page_title' => 'SMASH! 2012',
+    ),
+    '2012/details/about-us' => array(
+      '#page_title' => 'About',
+    ),
+    '2012/details/accommodation' => array(
+      '#page_title' => 'Accommodation',
+    ),
+    '2012/details/code-of-conduct' => array(
+      '#page_title' => 'Conduct',
+    ),
+    '2012/details/location' => array(
+      '#page_title' => 'Location',
+    ),
+    '2012/map' => array(
+      '#page_title' => 'Floor Plan',
+    ),
+    '2012/schedule' => array(
+      '#page_title' => 'Schedule',
+    ),
+    '2012/details/transport' => array(
+      '#page_title' => 'Transport',
+    ),
+    'smash-inc' => array(
+      '#is_link' => FALSE,
+      '#page_title' => 'SMASH Inc',
+    ),
+    '2012/contact-us' => array(
+      '#page_title' => 'Contact',
+    ),
+    '2012/details/history' => array(
+      '#page_title' => 'History',
+    ),
+    '2012/details/organisers' => array(
+      '#page_title' => 'Organisers',
+    ),
+    'media-relations' => array(
+      '#is_link' => FALSE,
+      '#page_title' => 'Media Relations',
+    ),
+    '2012/details/media' => array(
+      '#page_title' => 'Press & Media',
+    ),
+    
+  );
+  $struct['Events'] = array(
+    '#page_name' => 'Events',
+  );
+  $struct['Guests'] = array(
+    '#page_name' => 'Guests',
+  );
+  $struct['Tickets'] = array(
+    '#page_name' => 'Tickets',
+  );
+  $struct['Vendors'] = array(
+    '#page_name' => 'Vendors',
+  );
+  
+  return $struct;
+}
+
+function smash_build_pages_process() {
+  
+  $find = function($elem, $page_name) {
+    if ($elem['#page_name'] == $page_name) {
+      return $elem;
+    }
+    $found = FALSE;
+    foreach ($elem as $key => &$value) {
+      if (!$found && substr($key, 0, 1) != '#') {
+        $test = __FUNCTION__($value, $page_name);
+        if (!is_null($test)) return $test;
+      }
+    }
+    return NULL;
+  }
+  
+  $menu_tree = array();
+  $entities = $query->entityCondition('entity_type', 'node')
+                    ->entityCondition('bundle', 'page')
+                    ->propertyCondition('status', 1)
+                    ->execute();
+  $nodes = node_load_multiple(array_keys($entities['node']));
+  foreach ($nodes as $node) {
+    
+    $plid = NULL;
+    
+    $menu_item_data = array(
+      'link_path' => '',
+      'link_title' => '',
+      'menu_name' => '',
+      'weight' => '',
+      'expanded' => TRUE,
+      'options' => array(),
+      'mlid' => NULL,
+      'plid' => $plid,
+    );
+    
+  }
+}
