@@ -1,18 +1,19 @@
 <?php
 /**
- * @file
- * Enables modules and site configuration for a standard site installation.
- */
-
-/**
- * Implements hook_form_FORM_ID_alter() for install_configure_form().
+ * Implements hook_form_FORM_ID_alter().
  *
  * Allows the profile to alter the site configuration form.
  */
-function smash_form_install_configure_form_alter(&$form, $form_state) {
-  $form['site_information']['site_name']['#default_value'] = 'SMASH! 2013';
-  $form['site_information']['site_mail']['#default_value'] = 'it@smash.org.au';
-  
-  $form['server_settings']['site_default_country']['#default_value'] = 'AU';
-  $form['server_settings']['date_default_timezone']['#default_value'] = 'Australia/Sydney';
+function system_form_install_configure_form_alter(&$form, $form_state) {
+  // Pre-populate the site name with the server name.
+  $form['site_information']['site_name']['#default_value'] = 'SMASH!';
+}
+/**
+ * Implements hook_form_alter().
+ */
+function system_form_install_select_profile_form_alter(&$form, $form_state) {
+  // select smash install profile by default
+  foreach ($form['profile'] as $key => $element) {
+    $form['profile'][$key]['#value'] = 'smash';
+  }
 }
