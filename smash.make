@@ -221,17 +221,17 @@ libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][type] = "library"
 libraries[ckeditor][destination] = "libraries"
 libraries[ckeditor][download][type] = "get"
-libraries[ckeditor][download][url] = "" ; TODO add download URI
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.5/ckeditor_3.6.5.zip" ; TODO add download URI
 
 libraries[colorbox][directory_name] = "colorbox"
 libraries[colorbox][type] = "library"
 libraries[colorbox][destination] = "libraries"
 libraries[colorbox][download][type] = "get"
-libraries[colorbox][download][url] = "" ; TODO add download URI
+libraries[colorbox][download][url] = "https://github.com/downloads/moxiecode/plupload/plupload_1_5_4.zip" ; TODO add download URI
 
 libraries[plupload][directory_name] = "plupload"
 libraries[plupload][type] = "library"
 libraries[plupload][destination] = "libraries"
 libraries[plupload][download][type] = "get"
-libraries[plupload][download][url] = "" ; TODO add download URI
+libraries[plupload][download][url] = "http://www.jacklmoore.com/colorbox/colorbox.zip" ; TODO add download URI
 
