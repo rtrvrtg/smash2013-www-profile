@@ -1,11 +1,16 @@
 default_run_options[:pty] = true  # Must be set for the password prompt from git to work
 set :ssh_options, { :forward_agent => true }
 
+set :application, "smash-web"
 set :user,        "smash"
-set :application, "SMASH! Website"
 set :domain,      "linode.smash.org.au"
 set :repository,  "git@github.com:rtrvrtg/smash2013-www-profile.git"
 set :deploy_to,   "/var/www/staging.smash.org.au/www"
+
+set :stages, %w(production staging)
+set :default_stage, "staging"
+require 'capistrano/ext/multistage'
+
 set :shared_path, "#{deploy_to}/shared"
 set :use_sudo, false
  
@@ -47,10 +52,14 @@ def set_chmod(full_path, perm = "2775")
 end
 
 def is_drupal_installed?
-  data = capture("drush status --root=#{current_release}").strip
-  db_ok = /Database\s*:\s*([^\s]+)/.match(data)
-  d7_ok = /Drupal bootstrap\s*:\s*([^\s]+)/.match(data)
-  db_ok[1] == 'Connected' and d7_ok[1] == 'Successful'
+  begin
+    data = capture("drush status --root=#{current_release}").strip
+    db_ok = /Database\s*:\s*([^\s]+)/.match(data)
+    d7_ok = /Drupal bootstrap\s*:\s*([^\s]+)/.match(data)
+    (!db_ok.nil? && !d7_ok?) && (db_ok[1] == 'Connected' and d7_ok[1] == 'Successful')
+  rescue
+    false
+  end
 end
 
 namespace :deploy do
@@ -64,6 +73,14 @@ namespace :deploy do
   end
 end
 
+task :uname do
+  run "uname -a"
+end
+
+task :pwd do
+  run "echo #{deploy_to}"
+end
+
 namespace :drush do
 
   # Runs the makefile
@@ -73,13 +90,15 @@ namespace :drush do
   
   # Installs site
   task :install_site, :roles => :web do
+    run "cd #{current_release} && git submodule update --init"
+    
     if !is_drupal_installed?
       set(:db_user, Capistrano::CLI.ui.ask("DB User: ") )
       set(:db_pass, Capistrano::CLI.password_prompt("DB Pass: ") )
       set(:account_name, Capistrano::CLI.ui.ask("Account name: ") )
       set(:account_mail, Capistrano::CLI.ui.ask("Account email: ") )
       
-      db_url = "mysql://#{db_user}:#{db_pass}@localhost/smash_staging"
+      db_url = "mysql://#{db_user}:#{db_pass}@localhost/www_staging"
       
       account_setup = "--account-name=#{account_name} --account-mail=#{account_mail} --site-mail=#{account_mail}"
       db_switch = "--db-url=#{db_url}"
@@ -158,7 +177,7 @@ namespace :compass do
   # Build a fresh copy of theme stylesheets if compass is installed
   task :make_styles, :roles => :web do
     if app_exists? 'compass'
-      run "cd #{current_release}/sites/all/themes/smash && compass compile"
+      run "cd #{current_release}/profiles/smash/themes/custom/smash2013 && compass compile"
     end
   end
 end
