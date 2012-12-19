@@ -146,11 +146,9 @@ function smash2013_preprocess_html(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function smash2013_preprocess_page(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+  // dpm($variables);
 }
-// */
 
 /**
  * Override or insert variables into the node templates.
@@ -212,8 +210,9 @@ function smash2013_preprocess_region(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("block" in this case.)
  */
-/* -- Delete this line if you want to use this function
+
 function smash2013_preprocess_block(&$variables, $hook) {
+  // dpm($variables['block_html_id']);
   // Add a count to all the blocks in the region.
   // $variables['classes_array'][] = 'count-' . $variables['block_id'];
 
@@ -223,4 +222,111 @@ function smash2013_preprocess_block(&$variables, $hook) {
   //  $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('block__no_wrapper'));
   //}
 }
-// */
+
+function smash2013_menu_link(array $variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+  
+  if ($element['#href'] == '<nolink-group>') {
+    return '<div class="menu-item-group">' . $sub_menu . '</div>';
+  }
+
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
+function _smash_2013_prep_toggler($seed) {
+  $var_stack = md5($seed);
+  $id = drupal_html_id('menu-tree--' . $var_stack);
+  $label = '<input id="' . $id . '" class="menu-toggle-checkbox" type="checkbox" />' . 
+    '<label for="' . $id . '" class="menu-toggle-label">Toggle menu</label>';
+  return array($id, $label);
+}
+
+function smash2013_menu_tree__menu_block($variables) {
+  // dpm($variables);
+  $tree = $variables['tree'];
+  list($id, $label) = _smash_2013_prep_toggler($tree);
+  $menu_splitter = '</ul><ul class="menu">';
+
+  $doc = new DOMDocument();
+  $doc->loadHTML($tree);
+  // $tree = $doc->saveHTML();
+  
+  $nodeAggregates = array();
+  $nodeAggIndex = 0;
+  
+  $body = $doc->getElementsByTagName('body');
+  foreach ($body->item(0)->childNodes as $item) {
+    if ($item->nodeName != 'li') continue;
+    $class = $item->getAttribute('class');
+    if (strpos($class, 'nolink') !== FALSE) {
+      // insert markup?
+      $nodeAggIndex++;
+    }
+    $nodeAggregates[$nodeAggIndex][] = $item;
+    
+    foreach ($item->childNodes as $child) {
+      $class = $item->getAttribute('class');
+      if (strpos($class, 'view') !== FALSE) {
+        list($id, $label) = _smash_2013_prep_toggler($doc->saveHTML($child));
+        $item->setAttribute('id', $id);
+      }
+    }
+  }
+  
+  $mk_menu_wrapper = function($children, &$doc) {
+    $wrap = $doc->createElement('div');
+    $wrap->setAttribute('class', 'menu-wrapper');
+    
+    $ul = $doc->createElement('ul');
+    $ul->setAttribute('class', 'menu');
+    
+    foreach ($children as $child) {
+      $ul->appendChild($child);
+    }
+    $wrap->appendChild($ul);
+    return $wrap;
+  };
+  
+  $wrapped = array();
+  if ($nodeAggIndex > 0) {
+    foreach ($nodeAggregates as $nodeAggList) {
+      $wrapped[] = $mk_menu_wrapper($nodeAggList, $doc);
+    }
+  }
+  else {
+    // foreach ($nodeAggregates as $nodeAggList) {
+    //   $wrapped[] = $mk_menu_wrapper($nodeAggList, $doc);
+    // }
+  }
+  
+  // dpm($wrapped);
+  // dpm($doc->saveHTML());
+  
+  // $matched = preg_match_all('/<li.*\/li>/', $tree, $matches);
+  // foreach ($matches[0] as $k => $li) {
+  //   if ($k > 0 && strpos($li, 'nolink') !== FALSE) {
+  //     $tree = str_replace($li, $menu_splitter . $li, $tree);
+  //   }
+  // }
+  // $tree = str_replace('<ul class="menu"></ul>', '', $tree);
+  
+  return $label . '<div class="menu-wrapper"><ul class="menu">' . $tree . '</ul></div>';
+}
+
+function smash2013_preprocess_views_view(&$vars) {
+  // dpm($vars);
+  // $vars['raw_result'] = $vars['view']->style_plugin->rendered_fields;
+}
+
+function smash2013_preprocess_views_view_list(&$vars) {
+  // dpm($vars);
+  // $vars['raw_result'] = $vars['view']->style_plugin->rendered_fields;
+}
+
+

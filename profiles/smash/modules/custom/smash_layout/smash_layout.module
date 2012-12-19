@@ -103,3 +103,44 @@ function smash_layout_preprocess_html(&$variables) {
     }
   }
 }
+
+/**
+ * Special tokens and stuff
+ */
+function smash_layout_token_info() {
+  $type = array(
+    'name' => t('SMASH! Layout'), 
+    'description' => t('Tokens related to SMASH! layout stuff.'), 
+  );
+
+  // Core tokens for nodes.
+  $smash_layout['tweet'] = array(
+    'name' => t("Latest tweet"), 
+    'description' => t("Latest tweet from @smashcon"),
+  );
+  
+  return array(
+    'types' => array('smash-layout' => $type), 
+    'tokens' => array('smash-layout' => $smash_layout),
+  );
+}
+
+function smash_layout_tokens($type, $tokens, array $data = array(), array $options = array()) {
+  $replacements = array();
+  if ($type == 'smash-layout') {
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'tweet':
+          $replacements[$original] = '';
+          if (function_exists('twitter_pull_render')) {
+            $replacements[$original] = twitter_pull_render('@smashcon', 'smashcon', 1);
+          }
+          break;
+      }
+    }
+  }
+  return $replacements;
+}
+
+
+

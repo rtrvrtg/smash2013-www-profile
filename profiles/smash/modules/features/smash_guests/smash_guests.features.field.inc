@@ -674,7 +674,7 @@ function smash_guests_field_default_fields() {
       'bundle' => 'guest',
       'default_value' => array(
         0 => array(
-          'tid' => '9',
+          'tid' => '4',
         ),
       ),
       'deleted' => '0',
@@ -693,7 +693,9 @@ function smash_guests_field_default_fields() {
           'weight' => '4',
         ),
       ),
+      'ds_extras_field_template' => '',
       'entity_type' => 'node',
+      'fences_wrapper' => 'div',
       'field_name' => 'field_section',
       'label' => 'Section',
       'required' => 1,

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SMASH! Front Page feature.
+ */
+
+include_once 'smash_front_page.features.inc';

@@ -5,3 +5,16 @@
  */
 
 include_once 'smash_basic_config.features.inc';
+
+/**
+*Implementation of hook_menu()
+*/
+function smash_basic_config_menu() {
+  $items['<nolink-group>'] = array(
+    'page callback' => 'drupal_not_found',
+    'access callback' => TRUE, 
+    'type' => MENU_CALLBACK,
+  );
+  
+ return $items;
+}

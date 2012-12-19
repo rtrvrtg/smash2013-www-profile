@@ -46,9 +46,12 @@ li a.active {
 
 #navigation {
   /* overflow: hidden; */ /* Sometimes you want to prevent overlapping with main div. */
-
+  
+  padding: 0;
+  
   .block {
     margin-bottom: 0;
+    position: relative;
   }
 
   .block-menu .block-title,
@@ -62,16 +65,232 @@ li a.active {
     padding: 0;
     text-align: left; /* LTR */
 
-    li { /* A simple method to get navigation links to appear in one line. */
-      float: left; /* LTR */
-      padding: 0 10px 0 0; /* LTR */
+    li, .item-list {
       list-style-type: none;
       list-style-image: none;
+      position: relative;
+    }
+  }
+  
+  .menu-toggle-label, .menu-toggle-checkbox {
+    
+    @media all and (min-width: $desktop-minimum) {
+      display: none;
+    }
+  }
+  
+  .menu-toggle-label {
+    float: right;
+    overflow: hidden;
+    text-indent: -1000px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url(../images/menu-toggle.png) no-repeat top left;
+    z-index: 9999;
+    
+    top: 0;
+    right: 0;
+    
+    &:after {
+      content: " ";
+      
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-indent: 0;
+    }
+  }
+  
+  .menu-item-group {
+    position: relative;
+  }
+
+  @media all and (max-width: $desktop-minimum) {
+    #block-menu-block-1 {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      max-width: 320px;
+      z-index: 9998;
+      
+      .contextual-links-wrapper {
+        display: none;
+      }
+    }
+  }
+  
+  @media all and (max-width: $desktop-minimum) {
+    .menu-toggle-checkbox {
+      display: none;
+      & ~ .menu > li, 
+      & ~ .menu-wrapper > ul > li, 
+      & ~ .menu-wrapper > ul > .menu-item-group {
+        display: none;
+        &.nolink {
+          display: block;
+        }
+        @media all and (min-width: $desktop-minimum) {
+          display: block;
+        }
+      }
+      &:checked ~ .menu > li, 
+      &:checked ~ .menu-wrapper > ul > li, 
+      &:checked ~ .menu-wrapper > ul > .menu-item-group {
+        display: block;
+      }
+      &:checked + label {
+        background-position: top right;
+      }
     }
   }
 }
 
-.region-navigation {
+.block-menu-block {
+  background: $color-purple;
+  @include box-shadow(rgba(0,0,0,0.5) -6px 6px 0px);
+  
+  ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    li {
+      display: block;
+      float: none;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid #45146e;
+      clear: both;
+      
+      a {
+        display: block;
+        padding: 0.25em;
+        color: white;
+      }
+      
+      &.nolink {
+        padding: 0.25em;
+      }
+    }
+  }
+}    
+
+@media all and (min-width: $desktop-minimum) {
+
+  .block-menu-block {
+    @include box-shadow(none);
+    
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;      
+        border-top: 0px none;
+        
+        display: inline-block;
+        line-height: 1.5em;
+        
+        a {
+          display: block;
+          padding: 0.5em;
+          text-transform: uppercase;
+          font-weight: bold;
+          text-decoration: none;
+          
+          &:hover, &:focus, &:active, &.active, &.active-trail {
+            background-color: $color-menu-hov;
+          }
+        }
+        
+        > .menu-wrapper {
+          position: absolute;
+          top: 2.5em;
+          visibility: hidden;
+          background: $color-menu-hov;
+          @include box-shadow(rgba(0,0,0,0.5) 6px 6px 0px);
+          z-index: 9999;
+          min-width: 360px;
+          .menu-item-group {
+            width: 120px;
+            float: left;
+          }
+          
+          h3 {
+            color: $color-turq;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1em;
+            min-height: 24px;
+            padding-left: 32px;
+            background-position: 4px 0;
+            background-repeat: no-repeat;
+
+            &.event-list-title--maid-caf-- {
+              background-image: url(../images/menuicons/menuicons.maidcafe.png);
+            }
+            &.event-list-title--art-events {
+              background-image: url(../images/menuicons/menuicons.artevents.png);
+            }
+            &.event-list-title--cosplay-events {
+              background-image: url(../images/menuicons/menuicons.cosplayevents.png);
+            }
+            &.event-list-title--gaming-events {
+              background-image: url(../images/menuicons/menuicons.gamingevents.png);
+            }
+            &.event-list-title--gundam-events {
+              background-image: url(../images/menuicons/menuicons.gundamevents.png);
+            }
+            &.event-list-title--misc-events {
+              background-image: url(../images/menuicons/menuicons.miscevents.png);
+            }
+            &.event-list-title--panels {
+              background-image: url(../images/menuicons/menuicons.panel.png);
+            }
+
+          }
+          
+          ul {
+            margin: 1em 0;
+            
+            li {
+              float: none;
+              display: block;
+            
+              a {
+                color: white;
+                text-decoration: none;
+                text-transform: none;
+                font-weight: normal;
+              }
+            
+            }
+          }
+        }
+        
+        &.nolink {
+          padding: 0.25em;
+          text-transform: uppercase;
+          font-weight: bold;
+          color: $color-turq;
+        }
+        
+        &:hover {
+          > .menu-wrapper {
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
 }
 
 /*

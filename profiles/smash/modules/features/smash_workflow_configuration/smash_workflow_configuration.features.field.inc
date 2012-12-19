@@ -109,12 +109,16 @@ function smash_workflow_configuration_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'image',
+          'module' => 'colorbox',
           'settings' => array(
-            'image_link' => '',
-            'image_style' => 'thumbnail',
+            'colorbox_caption' => 'auto',
+            'colorbox_caption_custom' => '',
+            'colorbox_gallery' => 'post',
+            'colorbox_gallery_custom' => '',
+            'colorbox_image_style' => 'large',
+            'colorbox_node_style' => 'thumbnail',
           ),
-          'type' => 'image',
+          'type' => 'colorbox',
           'weight' => '2',
         ),
       ),
@@ -326,9 +330,8 @@ function smash_workflow_configuration_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
+          'type' => 'hidden',
           'weight' => '2',
         ),
         'teaser' => array(
@@ -381,13 +384,13 @@ function smash_workflow_configuration_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'field_collection',
           'settings' => array(
-            'add' => 'Add',
-            'delete' => 'Delete',
-            'description' => TRUE,
-            'edit' => 'Edit',
+            'add' => '',
+            'delete' => '',
+            'description' => 1,
+            'edit' => '',
             'view_mode' => 'full',
           ),
           'type' => 'field_collection_view',

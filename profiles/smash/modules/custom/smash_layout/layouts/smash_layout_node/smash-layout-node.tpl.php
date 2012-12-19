@@ -26,6 +26,11 @@ else {
   }
 }
 
+$main_area_styles = ' ';
+if ($smash_layout_node_main && $smash_layout_node_sidebar) {
+  $main_area_styles .= 'has-main-and-sidebar';
+}
+
 ?>
 
 <div class="<?php print $classes;?> clearfix">
@@ -34,16 +39,16 @@ else {
   <?php print render($admin_links); ?>
   <?php endif; ?>
   
-  <div class="content-main-area clearfix">
+  <div class="content-main-area clearfix <?php print $main_area_styles; ?>">
     <div class="content-main-area-inner">
 
-	  <?php if ($smash_layout_node_main) { ?>
+	  <?php if ($smash_layout_node_main && !empty($smash_layout_node_main)) { ?>
 		<div class="prefaced-node-content <?php print $smash_layout_node_main_classes; ?>">
 		  <?php print $smash_layout_node_main; ?>
 		</div>
 	  <?php } ?>
 	
-	  <?php if ($smash_layout_node_sidebar) { ?>
+	  <?php if ($smash_layout_node_sidebar && !empty($smash_layout_node_sidebar)) { ?>
 		<div class="prefaced-node-sidebar <?php print $smash_layout_node_sidebar_classes; ?>">
 		  <?php print $smash_layout_node_sidebar; ?>
 		</div>

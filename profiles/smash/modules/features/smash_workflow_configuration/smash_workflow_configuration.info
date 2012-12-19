@@ -4,6 +4,7 @@ package = SMASH!
 php = 5.2.4
 version = 7.x-0.2
 project = smash_workflow_configuration
+dependencies[] = colorbox
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = field_collection

@@ -17,9 +17,14 @@
 body {
   margin: 0;
   padding: 0;
+  background: $color-bg url(../images/2013webbg.png) repeat top center;
+  @media all and (min-width: $desktop-minimum) {
+    padding: 10px;
+  }
 }
 
 #page {
+  max-width: 960px;
 }
 
 /*
@@ -46,15 +51,20 @@ body {
  */
 
 #header {
+  color: white;
 }
 
 #logo { /* Wrapping link for logo */
   float: left; /* LTR */
   margin: 0;
   padding: 0;
+  width: 20%;
+  max-width: 172px;
 
   img {
     vertical-align: bottom;
+    margin-bottom: 10px;
+    max-width: 100%;
   }
 }
 
@@ -93,6 +103,7 @@ body {
  */
 
 #main {
+  background: white;
 }
 
 /*
@@ -125,6 +136,9 @@ h2.title, /* Comment section heading */
 h2.comment-form, /* Comment form heading */
 h3.title { /* Comment title */
   margin: 0;
+  color: $color-header;
+  font-family: $font-header;
+  font-weight: normal;
 }
 
 tr.even { /* Some tables have rows marked even or odd. */
@@ -204,6 +218,21 @@ span.field-label { /* The inline field label used by the Fences module */
 .more-link { /* Aggregator, blog, and forum more link */
 }
 
+.more-info-link {
+  display: block;
+  margin: 0px auto;
+  @include border-radius(20px);
+  padding: 5px;
+  max-width: 320px;
+  background: #1675b9;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
 /*
  * First sidebar (on left in LTR languages, on right in RTL)
  *
@@ -229,6 +258,9 @@ span.field-label { /* The inline field label used by the Fences module */
  */
 
 #footer {
+  @include box-shadow(rgba(0, 0, 0, 0.75) 0px 0px 10px);
+  background-color: white;
+  color: $color-bgheader;
 }
 
 /*

@@ -106,3 +106,23 @@
 
 #block-user-online { /* "Who's online" block for a list of the online users */
 }
+
+#boxes-box-social_networks {
+  .boxes-box-content {
+    a {
+      display: inline-block;
+      color: white;
+      background: purple;
+      box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+      
+      &:hover, &:focus, &:active {
+        margin: 0 5px 5px 0;
+        box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+
+#block-boxes-footer-text {
+  font-size: 0.8em;
+}

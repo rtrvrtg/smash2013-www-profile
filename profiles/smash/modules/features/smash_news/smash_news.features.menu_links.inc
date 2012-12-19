@@ -22,7 +22,7 @@ function smash_news_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '1',
     'expanded' => '0',
-    'weight' => '0',
+    'weight' => '-49',
   );
   // Translatables
   // Included for use with string extractors like potx.

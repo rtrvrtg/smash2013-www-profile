@@ -50,7 +50,7 @@ function smash_events_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '1',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -78,7 +78,7 @@ function smash_events_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '5',
+        'weight' => '6',
       ),
     ),
   );
@@ -119,17 +119,17 @@ function smash_events_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'date',
           'settings' => array(
-            'format_type' => 'long',
+            'format_type' => 'short',
             'fromto' => 'both',
             'multiple_from' => '',
             'multiple_number' => '',
             'multiple_to' => '',
           ),
           'type' => 'date_default',
-          'weight' => 3,
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -162,7 +162,7 @@ function smash_events_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_popup',
-        'weight' => '3',
+        'weight' => '4',
       ),
       'workbench_access_field' => 0,
     ),
@@ -209,11 +209,10 @@ function smash_events_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'taxonomy',
+          'label' => 'hidden',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '0',
+          'type' => 'hidden',
+          'weight' => '12',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -234,7 +233,7 @@ function smash_events_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '2',
+        'weight' => '3',
       ),
       'workbench_access_field' => 0,
     ),
@@ -294,13 +293,13 @@ function smash_events_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'entityreference',
           'settings' => array(
-            'link' => FALSE,
+            'link' => 0,
           ),
           'type' => 'entityreference_label',
-          'weight' => 4,
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -326,61 +325,48 @@ function smash_events_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'entityreference_autocomplete',
-        'weight' => '4',
+        'weight' => '5',
       ),
       'workbench_access_field' => 0,
     ),
   );
 
-  // Exported field: 'node-event-field_section'.
-  $fields['node-event-field_section'] = array(
+  // Exported field: 'node-event-field_sidebar_content'.
+  $fields['node-event-field_sidebar_content'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_section',
-      'foreign keys' => array(
-        'tid' => array(
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
+      'field_name' => 'field_sidebar_content',
+      'foreign keys' => array(),
+      'indexes' => array(),
       'locked' => '0',
-      'module' => 'taxonomy',
+      'module' => 'field_collection',
       'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'section',
-            'parent' => '0',
-          ),
-        ),
+        'path' => '',
       ),
       'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
+      'type' => 'field_collection',
     ),
     'field_instance' => array(
       'bundle' => 'event',
-      'default_value' => array(
-        0 => array(
-          'tid' => '8',
-        ),
-      ),
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '2',
+          'label' => 'hidden',
+          'module' => 'field_collection',
+          'settings' => array(
+            'add' => 'Add',
+            'delete' => 'Delete',
+            'description' => 1,
+            'edit' => 'Edit',
+            'view_mode' => 'full',
+          ),
+          'type' => 'field_collection_view',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -390,20 +376,19 @@ function smash_events_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_section',
-      'label' => 'Section',
-      'required' => 1,
+      'field_name' => 'field_sidebar_content',
+      'label' => 'Sidebar Content',
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 1,
-        'module' => 'options',
+        'active' => 0,
+        'module' => 'field_collection',
         'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '1',
+        'type' => 'field_collection_embed',
+        'weight' => '7',
       ),
-      'workbench_access_field' => 1,
     ),
   );
 
@@ -413,7 +398,7 @@ function smash_events_field_default_fields() {
   t('Event Date/Time');
   t('Event Type');
   t('Location');
-  t('Section');
+  t('Sidebar Content');
 
   return $fields;
 }

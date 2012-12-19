@@ -41,6 +41,12 @@ function smash_workflow_configuration_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -121,6 +127,7 @@ function smash_workflow_configuration_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_access_menu';
   $strongarm->value = array(
+    'devel' => 0,
     'main-menu' => 0,
     'management' => 0,
     'navigation' => 0,
@@ -135,11 +142,9 @@ function smash_workflow_configuration_strongarm() {
   $strongarm->value = array(
     'section' => 'section',
     'event_type' => 0,
-    'product' => 0,
-    'role_type' => 0,
     'tags' => 0,
-    'team' => 0,
     'vendor_type' => 0,
+    'gallery' => 0,
   );
   $export['workbench_access_taxonomy'] = $strongarm;
 

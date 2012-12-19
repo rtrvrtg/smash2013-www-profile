@@ -62,3 +62,89 @@
     @include unpublished-div;
   }
 }
+
+.node-home-page {
+  .field-name-wrapped-hero {
+    a.hero-wrapped {
+      display: block;
+      position: relative;
+      .hero-wrapped-image {
+        display: block;
+      }
+      .hero-wrapped-content {
+        display: block;
+        background: rgba(0,0,0,0.7);
+        color: white;
+        @media all and (min-width: $desktop-minimum) {
+          position: absolute;
+          top: 280px;
+          left: 0px;
+          width: 360px;
+        }
+      }
+    }
+  }
+  .field-name-feature-wrapper {
+    a.feature-wrapped {
+      .feature-wrapped-image {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 60px;
+        @media all and (min-width: $desktop-minimum) {
+          width: 120px;
+        }
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 60px;
+          @media all and (min-width: $desktop-minimum) {
+            width: 120px;
+          }
+          &.feature-wrapped-image-inactive {
+            visibility: visible;
+          }
+          &.feature-wrapped-image-active {
+            visibility: hidden;
+          }
+        }
+      }
+      
+      .feature-wrapped-text {
+        margin-left: 70px;
+        @media all and (min-width: $desktop-minimum) {
+          margin-left: 130px;
+        }
+        display: inline-block;
+        vertical-align: top;
+        h2, p {
+          margin: 0;
+        }
+      }
+      
+      display: block;
+      overflow: hidden;
+      
+      &:hover, &:focus, &:active {
+        .feature-wrapped-image {
+          img {
+            &.feature-wrapped-image-inactive {
+              visibility: hidden;
+            }
+            &.feature-wrapped-image-active {
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+  }
+  .field-name-field-further-highlights {
+    width: 33%;
+    display: inline-block;
+    @media all and (min-width: $desktop-minimum) {
+    }
+  }
+}
+

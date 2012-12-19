@@ -67,14 +67,16 @@ $verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
 $tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
 $helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
+$lucida:          "Lucida Sans", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
-$base-font-family: $verdana; // The font family set on the html element.
-$font-body:        $verdana;
+$base-font-family: $helvetica; // The font family set on the html element.
+$font-body:        $helvetica;
+$font-header:      $lucida;
 $font-monospace:   $courier;
 
 
@@ -82,8 +84,28 @@ $font-monospace:   $courier;
 // Colors, etc.
 //
 
+$color-wrapbg:    #1b171a;
+$color-bg:        white;
+$color-header:    #600;
+$color-bgheader:  #1b171a;
+$color-purple:    #7f54a3;
+$color-menu-hov:  #282828;
+$color-turq:      #3ec1bc;
+
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 30px;
+
+
+//
+// Responsive breakpoints
+//
+$phone-minimum: 0px;
+$tablet-minimum: 480px;
+$desktop-minimum: 960px;
+
+$phone-maximum: $tablet-minimum - 1;
+$tablet-maximum: $desktop-minimum - 1;
+$tablet-half: ($tablet-maximum - $tablet-minimum);
 
 
 //
