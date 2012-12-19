@@ -204,9 +204,9 @@ projects[twitter_cards][subdir] = "custom"
 
 ; Themes
 ; 
-projects[][type] = "theme"
-projects[][version] = ""; TODO add version
-projects[][subdir] = "custom"
+;projects[][type] = "theme"
+;projects[][version] = ""; TODO add version
+;projects[][subdir] = "custom"
 ; omega
 projects[omega][type] = "theme"
 projects[omega][version] = "3.x-dev"
