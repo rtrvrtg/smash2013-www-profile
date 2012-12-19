@@ -4,3 +4,7 @@ sites/*/settings*.php
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
+
+# No sass cache
+profiles/smash/themes/custom/smash2013/.sass-cache
+
