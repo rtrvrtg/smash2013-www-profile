@@ -131,30 +131,6 @@ projects[registration][subdir] = "contrib"
 projects[rules][version] = "2.2"
 projects[rules][subdir] = "contrib"
 
-projects[smash_basic_config][version] = "0.1"
-projects[smash_basic_config][subdir] = "contrib"
-
-projects[smash_events][version] = "0.2"
-projects[smash_events][subdir] = "contrib"
-
-projects[smash_guests][version] = "0.1"
-projects[smash_guests][subdir] = "contrib"
-
-projects[smash_layout][version] = "0.1"
-projects[smash_layout][subdir] = "contrib"
-
-projects[smash_locations][version] = "0.2"
-projects[smash_locations][subdir] = "contrib"
-
-projects[smash_news][version] = "0.3"
-projects[smash_news][subdir] = "contrib"
-
-projects[smash_vendors][version] = "0.1"
-projects[smash_vendors][subdir] = "contrib"
-
-projects[smash_workflow_configuration][version] = "0.2"
-projects[smash_workflow_configuration][subdir] = "contrib"
-
 projects[uuid][version] = "1.x-dev"
 projects[uuid][subdir] = "contrib"
 
@@ -198,9 +174,9 @@ projects[crumbs][version] = "1.8"
 projects[crumbs][subdir] = "contrib"
 
 ; TODO modules without versions
-projects[twitter_cards][version] = "" ; TODO add version
-projects[twitter_cards][subdir] = "custom"
-
+; projects[twitter_cards][type] = "module"
+; projects[twitter_cards][version] = "" ; TODO add version
+; projects[twitter_cards][subdir] = "custom"
 
 ; Themes
 ; 
