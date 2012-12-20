@@ -59,17 +59,20 @@ li a.active {
     @include element-invisible();
   }
 
-  ul.links, /* Main menu and secondary menu links */
-  ul.menu { /* Menu block links */
+  ul.links,
+  ul.menu {
     margin: 0;
     padding: 0;
-    text-align: left; /* LTR */
+    text-align: left;
 
     li, .item-list {
       list-style-type: none;
       list-style-image: none;
       position: relative;
     }
+  }
+  ul.menu {
+    text-align: center;
   }
   
   .menu-toggle-label, .menu-toggle-checkbox {
@@ -107,9 +110,9 @@ li a.active {
     position: relative;
   }
 
-  @media all and (max-width: $desktop-minimum) {
+  @media all and (max-width: $tablet-maximum) {
     #block-menu-block-1 {
-      position: fixed;
+      position: absolute;
       top: 0;
       right: 0;
       width: 100%;
@@ -122,7 +125,7 @@ li a.active {
     }
   }
   
-  @media all and (max-width: $desktop-minimum) {
+  @media all and (max-width: $tablet-maximum) {
     .menu-toggle-checkbox {
       display: none;
       & ~ .menu > li, 
@@ -135,13 +138,19 @@ li a.active {
         @media all and (min-width: $desktop-minimum) {
           display: block;
         }
+        .menu-toggle-label {
+          background-position: bottom left;
+        }
+        .menu-toggle-checkbox:checked + .menu-toggle-label {
+          background-position: bottom right;
+        }
       }
       &:checked ~ .menu > li, 
       &:checked ~ .menu-wrapper > ul > li, 
       &:checked ~ .menu-wrapper > ul > .menu-item-group {
         display: block;
       }
-      &:checked + label {
+      &:checked + .menu-toggle-label {
         background-position: top right;
       }
     }
@@ -166,17 +175,31 @@ li a.active {
       list-style: none;
       border-top: 1px solid #45146e;
       clear: both;
+      color: white;
+      line-height: 40px;
       
       a {
         display: block;
         padding: 0.25em;
         color: white;
+        text-decoration: none;
+        &:hover, &:focus, &:active {
+          background-color: $color-menu-hov;
+        }
       }
       
       &.nolink {
         padding: 0.25em;
+        background-color: $color-menu-hov;
       }
     }
+  }
+  h3 {
+    padding: 0.25em;
+    background-color: $color-menu-hov;
+    margin: 0;
+    font-weight: normal;
+    font-size: 1em;
   }
 }    
 
@@ -189,9 +212,10 @@ li a.active {
       margin: 0;
       padding: 0;
       list-style: none;
+      text-align: center;
       
       li {
-        margin: 0;
+        margin: 0 0.75em;
         padding: 0;
         list-style: none;      
         border-top: 0px none;
@@ -264,12 +288,20 @@ li a.active {
             li {
               float: none;
               display: block;
+              margin: 0;
+              text-align: left;
             
               a {
                 color: white;
                 text-decoration: none;
                 text-transform: none;
                 font-weight: normal;
+                padding-top: 0.25em;
+                padding-bottom: 0.25em;
+                &:hover, &:focus, &:active {
+                  color: white;
+                  background-color: $color-purple;
+                }
               }
             
             }

@@ -109,20 +109,62 @@
 
 #boxes-box-social_networks {
   .boxes-box-content {
+    text-align: center;
     a {
+      text-decoration: none;
       display: inline-block;
+      vertical-align: top;
       color: white;
-      background: purple;
-      box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+      background: $color-purple;
+      box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+      @include transition(all 0.1s linear);
+      margin-top: 3px;
+      margin-right: 5px;
       
       &:hover, &:focus, &:active {
-        margin: 0 5px 5px 0;
-        box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 2px 5px 0px rgba(0, 0, 0, 0.5);
+        margin-top: 0px;
+      }
+      
+      &.networks-facebook,
+      &.networks-deviantart,
+      &.networks-youtube {
+        width: 50px;
+        height: 50px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        text-indent: -10000px;
+      }
+      &.networks-facebook {
+        background-image: url(../images/social/facebook.png);
+      }
+      &.networks-deviantart {
+        background-image: url(../images/social/deviantart.png);
+      }
+      &.networks-youtube {
+        background-image: url(../images/social/youtube.png);
+      }
+      &.networks-twitter {
+        height: 50px;
+        background: $color-purple url(../images/social/twitter.bird.png) no-repeat center left;
+        padding-left: 50px;
+        overflow: hidden;
+        @media all and (min-width: $desktop-minimum) {
+          max-width: 700px;
+          margin-right: -35px;
+          white-space: nowrap;
+          line-height: 50px;
+        }
       }
     }
   }
 }
 
 #block-boxes-footer-text {
-  font-size: 0.8em;
+  font-size: 0.7em;
+  line-height: 1.3em;
+  @media all and (min-width: $tablet-half) {
+    font-size: 0.8em;
+  }
 }

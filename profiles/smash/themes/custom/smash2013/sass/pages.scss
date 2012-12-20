@@ -17,14 +17,18 @@
 body {
   margin: 0;
   padding: 0;
-  background: $color-bg url(../images/2013webbg.png) repeat top center;
+  background-color: $color-menu-hov;
+  background: 
+	url(../images/2013webgradient.png) repeat-x top center, 
+	url(../images/2013webbg.png) repeat top center,
+    $color-menu-hov;
   @media all and (min-width: $desktop-minimum) {
     padding: 10px;
   }
 }
 
 #page {
-  max-width: 960px;
+  max-width: 950px;
 }
 
 /*
@@ -58,8 +62,8 @@ body {
   float: left; /* LTR */
   margin: 0;
   padding: 0;
-  width: 20%;
-  max-width: 172px;
+  width: 50%;
+  max-width: 361px;
 
   img {
     vertical-align: bottom;
@@ -104,6 +108,7 @@ body {
 
 #main {
   background: white;
+  @include box-shadow(rgba(0, 0, 0, 0.75) 0px 0px 10px);
 }
 
 /*

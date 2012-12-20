@@ -11,6 +11,12 @@
 // - Last we import a _custom.scss partial that includes our custom mixins.
 //
 
+@import "compass/support";  // Add Compass' IE and vendor prefix support variables.
+@import "compass/utilities/general/clearfix"; // Better than Drupal's clearfix.
+@import "compass/utilities/sprites"; // See http://compass-style.org/help/tutorials/spriting/
+@import "compass/css3";     // Use one CSS3 mixin instead of multiple vendor prefixes.
+@import "compass/typography/vertical_rhythm"; // Helps set up a vertical rhythm.
+
 
 //
 // Legacy IE support
@@ -31,6 +37,8 @@ $legacy-support-for-ie8: true;
 //
 // Font faces, stacks and sizes.
 //
+
+@import "font_ultramagnetic";
 
 // Compass' vertical_rhythm extension is a powerful tool to set up a vertical
 // rhythm for your entire page. You can see some of its mixins and functions in
@@ -68,17 +76,23 @@ $tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
 $helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 $lucida:          "Lucida Sans", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+$myriad:          "Myriad Pro", Myriad, Verdana, Arial, sans-serif;
+$ultramag:        "ultramagneticRegular", sans-serif;
 
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
-$base-font-family: $helvetica; // The font family set on the html element.
-$font-body:        $helvetica;
-$font-header:      $lucida;
+$base-font-family: $myriad; // The font family set on the html element.
+$font-body:        $myriad;
+$font-header:      $ultramag;
 $font-monospace:   $courier;
 
+@mixin headerfont {
+  font-family: $font-header;
+  font-weight: normal;
+}
 
 //
 // Colors, etc.
@@ -101,7 +115,7 @@ $indent-amount: 30px;
 //
 $phone-minimum: 0px;
 $tablet-minimum: 480px;
-$desktop-minimum: 960px;
+$desktop-minimum: 950px;
 
 $phone-maximum: $tablet-minimum - 1;
 $tablet-maximum: $desktop-minimum - 1;
@@ -112,11 +126,6 @@ $tablet-half: ($tablet-maximum - $tablet-minimum);
 // Partials to be shared with all .scss files.
 //
 
-@import "compass/support";  // Add Compass' IE and vendor prefix support variables.
-@import "compass/utilities/general/clearfix"; // Better than Drupal's clearfix.
-@import "compass/utilities/sprites"; // See http://compass-style.org/help/tutorials/spriting/
-@import "compass/css3";     // Use one CSS3 mixin instead of multiple vendor prefixes.
-@import "compass/typography/vertical_rhythm"; // Helps set up a vertical rhythm.
 @import "zen";              // Add the Zen Grids responsive layout mixins.
 
 @import "custom";           // Import our custom mixins last.

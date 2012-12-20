@@ -23,6 +23,6 @@
 
 <?php if (is_array($tweets)): ?>
 <?php foreach ($tweets as $tweet_key => $tweet): ?>
-<span class="tweet-text"><?php print twitter_pull_add_links($tweet->text); ?></span>
+<span class="tweet-text"><?php print strip_tags(twitter_pull_add_links($tweet->text)); ?></span>
 <?php endforeach; ?>
 <?php endif; ?>
