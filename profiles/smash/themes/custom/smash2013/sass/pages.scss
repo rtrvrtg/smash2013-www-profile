@@ -28,7 +28,7 @@ body {
 }
 
 #page {
-  max-width: 950px;
+  max-width: 948px;
 }
 
 /*
@@ -108,7 +108,9 @@ body {
 
 #main {
   background: white;
-  @include box-shadow(rgba(0, 0, 0, 0.75) 0px 0px 10px);
+  @media all and (min-width: $desktop-minimum) {
+    @include box-shadow(rgba(0, 0, 0, 0.75) 0px 0px 10px);
+  }
 }
 
 /*
@@ -258,14 +260,34 @@ span.field-label { /* The inline field label used by the Fences module */
 .region-sidebar-second {
 }
 
+.prefaced-node-sidebar {
+  .field-collection-container {
+    border: 0px none;
+    .field-collection-view {
+      margin: 0;
+      .sidebar-content-title {
+        padding: 10px 5px;
+        min-height: 1em;
+        line-height: 1em;
+        @media all and (min-width: $desktop-minimum) {
+          margin: 0 5px 0.5em 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
 /*
  * Footer
  */
 
 #footer {
-  @include box-shadow(rgba(0, 0, 0, 0.75) 0px 0px 10px);
   background-color: white;
   color: $color-bgheader;
+  @media all and (min-width: $desktop-minimum) {
+    @include box-shadow(rgba(0, 0, 0, 0.75) 0px 0px 10px);
+  }
 }
 
 /*

@@ -26,8 +26,10 @@ else {
   }
 }
 
+$test_sidebar = strip_tags($smash_layout_node_sidebar, '<img>');
+
 $main_area_styles = ' ';
-if ($smash_layout_node_main && $smash_layout_node_sidebar) {
+if ($smash_layout_node_main && !empty($test_sidebar)) {
   $main_area_styles .= 'has-main-and-sidebar';
 }
 
@@ -48,7 +50,7 @@ if ($smash_layout_node_main && $smash_layout_node_sidebar) {
 		</div>
 	  <?php } ?>
 	
-	  <?php if ($smash_layout_node_sidebar && !empty($smash_layout_node_sidebar)) { ?>
+	  <?php if ($smash_layout_node_sidebar && !empty($test_sidebar)) { ?>
 		<div class="prefaced-node-sidebar <?php print $smash_layout_node_sidebar_classes; ?>">
 		  <?php print $smash_layout_node_sidebar; ?>
 		</div>

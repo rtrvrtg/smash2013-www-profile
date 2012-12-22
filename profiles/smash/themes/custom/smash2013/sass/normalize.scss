@@ -201,7 +201,7 @@ a:active {
  * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
  */
 
-h1, h2 {
+h1, h2, .sidebar-content-title {
   @include headerfont;
 }
 
@@ -242,6 +242,12 @@ h6 {
   @include adjust-font-size-to( $h6-font-size );
   @include leader(1, $h6-font-size);
   @include trailer(1, $h6-font-size);
+}
+
+.sidebar-content-title {
+  text-transform: uppercase;
+  color: white;
+  background: $color-purple;
 }
 
 /* Thematic break */

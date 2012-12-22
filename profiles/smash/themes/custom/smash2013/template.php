@@ -278,43 +278,7 @@ function smash2013_menu_tree__menu_block($variables) {
       }
     }
   }
-  
-  $mk_menu_wrapper = function($children, &$doc) {
-    $wrap = $doc->createElement('div');
-    $wrap->setAttribute('class', 'menu-wrapper');
-    
-    $ul = $doc->createElement('ul');
-    $ul->setAttribute('class', 'menu');
-    
-    foreach ($children as $child) {
-      $ul->appendChild($child);
-    }
-    $wrap->appendChild($ul);
-    return $wrap;
-  };
-  
-  $wrapped = array();
-  if ($nodeAggIndex > 0) {
-    foreach ($nodeAggregates as $nodeAggList) {
-      $wrapped[] = $mk_menu_wrapper($nodeAggList, $doc);
-    }
-  }
-  else {
-    // foreach ($nodeAggregates as $nodeAggList) {
-    //   $wrapped[] = $mk_menu_wrapper($nodeAggList, $doc);
-    // }
-  }
-  
-  // dpm($wrapped);
-  // dpm($doc->saveHTML());
-  
-  // $matched = preg_match_all('/<li.*\/li>/', $tree, $matches);
-  // foreach ($matches[0] as $k => $li) {
-  //   if ($k > 0 && strpos($li, 'nolink') !== FALSE) {
-  //     $tree = str_replace($li, $menu_splitter . $li, $tree);
-  //   }
-  // }
-  // $tree = str_replace('<ul class="menu"></ul>', '', $tree);
+  $tree = $doc->saveHTML();
   
   return $label . '<div class="menu-wrapper"><ul class="menu">' . $tree . '</ul></div>';
 }
