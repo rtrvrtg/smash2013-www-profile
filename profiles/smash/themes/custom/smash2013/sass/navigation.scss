@@ -308,6 +308,10 @@ li a.active {
           }
         }
         
+        &.last > .menu-wrapper {
+          right: 0;
+        }
+        
         &.nolink {
           padding: 0.25em;
           text-transform: uppercase;

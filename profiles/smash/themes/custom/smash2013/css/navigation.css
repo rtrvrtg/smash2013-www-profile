@@ -345,13 +345,17 @@ li a.active {
     background-color: #7f54a3;
   }
   /* line 311, ../sass/navigation.scss */
+  .block-menu-block ul li.last > .menu-wrapper {
+    right: 0;
+  }
+  /* line 315, ../sass/navigation.scss */
   .block-menu-block ul li.nolink {
     padding: 0.25em;
     text-transform: uppercase;
     font-weight: bold;
     color: #3ec1bc;
   }
-  /* line 319, ../sass/navigation.scss */
+  /* line 323, ../sass/navigation.scss */
   .block-menu-block ul li:hover > .menu-wrapper {
     visibility: visible;
   }
@@ -359,7 +363,7 @@ li a.active {
 /*
  * Main menu and Secondary menu links
  */
-/* line 335, ../sass/navigation.scss */
+/* line 339, ../sass/navigation.scss */
 #secondary-menu {
   float: right;
   /* LTR */
