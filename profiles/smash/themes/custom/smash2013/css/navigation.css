@@ -344,18 +344,18 @@ li a.active {
     color: white;
     background-color: #7f54a3;
   }
-  /* line 311, ../sass/navigation.scss */
-  .block-menu-block ul li.last > .menu-wrapper {
+  /* line 313, ../sass/navigation.scss */
+  .block-menu-block ul li.menu-mlid-708 > .menu-wrapper, .block-menu-block ul li.menu-mlid-724 > .menu-wrapper, .block-menu-block ul li.menu-mlid-725 > .menu-wrapper {
     right: 0;
   }
-  /* line 315, ../sass/navigation.scss */
+  /* line 317, ../sass/navigation.scss */
   .block-menu-block ul li.nolink {
     padding: 0.25em;
     text-transform: uppercase;
     font-weight: bold;
     color: #3ec1bc;
   }
-  /* line 323, ../sass/navigation.scss */
+  /* line 325, ../sass/navigation.scss */
   .block-menu-block ul li:hover > .menu-wrapper {
     visibility: visible;
   }
@@ -363,7 +363,7 @@ li a.active {
 /*
  * Main menu and Secondary menu links
  */
-/* line 339, ../sass/navigation.scss */
+/* line 341, ../sass/navigation.scss */
 #secondary-menu {
   float: right;
   /* LTR */

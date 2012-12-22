@@ -308,7 +308,9 @@ li a.active {
           }
         }
         
-        &.last > .menu-wrapper {
+        &.menu-mlid-708 > .menu-wrapper,
+        &.menu-mlid-724 > .menu-wrapper,
+        &.menu-mlid-725 > .menu-wrapper {
           right: 0;
         }
         
