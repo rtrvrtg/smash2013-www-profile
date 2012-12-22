@@ -111,7 +111,7 @@
     <?php print render($page['header']); ?>
 
   </header>
-
+  <div id="main-wrapper">
   <div id="main">
 
     <div id="content" class="column" role="main">
@@ -155,6 +155,7 @@
   </div><!-- /#main -->
 
   <?php print render($page['footer']); ?>
+  </div><!-- /#mainwrapper -->
 
 </div><!-- /#page -->
 

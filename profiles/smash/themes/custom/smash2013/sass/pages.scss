@@ -106,11 +106,14 @@ body {
  * Main (container for everything else)
  */
 
-#main {
+#main-wrapper {
   background: white;
   @media all and (min-width: $desktop-minimum) {
     @include box-shadow(rgba(0, 0, 0, 0.75) 0px 0px 10px);
   }
+}
+
+#main {
 }
 
 /*
@@ -283,11 +286,7 @@ span.field-label { /* The inline field label used by the Fences module */
  */
 
 #footer {
-  background-color: white;
   color: $color-bgheader;
-  @media all and (min-width: $desktop-minimum) {
-    @include box-shadow(rgba(0, 0, 0, 0.75) 0px 0px 10px);
-  }
 }
 
 /*
