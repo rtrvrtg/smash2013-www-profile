@@ -179,14 +179,6 @@ projects[crumbs][subdir] = "contrib"
 ; projects[twitter_cards][subdir] = "custom"
 
 ; Themes
-; 
-;projects[][type] = "theme"
-;projects[][version] = ""; TODO add version
-;projects[][subdir] = "custom"
-; omega
-projects[omega][type] = "theme"
-projects[omega][version] = "3.x-dev"
-projects[omega][subdir] = "contrib"
 ; zen
 projects[zen][type] = "theme"
 projects[zen][version] = "5.1"
@@ -203,11 +195,11 @@ libraries[colorbox][directory_name] = "colorbox"
 libraries[colorbox][type] = "library"
 libraries[colorbox][destination] = "libraries"
 libraries[colorbox][download][type] = "get"
-libraries[colorbox][download][url] = "https://github.com/downloads/moxiecode/plupload/plupload_1_5_4.zip"
+libraries[colorbox][download][url] = "http://www.jacklmoore.com/colorbox/colorbox.zip"
 
 libraries[plupload][directory_name] = "plupload"
 libraries[plupload][type] = "library"
 libraries[plupload][destination] = "libraries"
 libraries[plupload][download][type] = "get"
-libraries[plupload][download][url] = "http://www.jacklmoore.com/colorbox/colorbox.zip"
+libraries[plupload][download][url] = "https://github.com/downloads/moxiecode/plupload/plupload_1_5_4.zip"
 
