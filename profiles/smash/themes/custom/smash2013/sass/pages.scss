@@ -266,11 +266,11 @@ span.field-label { /* The inline field label used by the Fences module */
     .field-collection-view {
       margin: 0;
       .sidebar-content-title {
-        padding: 10px 5px;
+        padding: 10px 5px 2px 5px;
         min-height: 1em;
         line-height: 1em;
         @media all and (min-width: $desktop-minimum) {
-          margin: 0 5px 0.5em 0;
+          margin: 0 5px 2em 0;
           width: 100%;
         }
       }

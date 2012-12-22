@@ -252,7 +252,8 @@ function smash2013_menu_tree__menu_block($variables) {
   $tree = $variables['tree'];
   list($id, $label) = _smash_2013_prep_toggler($tree);
   $menu_splitter = '</ul><ul class="menu">';
-
+  
+  /*
   $doc = new DOMDocument();
   $doc->loadHTML($tree);
   // $tree = $doc->saveHTML();
@@ -279,6 +280,7 @@ function smash2013_menu_tree__menu_block($variables) {
     }
   }
   $tree = $doc->saveHTML();
+  */
   
   return $label . '<div class="menu-wrapper"><ul class="menu">' . $tree . '</ul></div>';
 }
@@ -293,4 +295,24 @@ function smash2013_preprocess_views_view_list(&$vars) {
   // $vars['raw_result'] = $vars['view']->style_plugin->rendered_fields;
 }
 
+
+function smash2013_breadcrumb($variables) {
+  $breadcrumb = $variables['breadcrumb'];
+
+  if (!empty($breadcrumb)) {
+    $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
+
+    foreach ($breadcrumb as $key => $value) {
+      $class_matched = preg_match('/class="([^"]*)"/', $value, $class_matches);
+      $title = strip_tags($value);
+      $href_matched = preg_match('/href="([^"]*)"/', $value, $href_matches);
+      if ($href_matches[1] == '/%3Cnolink-group%3E' || $href_matches[1] == '/%3Cnolink%3E') {
+        unset($breadcrumb[$key]);
+      }
+    }
+
+    $output .= '<div class="breadcrumb">' . implode(' » ', $breadcrumb) . '</div>';
+    return $output;
+  }
+}
 

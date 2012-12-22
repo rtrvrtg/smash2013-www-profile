@@ -341,14 +341,14 @@ span.field-label {
 }
 /* line 268, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view .sidebar-content-title {
-  padding: 10px 5px;
+  padding: 10px 5px 2px 5px;
   min-height: 1em;
   line-height: 1em;
 }
 @media all and (min-width: 950px) {
   /* line 268, ../sass/pages.scss */
   .prefaced-node-sidebar .field-collection-container .field-collection-view .sidebar-content-title {
-    margin: 0 5px 0.5em 0;
+    margin: 0 5px 2em 0;
     width: 100%;
   }
 }
