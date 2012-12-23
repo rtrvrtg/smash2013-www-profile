@@ -180,8 +180,9 @@ li a.active {
       
       a {
         display: block;
-        padding: 0.25em;
+        padding: 0.1em 0.25em;
         color: white;
+        font-size: 0.8em;
         text-decoration: none;
         &:hover, &:focus, &:active {
           background-color: $color-menu-hov;

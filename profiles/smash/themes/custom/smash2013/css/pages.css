@@ -33,7 +33,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #282828;
-  background: url(../images/2013webgradient.png) repeat-x top center, url(../images/2013webbg.png) repeat top center, #282828;
+  background: url(../images/2013webgradient.png) fixed repeat-x bottom center, url(../images/2013webbg.png) repeat top center, #282828;
 }
 @media all and (min-width: 950px) {
   /* line 17, ../sass/pages.scss */
