@@ -83,7 +83,7 @@ projects[colorbox][subdir] = "contrib"
 projects[diff][version] = "3.2"
 projects[diff][subdir] = "contrib"
 
-projects[entity][version] = "1.0-rc3"
+projects[entity][version] = "1.x-dev"
 projects[entity][subdir] = "contrib"
 
 projects[imagecrop][version] = "1.x-dev"
