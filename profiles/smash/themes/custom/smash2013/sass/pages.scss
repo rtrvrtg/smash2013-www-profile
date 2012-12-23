@@ -62,8 +62,6 @@ body {
   float: left; /* LTR */
   margin: 0;
   padding: 0;
-  width: 50%;
-  max-width: 361px;
 
   img {
     vertical-align: bottom;
@@ -74,6 +72,8 @@ body {
 
 #name-and-slogan { /* Wrapper for website name and slogan */
   float: left;
+  width: 50%;
+  max-width: 361px;
 }
 
 #site-name { /* The name of the website */
@@ -95,7 +95,16 @@ body {
 
 #site-slogan { /* The slogan (or tagline) of a website */
   margin: 0;
-  font-size: 1em;
+  clear: left;
+  white-space: nowrap;
+  font-size: 0.8em;
+  @media all and (min-width: $desktop-minimum) {
+    font-size: 0.95em;
+    letter-spacing: 0.05em;
+  }
+  line-height: 1em;
+  font-family: $base-font-family;
+  text-transform: uppercase;
 }
 
 .region-header { /* Wrapper for any blocks placed in the header region */
