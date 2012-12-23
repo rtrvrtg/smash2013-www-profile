@@ -209,3 +209,8 @@ libraries[jquery.cycle][destination] = "libraries"
 libraries[jquery.cycle][download][type] = "get"
 libraries[jquery.cycle][download][url] = "http://malsup.github.com/jquery.cycle.all.js"
 
+libraries[jquery.imagesloaded][directory_name] = "jquery.imagesloaded"
+libraries[jquery.imagesloaded][type] = "library"
+libraries[jquery.imagesloaded][destination] = "libraries"
+libraries[jquery.imagesloaded][download][type] = "git"
+libraries[jquery.imagesloaded][download][url] = "https://github.com/desandro/imagesloaded.git"
