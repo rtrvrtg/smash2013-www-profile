@@ -126,6 +126,11 @@ body {
 .region-highlighted {
 }
 
+#breadcrumb-area {
+  margin: 0.5em 0;
+  font-size: 0.8em;
+}
+
 .breadcrumb { /* The path to the current page in the form of a list of links */
   ol {
     margin: 0;

@@ -187,6 +187,9 @@ li a.active {
           background-color: $color-menu-hov;
         }
       }
+      &:hover > a, &:focus > a, &:active > a {
+        background-color: $color-menu-hov;
+      }
       
       &.nolink {
         padding: 0.25em;

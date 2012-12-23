@@ -116,7 +116,11 @@
 
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
-      <?php print $breadcrumb; ?>
+      <?php if (!empty($breadcrumb)): ?>
+        <div id="breadcrumb-area">
+          <?php print $breadcrumb; ?>
+        </div>
+      <?php endif; ?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
