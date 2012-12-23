@@ -341,8 +341,8 @@ li a.active {
     text-decoration: none;
     text-transform: none;
     font-weight: normal;
-    padding-top: 0.25em;
-    padding-bottom: 0.25em;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   /* line 305, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper ul li a:hover, .block-menu-block ul li > .menu-wrapper ul li a:focus, .block-menu-block ul li > .menu-wrapper ul li a:active {

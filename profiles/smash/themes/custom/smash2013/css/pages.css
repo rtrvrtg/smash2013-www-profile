@@ -370,11 +370,15 @@ span.field-label {
     width: 100%;
   }
 }
+/* line 294, ../sass/pages.scss */
+.prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-body > *:first-child {
+  margin-top: 0;
+}
 
 /*
  * Footer
  */
-/* line 302, ../sass/pages.scss */
+/* line 305, ../sass/pages.scss */
 #footer {
   color: #1b171a;
 }
@@ -382,7 +386,7 @@ span.field-label {
 /*
  * Page bottom
  */
-/* line 310, ../sass/pages.scss */
+/* line 313, ../sass/pages.scss */
 .region-bottom {
   /* Wrapper for any blocks placed in the page bottom region */
 }

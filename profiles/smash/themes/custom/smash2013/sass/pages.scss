@@ -291,6 +291,9 @@ span.field-label { /* The inline field label used by the Fences module */
           width: 100%;
         }
       }
+      .field-name-field-sidebar-body > *:first-child {
+        margin-top: 0;
+      }
     }
   }
 }
