@@ -74,7 +74,7 @@ namespace :deploy do
   
   desc "Flush the Drupal cache system."
   task :cacheclear, :roles => :web do
-    run "drush cc all --root=#{current_release} -l #{url}"
+    # run "drush cc all --root=#{current_release} -l #{url}"
   end
 end
 
@@ -147,8 +147,8 @@ END
   # Run drush updates
   task :run_updates, :roles => :web do
     if is_drupal_installed?
-      run "drush -y features-revert-all --root=#{current_release} -l #{url}"
-      run "drush -y updb --root=#{current_release} -l #{url}"
+      # run "drush -y features-revert-all --root=#{current_release} -l #{url}"
+      # run "drush -y updb --root=#{current_release} -l #{url}"
     end
   end
   
