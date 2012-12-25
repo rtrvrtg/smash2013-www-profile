@@ -248,41 +248,33 @@ function _smash_2013_prep_toggler($seed) {
 }
 
 function smash2013_menu_tree__menu_block($variables) {
-  // dpm($variables);
   $tree = $variables['tree'];
   list($id, $label) = _smash_2013_prep_toggler($tree);
   $menu_splitter = '</ul><ul class="menu">';
   
-  /*
-  $doc = new DOMDocument();
-  $doc->loadHTML($tree);
-  // $tree = $doc->saveHTML();
+  $groups_found = preg_match_all('/menu-item-group/', $tree, $groups);
+  $count = count($groups[0]) > 0 ? count($groups[0]) : 1;
+  // $tree = preg_replace('/menu-columns-[0-9]+/', '', $tree); // top level only!
   
-  $nodeAggregates = array();
-  $nodeAggIndex = 0;
-  
-  $body = $doc->getElementsByTagName('body');
-  foreach ($body->item(0)->childNodes as $item) {
-    if ($item->nodeName != 'li') continue;
-    $class = $item->getAttribute('class');
-    if (strpos($class, 'nolink') !== FALSE) {
-      // insert markup?
-      $nodeAggIndex++;
-    }
-    $nodeAggregates[$nodeAggIndex][] = $item;
-    
-    foreach ($item->childNodes as $child) {
-      $class = $item->getAttribute('class');
-      if (strpos($class, 'view') !== FALSE) {
-        list($id, $label) = _smash_2013_prep_toggler($doc->saveHTML($child));
-        $item->setAttribute('id', $id);
-      }
-    }
+  $class = 'menu';
+  $tag = 'ul';
+  if ($count > 1) {
+    $class .= ' menu-columns-' . $count;
+    $tag = 'div';
   }
-  $tree = $doc->saveHTML();
+  
+  /*
+  return $label . '<div class="menu-wrapper">' . 
+    '<' . $tag . ' class="' . $class . '">' . 
+    $tree . 
+    '</' . $tag . '>' . '</div>';
   */
   
-  return $label . '<div class="menu-wrapper"><ul class="menu">' . $tree . '</ul></div>';
+  $tag = 'ul';
+  return $label . '<div class="menu-wrapper">' . 
+    '<' . $tag . ' class="' . $class . '">' . 
+    $tree . 
+    '</' . $tag . '>' . '</div>';
 }
 
 function smash2013_preprocess_views_view(&$vars) {

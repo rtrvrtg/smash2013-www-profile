@@ -287,7 +287,7 @@ span.field-label { /* The inline field label used by the Fences module */
         min-height: 1em;
         line-height: 1em;
         @media all and (min-width: $desktop-minimum) {
-          margin: 0 5px 2em 0;
+          margin: 0 5px 0.2em 0;
           width: 100%;
         }
       }

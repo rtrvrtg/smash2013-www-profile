@@ -366,7 +366,7 @@ span.field-label {
 @media all and (min-width: 950px) {
   /* line 285, ../sass/pages.scss */
   .prefaced-node-sidebar .field-collection-container .field-collection-view .sidebar-content-title {
-    margin: 0 5px 2em 0;
+    margin: 0 5px 0.2em 0;
     width: 100%;
   }
 }

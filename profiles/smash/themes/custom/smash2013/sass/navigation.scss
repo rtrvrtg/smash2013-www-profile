@@ -245,17 +245,37 @@ li a.active {
           background: $color-menu-hov;
           @include box-shadow(rgba(0,0,0,0.5) 6px 6px 0px);
           z-index: 9999;
-          min-width: 360px;
+          
+          min-width: 200px;
           .menu-item-group {
-            width: 120px;
             float: left;
+            width: 200px;
+          }
+          
+          .menu-columns-2 {
+            min-width: 350px;
+            .menu-item-group {
+              width: 175px;
+            }
+          }
+          .menu-columns-3 {
+            min-width: 450px;
+            .menu-item-group {
+              width: 150px;
+            }
+          }
+          .menu-columns-4 {
+            min-width: 480px;
+            .menu-item-group {
+              width: 120px;
+            }
           }
           
           h3 {
             color: $color-turq;
             text-transform: uppercase;
             font-weight: bold;
-            font-size: 1em;
+            font-size: 0.9em;
             min-height: 24px;
             padding-left: 32px;
             background-position: 4px 0;
@@ -279,7 +299,7 @@ li a.active {
             &.event-list-title--awesome-events {
               background-image: url(../images/menuicons/menuicons.miscevents.png);
             }
-            &.event-list-title--panels {
+            &.event-list-title--panels---workshops {
               background-image: url(../images/menuicons/menuicons.panel.png);
             }
 
@@ -296,7 +316,7 @@ li a.active {
             
               a {
                 color: white;
-                font-size: 0.8em;
+                font-size: 0.75em;
                 text-decoration: none;
                 text-transform: none;
                 font-weight: normal;
@@ -323,6 +343,7 @@ li a.active {
           text-transform: uppercase;
           font-weight: bold;
           color: $color-turq;
+          font-size: 0.9em;
         }
         
         &:hover {

@@ -15,3 +15,4 @@ list($toggler_id, $toggler) = _smash_2013_prep_toggler(print_r($rows, 1));
   <?php print $list_type_suffix; ?>
   </div>
 <?php print $wrapper_suffix; ?>
+<!-- splitpoint -->

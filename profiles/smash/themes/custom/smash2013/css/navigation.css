@@ -277,90 +277,115 @@ li a.active {
     -moz-box-shadow: rgba(0, 0, 0, 0.5) 6px 6px 0px;
     box-shadow: rgba(0, 0, 0, 0.5) 6px 6px 0px;
     z-index: 9999;
-    min-width: 360px;
+    min-width: 200px;
   }
-  /* line 249, ../sass/navigation.scss */
+  /* line 250, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper .menu-item-group {
-    width: 120px;
     float: left;
+    width: 200px;
   }
-  /* line 254, ../sass/navigation.scss */
+  /* line 255, ../sass/navigation.scss */
+  .block-menu-block ul li > .menu-wrapper .menu-columns-2 {
+    min-width: 350px;
+  }
+  /* line 257, ../sass/navigation.scss */
+  .block-menu-block ul li > .menu-wrapper .menu-columns-2 .menu-item-group {
+    width: 175px;
+  }
+  /* line 261, ../sass/navigation.scss */
+  .block-menu-block ul li > .menu-wrapper .menu-columns-3 {
+    min-width: 450px;
+  }
+  /* line 263, ../sass/navigation.scss */
+  .block-menu-block ul li > .menu-wrapper .menu-columns-3 .menu-item-group {
+    width: 150px;
+  }
+  /* line 267, ../sass/navigation.scss */
+  .block-menu-block ul li > .menu-wrapper .menu-columns-4 {
+    min-width: 480px;
+  }
+  /* line 269, ../sass/navigation.scss */
+  .block-menu-block ul li > .menu-wrapper .menu-columns-4 .menu-item-group {
+    width: 120px;
+  }
+  /* line 274, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper h3 {
     color: #3ec1bc;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 0.9em;
     min-height: 24px;
     padding-left: 32px;
     background-position: 4px 0;
     background-repeat: no-repeat;
   }
-  /* line 264, ../sass/navigation.scss */
+  /* line 284, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper h3.event-list-title--maid-caf-- {
     background-image: url(../images/menuicons/menuicons.maidcafe.png);
   }
-  /* line 267, ../sass/navigation.scss */
+  /* line 287, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper h3.event-list-title--art-events {
     background-image: url(../images/menuicons/menuicons.artevents.png);
   }
-  /* line 270, ../sass/navigation.scss */
+  /* line 290, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper h3.event-list-title--cosplay-events {
     background-image: url(../images/menuicons/menuicons.cosplayevents.png);
   }
-  /* line 273, ../sass/navigation.scss */
+  /* line 293, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper h3.event-list-title--gaming-events {
     background-image: url(../images/menuicons/menuicons.gamingevents.png);
   }
-  /* line 276, ../sass/navigation.scss */
+  /* line 296, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper h3.event-list-title--gundam-events {
     background-image: url(../images/menuicons/menuicons.gundamevents.png);
   }
-  /* line 279, ../sass/navigation.scss */
+  /* line 299, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper h3.event-list-title--awesome-events {
     background-image: url(../images/menuicons/menuicons.miscevents.png);
   }
-  /* line 282, ../sass/navigation.scss */
-  .block-menu-block ul li > .menu-wrapper h3.event-list-title--panels {
+  /* line 302, ../sass/navigation.scss */
+  .block-menu-block ul li > .menu-wrapper h3.event-list-title--panels---workshops {
     background-image: url(../images/menuicons/menuicons.panel.png);
   }
-  /* line 288, ../sass/navigation.scss */
+  /* line 308, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper ul {
     margin: 0 0 0.5em 0;
   }
-  /* line 291, ../sass/navigation.scss */
+  /* line 311, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper ul li {
     float: none;
     display: block;
     margin: 0;
     text-align: left;
   }
-  /* line 297, ../sass/navigation.scss */
+  /* line 317, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper ul li a {
     color: white;
-    font-size: 0.8em;
+    font-size: 0.75em;
     text-decoration: none;
     text-transform: none;
     font-weight: normal;
     padding-top: 0;
     padding-bottom: 0;
   }
-  /* line 305, ../sass/navigation.scss */
+  /* line 325, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper ul li a:hover, .block-menu-block ul li > .menu-wrapper ul li a:focus, .block-menu-block ul li > .menu-wrapper ul li a:active {
     color: white;
     background-color: #7f54a3;
   }
-  /* line 317, ../sass/navigation.scss */
+  /* line 337, ../sass/navigation.scss */
   .block-menu-block ul li.menu-mlid-708 > .menu-wrapper, .block-menu-block ul li.menu-mlid-724 > .menu-wrapper, .block-menu-block ul li.menu-mlid-725 > .menu-wrapper {
     right: 0;
   }
-  /* line 321, ../sass/navigation.scss */
+  /* line 341, ../sass/navigation.scss */
   .block-menu-block ul li.nolink {
     padding: 0.25em;
     text-transform: uppercase;
     font-weight: bold;
     color: #3ec1bc;
+    font-size: 0.9em;
   }
-  /* line 329, ../sass/navigation.scss */
+  /* line 350, ../sass/navigation.scss */
   .block-menu-block ul li:hover > .menu-wrapper {
     visibility: visible;
   }
@@ -368,7 +393,7 @@ li a.active {
 /*
  * Main menu and Secondary menu links
  */
-/* line 345, ../sass/navigation.scss */
+/* line 366, ../sass/navigation.scss */
 #secondary-menu {
   float: right;
   /* LTR */
