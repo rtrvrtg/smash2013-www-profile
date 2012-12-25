@@ -6,6 +6,7 @@ set :user,        "smash"
 set :domain,      "linode.smash.org.au"
 set :repository,  "git@github.com:rtrvrtg/smash2013-www-profile.git"
 set :deploy_to,   "/var/www/staging.smash.org.au/www"
+set :url,         "http://www.staging.smash.org.au"
 
 set :stages, %w(production staging)
 set :default_stage, "staging"
@@ -39,11 +40,15 @@ def app_exists?(app_name)
   end
 end
 
-def set_ownership(full_path)
+def set_ownership(full_path, is_file = false)
   if !remote_file_exists? full_path
     run "#{try_sudo} mkdir #{full_path}"
   end
-  run "#{try_sudo} chown smash:www-data #{full_path}"
+  if is_file
+    run "#{try_sudo} chown -R smash:www-data #{full_path}"
+  else
+    run "#{try_sudo} chown -R smash:www-data #{full_path}"
+  end
   set_chmod(full_path)
 end
 
@@ -58,7 +63,7 @@ def is_drupal_installed?
     d7_ok = /Drupal bootstrap\s*:\s*([^\s]+)/.match(data)
     (!db_ok.nil? && !d7_ok?) && (db_ok[1] == 'Connected' and d7_ok[1] == 'Successful')
   rescue
-    false
+    true
   end
 end
 
@@ -69,7 +74,7 @@ namespace :deploy do
   
   desc "Flush the Drupal cache system."
   task :cacheclear, :roles => :web do
-    run "drush cc all --root=#{current_release}"
+    run "drush cc all --root=#{current_release} -l #{url}"
   end
 end
 
@@ -104,7 +109,7 @@ namespace :drush do
       db_switch = "--db-url=#{db_url}"
       db_su = "--db-su=#{db_user} --db-su-pw=#{db_pass}"
       
-      run "drush site-install smash --root=#{current_release} #{db_switch} #{db_su} #{account_setup} -y"
+      # run "drush site-install smash --root=#{current_release} #{db_switch} #{db_su} #{account_setup} -y"
     end
   end
   
@@ -134,16 +139,16 @@ END
   # Append caching stuff
   task :setup_files, :roles => :web do
     if is_drupal_installed?
-      set_ownership "#{shared_path}/sites-default/private"
-      set_ownership "#{shared_path}/sites-default/files"
+      set_ownership "#{shared_path}/sites-default/private", true
+      set_ownership "#{shared_path}/sites-default/files", true
     end
   end
   
   # Run drush updates
   task :run_updates, :roles => :web do
     if is_drupal_installed?
-      run "drush -y features-revert-all --root=#{current_release}"
-      run "drush -y updb --root=#{current_release}"
+      run "drush -y features-revert-all --root=#{current_release} -l #{url}"
+      run "drush -y updb --root=#{current_release} -l #{url}"
     end
   end
   
