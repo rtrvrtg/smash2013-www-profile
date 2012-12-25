@@ -286,27 +286,27 @@ li a.active {
   }
   /* line 255, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper .menu-columns-2 {
-    min-width: 350px;
+    min-width: 380px;
   }
   /* line 257, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper .menu-columns-2 .menu-item-group {
-    width: 175px;
+    width: 190px;
   }
   /* line 261, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper .menu-columns-3 {
-    min-width: 450px;
+    min-width: 525px;
   }
   /* line 263, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper .menu-columns-3 .menu-item-group {
-    width: 150px;
+    width: 175px;
   }
   /* line 267, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper .menu-columns-4 {
-    min-width: 480px;
+    min-width: 560px;
   }
   /* line 269, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper .menu-columns-4 .menu-item-group {
-    width: 120px;
+    width: 140px;
   }
   /* line 274, ../sass/navigation.scss */
   .block-menu-block ul li > .menu-wrapper h3 {
@@ -389,11 +389,15 @@ li a.active {
   .block-menu-block ul li:hover > .menu-wrapper {
     visibility: visible;
   }
+  /* line 358, ../sass/navigation.scss */
+  .block-menu-block .view-event-list ul li a {
+    padding-left: 32px;
+  }
 }
 /*
  * Main menu and Secondary menu links
  */
-/* line 366, ../sass/navigation.scss */
+/* line 372, ../sass/navigation.scss */
 #secondary-menu {
   float: right;
   /* LTR */

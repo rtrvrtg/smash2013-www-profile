@@ -253,21 +253,21 @@ li a.active {
           }
           
           .menu-columns-2 {
-            min-width: 350px;
+            min-width: 380px;
+            .menu-item-group {
+              width: 190px;
+            }
+          }
+          .menu-columns-3 {
+            min-width: 525px;
             .menu-item-group {
               width: 175px;
             }
           }
-          .menu-columns-3 {
-            min-width: 450px;
-            .menu-item-group {
-              width: 150px;
-            }
-          }
           .menu-columns-4 {
-            min-width: 480px;
+            min-width: 560px;
             .menu-item-group {
-              width: 120px;
+              width: 140px;
             }
           }
           
@@ -351,6 +351,12 @@ li a.active {
             visibility: visible;
           }
         }
+      }
+    }
+    
+    .view-event-list ul li {
+      a {
+        padding-left: 32px;
       }
     }
   }
