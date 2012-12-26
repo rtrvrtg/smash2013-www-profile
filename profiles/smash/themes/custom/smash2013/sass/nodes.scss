@@ -93,18 +93,22 @@
       .hero-wrapped-content {
         display: block;
         color: black;
-        padding: 10px;
+        padding: 20px 10px;
         @media all and (min-width: $tablet-half) {
           position: absolute;
-          bottom: 20%;
+          bottom: 25%;
           left: 0px;
           width: 290px;
-          padding: 10px 10px 10px 60px;
+          padding: 20px 10px 20px 60px;
           color: white;
           background: rgba(0,0,0,0.7);
         }
         p {
           margin: 0.5em 0;
+          
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
         h2 {
           margin: 0;
@@ -128,7 +132,7 @@
       &:hover, &:focus, &:active {
         .hero-wrapped-content .call-to-action {
           margin: 0 0 0 0;
-          @include box-shadow(6px 3px 0px #6d0428);
+          @include box-shadow(3px 6px 0px #6d0428);
         }
       }
     }
