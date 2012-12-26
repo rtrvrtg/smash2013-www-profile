@@ -199,14 +199,16 @@
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
   margin-top: 3px;
+  margin-bottom: 0px;
   margin-right: 5px;
 }
-/* line 124, ../sass/blocks.scss */
+/* line 125, ../sass/blocks.scss */
 #boxes-box-social_networks .boxes-box-content a:hover, #boxes-box-social_networks .boxes-box-content a:focus, #boxes-box-social_networks .boxes-box-content a:active {
   box-shadow: 2px 5px 0px rgba(0, 0, 0, 0.5);
   margin-top: 0px;
+  margin-bottom: 3px;
 }
-/* line 131, ../sass/blocks.scss */
+/* line 133, ../sass/blocks.scss */
 #boxes-box-social_networks .boxes-box-content a.networks-facebook, #boxes-box-social_networks .boxes-box-content a.networks-deviantart, #boxes-box-social_networks .boxes-box-content a.networks-youtube {
   width: 50px;
   height: 50px;
@@ -215,19 +217,19 @@
   overflow: hidden;
   text-indent: -10000px;
 }
-/* line 139, ../sass/blocks.scss */
+/* line 141, ../sass/blocks.scss */
 #boxes-box-social_networks .boxes-box-content a.networks-facebook {
   background-image: url(../images/social/facebook.png);
 }
-/* line 142, ../sass/blocks.scss */
+/* line 144, ../sass/blocks.scss */
 #boxes-box-social_networks .boxes-box-content a.networks-deviantart {
   background-image: url(../images/social/deviantart.png);
 }
-/* line 145, ../sass/blocks.scss */
+/* line 147, ../sass/blocks.scss */
 #boxes-box-social_networks .boxes-box-content a.networks-youtube {
   background-image: url(../images/social/youtube.png);
 }
-/* line 148, ../sass/blocks.scss */
+/* line 150, ../sass/blocks.scss */
 #boxes-box-social_networks .boxes-box-content a.networks-twitter {
   height: 50px;
   background: #7f54a3 url(../images/social/twitter.bird.png) no-repeat center left;
@@ -235,7 +237,7 @@
   overflow: hidden;
 }
 @media all and (min-width: 950px) {
-  /* line 148, ../sass/blocks.scss */
+  /* line 150, ../sass/blocks.scss */
   #boxes-box-social_networks .boxes-box-content a.networks-twitter {
     max-width: 700px;
     margin-right: -35px;
@@ -244,13 +246,13 @@
   }
 }
 
-/* line 164, ../sass/blocks.scss */
+/* line 166, ../sass/blocks.scss */
 #block-boxes-footer-text {
   font-size: 0.7em;
   line-height: 1.3em;
 }
 @media all and (min-width: 469px) {
-  /* line 164, ../sass/blocks.scss */
+  /* line 166, ../sass/blocks.scss */
   #block-boxes-footer-text {
     font-size: 0.8em;
   }
