@@ -78,16 +78,16 @@ function smash_vendors_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '9',
         ),
         'redirect' => array(
-          'weight' => '5',
+          'weight' => '8',
         ),
         'workbench_access' => array(
-          'weight' => '3',
+          'weight' => '2',
         ),
         'xmlsitemap' => array(
-          'weight' => '4',
+          'weight' => '7',
         ),
       ),
       'display' => array(),

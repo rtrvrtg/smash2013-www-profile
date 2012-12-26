@@ -116,10 +116,19 @@
           display: inline-block;
           background: #e02751;
           color: white;
+          margin: 3px 0 0 0;
           @include box-shadow(3px 3px 0px #6d0428);
           text-transform: uppercase;
           @include border-radius(1em);
           padding: 0.25em 1em;
+          @include transition(all 0.1s linear);
+        }
+      }
+      
+      &:hover, &:focus, &:active {
+        .hero-wrapped-content .call-to-action {
+          margin: 0 0 0 0;
+          @include box-shadow(6px 3px 0px #6d0428);
         }
       }
     }
