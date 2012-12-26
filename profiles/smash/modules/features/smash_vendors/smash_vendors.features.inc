@@ -26,6 +26,57 @@ function smash_vendors_views_api() {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function smash_vendors_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: vendor_banner.
+  $styles['vendor_banner'] = array(
+    'name' => 'vendor_banner',
+    'effects' => array(
+      3 => array(
+        'label' => 'Javascript crop',
+        'help' => 'Create a crop with a javascript toolbox.',
+        'effect callback' => 'imagecrop_effect',
+        'form callback' => 'imagecrop_effect_form',
+        'summary theme' => 'imagecrop_effect_summary',
+        'module' => 'imagecrop',
+        'name' => 'imagecrop_javascript',
+        'data' => array(
+          'width' => '200',
+          'height' => '80',
+          'xoffset' => '',
+          'yoffset' => '',
+          'resizable' => 1,
+          'downscaling' => 0,
+          'aspect_ratio' => '',
+          'disable_if_no_data' => 0,
+        ),
+        'weight' => '1',
+      ),
+      4 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '200',
+          'height' => '80',
+        ),
+        'weight' => '2',
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function smash_vendors_node_info() {
