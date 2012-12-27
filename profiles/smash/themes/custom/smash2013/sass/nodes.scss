@@ -280,3 +280,33 @@
   }
 }
 
+.node-article {
+  clear: both;
+  .field-name-title {
+    h2 {
+      margin: 0;
+    }
+  }
+  .field-name-post-date {
+    font-weight: bold;
+  }
+  .field-name-field-image {
+    float: left;
+    margin: 0 10px 10px 0;
+    max-width: 80px;
+    @media all and (min-width: $tablet-half) {
+      max-width: 200px;
+    }
+  }
+  .field-name-body {
+    *:first-child {
+      margin-top: 0;
+    }
+  }
+  .field-name-field-tags {
+    .label-above {
+      font-weight: bold;
+    }
+  }
+}
+
