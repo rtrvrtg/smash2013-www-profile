@@ -282,17 +282,17 @@
   .sidebar-second #content {
     /* Span 4 columns, starting in 1st column from left. */
     float: left;
-    width: 948px;
+    width: 711px;
     margin-left: 0px;
-    margin-right: -948px;
+    margin-right: -711px;
   }
   /* line 226, ../../sass/layouts/responsive-sidebars.scss */
   .sidebar-second .region-sidebar-second {
     /* Span 1 column, starting in 5th column from left. */
     float: left;
     width: 237px;
-    margin-left: 948px;
-    margin-right: -1185px;
+    margin-left: 711px;
+    margin-right: -948px;
   }
 
   /*
