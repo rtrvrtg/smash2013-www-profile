@@ -155,16 +155,24 @@ body {
  */
 
 a:link {
+  color: $color-red;
+  text-decoration: none;
 }
 
 a:visited {
+  color: $color-red;
+  text-decoration: none;
 }
 
 a:hover,
 a:focus {
+  color: $color-red-bg;
+  text-decoration: none;
 }
 
 a:active {
+  color: $color-red-bg;
+  text-decoration: underline;
 }
 
 /*

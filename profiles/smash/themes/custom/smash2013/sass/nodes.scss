@@ -114,15 +114,15 @@
         h2 {
           margin: 0;
           text-transform: uppercase;
-          color: #e02751;
+          color: $color-red;
           line-height: 1em;
         }
         .call-to-action {
           display: inline-block;
-          background: #e02751;
+          background: $color-red;
           color: white;
           margin: 3px 0 0 0;
-          @include box-shadow(3px 3px 0px #6d0428);
+          @include box-shadow(3px 3px 0px $color-red-bg);
           text-transform: uppercase;
           @include border-radius(1em);
           padding: 0.25em 1em;
@@ -133,7 +133,7 @@
       &:hover, &:focus, &:active {
         .hero-wrapped-content .call-to-action {
           margin: 0 0 3px 0;
-          @include box-shadow(3px 6px 0px #6d0428);
+          @include box-shadow(3px 6px 0px $color-red-bg);
         }
       }
     }
@@ -244,6 +244,38 @@
           text-decoration: none;
         }
       }
+    }
+  }
+}
+
+.node-vendor {
+  position: relative;
+  min-height: 80px;
+  .vendor-left {
+    text-align: center;
+  }
+  .vendor-right {
+    h2 {
+      margin: 0;
+    }
+    .field-name-body {
+      p:first-child {
+        margin-top: 0;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @media all and (min-width: $tablet-half) {
+    .vendor-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+    }
+    .vendor-right {
+      margin-left: 210px;
     }
   }
 }
