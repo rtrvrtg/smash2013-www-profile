@@ -409,3 +409,7 @@
 .node-article .field-name-field-tags .label-above {
   font-weight: bold;
 }
+/* line 310, ../sass/nodes.scss */
+.node-article .field-name-field-tags a {
+  margin-right: 0.5em;
+}
