@@ -15,5 +15,16 @@
 
 // Place your code here.
 
+var newsByDate = $('#block-views-news-by-date-block');
+var newsByTag = $('#block-views-news-by-tag-block');
+
+if (newsByDate) {
+  // Filter by year and month
+}
+
+if (newsByTag) {
+  // Show top 10 only
+}
+
 
 })(jQuery, Drupal, this, this.document);
