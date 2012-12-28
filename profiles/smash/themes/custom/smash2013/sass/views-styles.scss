@@ -49,3 +49,21 @@
     display: inline-block;
   }
 }
+
+.view-news {
+  ul.views-summary {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      
+      h3 {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

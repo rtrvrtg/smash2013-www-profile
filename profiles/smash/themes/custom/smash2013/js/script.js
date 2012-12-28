@@ -11,20 +11,50 @@
 // - http://drupal.org/node/1446420
 // - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
 (function ($, Drupal, window, document, undefined) {
-
+$(document).ready(function(){
 
 // Place your code here.
 
 var newsByDate = $('#block-views-news-by-date-block');
 var newsByTag = $('#block-views-news-by-tag-block');
 
-if (newsByDate) {
+if (newsByDate.length > 0) {
   // Filter by year and month
+  
+  var yearHeadings = $('li.archive-heading', newsByDate);
+  yearHeadings.click(function(){
+    var year = $(this).attr('data-yeararchive');
+    
+    $('li', newsByDate).not('.archive-heading')
+      .not('[data-yeararchive="' + year + '"]')
+      .hide();
+    
+    $('li[data-yeararchive="' + year + '"]', newsByDate)
+      .not('.archive-heading')
+      .show();
+  });
+  
+  yearHeadings.first().click();
 }
 
-if (newsByTag) {
+if (newsByTag.length > 0) {
   // Show top 10 only
+  var ul = $('ul.views-summary', newsByTag);
+  var li = $('li.bottom-tag', newsByTag);
+  var hidden = true;
+  
+  li.hide();
+  $('<a />', {
+    text: 'More tags'
+  }).click(function(){
+    if (li.first().is(':hidden')) {
+      li.show();
+    }
+    else {
+      li.hide();
+    }
+  }).insertAfter(ul);
 }
 
-
+});
 })(jQuery, Drupal, this, this.document);

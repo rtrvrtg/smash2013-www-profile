@@ -77,3 +77,20 @@
 .view-gallery .views-row {
   display: inline-block;
 }
+
+/* line 54, ../sass/views-styles.scss */
+.view-news ul.views-summary {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 59, ../sass/views-styles.scss */
+.view-news ul.views-summary li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 64, ../sass/views-styles.scss */
+.view-news ul.views-summary li h3 {
+  margin-bottom: 0;
+}
