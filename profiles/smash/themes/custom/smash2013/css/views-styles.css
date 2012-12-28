@@ -94,3 +94,13 @@
 .view-news ul.views-summary li h3 {
   margin-bottom: 0;
 }
+/* line 67, ../sass/views-styles.scss */
+.view-news ul.views-summary li .archive-heading {
+  cursor: pointer;
+}
+/* line 72, ../sass/views-styles.scss */
+.view-news ul.views-summary + .more-tags-link {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: bold;
+}

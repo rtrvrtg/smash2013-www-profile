@@ -45,13 +45,17 @@ if (newsByTag.length > 0) {
   
   li.hide();
   $('<a />', {
-    text: 'More tags'
+    text: 'More tags',
+    href: '#',
+    'class': 'more-tags-link'
   }).click(function(){
     if (li.first().is(':hidden')) {
       li.show();
+      $(this).text('Fewer tags');
     }
     else {
       li.hide();
+      $(this).text('More tags');
     }
   }).insertAfter(ul);
 }
