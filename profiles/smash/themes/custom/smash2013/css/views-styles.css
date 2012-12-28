@@ -97,8 +97,13 @@
 /* line 67, ../sass/views-styles.scss */
 .view-news ul.views-summary li .archive-heading {
   cursor: pointer;
+  color: #6d0428;
 }
-/* line 72, ../sass/views-styles.scss */
+/* line 71, ../sass/views-styles.scss */
+.view-news ul.views-summary li .archive-heading.active {
+  color: #e02751;
+}
+/* line 77, ../sass/views-styles.scss */
 .view-news ul.views-summary + .more-tags-link {
   font-size: 0.8em;
   text-transform: uppercase;

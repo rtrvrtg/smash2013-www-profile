@@ -66,6 +66,11 @@
       }
       .archive-heading {
         cursor: pointer;
+        color: $color-red-bg;
+        
+        &.active {
+          color: $color-red;
+        }
       }
     }
     

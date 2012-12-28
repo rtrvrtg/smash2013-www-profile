@@ -29,9 +29,13 @@ if (newsByDate.length > 0) {
       .not('[data-yeararchive="' + year + '"]')
       .hide();
     
+    $('li.archive-heading').not(this).removeClass('active');
+    
     $('li[data-yeararchive="' + year + '"]', newsByDate)
       .not('.archive-heading')
       .show();
+    
+    $(this).addClass('active');
   });
   
   yearHeadings.first().click();
