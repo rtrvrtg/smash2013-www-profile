@@ -128,12 +128,28 @@ li a.active {
   @media all and (max-width: $tablet-maximum) {
     .menu-toggle-checkbox {
       display: none;
-      & ~ .menu > li, 
-      & ~ .menu-wrapper > ul > li, 
-      & ~ .menu-wrapper > ul > .menu-item-group {
+      
+      & ~ .menu-wrapper {
+        display: none;
+        
+        .menu-toggle-label {
+          background-position: bottom left;
+        }
+        .menu-toggle-checkbox:checked + .menu-toggle-label {
+          background-position: bottom right;
+        }
+      }
+      &:checked ~ .menu-wrapper,
+      &.active ~ .menu-wrapper {
+        display: block;
+      }
+      
+      /*
+      & ~ .menu-wrapper > .menu > li, 
+      & ~ .menu-wrapper > .menu > .menu-item-group {
         display: none;
         &.nolink {
-          display: block;
+          display: none;
         }
         @media all and (min-width: $desktop-minimum) {
           display: block;
@@ -145,11 +161,15 @@ li a.active {
           background-position: bottom right;
         }
       }
-      &:checked ~ .menu > li, 
       &:checked ~ .menu-wrapper > ul > li, 
       &:checked ~ .menu-wrapper > ul > .menu-item-group {
         display: block;
+        &.nolink {
+          display: block;
+        }
       }
+      */
+      
       &:checked + .menu-toggle-label {
         background-position: top right;
       }
@@ -158,14 +178,24 @@ li a.active {
 }
 
 .block-menu-block {
-  background: $color-purple;
-  @include box-shadow(rgba(0,0,0,0.5) -6px 6px 0px);
   
-  ul {
+  > .menu-block-wrapper > .menu-toggle-checkbox:checked + * + .menu-wrapper {
+    background-color: $color-purple;
+    padding-top: 42px;
+    @include box-shadow(rgba(0,0,0,0.5) -6px 6px 0px);
+  }
+  
+  .menu {
     display: block;
     margin: 0;
     padding: 0;
     list-style: none;
+    
+    .group-single-heading {
+      .menu-wrapper > .menu > .nolink {
+        display: none;
+      }
+    }
     
     li {
       display: block;
@@ -183,6 +213,9 @@ li a.active {
         padding: 0.1em 0.25em;
         color: white;
         text-decoration: none;
+        text-align: left;
+        background-color: $color-menu-hov;
+        
         &:hover, &:focus, &:active {
           background-color: $color-menu-hov;
         }
@@ -194,24 +227,44 @@ li a.active {
       &.nolink {
         padding: 0.25em;
         background-color: $color-menu-hov;
+        text-align: left;
+        @include stripe-bg;
+      }
+      
+      .menu-wrapper {
+        padding-left: 10px;
       }
     }
+    
+    .view .menu-wrapper > ul {
+      margin: 0;
+      padding: 0;
+    }
   }
-  h3 {
+  h3, .menu-item-group-name {
     padding: 0.25em;
     background-color: $color-menu-hov;
+    @include stripe-bg;
     margin: 0;
     font-weight: normal;
     font-size: 1em;
+    text-align: left;
+    min-height: 40px;
   }
 }    
 
 @media all and (min-width: $desktop-minimum) {
 
   .block-menu-block {
-    @include box-shadow(none);
+    background: $color-purple;
     
-    ul {
+    > .menu-block-wrapper > .menu-toggle-checkbox:checked + * + .menu-wrapper {
+      padding-top: 0;
+      background: $color-purple;
+      @include box-shadow(none);
+    }
+    
+    .menu {
       margin: 0;
       padding: 0;
       list-style: none;
@@ -232,6 +285,7 @@ li a.active {
           text-transform: uppercase;
           font-weight: bold;
           text-decoration: none;
+          background-color: transparent;
           
           &:hover, &:focus, &:active, &.active, &.active-trail {
             background-color: $color-menu-hov;
@@ -271,6 +325,10 @@ li a.active {
             }
           }
           
+          .menu-item-group-name {
+            display: none;
+          }
+          
           h3 {
             color: $color-turq;
             text-transform: uppercase;
@@ -305,7 +363,7 @@ li a.active {
 
           }
           
-          ul {
+          .menu {
             margin: 0 0 0.5em 0;
             
             li {
@@ -344,6 +402,7 @@ li a.active {
           font-weight: bold;
           color: $color-turq;
           font-size: 0.9em;
+          background: none;
         }
         
         &:hover {

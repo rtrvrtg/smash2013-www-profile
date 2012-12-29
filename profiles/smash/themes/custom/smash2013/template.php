@@ -229,13 +229,45 @@ function smash2013_preprocess_block(&$variables, $hook) {
 function smash2013_menu_link(array $variables) {
   $element = $variables['element'];
   $sub_menu = '';
-
-  if ($element['#below']) {
-    $sub_menu = drupal_render($element['#below']);
-  }
   
   if ($element['#href'] == '<nolink-group>') {
-    return '<div class="menu-item-group">' . $sub_menu . '</div>';
+    
+    // Aggregate titles
+    $title = $element['#title'];
+    $titles = array();
+    
+    foreach ($element['#below'] as $item) {
+      // dpm($item);
+      if (isset($item['#href']) && $item['#href'] == '<nolink>') {
+        array_push($titles, $item['#title']);
+      }
+    }
+    
+    $group_class = '';
+    
+    if (count($titles) > 1) {
+      // implode titles
+      $title = implode(' / ', $titles);
+      $group_class = 'group-multi-headings';
+    }
+    elseif (count($titles) == 1) {
+      $title = implode('', $titles);
+      $group_class = 'group-single-heading';
+    }
+    else {
+    }
+    
+    if ($element['#below']) {
+      $sub_menu = drupal_render($element['#below']);
+    }
+    
+    $text_item = '<div class="menu-item-group-name">' . $title . '</div>';
+    return '<div class="menu-item-group ' . $group_class . '">' . $text_item . $sub_menu . '</div>';
+  }
+  else {
+    if ($element['#below']) {
+      $sub_menu = drupal_render($element['#below']);
+    }
   }
 
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
@@ -249,7 +281,7 @@ function _smash_2013_prep_toggler($seed) {
   $var_stack = md5($seed);
   $id = drupal_html_id('menu-tree--' . $var_stack);
   $label = '<input id="' . $id . '" class="menu-toggle-checkbox" type="checkbox" />' . 
-    '<label for="' . $id . '" class="menu-toggle-label">Toggle menu</label>';
+    '<label for="' . $id . '" class="menu-toggle-label">' . t('Toggle menu') . '</label>';
   return array($id, $label);
 }
 
@@ -259,11 +291,25 @@ function _smash_2013_prep_toggler($seed) {
 function smash2013_menu_tree__menu_block($variables) {
   $tree = $variables['tree'];
   list($id, $label) = _smash_2013_prep_toggler($tree);
-  $menu_splitter = '</ul><ul class="menu">';
   
-  $groups_found = preg_match_all('/menu-item-group/', $tree, $groups);
-  $count = count($groups[0]) > 0 ? count($groups[0]) : 1;
+  // $groups_found = preg_match_all('/menu-item-group/', $tree, $groups);
+  // $count = count($groups[0]) > 0 ? count($groups[0]) : 1;
   // $tree = preg_replace('/menu-columns-[0-9]+/', '', $tree); // top level only!
+  
+  // Load into DOM
+  $doc = new DOMDocument();
+  @$doc->loadHTML($tree);
+  $el = $doc->getElementsByTagName('body')->item(0);
+  $count = 0;
+  foreach ($el->childNodes as $node) {
+    if ($node->nodeType != XML_ELEMENT_NODE) continue;
+    if (strpos($node->getAttribute('class'), 'menu-item-group') !== FALSE) {
+      $count++;
+    }
+  }
+  $count = $count > 0 ? $count : 1;
+  
+  // drupal_set_message(print_r(htmlentities($doc->saveHTML()), 1));
   
   $class = 'menu';
   $tag = 'ul';
@@ -279,11 +325,11 @@ function smash2013_menu_tree__menu_block($variables) {
     '</' . $tag . '>' . '</div>';
   */
   
-  $tag = 'ul';
   return $label . '<div class="menu-wrapper">' . 
-    '<' . $tag . ' class="' . $class . '">' . 
+    '<' . $tag . ' class="' . $class . '" id=" ' . $id . ' ">' . 
     $tree . 
-    '</' . $tag . '>' . '</div>';
+    '</' . $tag . '>' . 
+    '</div>';
 }
 
 function smash2013_preprocess_views_view(&$vars) {
