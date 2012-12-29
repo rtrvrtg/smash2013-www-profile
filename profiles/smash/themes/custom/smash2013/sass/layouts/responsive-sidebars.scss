@@ -67,12 +67,16 @@ $zen-auto-include-item-base: false;
 .prefaced-node-content,
 .prefaced-node-sidebar {
   @include box-sizing(border-box);
-  padding: 0 5px;
+  padding: 0 10px;
 }
 
 body.uses-smash-layout {
   #content {
     padding: 0;
+    
+    .content-header {
+      padding: 0 10px;
+    }
   }
 }
 

@@ -223,6 +223,9 @@ function smash2013_preprocess_block(&$variables, $hook) {
   //}
 }
 
+/**
+ * Implements theme_menu_link
+ */
 function smash2013_menu_link(array $variables) {
   $element = $variables['element'];
   $sub_menu = '';
@@ -239,6 +242,9 @@ function smash2013_menu_link(array $variables) {
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
+/**
+ * Menu toggler themer
+ */
 function _smash_2013_prep_toggler($seed) {
   $var_stack = md5($seed);
   $id = drupal_html_id('menu-tree--' . $var_stack);
@@ -247,6 +253,9 @@ function _smash_2013_prep_toggler($seed) {
   return array($id, $label);
 }
 
+/**
+ * Implements theme_menu_tree__menu_block
+ */
 function smash2013_menu_tree__menu_block($variables) {
   $tree = $variables['tree'];
   list($id, $label) = _smash_2013_prep_toggler($tree);
@@ -278,16 +287,14 @@ function smash2013_menu_tree__menu_block($variables) {
 }
 
 function smash2013_preprocess_views_view(&$vars) {
-  // dpm($vars);
-  // $vars['raw_result'] = $vars['view']->style_plugin->rendered_fields;
 }
 
 function smash2013_preprocess_views_view_list(&$vars) {
-  // dpm($vars);
-  // $vars['raw_result'] = $vars['view']->style_plugin->rendered_fields;
 }
 
-
+/**
+ * Implements theme_breadcrumb
+ */
 function smash2013_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
 
@@ -308,3 +315,20 @@ function smash2013_breadcrumb($variables) {
   }
 }
 
+/**
+ * Implements theme_username
+ */
+function smash2013_preprocess_username(&$variables) {
+  // dpm($variables);
+  if ($variables['uid'] != 0) {
+    $user = user_load($variables['uid']);
+    if (!empty($user->field_display_name) && !empty($user->field_display_name[LANGUAGE_NONE])) {
+      if (!empty($user->field_display_name[LANGUAGE_NONE][0]['value'])) {
+        $variables['name'] = $user->field_display_name[LANGUAGE_NONE][0]['value'];
+      }
+    }
+  }
+  else {
+    $variables['name'] = '';
+  }
+}

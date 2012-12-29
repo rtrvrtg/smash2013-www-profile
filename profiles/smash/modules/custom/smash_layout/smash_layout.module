@@ -91,9 +91,19 @@ function smash_layout_preprocess_html(&$variables) {
     array_push($body_classes, 'uses-smash-layout');
   }
   */
+  
   $node = menu_get_object();
   if ($node) {
-    array_push($body_classes, 'uses-smash-layout');
+    $node_uses_layout = false;
+    
+    // get entity bundle settings
+    $info = entity_get_info('node');
+    if (isset($info['bundles'][$node->type]['layouts']['default'])) {
+      $layout = $info['bundles'][$node->type]['layouts']['default']['layout'];
+      if ($layout == 'smash_layout_node') {
+        array_push($body_classes, 'uses-smash-layout');
+      }
+    }
   }
   
   $panel = panels_get_current_page_display();

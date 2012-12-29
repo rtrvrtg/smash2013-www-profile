@@ -364,12 +364,16 @@ span.field-label {
  * (see the layout.css file.)
  */
 /* line 314, ../sass/pages.scss */
+.region-sidebar-second .block:first-child {
+  margin-top: 1em;
+}
+/* line 318, ../sass/pages.scss */
 .region-sidebar-second .block .block-title {
   position: relative;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  padding: 10px 0px 2px 5px;
+  padding: 10px 10px 2px 5px;
   text-transform: uppercase;
   color: white;
   background: #7f54a3;
@@ -379,7 +383,7 @@ span.field-label {
   line-height: 1em;
 }
 @media all and (min-width: 950px) {
-  /* line 314, ../sass/pages.scss */
+  /* line 318, ../sass/pages.scss */
   .region-sidebar-second .block .block-title {
     margin: 0 5px 0.2em 0;
     width: 100%;
@@ -400,21 +404,21 @@ span.field-label {
   }
 }
 
-/* line 321, ../sass/pages.scss */
+/* line 325, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container {
   border: 0px none;
 }
-/* line 323, ../sass/pages.scss */
+/* line 327, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view {
   margin: 0;
 }
-/* line 325, ../sass/pages.scss */
+/* line 329, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view .sidebar-content-title {
   position: relative;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  padding: 10px 0px 2px 5px;
+  padding: 10px 10px 2px 5px;
   text-transform: uppercase;
   color: white;
   background: #7f54a3;
@@ -424,7 +428,7 @@ span.field-label {
   line-height: 1em;
 }
 @media all and (min-width: 950px) {
-  /* line 325, ../sass/pages.scss */
+  /* line 329, ../sass/pages.scss */
   .prefaced-node-sidebar .field-collection-container .field-collection-view .sidebar-content-title {
     margin: 0 5px 0.2em 0;
     width: 100%;
@@ -445,23 +449,23 @@ span.field-label {
   }
 }
 @media all and (min-width: 950px) {
-  /* line 329, ../sass/pages.scss */
+  /* line 333, ../sass/pages.scss */
   .prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-body {
     margin-right: 10px;
   }
 }
-/* line 334, ../sass/pages.scss */
+/* line 338, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-body *:first-child {
   margin-top: 0;
 }
-/* line 339, ../sass/pages.scss */
+/* line 343, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-image {
   display: inline-block;
   width: 100px;
   height: 100px;
   margin-right: 10px;
 }
-/* line 345, ../sass/pages.scss */
+/* line 349, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-image img {
   vertical-align: middle;
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
@@ -472,7 +476,7 @@ span.field-label {
 /*
  * Footer
  */
-/* line 358, ../sass/pages.scss */
+/* line 362, ../sass/pages.scss */
 #footer {
   color: #1b171a;
 }
@@ -480,7 +484,7 @@ span.field-label {
 /*
  * Page bottom
  */
-/* line 366, ../sass/pages.scss */
+/* line 370, ../sass/pages.scss */
 .region-bottom {
   /* Wrapper for any blocks placed in the page bottom region */
 }
@@ -488,13 +492,13 @@ span.field-label {
 /*
  * Ticketing
  */
-/* line 373, ../sass/pages.scss */
+/* line 377, ../sass/pages.scss */
 .ticket-options {
   margin: 1em 0px 0;
   padding: 0;
   list-style: none;
 }
-/* line 376, ../sass/pages.scss */
+/* line 380, ../sass/pages.scss */
 .ticket-options li {
   margin: 0 0;
   padding: 0;
@@ -502,14 +506,14 @@ span.field-label {
   display: block;
 }
 @media all and (min-width: 469px) {
-  /* line 376, ../sass/pages.scss */
+  /* line 380, ../sass/pages.scss */
   .ticket-options li {
     display: inline-block;
     vertical-align: top;
     width: 50%;
   }
 }
-/* line 386, ../sass/pages.scss */
+/* line 390, ../sass/pages.scss */
 .ticket-options li a {
   display: block;
   text-align: center;
@@ -535,11 +539,11 @@ span.field-label {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-/* line 400, ../sass/pages.scss */
+/* line 404, ../sass/pages.scss */
 .ticket-options li a strong, .ticket-options li a small {
   display: block;
 }
-/* line 407, ../sass/pages.scss */
+/* line 411, ../sass/pages.scss */
 .ticket-options .ticket-option-inactive a {
   pointer-events: none;
   background-color: #444444;

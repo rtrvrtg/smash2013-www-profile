@@ -17,10 +17,30 @@ function smash_news_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'article';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
+    'author' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'author',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
+    ),
     'post_date' => array(
-      'weight' => '0',
+      'weight' => '3',
       'label' => 'hidden',
       'format' => 'ds_post_date_blog_date',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
+    ),
+    'ds_user_picture' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'ds_picture_thumbnail',
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_minimal',
@@ -59,7 +79,7 @@ function smash_news_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '0',
+      'weight' => '3',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -71,10 +91,35 @@ function smash_news_ds_field_settings_info() {
         ),
       ),
     ),
-    'post_date' => array(
+    'node_link' => array(
+      'weight' => '6',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'author' => array(
       'weight' => '1',
       'label' => 'hidden',
+      'format' => 'author',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
+    ),
+    'post_date' => array(
+      'weight' => '4',
+      'label' => 'hidden',
       'format' => 'ds_post_date_blog_date',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
+    ),
+    'ds_user_picture' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'ds_picture_thumbnail',
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_minimal',
@@ -120,25 +165,32 @@ function smash_news_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'article';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_1col';
+  $ds_layout->layout = 'ds_2col';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
-        0 => 'post_date',
-        1 => 'field_image',
-        2 => 'body',
-        3 => 'field_tags',
+      'left' => array(
+        0 => 'ds_user_picture',
+        1 => 'author',
+        2 => 'field_image',
+      ),
+      'right' => array(
+        3 => 'post_date',
+        4 => 'body',
+        5 => 'field_tags',
       ),
     ),
     'fields' => array(
-      'post_date' => 'ds_content',
-      'field_image' => 'ds_content',
-      'body' => 'ds_content',
-      'field_tags' => 'ds_content',
+      'ds_user_picture' => 'left',
+      'author' => 'left',
+      'field_image' => 'left',
+      'post_date' => 'right',
+      'body' => 'right',
+      'field_tags' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'left' => 'div',
+      'right' => 'div',
       'ds_hidden' => 'div',
     ),
     'layout_wrapper' => 'div',
@@ -153,27 +205,36 @@ function smash_news_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'article';
   $ds_layout->view_mode = 'teaser';
-  $ds_layout->layout = 'ds_1col';
+  $ds_layout->layout = 'ds_2col';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
-        0 => 'title',
-        1 => 'post_date',
+      'left' => array(
+        0 => 'ds_user_picture',
+        1 => 'author',
         2 => 'field_image',
-        3 => 'body',
-        4 => 'field_tags',
+      ),
+      'right' => array(
+        3 => 'title',
+        4 => 'post_date',
+        5 => 'body',
+        6 => 'node_link',
+        7 => 'field_tags',
       ),
     ),
     'fields' => array(
-      'title' => 'ds_content',
-      'post_date' => 'ds_content',
-      'field_image' => 'ds_content',
-      'body' => 'ds_content',
-      'field_tags' => 'ds_content',
+      'ds_user_picture' => 'left',
+      'author' => 'left',
+      'field_image' => 'left',
+      'title' => 'right',
+      'post_date' => 'right',
+      'body' => 'right',
+      'node_link' => 'right',
+      'field_tags' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'left' => 'div',
+      'right' => 'div',
       'ds_hidden' => 'div',
     ),
     'layout_wrapper' => 'div',

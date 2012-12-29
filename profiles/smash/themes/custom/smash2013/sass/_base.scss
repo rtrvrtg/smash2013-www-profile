@@ -114,6 +114,12 @@ $font-monospace:   $courier;
   list-style: none;
 }
 
+@mixin more-link {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 //
 // Colors, etc.
 //

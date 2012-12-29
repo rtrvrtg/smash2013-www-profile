@@ -53,23 +53,30 @@
 .node ul.links {
   /* Node links. See also the ul.links declaration in the pages.css. */
 }
+/* line 33, ../sass/nodes.scss */
+.node .field-name-node-link,
+.node .field-name-author {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
-/* line 34, ../sass/nodes.scss */
+/* line 39, ../sass/nodes.scss */
 .node-promoted {
   /* A node that has been promoted to the front page */
 }
 
-/* line 37, ../sass/nodes.scss */
+/* line 42, ../sass/nodes.scss */
 .node-sticky {
   /* A sticky node (displayed before others in a list) */
 }
 
-/* line 40, ../sass/nodes.scss */
+/* line 45, ../sass/nodes.scss */
 .node-by-viewer {
   /* A node created by the current user */
 }
 
-/* line 43, ../sass/nodes.scss */
+/* line 48, ../sass/nodes.scss */
 .node-teaser {
   /* A node displayed as teaser */
 }
@@ -79,23 +86,23 @@
  * it is. If you create a new content type called "my-custom-type", it will
  * receive a "node-my-custom-type" class.
  */
-/* line 52, ../sass/nodes.scss */
+/* line 57, ../sass/nodes.scss */
 .node-page {
   /* Page content node */
 }
 
-/* line 55, ../sass/nodes.scss */
+/* line 60, ../sass/nodes.scss */
 .node-article {
   /* Article content node */
 }
 
-/* line 58, ../sass/nodes.scss */
+/* line 63, ../sass/nodes.scss */
 .node-unpublished {
   /* Unpublished nodes */
   /* background-color: #fff4f4; */
   /* Drupal core uses a #fff4f4 background */
 }
-/* line 61, ../sass/nodes.scss */
+/* line 66, ../sass/nodes.scss */
 .node-unpublished p.unpublished {
   /* The word "Unpublished" displayed underneath the content. */
   height: 0;
@@ -110,50 +117,50 @@
   word-wrap: break-word;
 }
 
-/* line 67, ../sass/nodes.scss */
+/* line 72, ../sass/nodes.scss */
 .node-home-page .node-title {
   display: none;
 }
-/* line 70, ../sass/nodes.scss */
+/* line 75, ../sass/nodes.scss */
 .node-home-page .field-collection-container {
   border: 0px none;
 }
 @media all and (min-width: 950px) {
-  /* line 73, ../sass/nodes.scss */
+  /* line 78, ../sass/nodes.scss */
   .node-home-page .field-name-field-hero {
     margin: -1.5em -5px 0 -5px;
   }
 }
-/* line 77, ../sass/nodes.scss */
+/* line 82, ../sass/nodes.scss */
 .node-home-page .field-name-field-hero .field-collection-view {
   margin: 0;
 }
-/* line 80, ../sass/nodes.scss */
+/* line 85, ../sass/nodes.scss */
 .node-home-page .field-name-field-hero a.hero-wrapped {
   display: block;
   position: relative;
   text-decoration: none;
   color: black;
 }
-/* line 85, ../sass/nodes.scss */
+/* line 90, ../sass/nodes.scss */
 .node-home-page .field-name-field-hero a.hero-wrapped .hero-wrapped-image {
   display: block;
 }
-/* line 87, ../sass/nodes.scss */
+/* line 92, ../sass/nodes.scss */
 .node-home-page .field-name-field-hero a.hero-wrapped .hero-wrapped-image .hero-image-credits {
   display: block;
   text-align: right;
   font-size: 0.6em;
   padding: 0 1em;
 }
-/* line 94, ../sass/nodes.scss */
+/* line 99, ../sass/nodes.scss */
 .node-home-page .field-name-field-hero a.hero-wrapped .hero-wrapped-content {
   display: block;
   color: black;
   padding: 20px 10px;
 }
 @media all and (min-width: 469px) {
-  /* line 94, ../sass/nodes.scss */
+  /* line 99, ../sass/nodes.scss */
   .node-home-page .field-name-field-hero a.hero-wrapped .hero-wrapped-content {
     position: absolute;
     bottom: 25%;
@@ -164,22 +171,22 @@
     background: rgba(0, 0, 0, 0.7);
   }
 }
-/* line 109, ../sass/nodes.scss */
+/* line 114, ../sass/nodes.scss */
 .node-home-page .field-name-field-hero a.hero-wrapped .hero-wrapped-content p {
   margin: 0.5em 0;
 }
-/* line 112, ../sass/nodes.scss */
+/* line 117, ../sass/nodes.scss */
 .node-home-page .field-name-field-hero a.hero-wrapped .hero-wrapped-content p:last-child {
   margin-bottom: 0;
 }
-/* line 117, ../sass/nodes.scss */
+/* line 122, ../sass/nodes.scss */
 .node-home-page .field-name-field-hero a.hero-wrapped .hero-wrapped-content h2 {
   margin: 0;
   text-transform: uppercase;
   color: #e02751;
   line-height: 1em;
 }
-/* line 124, ../sass/nodes.scss */
+/* line 129, ../sass/nodes.scss */
 .node-home-page .field-name-field-hero a.hero-wrapped .hero-wrapped-content .call-to-action {
   display: inline-block;
   background: #e02751;
@@ -200,28 +207,28 @@
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-/* line 136, ../sass/nodes.scss */
+/* line 141, ../sass/nodes.scss */
 .node-home-page .field-name-field-hero a.hero-wrapped .hero-wrapped-content .call-to-action-container {
   min-height: 35px;
 }
-/* line 142, ../sass/nodes.scss */
+/* line 147, ../sass/nodes.scss */
 .node-home-page .field-name-field-hero a.hero-wrapped:hover .hero-wrapped-content .call-to-action, .node-home-page .field-name-field-hero a.hero-wrapped:focus .hero-wrapped-content .call-to-action, .node-home-page .field-name-field-hero a.hero-wrapped:active .hero-wrapped-content .call-to-action {
   margin: 0 0 3px 0;
   -webkit-box-shadow: 3px 6px 0px #6d0428;
   -moz-box-shadow: 3px 6px 0px #6d0428;
   box-shadow: 3px 6px 0px #6d0428;
 }
-/* line 149, ../sass/nodes.scss */
+/* line 154, ../sass/nodes.scss */
 .node-home-page .field-name-feature-wrapper {
   font-size: 0.8em;
 }
 @media all and (min-width: 469px) {
-  /* line 149, ../sass/nodes.scss */
+  /* line 154, ../sass/nodes.scss */
   .node-home-page .field-name-feature-wrapper {
     font-size: 1em;
   }
 }
-/* line 154, ../sass/nodes.scss */
+/* line 159, ../sass/nodes.scss */
 .node-home-page .field-name-feature-wrapper a.feature-wrapped {
   position: relative;
   min-height: 79px;
@@ -229,7 +236,7 @@
   display: block;
   overflow: hidden;
 }
-/* line 158, ../sass/nodes.scss */
+/* line 163, ../sass/nodes.scss */
 .node-home-page .field-name-feature-wrapper a.feature-wrapped .feature-wrapped-image {
   position: absolute;
   top: 0;
@@ -239,13 +246,13 @@
   height: 40px;
 }
 @media all and (min-width: 950px) {
-  /* line 158, ../sass/nodes.scss */
+  /* line 163, ../sass/nodes.scss */
   .node-home-page .field-name-feature-wrapper a.feature-wrapped .feature-wrapped-image {
     width: 120px;
     height: 79px;
   }
 }
-/* line 169, ../sass/nodes.scss */
+/* line 174, ../sass/nodes.scss */
 .node-home-page .field-name-feature-wrapper a.feature-wrapped .feature-wrapped-image img {
   position: absolute;
   top: 0;
@@ -253,56 +260,56 @@
   width: 60px;
 }
 @media all and (min-width: 950px) {
-  /* line 169, ../sass/nodes.scss */
+  /* line 174, ../sass/nodes.scss */
   .node-home-page .field-name-feature-wrapper a.feature-wrapped .feature-wrapped-image img {
     width: 120px;
   }
 }
-/* line 177, ../sass/nodes.scss */
+/* line 182, ../sass/nodes.scss */
 .node-home-page .field-name-feature-wrapper a.feature-wrapped .feature-wrapped-image img.feature-wrapped-image-inactive {
   visibility: visible;
 }
-/* line 180, ../sass/nodes.scss */
+/* line 185, ../sass/nodes.scss */
 .node-home-page .field-name-feature-wrapper a.feature-wrapped .feature-wrapped-image img.feature-wrapped-image-active {
   visibility: hidden;
 }
-/* line 186, ../sass/nodes.scss */
+/* line 191, ../sass/nodes.scss */
 .node-home-page .field-name-feature-wrapper a.feature-wrapped .feature-wrapped-text {
   margin-left: 70px;
   display: inline-block;
   vertical-align: top;
 }
 @media all and (min-width: 950px) {
-  /* line 186, ../sass/nodes.scss */
+  /* line 191, ../sass/nodes.scss */
   .node-home-page .field-name-feature-wrapper a.feature-wrapped .feature-wrapped-text {
     margin-left: 130px;
   }
 }
-/* line 193, ../sass/nodes.scss */
+/* line 198, ../sass/nodes.scss */
 .node-home-page .field-name-feature-wrapper a.feature-wrapped .feature-wrapped-text p {
   margin: 0;
 }
-/* line 196, ../sass/nodes.scss */
+/* line 201, ../sass/nodes.scss */
 .node-home-page .field-name-feature-wrapper a.feature-wrapped .feature-wrapped-text h2 {
   line-height: 1em;
   margin: 0.25em 0 0 0;
   color: #282828;
 }
-/* line 209, ../sass/nodes.scss */
+/* line 214, ../sass/nodes.scss */
 .node-home-page .field-name-feature-wrapper a.feature-wrapped:hover .feature-wrapped-image img.feature-wrapped-image-inactive, .node-home-page .field-name-feature-wrapper a.feature-wrapped:focus .feature-wrapped-image img.feature-wrapped-image-inactive, .node-home-page .field-name-feature-wrapper a.feature-wrapped:active .feature-wrapped-image img.feature-wrapped-image-inactive {
   visibility: hidden;
 }
-/* line 212, ../sass/nodes.scss */
+/* line 217, ../sass/nodes.scss */
 .node-home-page .field-name-feature-wrapper a.feature-wrapped:hover .feature-wrapped-image img.feature-wrapped-image-active, .node-home-page .field-name-feature-wrapper a.feature-wrapped:focus .feature-wrapped-image img.feature-wrapped-image-active, .node-home-page .field-name-feature-wrapper a.feature-wrapped:active .feature-wrapped-image img.feature-wrapped-image-active {
   visibility: visible;
 }
-/* line 220, ../sass/nodes.scss */
+/* line 225, ../sass/nodes.scss */
 .node-home-page .field-name-field-further-highlights {
   display: block;
   font-size: 0.8em;
 }
 @media all and (min-width: 469px) {
-  /* line 220, ../sass/nodes.scss */
+  /* line 225, ../sass/nodes.scss */
   .node-home-page .field-name-field-further-highlights {
     display: inline-block;
     vertical-align: top;
@@ -310,7 +317,7 @@
   }
 }
 @media all and (min-width: 950px) {
-  /* line 220, ../sass/nodes.scss */
+  /* line 225, ../sass/nodes.scss */
   .node-home-page .field-name-field-further-highlights {
     display: inline-block;
     vertical-align: top;
@@ -318,102 +325,127 @@
     font-size: 1em;
   }
 }
-/* line 234, ../sass/nodes.scss */
+/* line 239, ../sass/nodes.scss */
 .node-home-page .field-name-field-further-highlights .field-collection-view {
   margin: 0 10px;
   border: 0px none;
 }
-/* line 238, ../sass/nodes.scss */
+/* line 243, ../sass/nodes.scss */
 .node-home-page .field-name-field-further-highlights .field-name-field-further-highlights-title {
   margin: 0;
   text-transform: uppercase;
   color: #e02751;
 }
-/* line 243, ../sass/nodes.scss */
+/* line 248, ../sass/nodes.scss */
 .node-home-page .field-name-field-further-highlights .field-name-field-further-highlights-link {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 247, ../sass/nodes.scss */
+/* line 252, ../sass/nodes.scss */
 .node-home-page .field-name-field-further-highlights .field-name-field-further-highlights-link li {
   list-style: none;
   padding: 0;
 }
-/* line 250, ../sass/nodes.scss */
+/* line 255, ../sass/nodes.scss */
 .node-home-page .field-name-field-further-highlights .field-name-field-further-highlights-link li a {
   color: #282828;
   text-decoration: none;
 }
 
-/* line 259, ../sass/nodes.scss */
+/* line 264, ../sass/nodes.scss */
 .node-vendor {
   position: relative;
   min-height: 80px;
 }
-/* line 262, ../sass/nodes.scss */
+/* line 267, ../sass/nodes.scss */
 .node-vendor .vendor-left {
   text-align: center;
 }
-/* line 266, ../sass/nodes.scss */
+/* line 271, ../sass/nodes.scss */
 .node-vendor .vendor-right h2 {
   margin: 0;
 }
-/* line 270, ../sass/nodes.scss */
+/* line 275, ../sass/nodes.scss */
 .node-vendor .vendor-right .field-name-body p:first-child {
   margin-top: 0;
 }
-/* line 273, ../sass/nodes.scss */
+/* line 278, ../sass/nodes.scss */
 .node-vendor .vendor-right .field-name-body p:last-child {
   margin-bottom: 0;
 }
 @media all and (min-width: 469px) {
-  /* line 279, ../sass/nodes.scss */
+  /* line 284, ../sass/nodes.scss */
   .node-vendor .vendor-left {
     position: absolute;
     top: 0;
     left: 0;
     width: 200px;
   }
-  /* line 285, ../sass/nodes.scss */
+  /* line 290, ../sass/nodes.scss */
   .node-vendor .vendor-right {
     margin-left: 210px;
   }
 }
 
-/* line 291, ../sass/nodes.scss */
+/* line 296, ../sass/nodes.scss */
 .node-article {
   clear: both;
+  position: relative;
+  overflow: hidden;
 }
-/* line 294, ../sass/nodes.scss */
+/* line 301, ../sass/nodes.scss */
+.node-article .article-left {
+  text-align: center;
+}
+@media all and (min-width: 469px) {
+  /* line 307, ../sass/nodes.scss */
+  .node-article .article-left {
+    position: relative;
+    float: left;
+    top: 0;
+    left: 200px;
+    margin-left: -200px;
+    width: 200px;
+  }
+  /* line 315, ../sass/nodes.scss */
+  .node-article .article-right {
+    margin-left: 210px;
+  }
+}
+/* line 321, ../sass/nodes.scss */
 .node-article .field-name-title h2 {
   margin: 0;
 }
-/* line 298, ../sass/nodes.scss */
+/* line 325, ../sass/nodes.scss */
 .node-article .field-name-post-date {
   font-weight: bold;
 }
-/* line 301, ../sass/nodes.scss */
+/* line 328, ../sass/nodes.scss */
 .node-article .field-name-field-image {
-  float: left;
+  /* float: left; */
   margin: 0 10px 10px 0;
   max-width: 80px;
 }
-@media all and (min-width: 469px) {
-  /* line 301, ../sass/nodes.scss */
+@media all and (min-width: 950px) {
+  /* line 328, ../sass/nodes.scss */
   .node-article .field-name-field-image {
     max-width: 200px;
   }
 }
-/* line 310, ../sass/nodes.scss */
+/* line 337, ../sass/nodes.scss */
 .node-article .field-name-body *:first-child {
   margin-top: 0;
 }
-/* line 315, ../sass/nodes.scss */
+/* line 340, ../sass/nodes.scss */
+.node-article .field-name-body *:last-child {
+  margin-bottom: 0;
+}
+/* line 345, ../sass/nodes.scss */
 .node-article .field-name-field-tags .label-above {
   font-weight: bold;
 }
-/* line 318, ../sass/nodes.scss */
+/* line 348, ../sass/nodes.scss */
 .node-article .field-name-field-tags a {
   margin-right: 0.5em;
 }

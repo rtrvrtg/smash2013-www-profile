@@ -28,6 +28,11 @@
 
   ul.links { /* Node links. See also the ul.links declaration in the pages.css. */
   }
+  
+  .field-name-node-link,
+  .field-name-author {
+    @include more-link;
+  }
 
 }
 
@@ -290,6 +295,28 @@
 
 .node-article {
   clear: both;
+  position: relative;
+  overflow: hidden;
+  
+  .article-left {
+    text-align: center;
+  }
+  .article-right {
+  }
+  @media all and (min-width: $tablet-half) {
+    .article-left {
+      position: relative;
+      float: left;
+      top: 0;
+      left: 200px;
+      margin-left: -200px;
+      width: 200px;
+    }
+    .article-right {
+      margin-left: 210px;
+    }
+  }
+  
   .field-name-title {
     h2 {
       margin: 0;
@@ -299,16 +326,19 @@
     font-weight: bold;
   }
   .field-name-field-image {
-    float: left;
+    /* float: left; */
     margin: 0 10px 10px 0;
     max-width: 80px;
-    @media all and (min-width: $tablet-half) {
+    @media all and (min-width: $desktop-minimum) {
       max-width: 200px;
     }
   }
   .field-name-body {
     *:first-child {
       margin-top: 0;
+    }
+    *:last-child {
+      margin-bottom: 0;
     }
   }
   .field-name-field-tags {
