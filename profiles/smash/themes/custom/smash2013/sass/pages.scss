@@ -310,7 +310,9 @@ span.field-label { /* The inline field label used by the Fences module */
       }
 
       .field-name-field-sidebar-body {
-        margin-right: 10px;
+        @media all and (min-width: $desktop-minimum) {
+          margin-right: 10px;
+        }
         
         *:first-child {
           margin-top: 0;
