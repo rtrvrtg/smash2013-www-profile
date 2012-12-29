@@ -116,8 +116,9 @@ projects[token_filter][subdir] = "contrib"
 projects[transliteration][version] = "3.1"
 projects[transliteration][subdir] = "contrib"
 
-projects[twitter_pull][version] = "1.0-rc4"
+projects[twitter_pull][version] = "1.x-dev"
 projects[twitter_pull][subdir] = "contrib"
+projects[twitter_pull][patch][] = http://drupal.org/files/twitter-pull-invalidarg.patch
 
 projects[panels][version] = "3.3"
 projects[panels][subdir] = "contrib"

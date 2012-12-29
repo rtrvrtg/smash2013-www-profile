@@ -299,6 +299,7 @@ li a.active {
           background: $color-menu-hov;
           @include box-shadow(rgba(0,0,0,0.5) 6px 6px 0px);
           z-index: 9999;
+          padding: 0;
           
           min-width: 200px;
           .menu-item-group {
