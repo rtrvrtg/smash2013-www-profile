@@ -25,6 +25,8 @@ body {
   @media all and (min-width: $desktop-minimum) {
     padding: 10px;
   }
+  
+  text-rendering: optimizeLegibility;
 }
 
 #page {
@@ -56,6 +58,10 @@ body {
 
 #header {
   color: white;
+  @media all and (min-width: $desktop-minimum) {
+    background: url(../images/skadi-cyrus.png) no-repeat bottom right;
+    min-height: 134px;
+  }
 }
 
 #logo { /* Wrapping link for logo */
@@ -80,6 +86,10 @@ body {
   margin: 0;
   font-size: 2em;
   line-height: 1.5em;
+  
+  @media all and (min-width: $desktop-minimum) {
+    margin-top: 20px;
+  }
 
   a:link,
   a:visited {
