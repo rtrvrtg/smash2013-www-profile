@@ -108,6 +108,12 @@ $font-monospace:   $courier;
   border-color: #53336d transparent;
 }
 
+@mixin clean-list($margin-top: 0, $margin-left: 0) {
+  margin: $margin-top $margin-left;
+  padding: 0;
+  list-style: none;
+}
+
 //
 // Colors, etc.
 //
@@ -121,6 +127,7 @@ $color-menu-hov:  #282828;
 $color-turq:      #3ec1bc;
 $color-red:       #e02751;
 $color-red-bg:    #6d0428;
+$color-inactive:  #444;
 
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 30px;

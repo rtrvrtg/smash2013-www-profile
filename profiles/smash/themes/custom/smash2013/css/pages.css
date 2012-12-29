@@ -439,3 +439,70 @@ span.field-label {
 .region-bottom {
   /* Wrapper for any blocks placed in the page bottom region */
 }
+
+/*
+ * Ticketing
+ */
+/* line 356, ../sass/pages.scss */
+.ticket-options {
+  margin: 1em 0px 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 359, ../sass/pages.scss */
+.ticket-options li {
+  margin: 0 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+}
+@media all and (min-width: 469px) {
+  /* line 359, ../sass/pages.scss */
+  .ticket-options li {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+  }
+}
+/* line 369, ../sass/pages.scss */
+.ticket-options li a {
+  display: block;
+  text-align: center;
+  width: 80%;
+  padding: 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0px auto;
+  text-decoration: none;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+  border-radius: 1em;
+  color: white;
+  background-color: #e02751;
+  -webkit-box-shadow: 3px 3px 0px #6d0428;
+  -moz-box-shadow: 3px 3px 0px #6d0428;
+  box-shadow: 3px 3px 0px #6d0428;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+/* line 383, ../sass/pages.scss */
+.ticket-options li a strong, .ticket-options li a small {
+  display: block;
+}
+/* line 390, ../sass/pages.scss */
+.ticket-options .ticket-option-inactive a {
+  pointer-events: none;
+  background-color: #444444;
+  -webkit-box-shadow: 1px 1px 0 #282828;
+  -moz-box-shadow: 1px 1px 0 #282828;
+  box-shadow: 1px 1px 0 #282828;
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 10%, transparent 10%, transparent 20%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.1) 30%, transparent 30%, transparent 40%, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.1) 50%, transparent 50%, transparent 60%, rgba(255, 255, 255, 0.1) 60%, rgba(255, 255, 255, 0.1) 70%, transparent 70%, transparent 80%, rgba(255, 255, 255, 0.1) 80%, rgba(255, 255, 255, 0.1) 90%, transparent 90%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 10%, transparent 10%, transparent 20%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.1) 30%, transparent 30%, transparent 40%, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.1) 50%, transparent 50%, transparent 60%, rgba(255, 255, 255, 0.1) 60%, rgba(255, 255, 255, 0.1) 70%, transparent 70%, transparent 80%, rgba(255, 255, 255, 0.1) 80%, rgba(255, 255, 255, 0.1) 90%, transparent 90%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 10%, transparent 10%, transparent 20%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.1) 30%, transparent 30%, transparent 40%, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.1) 50%, transparent 50%, transparent 60%, rgba(255, 255, 255, 0.1) 60%, rgba(255, 255, 255, 0.1) 70%, transparent 70%, transparent 80%, rgba(255, 255, 255, 0.1) 80%, rgba(255, 255, 255, 0.1) 90%, transparent 90%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 10%, transparent 10%, transparent 20%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.1) 30%, transparent 30%, transparent 40%, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.1) 50%, transparent 50%, transparent 60%, rgba(255, 255, 255, 0.1) 60%, rgba(255, 255, 255, 0.1) 70%, transparent 70%, transparent 80%, rgba(255, 255, 255, 0.1) 80%, rgba(255, 255, 255, 0.1) 90%, transparent 90%, transparent);
+}
