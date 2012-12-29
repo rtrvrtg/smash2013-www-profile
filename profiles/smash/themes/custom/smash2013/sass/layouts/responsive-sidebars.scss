@@ -56,14 +56,24 @@ $zen-auto-include-item-base: false;
 // See the note about $zen-auto-include-item-base above.
 
 #header,
-#content,
 #navigation,
+#footer {
+  @include zen-grid-item-base();
+}
+
+#content,
 .region-sidebar-first,
 .region-sidebar-second,
 .prefaced-node-content,
-.prefaced-node-sidebar,
-#footer {
-  @include zen-grid-item-base();
+.prefaced-node-sidebar {
+  @include box-sizing(border-box);
+  padding: 0 5px;
+}
+
+body.uses-smash-layout {
+  #content {
+    padding: 0;
+  }
 }
 
 /*

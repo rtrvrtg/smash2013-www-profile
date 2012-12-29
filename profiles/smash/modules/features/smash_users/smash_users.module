@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SMASH! Users feature.
+ */
+
+include_once 'smash_users.features.inc';

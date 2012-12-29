@@ -284,7 +284,37 @@ span.field-label { /* The inline field label used by the Fences module */
  * (see the layout.css file.)
  */
 
+@mixin block-title {
+  position: relative;
+  @include box-sizing(content-box);
+  padding: 10px 0px 2px 5px;
+  
+  text-transform: uppercase;
+  color: white;
+  background: $color-purple;
+  
+  min-height: 1em;
+  @include adjust-font-size-to( $h3-font-size );
+  line-height: 1em;
+  
+  @media all and (min-width: $desktop-minimum) {
+    margin: 0 5px 0.2em 0;
+    width: 100%;
+    
+    &:after {
+      @include br-corner-elem;
+      bottom: -5px;
+      right: 0;
+    }
+  }
+}
+
 .region-sidebar-second {
+  .block {
+    .block-title {
+      @include block-title;
+    }
+  }
 }
 
 .prefaced-node-sidebar {
@@ -293,20 +323,7 @@ span.field-label { /* The inline field label used by the Fences module */
     .field-collection-view {
       margin: 0;
       .sidebar-content-title {
-        position: relative;
-        padding: 10px 0px 2px 5px;
-        min-height: 1em;
-        line-height: 1em;
-        @media all and (min-width: $desktop-minimum) {
-          margin: 0 5px 0.2em 0;
-          width: 100%;
-          
-          &:after {
-            @include br-corner-elem;
-            bottom: -5px;
-            right: 0;
-          }
-        }
+        @include block-title;
       }
 
       .field-name-field-sidebar-body {

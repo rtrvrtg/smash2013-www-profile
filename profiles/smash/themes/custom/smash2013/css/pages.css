@@ -363,23 +363,68 @@ span.field-label {
  * Remember to NOT add padding or margin to your .region-sidebar-second
  * (see the layout.css file.)
  */
-/* line 291, ../sass/pages.scss */
-.prefaced-node-sidebar .field-collection-container {
-  border: 0px none;
-}
-/* line 293, ../sass/pages.scss */
-.prefaced-node-sidebar .field-collection-container .field-collection-view {
-  margin: 0;
-}
-/* line 295, ../sass/pages.scss */
-.prefaced-node-sidebar .field-collection-container .field-collection-view .sidebar-content-title {
+/* line 314, ../sass/pages.scss */
+.region-sidebar-second .block .block-title {
   position: relative;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
   padding: 10px 0px 2px 5px;
+  text-transform: uppercase;
+  color: white;
+  background: #7f54a3;
   min-height: 1em;
+  font-size: 1.17em;
+  line-height: 1.28205em;
   line-height: 1em;
 }
 @media all and (min-width: 950px) {
-  /* line 295, ../sass/pages.scss */
+  /* line 314, ../sass/pages.scss */
+  .region-sidebar-second .block .block-title {
+    margin: 0 5px 0.2em 0;
+    width: 100%;
+  }
+  /* line 304, ../sass/pages.scss */
+  .region-sidebar-second .block .block-title:after {
+    content: " ";
+    display: block;
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-width: 5px 5px 0 0;
+    border-style: solid;
+    border-color: #53336d transparent;
+    bottom: -5px;
+    right: 0;
+  }
+}
+
+/* line 321, ../sass/pages.scss */
+.prefaced-node-sidebar .field-collection-container {
+  border: 0px none;
+}
+/* line 323, ../sass/pages.scss */
+.prefaced-node-sidebar .field-collection-container .field-collection-view {
+  margin: 0;
+}
+/* line 325, ../sass/pages.scss */
+.prefaced-node-sidebar .field-collection-container .field-collection-view .sidebar-content-title {
+  position: relative;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 10px 0px 2px 5px;
+  text-transform: uppercase;
+  color: white;
+  background: #7f54a3;
+  min-height: 1em;
+  font-size: 1.17em;
+  line-height: 1.28205em;
+  line-height: 1em;
+}
+@media all and (min-width: 950px) {
+  /* line 325, ../sass/pages.scss */
   .prefaced-node-sidebar .field-collection-container .field-collection-view .sidebar-content-title {
     margin: 0 5px 0.2em 0;
     width: 100%;
@@ -400,23 +445,23 @@ span.field-label {
   }
 }
 @media all and (min-width: 950px) {
-  /* line 312, ../sass/pages.scss */
+  /* line 329, ../sass/pages.scss */
   .prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-body {
     margin-right: 10px;
   }
 }
-/* line 317, ../sass/pages.scss */
+/* line 334, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-body *:first-child {
   margin-top: 0;
 }
-/* line 322, ../sass/pages.scss */
+/* line 339, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-image {
   display: inline-block;
   width: 100px;
   height: 100px;
   margin-right: 10px;
 }
-/* line 328, ../sass/pages.scss */
+/* line 345, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-image img {
   vertical-align: middle;
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
@@ -427,7 +472,7 @@ span.field-label {
 /*
  * Footer
  */
-/* line 341, ../sass/pages.scss */
+/* line 358, ../sass/pages.scss */
 #footer {
   color: #1b171a;
 }
@@ -435,7 +480,7 @@ span.field-label {
 /*
  * Page bottom
  */
-/* line 349, ../sass/pages.scss */
+/* line 366, ../sass/pages.scss */
 .region-bottom {
   /* Wrapper for any blocks placed in the page bottom region */
 }
@@ -443,13 +488,13 @@ span.field-label {
 /*
  * Ticketing
  */
-/* line 356, ../sass/pages.scss */
+/* line 373, ../sass/pages.scss */
 .ticket-options {
   margin: 1em 0px 0;
   padding: 0;
   list-style: none;
 }
-/* line 359, ../sass/pages.scss */
+/* line 376, ../sass/pages.scss */
 .ticket-options li {
   margin: 0 0;
   padding: 0;
@@ -457,14 +502,14 @@ span.field-label {
   display: block;
 }
 @media all and (min-width: 469px) {
-  /* line 359, ../sass/pages.scss */
+  /* line 376, ../sass/pages.scss */
   .ticket-options li {
     display: inline-block;
     vertical-align: top;
     width: 50%;
   }
 }
-/* line 369, ../sass/pages.scss */
+/* line 386, ../sass/pages.scss */
 .ticket-options li a {
   display: block;
   text-align: center;
@@ -490,11 +535,11 @@ span.field-label {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-/* line 383, ../sass/pages.scss */
+/* line 400, ../sass/pages.scss */
 .ticket-options li a strong, .ticket-options li a small {
   display: block;
 }
-/* line 390, ../sass/pages.scss */
+/* line 407, ../sass/pages.scss */
 .ticket-options .ticket-option-inactive a {
   pointer-events: none;
   background-color: #444444;
