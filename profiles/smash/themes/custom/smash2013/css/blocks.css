@@ -234,25 +234,44 @@
   height: 50px;
   background: #7f54a3 url(../images/social/twitter.bird.png) no-repeat center left;
   padding-left: 50px;
-  overflow: hidden;
+  position: relative;
 }
 @media all and (min-width: 950px) {
   /* line 150, ../sass/blocks.scss */
   #boxes-box-social_networks .boxes-box-content a.networks-twitter {
-    max-width: 700px;
+    width: 698px;
     margin-right: -35px;
+    text-align: left;
+  }
+  /* line 164, ../sass/blocks.scss */
+  #boxes-box-social_networks .boxes-box-content a.networks-twitter span {
+    overflow: hidden;
     white-space: nowrap;
     line-height: 50px;
   }
+  /* line 170, ../sass/blocks.scss */
+  #boxes-box-social_networks .boxes-box-content a.networks-twitter:after {
+    content: " ";
+    display: block;
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-width: 5px 5px 0 0;
+    border-style: solid;
+    border-color: #53336d transparent;
+    top: 50px;
+    right: 0;
+  }
 }
 
-/* line 166, ../sass/blocks.scss */
+/* line 181, ../sass/blocks.scss */
 #block-boxes-footer-text {
   font-size: 0.7em;
   line-height: 1.3em;
 }
 @media all and (min-width: 469px) {
-  /* line 166, ../sass/blocks.scss */
+  /* line 181, ../sass/blocks.scss */
   #block-boxes-footer-text {
     font-size: 0.8em;
   }

@@ -94,6 +94,20 @@ $font-monospace:   $courier;
   font-weight: normal;
 }
 
+@mixin br-corner-elem {
+  content: " ";
+  display: block;
+  overflow: hidden;
+  width: 0px;
+  height: 0px;
+  
+  position: absolute;
+  
+  border-width: 5px 5px 0 0;
+  border-style: solid;
+  border-color: #53336d transparent;
+}
+
 //
 // Colors, etc.
 //

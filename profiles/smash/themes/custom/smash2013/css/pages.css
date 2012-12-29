@@ -373,7 +373,8 @@ span.field-label {
 }
 /* line 295, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view .sidebar-content-title {
-  padding: 10px 5px 2px 5px;
+  position: relative;
+  padding: 10px 0px 2px 5px;
   min-height: 1em;
   line-height: 1em;
 }
@@ -383,8 +384,22 @@ span.field-label {
     margin: 0 5px 0.2em 0;
     width: 100%;
   }
+  /* line 304, ../sass/pages.scss */
+  .prefaced-node-sidebar .field-collection-container .field-collection-view .sidebar-content-title:after {
+    content: " ";
+    display: block;
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-width: 5px 5px 0 0;
+    border-style: solid;
+    border-color: #53336d transparent;
+    bottom: -9px;
+    right: 0;
+  }
 }
-/* line 304, ../sass/pages.scss */
+/* line 311, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-body > *:first-child {
   margin-top: 0;
 }
@@ -392,7 +407,7 @@ span.field-label {
 /*
  * Footer
  */
-/* line 315, ../sass/pages.scss */
+/* line 322, ../sass/pages.scss */
 #footer {
   color: #1b171a;
 }
@@ -400,7 +415,7 @@ span.field-label {
 /*
  * Page bottom
  */
-/* line 323, ../sass/pages.scss */
+/* line 330, ../sass/pages.scss */
 .region-bottom {
   /* Wrapper for any blocks placed in the page bottom region */
 }

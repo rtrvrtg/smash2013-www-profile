@@ -151,12 +151,27 @@
         height: 50px;
         background: $color-purple url(../images/social/twitter.bird.png) no-repeat center left;
         padding-left: 50px;
-        overflow: hidden;
+        position: relative;
+        
+        span {
+        }
+        
         @media all and (min-width: $desktop-minimum) {
-          max-width: 700px;
+          width: 698px;
           margin-right: -35px;
-          white-space: nowrap;
-          line-height: 50px;
+          text-align: left;
+          
+          span {
+            overflow: hidden;
+            white-space: nowrap;
+            line-height: 50px;
+          }
+          
+          &:after {
+            @include br-corner-elem;
+            top: 50px;
+            right: 0;
+          }
         }
       }
     }
