@@ -308,15 +308,20 @@ span.field-label { /* The inline field label used by the Fences module */
           }
         }
       }
-      
-      .field-name-field-sidebar-body > *:first-child {
-        margin-top: 0;
+
+      .field-name-field-sidebar-body {
+        margin-right: 10px;
+        
+        *:first-child {
+          margin-top: 0;
+        }
       }
       
       .field-name-field-sidebar-image {
         display: inline-block;
         width: 100px;
         height: 100px;
+        margin-right: 10px;
         
         img {
           vertical-align: middle;
