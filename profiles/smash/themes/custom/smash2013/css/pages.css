@@ -399,15 +399,28 @@ span.field-label {
     right: 0;
   }
 }
-/* line 311, ../sass/pages.scss */
+/* line 312, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-body > *:first-child {
   margin-top: 0;
+}
+/* line 316, ../sass/pages.scss */
+.prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-image {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+/* line 321, ../sass/pages.scss */
+.prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-image img {
+  vertical-align: middle;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
+  box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
 }
 
 /*
  * Footer
  */
-/* line 322, ../sass/pages.scss */
+/* line 334, ../sass/pages.scss */
 #footer {
   color: #1b171a;
 }
@@ -415,7 +428,7 @@ span.field-label {
 /*
  * Page bottom
  */
-/* line 330, ../sass/pages.scss */
+/* line 342, ../sass/pages.scss */
 .region-bottom {
   /* Wrapper for any blocks placed in the page bottom region */
 }

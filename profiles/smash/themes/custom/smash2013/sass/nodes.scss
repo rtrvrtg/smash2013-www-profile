@@ -95,6 +95,7 @@
         display: block;
         color: black;
         padding: 20px 10px;
+        
         @media all and (min-width: $tablet-half) {
           position: absolute;
           bottom: 25%;
@@ -104,6 +105,7 @@
           color: white;
           background: rgba(0,0,0,0.7);
         }
+        
         p {
           margin: 0.5em 0;
           
@@ -111,12 +113,14 @@
             margin-bottom: 0;
           }
         }
+        
         h2 {
           margin: 0;
           text-transform: uppercase;
           color: $color-red;
           line-height: 1em;
         }
+        
         .call-to-action {
           display: inline-block;
           background: $color-red;
@@ -127,6 +131,10 @@
           @include border-radius(1em);
           padding: 0.25em 1em;
           @include transition(all 0.1s linear);
+        }
+        
+        .call-to-action-container {
+          min-height: 35px;
         }
       }
       
