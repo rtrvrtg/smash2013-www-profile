@@ -137,7 +137,7 @@ function smash_vendors_field_default_fields() {
             'colorbox_gallery' => 'none',
             'colorbox_gallery_custom' => '',
             'colorbox_image_style' => '',
-            'colorbox_node_style' => 'thumbnail',
+            'colorbox_node_style' => 'vendor_banner',
           ),
           'type' => 'colorbox',
           'weight' => '0',
