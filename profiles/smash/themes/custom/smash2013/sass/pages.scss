@@ -303,7 +303,7 @@ span.field-label { /* The inline field label used by the Fences module */
           
           &:after {
             @include br-corner-elem;
-            bottom: -9px;
+            bottom: -5px;
             right: 0;
           }
         }
