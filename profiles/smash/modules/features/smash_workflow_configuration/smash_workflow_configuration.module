@@ -5,3 +5,52 @@
  */
 
 include_once 'smash_workflow_configuration.features.inc';
+
+function smash_workflow_configuration_form_alter(&$form, &$form_state, $form_id) {
+  if (strpos($form_id, '_node_form') !== FALSE) {
+    $form['#after_build'][] = '_smash_workflow_configuration_nodeform_after';
+  }
+}
+
+function _smash_workflow_configuration_nodeform_after($form) {
+  // dpm($form);
+  
+  $access_id = &$form['workbench_access']['workbench_access_id'];
+  
+  $hide = false;
+  
+  switch($form['#node']->type) {
+    case 'vendor':
+      $access_id['#value'] = array_search('- Vendors', $access_id['#options']);
+      $hide = true;
+      break;
+    case 'event':
+      $access_id['#value'] = array_search('- Events', $access_id['#options']);
+      $hide = true;
+      break;
+    case 'guest':
+      $access_id['#value'] = array_search('- Guests', $access_id['#options']);
+      $hide = true;
+      break;
+    case 'article':
+      $access_id['#value'] = array_search('- News', $access_id['#options']);
+      $hide = true;
+      break;
+    case 'location':
+    case 'venue_map':
+      $access_id['#value'] = array_search('- Details', $access_id['#options']);
+      $hide = true;
+      break;
+    case 'home_page':
+      $access_id['#value'] = array_search('- Home Page', $access_id['#options']);
+      $hide = true;
+      break;
+  }
+  
+  if ($hide) {
+    $access_id['#prefix'] = '<div class="element-invisible">';
+    $access_id['#suffix'] = '</div>';
+  }
+  
+  return $form;
+}
