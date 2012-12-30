@@ -59,6 +59,8 @@ $zen-auto-include-item-base: false;
 #navigation,
 #footer {
   @include zen-grid-item-base();
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #content,
