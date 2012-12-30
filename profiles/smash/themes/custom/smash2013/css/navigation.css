@@ -403,19 +403,17 @@ li a.active {
     text-decoration: none;
     text-transform: none;
     font-weight: normal;
-    padding-top: 0;
-    padding-bottom: 0;
   }
-  /* line 370, ../sass/navigation.scss */
+  /* line 368, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu li a:hover, .block-menu-block .menu li > .menu-wrapper .menu li a:focus, .block-menu-block .menu li > .menu-wrapper .menu li a:active {
     color: white;
     background-color: #7f54a3;
   }
-  /* line 382, ../sass/navigation.scss */
+  /* line 380, ../sass/navigation.scss */
   .block-menu-block .menu li.menu-mlid-725 > .menu-wrapper, .block-menu-block .menu li.menu-mlid-709 > .menu-wrapper, .block-menu-block .menu li.menu-mlid-704 > .menu-wrapper {
     right: 0;
   }
-  /* line 386, ../sass/navigation.scss */
+  /* line 384, ../sass/navigation.scss */
   .block-menu-block .menu li.nolink {
     padding: 0.25em;
     text-transform: uppercase;
@@ -424,11 +422,11 @@ li a.active {
     font-size: 0.9em;
     background: none;
   }
-  /* line 394, ../sass/navigation.scss */
+  /* line 392, ../sass/navigation.scss */
   .block-menu-block .menu li:hover > .menu-wrapper {
     visibility: visible;
   }
-  /* line 402, ../sass/navigation.scss */
+  /* line 400, ../sass/navigation.scss */
   .block-menu-block .view-event-list ul li a {
     padding-left: 32px;
   }
@@ -436,7 +434,7 @@ li a.active {
 /*
  * Main menu and Secondary menu links
  */
-/* line 416, ../sass/navigation.scss */
+/* line 414, ../sass/navigation.scss */
 #secondary-menu {
   float: right;
   /* LTR */

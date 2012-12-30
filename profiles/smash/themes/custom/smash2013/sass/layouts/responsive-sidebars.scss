@@ -96,7 +96,15 @@ body.uses-smash-layout {
 
 .prefaced-node-content {
   .field-name-body {
-    *:first-child {
+    > *:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.content-header + * {
+  .view-header {
+    > *:first-child {
       margin-top: 0;
     }
   }
