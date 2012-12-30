@@ -87,6 +87,17 @@ body.uses-smash-layout {
     
     .content-header {
       padding: 0 10px;
+      @media all and (min-width: $desktop-minimum) {
+        padding: 0 40px;
+      }
+    }
+  }
+}
+
+.prefaced-node-content {
+  .field-name-body {
+    *:first-child {
+      margin-top: 0;
     }
   }
 }

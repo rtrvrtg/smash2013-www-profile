@@ -97,6 +97,17 @@ body.uses-smash-layout #content {
 body.uses-smash-layout #content .content-header {
   padding: 0 10px;
 }
+@media all and (min-width: 950px) {
+  /* line 88, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  body.uses-smash-layout #content .content-header {
+    padding: 0 40px;
+  }
+}
+
+/* line 99, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+.prefaced-node-content .field-name-body *:first-child {
+  margin-top: 0;
+}
 
 /*
  * Containers for grid items and flow items.
@@ -121,12 +132,12 @@ body.uses-smash-layout #content .content-header {
  * Navigation bar
  */
 @media all and (min-width: 469px) {
-  /* line 109, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 120, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   #main {
     position: relative;
   }
 
-  /* line 112, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 123, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   #navigation {
     position: absolute;
     top: 0;
@@ -136,14 +147,14 @@ body.uses-smash-layout #content .content-header {
   }
 }
 @media all and (min-width: 950px) {
-  /* line 121, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 132, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   #main {
     padding-top: 2.5em;
     /* Move all the children of #main down to make room. */
     position: relative;
   }
 
-  /* line 125, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 136, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   #navigation {
     position: absolute;
     top: 0;
@@ -159,7 +170,7 @@ body.uses-smash-layout #content .content-header {
   /*
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 144, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 155, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .sidebar-first #content {
     /* Span 2 columns, starting in 2nd column from left. */
     float: right;
@@ -167,7 +178,7 @@ body.uses-smash-layout #content .content-header {
     margin-right: 316px;
     margin-left: -948px;
   }
-  /* line 148, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 159, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .sidebar-first .region-sidebar-first {
     /* Span 1 column, starting in 1st column from left. */
     float: right;
@@ -176,14 +187,14 @@ body.uses-smash-layout #content .content-header {
     margin-left: -316px;
   }
 
-  /* line 153, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 164, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .prefaced-node-content {
     float: left;
     width: 66%;
     margin-right: 1%;
   }
 
-  /* line 158, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 169, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .prefaced-node-sidebar {
     float: left;
     width: 33%;
@@ -192,14 +203,14 @@ body.uses-smash-layout #content .content-header {
   /*
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 168, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 179, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .sidebar-second #content {
     /* Span 2 columns, starting in 1st column from left. */
     float: left;
     width: 66%;
     margin-right: 1%;
   }
-  /* line 174, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 185, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .sidebar-second .region-sidebar-second {
     /* Span 1 column, starting in 3rd column from left. */
     float: left;
@@ -209,7 +220,7 @@ body.uses-smash-layout #content .content-header {
   /*
    * The layout when there are two sidebars.
    */
-  /* line 185, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 196, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .two-sidebars #content {
     /* Span 2 columns, starting in 2nd column from left. */
     float: right;
@@ -217,7 +228,7 @@ body.uses-smash-layout #content .content-header {
     margin-right: 316px;
     margin-left: -948px;
   }
-  /* line 189, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 200, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-first {
     /* Span 1 column, starting in 1st column from left. */
     float: right;
@@ -225,7 +236,7 @@ body.uses-smash-layout #content .content-header {
     margin-right: 0px;
     margin-left: -316px;
   }
-  /* line 193, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 204, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-second {
     /* Start a new row and span all 3 columns. */
     float: right;
@@ -236,7 +247,7 @@ body.uses-smash-layout #content .content-header {
     padding-right: 0;
     clear: right;
   }
-  /* line 198, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 209, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-second .block {
     padding-left: 5px;
     padding-right: 5px;
@@ -246,7 +257,7 @@ body.uses-smash-layout #content .content-header {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 201, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 212, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     /* Span 1 column, starting in the 1st column from left. */
     float: right;
@@ -255,7 +266,7 @@ body.uses-smash-layout #content .content-header {
     margin-left: -316px;
     clear: right;
   }
-  /* line 205, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 216, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     /* Span 1 column, starting in the 2nd column from left. */
     float: right;
@@ -263,7 +274,7 @@ body.uses-smash-layout #content .content-header {
     margin-right: 316px;
     margin-left: -632px;
   }
-  /* line 208, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 219, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     /* Span 1 column, starting in the 3rd column from left. */
     float: right;
@@ -279,7 +290,7 @@ body.uses-smash-layout #content .content-header {
   /*
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 226, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 237, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .sidebar-first #content {
     /* Span 4 columns, starting in 2nd column from left. */
     float: right;
@@ -287,7 +298,7 @@ body.uses-smash-layout #content .content-header {
     margin-right: 237px;
     margin-left: -1185px;
   }
-  /* line 230, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 241, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .sidebar-first .region-sidebar-first {
     /* Span 1 column, starting in 1st column from left. */
     float: right;
@@ -296,7 +307,7 @@ body.uses-smash-layout #content .content-header {
     margin-left: -237px;
   }
 
-  /* line 235, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 246, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .prefaced-node-content {
     float: right;
     width: 711px;
@@ -304,7 +315,7 @@ body.uses-smash-layout #content .content-header {
     margin-left: -711px;
   }
 
-  /* line 238, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 249, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .prefaced-node-sidebar {
     float: right;
     width: 237px;
@@ -315,7 +326,7 @@ body.uses-smash-layout #content .content-header {
   /*
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 247, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 258, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .sidebar-second #content {
     /* Span 4 columns, starting in 1st column from left. */
     float: right;
@@ -323,7 +334,7 @@ body.uses-smash-layout #content .content-header {
     margin-right: 0px;
     margin-left: -711px;
   }
-  /* line 251, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 262, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .sidebar-second .region-sidebar-second {
     /* Span 1 column, starting in 5th column from left. */
     float: right;
@@ -335,7 +346,7 @@ body.uses-smash-layout #content .content-header {
   /*
    * The layout when there are two sidebars.
    */
-  /* line 261, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 272, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .two-sidebars #content {
     /* Span 3 columns, starting in 2nd column from left. */
     float: right;
@@ -343,7 +354,7 @@ body.uses-smash-layout #content .content-header {
     margin-right: 237px;
     margin-left: -948px;
   }
-  /* line 265, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 276, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-first {
     /* Span 1 column, starting in 1st column from left. */
     float: right;
@@ -351,7 +362,7 @@ body.uses-smash-layout #content .content-header {
     margin-right: 0px;
     margin-left: -237px;
   }
-  /* line 269, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
+  /* line 280, /srv/www/smash2013/profiles/smash/themes/custom/smash2013/sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-second {
     /* Span 1 column, starting in 5th column from left. */
     float: right;
