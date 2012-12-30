@@ -148,6 +148,7 @@
         background-image: url(../images/social/youtube.png);
       }
       &.networks-twitter {
+        margin-top: 10px;
         height: 50px;
         background: $color-purple url(../images/social/twitter.bird.png) no-repeat center left;
         padding-left: 50px;
@@ -157,6 +158,7 @@
         }
         
         @media all and (min-width: $desktop-minimum) {
+          margin-top: 3px;
           width: 670px;
           margin-right: -65px;
           text-align: left;

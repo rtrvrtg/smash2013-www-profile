@@ -76,9 +76,9 @@ body {
   }
 }
 
-#name-and-slogan { /* Wrapper for website name and slogan */
+#logo-region { /* Wrapper for website name and slogan */
   float: left;
-  width: 50%;
+  width: 75%;
   max-width: 361px;
 }
 
@@ -104,10 +104,11 @@ body {
 }
 
 #site-slogan { /* The slogan (or tagline) of a website */
-  margin: 0;
+  margin: 0.5em 0;
   clear: left;
   font-size: 0.8em;
   @media all and (min-width: $desktop-minimum) {
+    margin: 0;
     font-size: 0.95em;
     letter-spacing: 0.05em;
     white-space: nowrap;
