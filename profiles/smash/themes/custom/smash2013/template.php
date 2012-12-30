@@ -384,7 +384,7 @@ function smash2013_breadcrumb($variables) {
       }
     }
     
-    array_push(drupal_get_title());
+    array_push($breadcrumb, drupal_get_title());
 
     $output .= '<div class="breadcrumb">' . implode(' » ', $breadcrumb) . '</div>';
     return $output;
