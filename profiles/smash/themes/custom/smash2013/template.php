@@ -286,44 +286,72 @@ function _smash_2013_prep_toggler($seed) {
 }
 
 /**
+ * DOM helper: get elements by class name
+ */
+function _dom_getElementsByClassName($el, $className) {
+  if (!is_a($el, 'DOMDocument') && !is_a($el, 'DOMNode')) return array();
+  
+  $elements = $el->getElementsByTagName("*");
+  $matched = array();
+
+  foreach ($elements as $node) {
+    if (!$node->hasAttributes()) continue;
+
+    $classAttribute = $node->attributes->getNamedItem('class');
+
+    if (!$classAttribute) continue;
+
+    $classes = explode(' ', $classAttribute->nodeValue);
+
+    if(in_array($className, $classes)) {
+      $matched[] = $node;
+    }
+  }
+
+  return $matched;
+}
+
+/**
  * Implements theme_menu_tree__menu_block
  */
 function smash2013_menu_tree__menu_block($variables) {
   $tree = $variables['tree'];
   list($id, $label) = _smash_2013_prep_toggler($tree);
   
-  // $groups_found = preg_match_all('/menu-item-group/', $tree, $groups);
-  // $count = count($groups[0]) > 0 ? count($groups[0]) : 1;
-  // $tree = preg_replace('/menu-columns-[0-9]+/', '', $tree); // top level only!
-  
   // Load into DOM
   $doc = new DOMDocument();
   @$doc->loadHTML($tree);
   $el = $doc->getElementsByTagName('body')->item(0);
   $count = 0;
+  $override_tag = NULL;
+  
   foreach ($el->childNodes as $node) {
     if ($node->nodeType != XML_ELEMENT_NODE) continue;
+    
     if (strpos($node->getAttribute('class'), 'menu-item-group') !== FALSE) {
       $count++;
     }
+    
+    // check if this is a view and test on that
+    $view_test = _dom_getElementsByClassName($node, 'view-content');
+    if (count($view_test) > 0) {
+      $count += count(_dom_getElementsByClassName($view_test[0], 'menu-item-group'));
+      $override_tag = 'ul';
+    }
   }
-  $count = $count > 0 ? $count : 1;
   
-  // drupal_set_message(print_r(htmlentities($doc->saveHTML()), 1));
+  $count = $count > 0 ? $count : 1;
   
   $class = 'menu';
   $tag = 'ul';
   if ($count > 1) {
     $class .= ' menu-columns-' . $count;
     $tag = 'div';
+    
+    if (!is_null($override_tag)) {
+      $tag = $override_tag;
+    }
   }
-  
-  /*
-  return $label . '<div class="menu-wrapper">' . 
-    '<' . $tag . ' class="' . $class . '">' . 
-    $tree . 
-    '</' . $tag . '>' . '</div>';
-  */
   
   return $label . '<div class="menu-wrapper">' . 
     '<' . $tag . ' class="' . $class . '" id=" ' . $id . ' ">' . 
