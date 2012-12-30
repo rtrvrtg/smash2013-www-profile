@@ -42,8 +42,12 @@ body {
     padding: 10px;
   }
 }
-
 /* line 32, ../sass/pages.scss */
+body.lt-ie9 {
+  background: #282828 url(../images/2013webbg.png) repeat top center;
+}
+
+/* line 38, ../sass/pages.scss */
 #page {
   max-width: 948px;
 }
@@ -52,11 +56,11 @@ body {
  * The skip-link link will be completely hidden until a user tabs to the link.
  * See the element-focusable rule in system.base.css.
  */
-/* line 41, ../sass/pages.scss */
+/* line 47, ../sass/pages.scss */
 #skip-link {
   margin: 0;
 }
-/* line 45, ../sass/pages.scss */
+/* line 51, ../sass/pages.scss */
 #skip-link a,
 #skip-link a:visited {
   display: block;
@@ -70,19 +74,19 @@ body {
 /*
  * Header
  */
-/* line 59, ../sass/pages.scss */
+/* line 65, ../sass/pages.scss */
 #header {
   color: white;
 }
 @media all and (min-width: 950px) {
-  /* line 59, ../sass/pages.scss */
+  /* line 65, ../sass/pages.scss */
   #header {
     background: url(../images/skadi-cyrus.png) no-repeat bottom right;
     min-height: 134px;
   }
 }
 
-/* line 67, ../sass/pages.scss */
+/* line 73, ../sass/pages.scss */
 #logo {
   /* Wrapping link for logo */
   float: left;
@@ -90,14 +94,14 @@ body {
   margin: 0;
   padding: 0;
 }
-/* line 72, ../sass/pages.scss */
+/* line 78, ../sass/pages.scss */
 #logo img {
   vertical-align: bottom;
   margin-bottom: 10px;
   max-width: 100%;
 }
 
-/* line 79, ../sass/pages.scss */
+/* line 85, ../sass/pages.scss */
 #logo-region {
   /* Wrapper for website name and slogan */
   float: left;
@@ -105,7 +109,7 @@ body {
   max-width: 361px;
 }
 
-/* line 85, ../sass/pages.scss */
+/* line 91, ../sass/pages.scss */
 #site-name {
   /* The name of the website */
   margin: 0;
@@ -113,24 +117,24 @@ body {
   line-height: 1.5em;
 }
 @media all and (min-width: 950px) {
-  /* line 85, ../sass/pages.scss */
+  /* line 91, ../sass/pages.scss */
   #site-name {
     margin-top: 20px;
   }
 }
-/* line 95, ../sass/pages.scss */
+/* line 101, ../sass/pages.scss */
 #site-name a:link,
 #site-name a:visited {
   color: #000;
   text-decoration: none;
 }
-/* line 101, ../sass/pages.scss */
+/* line 107, ../sass/pages.scss */
 #site-name a:hover,
 #site-name a:focus {
   text-decoration: underline;
 }
 
-/* line 106, ../sass/pages.scss */
+/* line 112, ../sass/pages.scss */
 #site-slogan {
   /* The slogan (or tagline) of a website */
   margin: 0.5em 0;
@@ -141,7 +145,7 @@ body {
   text-transform: uppercase;
 }
 @media all and (min-width: 950px) {
-  /* line 106, ../sass/pages.scss */
+  /* line 112, ../sass/pages.scss */
   #site-slogan {
     margin: 0;
     font-size: 0.95em;
@@ -150,7 +154,7 @@ body {
   }
 }
 
-/* line 121, ../sass/pages.scss */
+/* line 127, ../sass/pages.scss */
 .region-header {
   /* Wrapper for any blocks placed in the header region */
   clear: both;
@@ -160,12 +164,12 @@ body {
 /*
  * Main (container for everything else)
  */
-/* line 129, ../sass/pages.scss */
+/* line 135, ../sass/pages.scss */
 #main-wrapper {
   background: white;
 }
 @media all and (min-width: 950px) {
-  /* line 129, ../sass/pages.scss */
+  /* line 135, ../sass/pages.scss */
   #main-wrapper {
     -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 10px;
     -moz-box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 10px;
@@ -176,22 +180,22 @@ body {
 /*
  * Content
  */
-/* line 149, ../sass/pages.scss */
+/* line 155, ../sass/pages.scss */
 #breadcrumb-area {
   margin: 0.5em 0;
   font-size: 0.8em;
 }
 
-/* line 154, ../sass/pages.scss */
+/* line 160, ../sass/pages.scss */
 .breadcrumb {
   /* The path to the current page in the form of a list of links */
 }
-/* line 155, ../sass/pages.scss */
+/* line 161, ../sass/pages.scss */
 .breadcrumb ol {
   margin: 0;
   padding: 0;
 }
-/* line 159, ../sass/pages.scss */
+/* line 165, ../sass/pages.scss */
 .breadcrumb li {
   display: inline;
   list-style-type: none;
@@ -199,7 +203,7 @@ body {
   padding: 0;
 }
 
-/* line 172, ../sass/pages.scss */
+/* line 178, ../sass/pages.scss */
 h1.title,
 h2.node-title,
 h2.block-title,
@@ -213,37 +217,37 @@ h3.title {
   font-weight: normal;
 }
 
-/* line 179, ../sass/pages.scss */
+/* line 185, ../sass/pages.scss */
 tr.even {
   /* Some tables have rows marked even or odd. */
   /* background-color: #eee; */
   /* Drupal core uses a #eee background */
 }
 
-/* line 183, ../sass/pages.scss */
+/* line 189, ../sass/pages.scss */
 tr.odd {
   /* background-color: #eee; */
   /* Drupal core uses a #eee background */
 }
 
-/* line 187, ../sass/pages.scss */
+/* line 193, ../sass/pages.scss */
 div.messages {
   /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
   margin: 1.5em 0;
   /* Drupal core uses "6px 0" margin */
 }
-/* line 190, ../sass/pages.scss */
+/* line 196, ../sass/pages.scss */
 div.messages ul {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-/* line 196, ../sass/pages.scss */
+/* line 202, ../sass/pages.scss */
 div.status {
   /* Normal priority messages */
 }
 
-/* line 200, ../sass/pages.scss */
+/* line 206, ../sass/pages.scss */
 div.warning,
 tr.warning {
   /* Medium priority messages */
@@ -251,53 +255,53 @@ tr.warning {
   /* Drupal core uses: 1px solid #f0c020 */
 }
 
-/* line 205, ../sass/pages.scss */
+/* line 211, ../sass/pages.scss */
 div.error,
 tr.error {
   /* High priority messages. See also the .error declaration below. */
 }
 
-/* line 208, ../sass/pages.scss */
+/* line 214, ../sass/pages.scss */
 .error {
   /* Errors that are separate from div.messages status messages. */
   /* color: #e55; */
   /* Drupal core uses a #e55 background */
 }
 
-/* line 212, ../sass/pages.scss */
+/* line 218, ../sass/pages.scss */
 .warning {
   /* Warnings that are separate from div.messages status messages. */
   /* color: #e09010; */
   /* Drupal core uses a #e09010 background */
 }
 
-/* line 216, ../sass/pages.scss */
+/* line 222, ../sass/pages.scss */
 .tabs {
   /* See also the tabs.css file. */
 }
 
-/* line 219, ../sass/pages.scss */
+/* line 225, ../sass/pages.scss */
 .region-help {
   /* Help text on a page */
 }
 
-/* line 222, ../sass/pages.scss */
+/* line 228, ../sass/pages.scss */
 .more-help-link {
   /* Link to more help */
 }
 
-/* line 225, ../sass/pages.scss */
+/* line 231, ../sass/pages.scss */
 .region-content {
   /* Wrapper for the actual page content */
 }
 
-/* line 228, ../sass/pages.scss */
+/* line 234, ../sass/pages.scss */
 ul.inline {
   /* List of links generated by theme_links() */
   display: inline;
   padding: 0;
 }
-/* line 232, ../sass/pages.scss */
+/* line 238, ../sass/pages.scss */
 ul.inline li {
   display: inline;
   list-style-type: none;
@@ -305,35 +309,35 @@ ul.inline li {
   /* LTR */
 }
 
-/* line 238, ../sass/pages.scss */
+/* line 244, ../sass/pages.scss */
 span.field-label {
   /* The inline field label used by the Fences module */
   padding: 0 1em 0 0;
   /* LTR */
 }
 
-/* line 242, ../sass/pages.scss */
+/* line 248, ../sass/pages.scss */
 .item-list .pager {
   /* A list of page numbers when more than 1 page of content is available */
   padding: 0;
 }
-/* line 245, ../sass/pages.scss */
+/* line 251, ../sass/pages.scss */
 .item-list .pager li {
   /* Each page number in the pager list */
   padding: 0 0.5em;
 }
 
-/* line 250, ../sass/pages.scss */
+/* line 256, ../sass/pages.scss */
 .feed-icon {
   /* The link to the RSS or Atom feed for the current list of content */
 }
 
-/* line 253, ../sass/pages.scss */
+/* line 259, ../sass/pages.scss */
 .more-link {
   /* Aggregator, blog, and forum more link */
 }
 
-/* line 256, ../sass/pages.scss */
+/* line 262, ../sass/pages.scss */
 .more-info-link {
   display: block;
   margin: 0px auto;
@@ -364,11 +368,11 @@ span.field-label {
  * Remember to NOT add padding or margin to your .region-sidebar-second
  * (see the layout.css file.)
  */
-/* line 315, ../sass/pages.scss */
+/* line 321, ../sass/pages.scss */
 .region-sidebar-second .block:first-child {
   margin-top: 1em;
 }
-/* line 319, ../sass/pages.scss */
+/* line 325, ../sass/pages.scss */
 .region-sidebar-second .block .block-title {
   position: relative;
   -webkit-box-sizing: content-box;
@@ -384,12 +388,12 @@ span.field-label {
   line-height: 1em;
 }
 @media all and (min-width: 950px) {
-  /* line 319, ../sass/pages.scss */
+  /* line 325, ../sass/pages.scss */
   .region-sidebar-second .block .block-title {
     margin: 0 5px 0.2em 0;
     width: 100%;
   }
-  /* line 305, ../sass/pages.scss */
+  /* line 311, ../sass/pages.scss */
   .region-sidebar-second .block .block-title:after {
     content: " ";
     display: block;
@@ -405,15 +409,15 @@ span.field-label {
   }
 }
 
-/* line 326, ../sass/pages.scss */
+/* line 332, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container {
   border: 0px none;
 }
-/* line 328, ../sass/pages.scss */
+/* line 334, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view {
   margin: 0;
 }
-/* line 330, ../sass/pages.scss */
+/* line 336, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view .sidebar-content-title {
   position: relative;
   -webkit-box-sizing: content-box;
@@ -429,12 +433,12 @@ span.field-label {
   line-height: 1em;
 }
 @media all and (min-width: 950px) {
-  /* line 330, ../sass/pages.scss */
+  /* line 336, ../sass/pages.scss */
   .prefaced-node-sidebar .field-collection-container .field-collection-view .sidebar-content-title {
     margin: 0 5px 0.2em 0;
     width: 100%;
   }
-  /* line 305, ../sass/pages.scss */
+  /* line 311, ../sass/pages.scss */
   .prefaced-node-sidebar .field-collection-container .field-collection-view .sidebar-content-title:after {
     content: " ";
     display: block;
@@ -450,23 +454,23 @@ span.field-label {
   }
 }
 @media all and (min-width: 950px) {
-  /* line 334, ../sass/pages.scss */
+  /* line 340, ../sass/pages.scss */
   .prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-body {
     margin-right: 10px;
   }
 }
-/* line 339, ../sass/pages.scss */
+/* line 345, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-body *:first-child {
   margin-top: 0;
 }
-/* line 344, ../sass/pages.scss */
+/* line 350, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-image {
   display: inline-block;
   width: 100px;
   height: 100px;
   margin-right: 10px;
 }
-/* line 350, ../sass/pages.scss */
+/* line 356, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-image img {
   vertical-align: middle;
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
@@ -477,15 +481,16 @@ span.field-label {
 /*
  * Footer
  */
-/* line 363, ../sass/pages.scss */
+/* line 369, ../sass/pages.scss */
 #footer {
+  clear: both;
   color: #888888;
 }
 
 /*
  * Page bottom
  */
-/* line 371, ../sass/pages.scss */
+/* line 378, ../sass/pages.scss */
 .region-bottom {
   /* Wrapper for any blocks placed in the page bottom region */
 }
@@ -493,13 +498,13 @@ span.field-label {
 /*
  * Ticketing
  */
-/* line 378, ../sass/pages.scss */
+/* line 385, ../sass/pages.scss */
 .ticket-options {
   margin: 1em 0px 0;
   padding: 0;
   list-style: none;
 }
-/* line 381, ../sass/pages.scss */
+/* line 388, ../sass/pages.scss */
 .ticket-options li {
   margin: 0 0;
   padding: 0;
@@ -507,14 +512,14 @@ span.field-label {
   display: block;
 }
 @media all and (min-width: 469px) {
-  /* line 381, ../sass/pages.scss */
+  /* line 388, ../sass/pages.scss */
   .ticket-options li {
     display: inline-block;
     vertical-align: top;
     width: 50%;
   }
 }
-/* line 391, ../sass/pages.scss */
+/* line 398, ../sass/pages.scss */
 .ticket-options li a {
   display: block;
   text-align: center;
@@ -540,11 +545,11 @@ span.field-label {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-/* line 405, ../sass/pages.scss */
+/* line 412, ../sass/pages.scss */
 .ticket-options li a strong, .ticket-options li a small {
   display: block;
 }
-/* line 412, ../sass/pages.scss */
+/* line 419, ../sass/pages.scss */
 .ticket-options .ticket-option-inactive a {
   pointer-events: none;
   background-color: #444444;

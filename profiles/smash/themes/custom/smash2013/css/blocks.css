@@ -237,6 +237,11 @@
   padding-left: 50px;
   position: relative;
 }
+/* line 160, ../sass/blocks.scss */
+body.lt-ie9 #boxes-box-social_networks .boxes-box-content a.networks-twitter {
+  width: 668px;
+  margin-right: -63px;
+}
 @media all and (min-width: 950px) {
   /* line 150, ../sass/blocks.scss */
   #boxes-box-social_networks .boxes-box-content a.networks-twitter {
@@ -245,13 +250,13 @@
     margin-right: -65px;
     text-align: left;
   }
-  /* line 166, ../sass/blocks.scss */
+  /* line 171, ../sass/blocks.scss */
   #boxes-box-social_networks .boxes-box-content a.networks-twitter span {
     overflow: hidden;
     white-space: nowrap;
     line-height: 50px;
   }
-  /* line 172, ../sass/blocks.scss */
+  /* line 177, ../sass/blocks.scss */
   #boxes-box-social_networks .boxes-box-content a.networks-twitter:after {
     content: " ";
     display: block;
@@ -267,13 +272,13 @@
   }
 }
 
-/* line 183, ../sass/blocks.scss */
+/* line 188, ../sass/blocks.scss */
 #block-boxes-footer-text {
   font-size: 0.7em;
   line-height: 1.3em;
 }
 @media all and (min-width: 469px) {
-  /* line 183, ../sass/blocks.scss */
+  /* line 188, ../sass/blocks.scss */
   #block-boxes-footer-text {
     font-size: 0.8em;
   }

@@ -230,17 +230,25 @@
   .field-name-field-further-highlights {
     display: block;
     font-size: 0.8em;
+    
     @media all and (min-width: $tablet-half) {
       display: inline-block;
       vertical-align: top;
       width: 30%;
     }
+    
     @media all and (min-width: $desktop-minimum) {
       display: inline-block;
       vertical-align: top;
       width: 33%;
       font-size: 1em;
     }
+    
+    body.lt-ie9 & {
+      display: block;
+      float: left;
+    }
+    
     .field-collection-view {
       margin: 0 10px;
       border: 0px none;

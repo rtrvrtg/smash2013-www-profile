@@ -22,11 +22,17 @@ body {
 	url(../images/2013webgradient.png) fixed repeat-x bottom center, 
 	url(../images/2013webbg.png) repeat top center,
     $color-menu-hov;
+  
   @media all and (min-width: $desktop-minimum) {
     padding: 10px;
   }
   
   text-rendering: optimizeLegibility;
+  
+  &.lt-ie9 {
+    background: $color-menu-hov url(../images/2013webbg.png) repeat top center;
+  }
+
 }
 
 #page {
@@ -361,6 +367,7 @@ span.field-label { /* The inline field label used by the Fences module */
  */
 
 #footer {
+  clear: both;
   color: $color-footer;
 }
 

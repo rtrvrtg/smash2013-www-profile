@@ -329,81 +329,86 @@ body.lt-ie9 .node-home-page .field-name-field-hero a.hero-wrapped .hero-wrapped-
     font-size: 1em;
   }
 }
-/* line 244, ../sass/nodes.scss */
+/* line 247, ../sass/nodes.scss */
+body.lt-ie9 .node-home-page .field-name-field-further-highlights {
+  display: block;
+  float: left;
+}
+/* line 252, ../sass/nodes.scss */
 .node-home-page .field-name-field-further-highlights .field-collection-view {
   margin: 0 10px;
   border: 0px none;
 }
-/* line 248, ../sass/nodes.scss */
+/* line 256, ../sass/nodes.scss */
 .node-home-page .field-name-field-further-highlights .field-name-field-further-highlights-title {
   margin: 0;
   text-transform: uppercase;
   color: #e02751;
 }
-/* line 253, ../sass/nodes.scss */
+/* line 261, ../sass/nodes.scss */
 .node-home-page .field-name-field-further-highlights .field-name-field-further-highlights-link {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 257, ../sass/nodes.scss */
+/* line 265, ../sass/nodes.scss */
 .node-home-page .field-name-field-further-highlights .field-name-field-further-highlights-link li {
   list-style: none;
   padding: 0;
 }
-/* line 260, ../sass/nodes.scss */
+/* line 268, ../sass/nodes.scss */
 .node-home-page .field-name-field-further-highlights .field-name-field-further-highlights-link li a {
   color: #282828;
   text-decoration: none;
 }
 
-/* line 269, ../sass/nodes.scss */
+/* line 277, ../sass/nodes.scss */
 .node-vendor {
   position: relative;
   min-height: 80px;
 }
-/* line 272, ../sass/nodes.scss */
+/* line 280, ../sass/nodes.scss */
 .node-vendor .vendor-left {
   text-align: center;
 }
-/* line 276, ../sass/nodes.scss */
+/* line 284, ../sass/nodes.scss */
 .node-vendor .vendor-right h2 {
   margin: 0;
 }
-/* line 280, ../sass/nodes.scss */
+/* line 288, ../sass/nodes.scss */
 .node-vendor .vendor-right .field-name-body p:first-child {
   margin-top: 0;
 }
-/* line 283, ../sass/nodes.scss */
+/* line 291, ../sass/nodes.scss */
 .node-vendor .vendor-right .field-name-body p:last-child {
   margin-bottom: 0;
 }
 @media all and (min-width: 469px) {
-  /* line 289, ../sass/nodes.scss */
+  /* line 297, ../sass/nodes.scss */
   .node-vendor .vendor-left {
     position: absolute;
     top: 0;
     left: 0;
     width: 200px;
   }
-  /* line 295, ../sass/nodes.scss */
+  /* line 303, ../sass/nodes.scss */
   .node-vendor .vendor-right {
     margin-left: 210px;
   }
 }
 
-/* line 301, ../sass/nodes.scss */
+/* line 309, ../sass/nodes.scss */
 .node-article {
   clear: both;
   position: relative;
   overflow: hidden;
 }
-/* line 306, ../sass/nodes.scss */
+/* line 314, ../sass/nodes.scss */
 .node-article .article-left {
   text-align: center;
 }
 @media all and (min-width: 469px) {
-  /* line 312, ../sass/nodes.scss */
+  /* line 320, ../sass/nodes.scss */
   .node-article .article-left {
     position: relative;
     float: left;
@@ -412,44 +417,44 @@ body.lt-ie9 .node-home-page .field-name-field-hero a.hero-wrapped .hero-wrapped-
     margin-left: -200px;
     width: 200px;
   }
-  /* line 320, ../sass/nodes.scss */
+  /* line 328, ../sass/nodes.scss */
   .node-article .article-right {
     margin-left: 210px;
   }
 }
-/* line 326, ../sass/nodes.scss */
+/* line 334, ../sass/nodes.scss */
 .node-article .field-name-title h2 {
   margin: 0;
 }
-/* line 330, ../sass/nodes.scss */
+/* line 338, ../sass/nodes.scss */
 .node-article .field-name-post-date {
   font-weight: bold;
 }
-/* line 333, ../sass/nodes.scss */
+/* line 341, ../sass/nodes.scss */
 .node-article .field-name-field-image {
   /* float: left; */
   margin: 0 10px 10px 0;
   max-width: 80px;
 }
 @media all and (min-width: 950px) {
-  /* line 333, ../sass/nodes.scss */
+  /* line 341, ../sass/nodes.scss */
   .node-article .field-name-field-image {
     max-width: 200px;
   }
 }
-/* line 342, ../sass/nodes.scss */
+/* line 350, ../sass/nodes.scss */
 .node-article .field-name-body *:first-child {
   margin-top: 0;
 }
-/* line 345, ../sass/nodes.scss */
+/* line 353, ../sass/nodes.scss */
 .node-article .field-name-body *:last-child {
   margin-bottom: 0;
 }
-/* line 350, ../sass/nodes.scss */
+/* line 358, ../sass/nodes.scss */
 .node-article .field-name-field-tags .label-above {
   font-weight: bold;
 }
-/* line 353, ../sass/nodes.scss */
+/* line 361, ../sass/nodes.scss */
 .node-article .field-name-field-tags a {
   margin-right: 0.5em;
 }

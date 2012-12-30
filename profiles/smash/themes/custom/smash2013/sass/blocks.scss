@@ -157,6 +157,11 @@
         span {
         }
         
+        body.lt-ie9 & {
+          width: 668px;
+          margin-right: -63px;
+        }
+        
         @media all and (min-width: $desktop-minimum) {
           margin-top: 3px;
           width: 670px;
