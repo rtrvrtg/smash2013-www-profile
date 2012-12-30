@@ -85,6 +85,7 @@ projects[diff][subdir] = "contrib"
 
 projects[entity][version] = "1.x-dev"
 projects[entity][subdir] = "contrib"
+projects[entity][patch][] = "http://drupal.org/files/entity-node-access-1780646-8.patch"
 
 projects[imagecrop][version] = "1.x-dev"
 projects[imagecrop][subdir] = "contrib"
