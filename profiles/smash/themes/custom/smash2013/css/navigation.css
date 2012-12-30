@@ -280,7 +280,7 @@ li a.active {
   }
   /* line 261, ../sass/navigation.scss */
   .block-menu-block .menu li:hover, .block-menu-block .menu li:focus, .block-menu-block .menu li:active {
-    background-color: #282828;
+    background: #282828;
   }
   /* line 265, ../sass/navigation.scss */
   .block-menu-block .menu li a {

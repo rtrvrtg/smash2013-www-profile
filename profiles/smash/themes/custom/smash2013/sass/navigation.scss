@@ -259,7 +259,7 @@ li a.active {
         line-height: 1.5em;
         
         &:hover, &:focus, &:active {
-          background-color: $color-menu-hov;
+          background: $color-menu-hov;
         }
         
         a {

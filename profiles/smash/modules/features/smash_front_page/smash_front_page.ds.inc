@@ -97,7 +97,7 @@ function smash_front_page_ds_custom_fields_info() {
       'value' => '<a href="[field_collection_item:field-hero-link:url]" class="hero-wrapped">
 <span class="hero-wrapped-image">
 <img src="[field_collection_item:field_hero_image]" />
-<span class="hero-image-credits">Photo credits: X</span>
+<span class="hero-image-credits">Photo credits: [field_collection_item:field-photo-credits]</span>
 </span>
 <span class="hero-wrapped-content">
 <h2>[field_collection_item:field-hero-title]</h2>
