@@ -181,6 +181,9 @@ projects[inline_entity_form][subdir] = "contrib"
 projects[linkchecker][version] = "1.0"
 projects[linkchecker][subdir] = "contrib"
 
+projects[filecache][version] = "1.x-dev"
+projects[filecache][subdir] = "contrib"
+
 ; TODO modules without versions
 ; projects[twitter_cards][type] = "module"
 ; projects[twitter_cards][version] = "" ; TODO add version
