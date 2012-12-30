@@ -106,11 +106,11 @@ body {
 #site-slogan { /* The slogan (or tagline) of a website */
   margin: 0;
   clear: left;
-  white-space: nowrap;
   font-size: 0.8em;
   @media all and (min-width: $desktop-minimum) {
     font-size: 0.95em;
     letter-spacing: 0.05em;
+    white-space: nowrap;
   }
   line-height: 1em;
   font-family: $base-font-family;

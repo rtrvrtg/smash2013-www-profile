@@ -135,7 +135,6 @@ body {
   /* The slogan (or tagline) of a website */
   margin: 0;
   clear: left;
-  white-space: nowrap;
   font-size: 0.8em;
   line-height: 1em;
   font-family: "Myriad Pro", Myriad, Verdana, Arial, sans-serif;
@@ -146,6 +145,7 @@ body {
   #site-slogan {
     font-size: 0.95em;
     letter-spacing: 0.05em;
+    white-space: nowrap;
   }
 }
 
