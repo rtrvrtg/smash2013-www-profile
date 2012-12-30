@@ -282,7 +282,11 @@ li a.active {
   .block-menu-block .menu li:hover, .block-menu-block .menu li:focus, .block-menu-block .menu li:active {
     background: #282828;
   }
-  /* line 265, ../sass/navigation.scss */
+  /* line 264, ../sass/navigation.scss */
+  .block-menu-block .menu li:hover > a, .block-menu-block .menu li:focus > a, .block-menu-block .menu li:active > a {
+    background-color: #282828;
+  }
+  /* line 269, ../sass/navigation.scss */
   .block-menu-block .menu li a {
     display: block;
     padding: 0.5em 1em;
@@ -291,15 +295,15 @@ li a.active {
     text-decoration: none;
     background-color: transparent;
   }
-  /* line 273, ../sass/navigation.scss */
+  /* line 277, ../sass/navigation.scss */
   .block-menu-block .menu li a:hover, .block-menu-block .menu li a:focus, .block-menu-block .menu li a:active, .block-menu-block .menu li a.active, .block-menu-block .menu li a.active-trail {
     background-color: #282828;
   }
-  /* line 278, ../sass/navigation.scss */
+  /* line 282, ../sass/navigation.scss */
   .block-menu-block .menu li .menu-wrapper {
     padding-left: 0px;
   }
-  /* line 282, ../sass/navigation.scss */
+  /* line 286, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper {
     position: absolute;
     top: 2.5em;
@@ -312,40 +316,40 @@ li a.active {
     padding: 0;
     min-width: 200px;
   }
-  /* line 292, ../sass/navigation.scss */
+  /* line 296, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu-item-group {
     float: left;
     width: 200px;
   }
-  /* line 297, ../sass/navigation.scss */
+  /* line 301, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu-columns-2 {
     min-width: 380px;
   }
-  /* line 299, ../sass/navigation.scss */
+  /* line 303, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu-columns-2 .menu-item-group {
     width: 190px;
   }
-  /* line 303, ../sass/navigation.scss */
+  /* line 307, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu-columns-3 {
     min-width: 525px;
   }
-  /* line 305, ../sass/navigation.scss */
+  /* line 309, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu-columns-3 .menu-item-group {
     width: 175px;
   }
-  /* line 309, ../sass/navigation.scss */
+  /* line 313, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu-columns-4 {
     min-width: 560px;
   }
-  /* line 311, ../sass/navigation.scss */
+  /* line 315, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu-columns-4 .menu-item-group {
     width: 140px;
   }
-  /* line 316, ../sass/navigation.scss */
+  /* line 320, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu-item-group-name {
     display: none;
   }
-  /* line 320, ../sass/navigation.scss */
+  /* line 324, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3 {
     text-transform: uppercase;
     color: #3ec1bc;
@@ -356,46 +360,46 @@ li a.active {
     background-position: 4px 0;
     background-repeat: no-repeat;
   }
-  /* line 328, ../sass/navigation.scss */
+  /* line 332, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--maid-caf-- {
     background-image: url(../images/menuicons/menuicons.maidcafe.png);
   }
-  /* line 331, ../sass/navigation.scss */
+  /* line 335, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--art-events {
     background-image: url(../images/menuicons/menuicons.artevents.png);
   }
-  /* line 334, ../sass/navigation.scss */
+  /* line 338, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--cosplay-events {
     background-image: url(../images/menuicons/menuicons.cosplayevents.png);
   }
-  /* line 337, ../sass/navigation.scss */
+  /* line 341, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--gaming-events {
     background-image: url(../images/menuicons/menuicons.gamingevents.png);
   }
-  /* line 340, ../sass/navigation.scss */
+  /* line 344, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--gundam-events {
     background-image: url(../images/menuicons/menuicons.gundamevents.png);
   }
-  /* line 343, ../sass/navigation.scss */
+  /* line 347, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--awesome-events {
     background-image: url(../images/menuicons/menuicons.miscevents.png);
   }
-  /* line 346, ../sass/navigation.scss */
+  /* line 350, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--panels---workshops {
     background-image: url(../images/menuicons/menuicons.panel.png);
   }
-  /* line 352, ../sass/navigation.scss */
+  /* line 356, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu {
     margin: 0 0 0.5em 0;
   }
-  /* line 355, ../sass/navigation.scss */
+  /* line 359, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu li {
     float: none;
     display: block;
     margin: 0;
     text-align: left;
   }
-  /* line 361, ../sass/navigation.scss */
+  /* line 365, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu li a {
     color: white;
     font-size: 0.75em;
@@ -404,16 +408,16 @@ li a.active {
     text-transform: none;
     font-weight: normal;
   }
-  /* line 368, ../sass/navigation.scss */
+  /* line 372, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu li a:hover, .block-menu-block .menu li > .menu-wrapper .menu li a:focus, .block-menu-block .menu li > .menu-wrapper .menu li a:active {
     color: white;
     background-color: #7f54a3;
   }
-  /* line 380, ../sass/navigation.scss */
+  /* line 384, ../sass/navigation.scss */
   .block-menu-block .menu li.menu-mlid-725 > .menu-wrapper, .block-menu-block .menu li.menu-mlid-709 > .menu-wrapper, .block-menu-block .menu li.menu-mlid-704 > .menu-wrapper {
     right: 0;
   }
-  /* line 384, ../sass/navigation.scss */
+  /* line 388, ../sass/navigation.scss */
   .block-menu-block .menu li.nolink {
     padding: 0.25em;
     text-transform: uppercase;
@@ -422,11 +426,11 @@ li a.active {
     font-size: 0.9em;
     background: none;
   }
-  /* line 392, ../sass/navigation.scss */
+  /* line 396, ../sass/navigation.scss */
   .block-menu-block .menu li:hover > .menu-wrapper {
     visibility: visible;
   }
-  /* line 400, ../sass/navigation.scss */
+  /* line 404, ../sass/navigation.scss */
   .block-menu-block .view-event-list ul li a {
     padding-left: 32px;
   }
@@ -434,7 +438,7 @@ li a.active {
 /*
  * Main menu and Secondary menu links
  */
-/* line 414, ../sass/navigation.scss */
+/* line 418, ../sass/navigation.scss */
 #secondary-menu {
   float: right;
   /* LTR */

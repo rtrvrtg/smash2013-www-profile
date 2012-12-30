@@ -260,6 +260,10 @@ li a.active {
         
         &:hover, &:focus, &:active {
           background: $color-menu-hov;
+          
+          > a {
+            background-color: $color-menu-hov;
+          }
         }
         
         a {
