@@ -72,6 +72,15 @@ $zen-auto-include-item-base: false;
   padding: 0 10px;
 }
 
+#content, 
+.prefaced-node-content,
+#footer {
+  padding: 0 10px;
+  @media all and (min-width: $desktop-minimum) {
+    padding: 0 40px;
+  }
+}
+
 body.uses-smash-layout {
   #content {
     padding: 0;

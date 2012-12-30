@@ -383,6 +383,8 @@ function smash2013_breadcrumb($variables) {
         unset($breadcrumb[$key]);
       }
     }
+    
+    array_push(drupal_get_title());
 
     $output .= '<div class="breadcrumb">' . implode(' » ', $breadcrumb) . '</div>';
     return $output;

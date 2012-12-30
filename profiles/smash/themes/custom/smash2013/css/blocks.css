@@ -239,8 +239,8 @@
 @media all and (min-width: 950px) {
   /* line 150, ../sass/blocks.scss */
   #boxes-box-social_networks .boxes-box-content a.networks-twitter {
-    width: 700px;
-    margin-right: -35px;
+    width: 670px;
+    margin-right: -65px;
     text-align: left;
   }
   /* line 164, ../sass/blocks.scss */
