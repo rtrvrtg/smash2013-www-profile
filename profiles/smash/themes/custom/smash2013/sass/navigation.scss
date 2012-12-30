@@ -133,6 +133,7 @@ li a.active {
         display: none;
         
         .menu-toggle-label {
+          background-color: rgba(40, 40, 40, 0.7);
           background-position: bottom left;
         }
         .menu-toggle-checkbox:checked + .menu-toggle-label {
@@ -144,32 +145,6 @@ li a.active {
         display: block;
       }
       
-      /*
-      & ~ .menu-wrapper > .menu > li, 
-      & ~ .menu-wrapper > .menu > .menu-item-group {
-        display: none;
-        &.nolink {
-          display: none;
-        }
-        @media all and (min-width: $desktop-minimum) {
-          display: block;
-        }
-        .menu-toggle-label {
-          background-position: bottom left;
-        }
-        .menu-toggle-checkbox:checked + .menu-toggle-label {
-          background-position: bottom right;
-        }
-      }
-      &:checked ~ .menu-wrapper > ul > li, 
-      &:checked ~ .menu-wrapper > ul > .menu-item-group {
-        display: block;
-        &.nolink {
-          display: block;
-        }
-      }
-      */
-      
       &:checked + .menu-toggle-label {
         background-position: top right;
       }
@@ -180,7 +155,7 @@ li a.active {
 .block-menu-block {
   
   > .menu-block-wrapper > .menu-toggle-checkbox:checked + * + .menu-wrapper {
-    background-color: $color-purple;
+    background-color: #111;
     padding-top: 42px;
     @include box-shadow(rgba(0,0,0,0.5) -6px 6px 0px);
   }
@@ -206,11 +181,10 @@ li a.active {
       border-top: 1px solid #45146e;
       clear: both;
       color: white;
-      line-height: 40px;
       
       a {
         display: block;
-        padding: 0.1em 0.25em;
+        padding: 0.625em 0.25em;
         color: white;
         text-decoration: none;
         text-align: left;
@@ -221,14 +195,14 @@ li a.active {
         }
       }
       &:hover > a, &:focus > a, &:active > a {
-        background-color: $color-menu-hov;
+        background-color: $color-purple;
       }
       
       &.nolink {
-        padding: 0.25em;
+        padding: 0.625em 0.25em;
         background-color: $color-menu-hov;
         text-align: left;
-        @include stripe-bg;
+        @include menu-heading-style;
       }
       
       .menu-wrapper {
@@ -242,14 +216,13 @@ li a.active {
     }
   }
   h3, .menu-item-group-name {
-    padding: 0.25em;
+    padding: 0.625em 0.25em;
     background-color: $color-menu-hov;
-    @include stripe-bg;
     margin: 0;
-    font-weight: normal;
-    font-size: 1em;
     text-align: left;
-    min-height: 40px;
+    
+    font-size: 1em;    
+    @include menu-heading-style;
   }
 }    
 
@@ -331,9 +304,7 @@ li a.active {
           }
           
           h3 {
-            color: $color-turq;
-            text-transform: uppercase;
-            font-weight: bold;
+            @include menu-heading-style;
             font-size: 0.9em;
             min-height: 24px;
             padding-left: 32px;
@@ -399,9 +370,7 @@ li a.active {
         
         &.nolink {
           padding: 0.25em;
-          text-transform: uppercase;
-          font-weight: bold;
-          color: $color-turq;
+          @include menu-heading-style;
           font-size: 0.9em;
           background: none;
         }
