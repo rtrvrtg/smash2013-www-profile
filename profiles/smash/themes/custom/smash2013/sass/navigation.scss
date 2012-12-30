@@ -243,6 +243,12 @@ li a.active {
       list-style: none;
       text-align: center;
       
+      .group-single-heading {
+        .menu-wrapper > .menu > .nolink {
+          display: block;
+        }
+      }
+      
       li {
         margin: 0 0.75em;
         padding: 0;

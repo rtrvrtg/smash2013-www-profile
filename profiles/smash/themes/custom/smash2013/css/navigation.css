@@ -265,7 +265,11 @@ li a.active {
     list-style: none;
     text-align: center;
   }
-  /* line 246, ../sass/navigation.scss */
+  /* line 247, ../sass/navigation.scss */
+  .block-menu-block .menu .group-single-heading .menu-wrapper > .menu > .nolink {
+    display: block;
+  }
+  /* line 252, ../sass/navigation.scss */
   .block-menu-block .menu li {
     margin: 0 0.75em;
     padding: 0;
@@ -274,7 +278,7 @@ li a.active {
     display: inline-block;
     line-height: 1.5em;
   }
-  /* line 255, ../sass/navigation.scss */
+  /* line 261, ../sass/navigation.scss */
   .block-menu-block .menu li a {
     display: block;
     padding: 0.5em;
@@ -283,11 +287,11 @@ li a.active {
     text-decoration: none;
     background-color: transparent;
   }
-  /* line 263, ../sass/navigation.scss */
+  /* line 269, ../sass/navigation.scss */
   .block-menu-block .menu li a:hover, .block-menu-block .menu li a:focus, .block-menu-block .menu li a:active, .block-menu-block .menu li a.active, .block-menu-block .menu li a.active-trail {
     background-color: #282828;
   }
-  /* line 268, ../sass/navigation.scss */
+  /* line 274, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper {
     position: absolute;
     top: 2.5em;
@@ -300,40 +304,40 @@ li a.active {
     padding: 0;
     min-width: 200px;
   }
-  /* line 278, ../sass/navigation.scss */
+  /* line 284, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu-item-group {
     float: left;
     width: 200px;
   }
-  /* line 283, ../sass/navigation.scss */
+  /* line 289, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu-columns-2 {
     min-width: 380px;
   }
-  /* line 285, ../sass/navigation.scss */
+  /* line 291, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu-columns-2 .menu-item-group {
     width: 190px;
   }
-  /* line 289, ../sass/navigation.scss */
+  /* line 295, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu-columns-3 {
     min-width: 525px;
   }
-  /* line 291, ../sass/navigation.scss */
+  /* line 297, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu-columns-3 .menu-item-group {
     width: 175px;
   }
-  /* line 295, ../sass/navigation.scss */
+  /* line 301, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu-columns-4 {
     min-width: 560px;
   }
-  /* line 297, ../sass/navigation.scss */
+  /* line 303, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu-columns-4 .menu-item-group {
     width: 140px;
   }
-  /* line 302, ../sass/navigation.scss */
+  /* line 308, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu-item-group-name {
     display: none;
   }
-  /* line 306, ../sass/navigation.scss */
+  /* line 312, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3 {
     text-transform: uppercase;
     color: #3ec1bc;
@@ -344,46 +348,46 @@ li a.active {
     background-position: 4px 0;
     background-repeat: no-repeat;
   }
-  /* line 314, ../sass/navigation.scss */
+  /* line 320, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--maid-caf-- {
     background-image: url(../images/menuicons/menuicons.maidcafe.png);
   }
-  /* line 317, ../sass/navigation.scss */
+  /* line 323, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--art-events {
     background-image: url(../images/menuicons/menuicons.artevents.png);
   }
-  /* line 320, ../sass/navigation.scss */
+  /* line 326, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--cosplay-events {
     background-image: url(../images/menuicons/menuicons.cosplayevents.png);
   }
-  /* line 323, ../sass/navigation.scss */
+  /* line 329, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--gaming-events {
     background-image: url(../images/menuicons/menuicons.gamingevents.png);
   }
-  /* line 326, ../sass/navigation.scss */
+  /* line 332, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--gundam-events {
     background-image: url(../images/menuicons/menuicons.gundamevents.png);
   }
-  /* line 329, ../sass/navigation.scss */
+  /* line 335, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--awesome-events {
     background-image: url(../images/menuicons/menuicons.miscevents.png);
   }
-  /* line 332, ../sass/navigation.scss */
+  /* line 338, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--panels---workshops {
     background-image: url(../images/menuicons/menuicons.panel.png);
   }
-  /* line 338, ../sass/navigation.scss */
+  /* line 344, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu {
     margin: 0 0 0.5em 0;
   }
-  /* line 341, ../sass/navigation.scss */
+  /* line 347, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu li {
     float: none;
     display: block;
     margin: 0;
     text-align: left;
   }
-  /* line 347, ../sass/navigation.scss */
+  /* line 353, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu li a {
     color: white;
     font-size: 0.75em;
@@ -393,16 +397,16 @@ li a.active {
     padding-top: 0;
     padding-bottom: 0;
   }
-  /* line 355, ../sass/navigation.scss */
+  /* line 361, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu li a:hover, .block-menu-block .menu li > .menu-wrapper .menu li a:focus, .block-menu-block .menu li > .menu-wrapper .menu li a:active {
     color: white;
     background-color: #7f54a3;
   }
-  /* line 367, ../sass/navigation.scss */
+  /* line 373, ../sass/navigation.scss */
   .block-menu-block .menu li.menu-mlid-725 > .menu-wrapper, .block-menu-block .menu li.menu-mlid-709 > .menu-wrapper, .block-menu-block .menu li.menu-mlid-704 > .menu-wrapper {
     right: 0;
   }
-  /* line 371, ../sass/navigation.scss */
+  /* line 377, ../sass/navigation.scss */
   .block-menu-block .menu li.nolink {
     padding: 0.25em;
     text-transform: uppercase;
@@ -411,11 +415,11 @@ li a.active {
     font-size: 0.9em;
     background: none;
   }
-  /* line 379, ../sass/navigation.scss */
+  /* line 385, ../sass/navigation.scss */
   .block-menu-block .menu li:hover > .menu-wrapper {
     visibility: visible;
   }
-  /* line 387, ../sass/navigation.scss */
+  /* line 393, ../sass/navigation.scss */
   .block-menu-block .view-event-list ul li a {
     padding-left: 32px;
   }
@@ -423,7 +427,7 @@ li a.active {
 /*
  * Main menu and Secondary menu links
  */
-/* line 401, ../sass/navigation.scss */
+/* line 407, ../sass/navigation.scss */
 #secondary-menu {
   float: right;
   /* LTR */
