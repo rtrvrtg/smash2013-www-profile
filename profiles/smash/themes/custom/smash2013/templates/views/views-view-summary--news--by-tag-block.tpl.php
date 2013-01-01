@@ -15,6 +15,8 @@ $count = 0;
 <?php foreach ($rows as $id => $row): ?>
   <?php
   
+  if ($b->num_records <= 1) continue;
+  
   $li_class = 'bottom-tag';
   if ($count < 10) {
     $li_class = 'top-tag';
