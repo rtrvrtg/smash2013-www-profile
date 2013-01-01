@@ -20,7 +20,7 @@ function smash_news_ds_field_settings_info() {
     'author' => array(
       'weight' => '1',
       'label' => 'hidden',
-      'format' => 'author',
+      'format' => 'author_linked',
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_minimal',
@@ -99,7 +99,7 @@ function smash_news_ds_field_settings_info() {
     'author' => array(
       'weight' => '1',
       'label' => 'hidden',
-      'format' => 'author',
+      'format' => 'author_linked',
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_minimal',

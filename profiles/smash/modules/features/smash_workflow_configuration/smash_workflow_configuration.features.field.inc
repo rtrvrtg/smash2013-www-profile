@@ -111,7 +111,7 @@ function smash_workflow_configuration_field_default_fields() {
           'label' => 'hidden',
           'module' => 'colorbox',
           'settings' => array(
-            'colorbox_caption' => 'auto',
+            'colorbox_caption' => 'none',
             'colorbox_caption_custom' => '',
             'colorbox_gallery' => 'post',
             'colorbox_gallery_custom' => '',
@@ -372,6 +372,7 @@ function smash_workflow_configuration_field_default_fields() {
       'locked' => '0',
       'module' => 'field_collection',
       'settings' => array(
+        'hide_blank_items' => TRUE,
         'path' => '',
       ),
       'translatable' => '0',

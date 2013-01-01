@@ -392,19 +392,35 @@ function smash2013_breadcrumb($variables) {
 }
 
 /**
- * Implements theme_username
+ * Implements template_preprocess_username
  */
 function smash2013_preprocess_username(&$variables) {
-  // dpm($variables);
   if ($variables['uid'] != 0) {
     $user = user_load($variables['uid']);
     if (!empty($user->field_display_name) && !empty($user->field_display_name[LANGUAGE_NONE])) {
       if (!empty($user->field_display_name[LANGUAGE_NONE][0]['value'])) {
-        $variables['name'] = $user->field_display_name[LANGUAGE_NONE][0]['value'];
+        $variables['real_name'] = $variables['name'] = $user->field_display_name[LANGUAGE_NONE][0]['value'];
       }
     }
   }
   else {
-    $variables['name'] = '';
+    $variables['real_name'] = $variables['name'] = '';
   }
+  if (!isset($variables['real_name'])) {
+    $variables['real_name'] = $variables['name'];
+  }
+}
+
+/**
+ * Implements theme_username
+ */
+function smash2013_username($variables) {
+  if (isset($variables['link_path'])) {
+    // $output = l($variables['real_name'] . $variables['extra'], $variables['link_path'], $variables['link_options']);
+    $output = '<span' . drupal_attributes($variables['attributes_array']) . '>' . $variables['real_name'] . $variables['extra'] . '</span>';
+  }
+  else {
+    $output = '<span' . drupal_attributes($variables['attributes_array']) . '>' . $variables['real_name'] . $variables['extra'] . '</span>';
+  }
+  return $output;
 }

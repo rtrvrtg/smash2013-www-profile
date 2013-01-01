@@ -5,3 +5,17 @@
  */
 
 include_once 'smash_users.features.inc';
+
+function smash_users_username_alter(&$name, $account) {
+  if ($account->uid != 0) {
+    $user = user_load($account->uid);
+    if (!empty($user->field_display_name) && !empty($user->field_display_name[LANGUAGE_NONE])) {
+      if (!empty($user->field_display_name[LANGUAGE_NONE][0]['value'])) {
+        $name = $user->field_display_name[LANGUAGE_NONE][0]['value'];
+      }
+    }
+  }
+  else {
+    $name = '';
+  }
+}
