@@ -142,7 +142,7 @@ projects[wysiwyg][subdir] = "contrib"
 projects[insert_view][version] = "2.0"
 projects[insert_view][subdir] = "contrib"
 
-projects[menu_views][version] = "2.0"
+projects[menu_views][version] = "2.x-dev"
 projects[menu_views][subdir] = "contrib"
 
 projects[views][version] = "3.5"
