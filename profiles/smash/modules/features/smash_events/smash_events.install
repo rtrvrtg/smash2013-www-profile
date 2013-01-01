@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * Create Event menu position rule.
+ */
+function smash_events_update_7000() {
+  module_load_include('inc', 'menu_position', 'menu_position.admin');
+
+  // 1. Check for rule existence first
+  $rules = menu_position_read_rules();
+  $found = false;
+  foreach ($rules as $rule) {
+    if ($rule->admin_title == 'Event') {
+      $found = true;
+      break;
+    }
+  }
+  
+  if (!$found) {  
+    // 2. Enable menu_position
+    
+    module_enable(array('menu_position'));
+    
+    // 3. Fetch existing menu item
+    
+    $mlid = db_select('menu_links', 'ml')
+      ->condition('ml.menu_name', 'main-menu')
+      ->condition('ml.link_title', 'events')
+      ->condition('ml.link_path', '<view>')
+      ->fields('ml', array('mlid'))
+      ->execute()
+      ->fetchField();
+    
+    // 4. Save rule
+    
+    if ($mlid) {
+      $rule_saved = menu_position_add_rule(array(
+        'admin_title' => 'Event',
+        'conditions'  => array(
+          'content_type' => array(
+            'content_type' => array(
+              'event' => 'event',
+            ),
+          ),
+        ),
+        'menu_name'   => 'main-menu',
+        'plid'        => $mlid,
+      ));
+      
+      drupal_set_message('Created new Event menu position rule.');
+    }
+    else {
+      drupal_set_message('Event menu position rule exists, no need to create.');
+    }
+  }
+}
