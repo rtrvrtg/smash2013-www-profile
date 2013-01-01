@@ -375,21 +375,28 @@ function smash2013_breadcrumb($variables) {
   if (!empty($breadcrumb)) {
     $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
 
-    $covered = array();
+    $unique_bc = array();
     
     foreach ($breadcrumb as $key => $value) {
-      if (in_array($value, $covered)) {
-        unset($breadcrumb[$key]);
-        continue;
-      }
+      $include = true;
       
-      $class_matched = preg_match('/class="([^"]*)"/', $value, $class_matches);
-      $title = strip_tags($value);
-      $href_matched = preg_match('/href="([^"]*)"/', $value, $href_matches);
-      if ($href_matches[1] == '/%3Cnolink-group%3E' || $href_matches[1] == '/%3Cnolink%3E') {
-        unset($breadcrumb[$key]);
+      if (in_array($value, $covered)) {
+        $include = false;
+      }
+      else {      
+        $class_matched = preg_match('/class="([^"]*)"/', $value, $class_matches);
+        $title = strip_tags($value);
+        $href_matched = preg_match('/href="([^"]*)"/', $value, $href_matches);
+        if ($href_matches[1] == '/%3Cnolink-group%3E' || $href_matches[1] == '/%3Cnolink%3E') {
+          $include = false;
+        }
+      }
+      if ($include) {
+        $unique_bc[] = $value;
       }
     }
+    
+    $breadcrumb = $unique_bc;
     
     array_push($breadcrumb, drupal_get_title());
 
