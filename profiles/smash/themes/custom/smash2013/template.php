@@ -380,7 +380,7 @@ function smash2013_breadcrumb($variables) {
     foreach ($breadcrumb as $key => $value) {
       $include = true;
       
-      if (in_array($value, $covered)) {
+      if (in_array($value, $unique_bc)) {
         $include = false;
       }
       else {      
