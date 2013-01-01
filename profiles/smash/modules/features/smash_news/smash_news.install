@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Create Vendor menu position rule.
+ * Create News menu position rule.
  */
 function smash_news_update_7000() {
   

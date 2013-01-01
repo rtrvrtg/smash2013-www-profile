@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Create Vendor menu position rule.
+ * Create Guests menu position rule.
  */
 function smash_guests_update_7000() {
   

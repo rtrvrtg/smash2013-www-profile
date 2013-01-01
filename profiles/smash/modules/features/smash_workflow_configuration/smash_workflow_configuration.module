@@ -129,10 +129,10 @@ function smash_workflow_configuration_menu_position_addrule(array $attribs) {
         'plid'        => $mlid,
       ));
       
-      drupal_set_message('Created new Event menu position rule.');
+      drupal_set_message('Created new ' . $admin_title . ' menu position rule.');
     }
     else {
-      drupal_set_message('Event menu position rule exists, no need to create.');
+      drupal_set_message($admin_title . ' menu position rule exists, no need to create.');
     }
   }
 }
