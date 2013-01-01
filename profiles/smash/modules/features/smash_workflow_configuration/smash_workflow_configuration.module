@@ -54,3 +54,81 @@ function _smash_workflow_configuration_nodeform_after($form) {
   
   return $form;
 }
+
+/**
+ * Create new menu position rule
+ * @params Array of attributes, with
+ *    - admin_title
+ *    - link_title
+ *    - link_path
+ *    - menu_name (optional, defaults to main-menu)
+ *    - conditions
+ */
+function smash_workflow_configuration_menu_position_addrule(array $attribs) {
+  $admin_title = $attribs['admin_title'];
+  $link_title = $attribs['link_title'];
+  $link_path = $attribs['link_path'];
+  $menu_name = isset($attribs['menu_name']) ? $attribs['menu_name'] : 'main-menu';
+  $conditions = $attribs['conditions'];
+  
+  // 1. Simplify condition declaration
+  
+  $new_conditions = array();
+  foreach ($conditions as $type => $value) {
+    if ($type == 'content_type') {
+      if (is_array($value)) {
+        foreach ($value as $v) {
+          $new_conditions['content_type']['content_type'][$v] = $v;
+        }
+      }
+      elseif (is_string($value)) {
+        $new_conditions['content_type']['content_type'][$value] = $value;
+      }
+    }
+  }
+  $conditions = $new_conditions;
+  
+  module_load_include('inc', 'menu_position', 'menu_position.admin');
+
+  // 2. Check for rule existence first
+  $rules = menu_position_read_rules();
+  $found = false;
+  foreach ($rules as $rule) {
+    if ($rule->admin_title == $admin_title) {
+      $found = true;
+      break;
+    }
+  }
+  
+  if (!$found) {  
+    // 3. Enable menu_position
+    
+    module_enable(array('menu_position'));
+    
+    // 4. Fetch existing menu item
+    
+    $mlid = db_select('menu_links', 'ml')
+      ->condition('ml.menu_name', $menu_name)
+      ->condition('ml.link_title', $link_title)
+      ->condition('ml.link_path', $link_path)
+      ->fields('ml', array('mlid'))
+      ->execute()
+      ->fetchField();
+    
+    // 5. Save rule
+    
+    if ($mlid) {
+      $rule_saved = menu_position_add_rule(array(
+        'admin_title' => $admin_title,
+        'conditions'  => $conditions,
+        'menu_name'   => $menu_name,
+        'plid'        => $mlid,
+      ));
+      
+      drupal_set_message('Created new Event menu position rule.');
+    }
+    else {
+      drupal_set_message('Event menu position rule exists, no need to create.');
+    }
+  }
+}

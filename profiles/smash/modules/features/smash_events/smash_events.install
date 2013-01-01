@@ -4,6 +4,15 @@
  * Create Event menu position rule.
  */
 function smash_events_update_7000() {
+  
+  smash_workflow_configuration_menu_position_addrule(array(
+    'admin_title' => 'Event',
+    'link_title'  => 'Events',
+    'link_path'   => '<view>',
+    'conditions'  => array('content_type' => 'event'),
+  ));
+  
+  /*
   module_load_include('inc', 'menu_position', 'menu_position.admin');
 
   // 1. Check for rule existence first
@@ -53,4 +62,5 @@ function smash_events_update_7000() {
       drupal_set_message('Event menu position rule exists, no need to create.');
     }
   }
+  */
 }
