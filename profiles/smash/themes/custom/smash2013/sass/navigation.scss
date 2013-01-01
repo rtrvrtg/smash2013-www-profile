@@ -199,10 +199,10 @@ li a.active {
       }
       
       &.nolink {
-        padding: 0.625em 6px;
         background-color: $color-menu-hov;
         text-align: left;
         @include menu-heading-style;
+        min-height: 22px;
       }
       
       .menu-wrapper {
@@ -220,6 +220,7 @@ li a.active {
     background-color: $color-menu-hov;
     margin: 0;
     text-align: left;
+    min-height: 22px;
     
     font-size: 1em;    
     @include menu-heading-style;
@@ -324,7 +325,7 @@ li a.active {
           h3 {
             @include menu-heading-style;
             font-size: 0.9em;
-            min-height: 24px;
+            min-height: 14px;
             padding-left: 32px;
             padding-right: 6px;
             background-position: 4px 0;
@@ -387,7 +388,6 @@ li a.active {
         }
         
         &.nolink {
-          padding: 0.25em 6px;
           @include menu-heading-style;
           font-size: 0.9em;
           background: none;
@@ -401,9 +401,12 @@ li a.active {
       }
     }
     
-    .view ul li {
-      a {
-        padding-left: 32px;
+    .view .item-list ul {
+      margin: 0;
+      li {
+        a {
+          padding-left: 32px;
+        }
       }
     }
   }
