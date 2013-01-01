@@ -124,6 +124,7 @@ $font-monospace:   $courier;
   text-transform: uppercase;
   color: $color-turq;
   font-weight: bold;
+  line-height: 1em;
 }
 
 @mixin stripe-bg {

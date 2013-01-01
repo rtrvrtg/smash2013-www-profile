@@ -199,7 +199,7 @@ li a.active {
       }
       
       &.nolink {
-        padding: 0.625em 0.25em;
+        padding: 0.625em 6px;
         background-color: $color-menu-hov;
         text-align: left;
         @include menu-heading-style;
@@ -216,7 +216,7 @@ li a.active {
     }
   }
   h3, .menu-item-group-name {
-    padding: 0.625em 0.25em;
+    padding: 0.625em 6px;
     background-color: $color-menu-hov;
     margin: 0;
     text-align: left;
@@ -268,7 +268,7 @@ li a.active {
         
         a {
           display: block;
-          padding: 0.5em 1em;
+          padding: 0.5em 6px;
           text-transform: uppercase;
           font-weight: bold;
           text-decoration: none;
@@ -326,6 +326,7 @@ li a.active {
             font-size: 0.9em;
             min-height: 24px;
             padding-left: 32px;
+            padding-right: 6px;
             background-position: 4px 0;
             background-repeat: no-repeat;
 
@@ -386,7 +387,7 @@ li a.active {
         }
         
         &.nolink {
-          padding: 0.25em;
+          padding: 0.25em 6px;
           @include menu-heading-style;
           font-size: 0.9em;
           background: none;
@@ -400,7 +401,7 @@ li a.active {
       }
     }
     
-    .view-event-list ul li {
+    .view ul li {
       a {
         padding-left: 32px;
       }
