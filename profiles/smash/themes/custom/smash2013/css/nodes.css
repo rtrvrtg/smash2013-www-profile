@@ -424,59 +424,64 @@ body.lt-ie9 .node-home-page .field-name-field-further-highlights {
   text-align: center;
 }
 @media all and (min-width: 469px) {
-  /* line 338, ../sass/nodes.scss */
+  /* line 339, ../sass/nodes.scss */
   .node-article .article-left {
     position: relative;
     float: left;
     top: 0;
-    left: 200px;
-    margin-left: -200px;
-    width: 200px;
+    left: 100px;
+    margin-left: -100px;
+    width: 100px;
   }
-  /* line 346, ../sass/nodes.scss */
+  /* line 347, ../sass/nodes.scss */
   .node-article .article-right {
-    margin-left: 210px;
+    margin-left: 110px;
   }
 }
-/* line 352, ../sass/nodes.scss */
+/* line 353, ../sass/nodes.scss */
 .node-article .field-name-title h2 {
   margin: 0;
 }
-/* line 356, ../sass/nodes.scss */
+/* line 358, ../sass/nodes.scss */
 .node-article .field-name-post-date {
   font-weight: bold;
 }
-/* line 359, ../sass/nodes.scss */
-.node-article .field-name-field-image {
-  /* float: left; */
-  margin: 0 10px 10px 0;
-  max-width: 80px;
-}
-@media all and (min-width: 950px) {
-  /* line 359, ../sass/nodes.scss */
-  .node-article .field-name-field-image {
-    max-width: 200px;
-  }
+/* line 363, ../sass/nodes.scss */
+.node-article .field-name-ds-user-picture img {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
+  box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
 }
 /* line 368, ../sass/nodes.scss */
+.node-article .field-name-field-image {
+  margin: 0 0 10px 0;
+  max-width: 100px;
+}
+/* line 372, ../sass/nodes.scss */
+.node-article .field-name-field-image img {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
+  box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
+}
+/* line 378, ../sass/nodes.scss */
 .node-article .field-name-body *:first-child {
   margin-top: 0;
 }
-/* line 371, ../sass/nodes.scss */
+/* line 381, ../sass/nodes.scss */
 .node-article .field-name-body *:last-child {
   margin-bottom: 0;
 }
-/* line 377, ../sass/nodes.scss */
+/* line 388, ../sass/nodes.scss */
 .node-article .field-name-field-tags .label-above,
 .node-article .field-name-field-tags .label-inline {
   font-weight: bold;
 }
-/* line 380, ../sass/nodes.scss */
+/* line 391, ../sass/nodes.scss */
 .node-article .field-name-field-tags .label-inline {
   display: inline-block;
   margin-right: 5px;
 }
-/* line 384, ../sass/nodes.scss */
+/* line 395, ../sass/nodes.scss */
 .node-article .field-name-field-tags a {
   margin-right: 0.5em;
 }

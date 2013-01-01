@@ -375,7 +375,14 @@ function smash2013_breadcrumb($variables) {
   if (!empty($breadcrumb)) {
     $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
 
+    $covered = array();
+    
     foreach ($breadcrumb as $key => $value) {
+      if (in_array($value, $covered)) {
+        unset($breadcrumb[$key]);
+        continue;
+      }
+      
       $class_matched = preg_match('/class="([^"]*)"/', $value, $class_matches);
       $title = strip_tags($value);
       $href_matched = preg_match('/href="([^"]*)"/', $value, $href_matches);
