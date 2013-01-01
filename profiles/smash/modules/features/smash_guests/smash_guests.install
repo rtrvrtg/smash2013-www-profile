@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Create Vendor menu position rule.
+ */
+function smash_guests_update_7000() {
+  
+  smash_workflow_configuration_menu_position_addrule(array(
+    'admin_title' => 'Guest',
+    'link_title'  => 'Guests',
+    'link_path'   => '<view>',
+    'conditions'  => array('content_type' => 'guest'),
+  ));
+  
+}

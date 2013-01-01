@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Create Vendor menu position rule.
+ */
+function smash_vendors_update_7000() {
+  
+  smash_workflow_configuration_menu_position_addrule(array(
+    'admin_title' => 'Vendor',
+    'link_title'  => 'Vendors',
+    'link_path'   => '<view>',
+    'conditions'  => array('content_type' => 'vendor'),
+  ));
+  
+}
