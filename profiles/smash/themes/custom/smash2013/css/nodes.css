@@ -474,8 +474,9 @@ body.lt-ie9 .node-home-page .field-name-field-further-highlights {
 /* line 380, ../sass/nodes.scss */
 .node-article .field-name-field-tags .label-inline {
   display: inline-block;
+  margin-right: 5px;
 }
-/* line 383, ../sass/nodes.scss */
+/* line 384, ../sass/nodes.scss */
 .node-article .field-name-field-tags a {
   margin-right: 0.5em;
 }
