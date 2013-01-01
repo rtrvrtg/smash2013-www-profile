@@ -33,6 +33,24 @@
   .field-name-author {
     @include more-link;
   }
+  
+  .prefaced-node-sidebar {
+    .field-name-field-sidebar-image {
+      a {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        
+        img {
+          vertical-align: middle;
+          @include box-shadow(rgba(0, 0, 0, 0.5) 3px 3px 0px);
+        }
+      }
+    }
+  }
 
 }
 

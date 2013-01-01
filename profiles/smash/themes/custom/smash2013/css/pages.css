@@ -463,25 +463,11 @@ span.field-label {
 .prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-body *:first-child {
   margin-top: 0;
 }
-/* line 350, ../sass/pages.scss */
-.prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-image {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  margin-right: 10px;
-}
-/* line 356, ../sass/pages.scss */
-.prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-image img {
-  vertical-align: middle;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
-  box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
-}
 
 /*
  * Footer
  */
-/* line 369, ../sass/pages.scss */
+/* line 357, ../sass/pages.scss */
 #footer {
   clear: both;
   color: #888888;
@@ -490,7 +476,7 @@ span.field-label {
 /*
  * Page bottom
  */
-/* line 378, ../sass/pages.scss */
+/* line 366, ../sass/pages.scss */
 .region-bottom {
   /* Wrapper for any blocks placed in the page bottom region */
 }
@@ -498,13 +484,13 @@ span.field-label {
 /*
  * Ticketing
  */
-/* line 385, ../sass/pages.scss */
+/* line 373, ../sass/pages.scss */
 .ticket-options {
   margin: 1em 0px 0;
   padding: 0;
   list-style: none;
 }
-/* line 388, ../sass/pages.scss */
+/* line 376, ../sass/pages.scss */
 .ticket-options li {
   margin: 0 0;
   padding: 0;
@@ -512,14 +498,14 @@ span.field-label {
   display: block;
 }
 @media all and (min-width: 469px) {
-  /* line 388, ../sass/pages.scss */
+  /* line 376, ../sass/pages.scss */
   .ticket-options li {
     display: inline-block;
     vertical-align: top;
     width: 50%;
   }
 }
-/* line 398, ../sass/pages.scss */
+/* line 386, ../sass/pages.scss */
 .ticket-options li a {
   display: block;
   text-align: center;
@@ -545,11 +531,11 @@ span.field-label {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-/* line 412, ../sass/pages.scss */
+/* line 400, ../sass/pages.scss */
 .ticket-options li a strong, .ticket-options li a small {
   display: block;
 }
-/* line 419, ../sass/pages.scss */
+/* line 407, ../sass/pages.scss */
 .ticket-options .ticket-option-inactive a {
   pointer-events: none;
   background-color: #444444;

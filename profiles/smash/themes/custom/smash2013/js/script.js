@@ -22,23 +22,29 @@ if (newsByDate.length > 0) {
   // Filter by year and month
   
   var yearHeadings = $('li.archive-heading', newsByDate);
-  yearHeadings.click(function(){
+  yearHeadings.click(function(e){
+    e.preventDefault();
+    
     var year = $(this).attr('data-yeararchive');
     
     $('li', newsByDate).not('.archive-heading')
       .not('[data-yeararchive="' + year + '"]')
-      .hide();
+      .hide('fast');
     
     $('li.archive-heading').not(this).removeClass('active');
     
     $('li[data-yeararchive="' + year + '"]', newsByDate)
       .not('.archive-heading')
-      .show();
+      .show('fast');
     
     $(this).addClass('active');
   });
   
-  yearHeadings.first().click();
+  var thisYear = yearHeadings.first().attr('data-yeararchive');
+  $('li', newsByDate).not('.archive-heading')
+    .not('[data-yeararchive="' + thisYear + '"]')
+    .hide();
+  yearHeadings.first().addClass('active');
 }
 
 if (newsByTag.length > 0) {
@@ -52,7 +58,9 @@ if (newsByTag.length > 0) {
     text: 'More tags',
     href: '#',
     'class': 'more-tags-link'
-  }).click(function(){
+  }).click(function(e){
+    e.preventDefault();
+  
     if (li.first().is(':hidden')) {
       li.show();
       $(this).text('Fewer tags');

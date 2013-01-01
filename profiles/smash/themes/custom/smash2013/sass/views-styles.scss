@@ -65,15 +65,27 @@
       margin: 0;
       padding: 0;
       
-      h3 {
-        margin-bottom: 0;
-      }
-      .archive-heading {
-        cursor: pointer;
-        color: $color-red-bg;
+      
+      &.archive-heading {
+        h3 {
+          margin-bottom: 0;
+          color: $color-red-bg;
+          cursor: pointer;
+          
+          &:after {
+            content: url(../images/toggle-off.png);
+            margin-left: 5px;
+          }
+        }
         
         &.active {
-          color: $color-red;
+          h3 {
+            color: $color-red;
+            
+            &:after {
+              content: url(../images/toggle-on.png);
+            }
+          }
         }
       }
     }
