@@ -71,7 +71,11 @@ function smash_workflow_configuration_menu_position_addrule(array $attribs) {
   $menu_name = isset($attribs['menu_name']) ? $attribs['menu_name'] : 'main-menu';
   $conditions = $attribs['conditions'];
   
-  // 1. Simplify condition declaration
+  // 1. Enable menu_position
+  
+  module_enable(array('menu_position'));
+  
+  // 2. Simplify condition declaration
   
   $new_conditions = array();
   foreach ($conditions as $type => $value) {
@@ -90,7 +94,7 @@ function smash_workflow_configuration_menu_position_addrule(array $attribs) {
   
   module_load_include('inc', 'menu_position', 'menu_position.admin');
 
-  // 2. Check for rule existence first
+  // 3. Check for rule existence first
   $rules = menu_position_read_rules();
   $found = false;
   foreach ($rules as $rule) {
@@ -101,11 +105,11 @@ function smash_workflow_configuration_menu_position_addrule(array $attribs) {
   }
   
   if (!$found) {  
-    // 3. Enable menu_position
+    // 4. Enable menu_position
     
     module_enable(array('menu_position'));
     
-    // 4. Fetch existing menu item
+    // 5. Fetch existing menu item
     
     $mlid = db_select('menu_links', 'ml')
       ->condition('ml.menu_name', $menu_name)
@@ -115,7 +119,7 @@ function smash_workflow_configuration_menu_position_addrule(array $attribs) {
       ->execute()
       ->fetchField();
     
-    // 5. Save rule
+    // 6. Save rule
     
     if ($mlid) {
       $rule_saved = menu_position_add_rule(array(
