@@ -373,8 +373,12 @@
     }
   }
   .field-name-field-tags {
-    .label-above {
+    .label-above,
+    .label-inline {
       font-weight: bold;
+    }
+    .label-inline {
+      display: inline-block;
     }
     a {
       margin-right: 0.5em;
