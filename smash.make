@@ -188,6 +188,9 @@ projects[menu_position][version] = "1.x-dev"
 projects[menu_position][subdir] = "contrib"
 projects[menu_position][patch][] = "http://drupal.org/files/menu_position_read_rules-1795202.patch"
 
+projects[menu_breadcrumb][version] = "1.3"
+projects[menu_breadcrumb][subdir] = "contrib"
+
 ; TODO modules without versions
 ; projects[twitter_cards][type] = "module"
 ; projects[twitter_cards][version] = "" ; TODO add version
