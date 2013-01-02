@@ -15,6 +15,16 @@ function smash_vendors_node_view($node, $view_mode) {
     $breadcrumb[] = l(t('Home'), NULL);
     $breadcrumb[] = l(t('Vendors'), 'vendors');
     drupal_set_breadcrumb($breadcrumb);
+    
+    $trail[] = array(
+      'title' => t('Home'),
+      'href' => '<front>',
+    );
+    $trail[] = array(
+      'title' => t('Vendors'),
+      'href' => 'vendors',
+    );
+    menu_set_active_trail($trail);
   }
 }
 

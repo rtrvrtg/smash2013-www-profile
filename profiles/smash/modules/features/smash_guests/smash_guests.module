@@ -15,6 +15,16 @@ function smash_guests_node_view($node, $view_mode) {
     $breadcrumb[] = l(t('Home'), NULL);
     $breadcrumb[] = l(t('Guests'), 'guests');
     drupal_set_breadcrumb($breadcrumb);
+    
+    $trail[] = array(
+      'title' => t('Home'),
+      'href' => '<front>',
+    );
+    $trail[] = array(
+      'title' => t('Guests'),
+      'href' => 'guests',
+    );
+    menu_set_active_trail($trail);
   }
 }
 
