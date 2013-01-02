@@ -11,6 +11,7 @@ dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = image
 dependencies[] = imagecrop
+dependencies[] = inline_entity_form
 dependencies[] = link
 dependencies[] = options
 dependencies[] = smash_workflow_configuration

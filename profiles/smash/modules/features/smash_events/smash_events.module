@@ -9,13 +9,11 @@ include_once 'smash_events.features.inc';
 /**
  * Force event breadcrumb
  */
-function smash_events_view($node, $view_mode) {
+function smash_events_node_view($node, $view_mode) {
   if ($view_mode == 'full' && node_is_page($node) && $node->type == 'event') {
     $breadcrumb = array();
     $breadcrumb[] = l(t('Home'), NULL);
     $breadcrumb[] = l(t('Events'), 'events');
     drupal_set_breadcrumb($breadcrumb);
   }
-
-  return $node;
 }

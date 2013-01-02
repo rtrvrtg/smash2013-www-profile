@@ -256,13 +256,15 @@ function smash_vendors_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'entityreference',
+        'module' => 'inline_entity_form',
         'settings' => array(
+          'fields' => array(),
           'match_operator' => 'CONTAINS',
           'path' => '',
           'size' => '60',
+          'type_settings' => array(),
         ),
-        'type' => 'entityreference_autocomplete',
+        'type' => 'inline_entity_form',
         'weight' => '6',
       ),
       'workbench_access_field' => 0,

@@ -130,6 +130,8 @@ function smash_vendors_views_default_views() {
   $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['description']['field'] = 'description';
   $handler->display->display_options['fields']['description']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['fields']['description']['label'] = '';
+  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
   $export['vendors'] = $view;
 
   return $export;
