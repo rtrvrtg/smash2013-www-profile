@@ -5,6 +5,45 @@
 
 @import "base";
 
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="date"],
+textarea {
+  border: 1px solid $color-wrapbg;
+  background: white;
+  color: black;
+  padding: 3px;
+  @include border-radius(5px);
+  line-height: 1.25em;
+  
+  &[disabled] {
+    color: $color-inactive;
+    background-color: $color-footer;
+    @include stripe-bg;
+  }
+}
+
+input[type="submit"],
+input[type="reset"],
+button {
+  border: 0px none;
+  color: white;
+  background-color: $color-purple;
+  padding: 3px 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  @include border-radius(5px);
+  font-size: 0.875em;
+  line-height: 1.6em;
+  
+  &[disabled] {
+    color: $color-footer;
+    background-color: $color-inactive;
+    @include stripe-bg;
+  }
+}
 
 .form-item { /* Wrapper for a form element (or group of form elements) and its label */
   margin: 1.5em 0;
@@ -148,4 +187,15 @@ form {
 
 td.menu-disabled {
   background: #ccc;
+}
+
+#mc_embed_signup {
+  text-align: center;
+  input {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  .clear {
+    display: inline-block;
+  }
 }
