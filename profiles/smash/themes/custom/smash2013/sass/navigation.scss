@@ -391,6 +391,7 @@ li a.active {
           @include menu-heading-style;
           font-size: 0.9em;
           background: none;
+          min-height: 14px;
         }
         
         &:hover {

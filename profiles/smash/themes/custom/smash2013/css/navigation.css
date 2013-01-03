@@ -434,16 +434,17 @@ li a.active {
     padding: 9px 6px;
     font-size: 0.9em;
     background: none;
+    min-height: 14px;
   }
-  /* line 397, ../sass/navigation.scss */
+  /* line 398, ../sass/navigation.scss */
   .block-menu-block .menu li:hover > .menu-wrapper {
     visibility: visible;
   }
-  /* line 404, ../sass/navigation.scss */
+  /* line 405, ../sass/navigation.scss */
   .block-menu-block .view .item-list ul {
     margin: 0;
   }
-  /* line 407, ../sass/navigation.scss */
+  /* line 408, ../sass/navigation.scss */
   .block-menu-block .view .item-list ul li a {
     padding-left: 32px;
   }
@@ -451,7 +452,7 @@ li a.active {
 /*
  * Main menu and Secondary menu links
  */
-/* line 422, ../sass/navigation.scss */
+/* line 423, ../sass/navigation.scss */
 #secondary-menu {
   float: right;
   /* LTR */
