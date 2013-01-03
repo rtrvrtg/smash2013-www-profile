@@ -151,6 +151,9 @@ projects[views][subdir] = "contrib"
 projects[views_bulk_operations][version] = "3.1"
 projects[views_bulk_operations][subdir] = "contrib"
 
+projects[admin_views][version] = "1.1"
+projects[admin_views][subdir] = "contrib"
+
 projects[webform][version] = "3.18"
 projects[webform][subdir] = "contrib"
 
