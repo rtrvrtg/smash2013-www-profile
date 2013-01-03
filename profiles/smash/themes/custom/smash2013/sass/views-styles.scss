@@ -47,6 +47,22 @@
 .view-gallery {
   .views-row {
     display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    
+    a {
+      display: block;
+      text-align: center;
+      width: 100px;
+      height: 100px;
+      
+      img {
+        vertical-align: middle;
+        @include box-shadow(rgba(0, 0, 0, 0.5) 3px 3px 0px);
+      }
+    }
   }
 }
 
