@@ -385,6 +385,17 @@ li a.active {
         &.menu-mlid-709 > .menu-wrapper,
         &.menu-mlid-704 > .menu-wrapper {
           right: 0;
+          
+          &:after {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -6px;
+            background: rgba(0, 0, 0, 0.5);
+            width: 6px;
+            height: 6px;
+          }
         }
         
         &.nolink {
@@ -404,6 +415,7 @@ li a.active {
     
     .view .item-list ul {
       margin: 0;
+      padding: 0;
       li {
         a {
           padding-left: 32px;
