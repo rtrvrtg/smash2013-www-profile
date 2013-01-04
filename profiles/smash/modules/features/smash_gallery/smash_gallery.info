@@ -1,0 +1,14 @@
+name = SMASH! Gallery
+description = Image gallery
+core = 7.x
+package = SMASH!
+php = 5.2.4
+version = 7.x-0.1
+project = smash_gallery
+dependencies[] = ctools
+dependencies[] = image
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[image][] = gallery_thumb
+features[views_view][] = gallery

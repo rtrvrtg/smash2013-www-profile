@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SMASH! Gallery feature.
+ */
+
+include_once 'smash_gallery.features.inc';
