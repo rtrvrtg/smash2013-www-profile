@@ -96,6 +96,9 @@ namespace :drush do
   # Installs site
   task :install_site, :roles => :web do
     run "cd #{current_release} && git submodule update --init"
+    run "mkdir #{current_release}/cache"
+    set_ownership("#{current_release}/cache");
+    set_chmod("#{current_release}/cache");
     
     if !is_drupal_installed?
       set(:db_user, Capistrano::CLI.ui.ask("DB User: ") )
