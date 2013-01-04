@@ -17,6 +17,20 @@ function smash_workflow_configuration_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'field_sidebar_content';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
+    'field_sidebar_body' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
+    ),
+    'field_sidebar_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
+    ),
     'field_sidebar_title' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -82,6 +96,7 @@ function smash_workflow_configuration_ds_layout_settings_info() {
     'classes' => array(),
     'wrappers' => array(
       'ds_content' => 'div',
+      'ds_hidden' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',

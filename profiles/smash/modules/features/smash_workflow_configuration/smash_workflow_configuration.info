@@ -12,6 +12,7 @@ dependencies[] = features
 dependencies[] = field_collection
 dependencies[] = image
 dependencies[] = page_manager
+dependencies[] = smash_gallery
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = uuid
