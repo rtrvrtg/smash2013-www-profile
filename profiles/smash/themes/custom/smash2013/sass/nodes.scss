@@ -35,7 +35,18 @@
   }
   
   .prefaced-node-sidebar {
+    .field-name-field-sidebar-body {
+      .view-gallery {
+        @media all and (min-width: $desktop-minimum) {
+          min-width: 210px;
+          margin-right: -10px;
+        }
+      }
+    }
+    
     .field-name-field-sidebar-image {
+      display: inline-block;
+      
       a {
         display: inline-block;
         margin-right: 5px;
