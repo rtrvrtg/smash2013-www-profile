@@ -182,11 +182,15 @@
   /* "Who's online" block for a list of the online users */
 }
 
-/* line 111, ../sass/blocks.scss */
+/* line 110, ../sass/blocks.scss */
+#boxes-box-social_networks {
+  min-height: 58px;
+}
+/* line 113, ../sass/blocks.scss */
 #boxes-box-social_networks .boxes-box-content {
   text-align: center;
 }
-/* line 113, ../sass/blocks.scss */
+/* line 115, ../sass/blocks.scss */
 #boxes-box-social_networks .boxes-box-content a {
   text-decoration: none;
   display: inline-block;
@@ -202,13 +206,13 @@
   margin-bottom: 0px;
   margin-right: 5px;
 }
-/* line 125, ../sass/blocks.scss */
+/* line 127, ../sass/blocks.scss */
 #boxes-box-social_networks .boxes-box-content a:hover, #boxes-box-social_networks .boxes-box-content a:focus, #boxes-box-social_networks .boxes-box-content a:active {
   box-shadow: 2px 5px 0px rgba(0, 0, 0, 0.5);
   margin-top: 0px;
   margin-bottom: 3px;
 }
-/* line 133, ../sass/blocks.scss */
+/* line 135, ../sass/blocks.scss */
 #boxes-box-social_networks .boxes-box-content a.networks-facebook, #boxes-box-social_networks .boxes-box-content a.networks-deviantart, #boxes-box-social_networks .boxes-box-content a.networks-youtube {
   width: 50px;
   height: 50px;
@@ -217,19 +221,19 @@
   overflow: hidden;
   text-indent: -10000px;
 }
-/* line 141, ../sass/blocks.scss */
+/* line 143, ../sass/blocks.scss */
 #boxes-box-social_networks .boxes-box-content a.networks-facebook {
   background-image: url(../images/social/facebook.png);
 }
-/* line 144, ../sass/blocks.scss */
+/* line 146, ../sass/blocks.scss */
 #boxes-box-social_networks .boxes-box-content a.networks-deviantart {
   background-image: url(../images/social/deviantart.png);
 }
-/* line 147, ../sass/blocks.scss */
+/* line 149, ../sass/blocks.scss */
 #boxes-box-social_networks .boxes-box-content a.networks-youtube {
   background-image: url(../images/social/youtube.png);
 }
-/* line 150, ../sass/blocks.scss */
+/* line 152, ../sass/blocks.scss */
 #boxes-box-social_networks .boxes-box-content a.networks-twitter {
   margin-top: 10px;
   height: 50px;
@@ -237,26 +241,32 @@
   padding-left: 50px;
   position: relative;
 }
-/* line 160, ../sass/blocks.scss */
+/* line 162, ../sass/blocks.scss */
 body.lt-ie9 #boxes-box-social_networks .boxes-box-content a.networks-twitter {
   width: 668px;
   margin-right: -63px;
 }
 @media all and (min-width: 950px) {
-  /* line 150, ../sass/blocks.scss */
+  /* line 152, ../sass/blocks.scss */
   #boxes-box-social_networks .boxes-box-content a.networks-twitter {
     margin-top: 3px;
     width: 670px;
     margin-right: -65px;
     text-align: left;
   }
-  /* line 171, ../sass/blocks.scss */
+  /* line 173, ../sass/blocks.scss */
   #boxes-box-social_networks .boxes-box-content a.networks-twitter span {
     overflow: hidden;
     white-space: nowrap;
     line-height: 50px;
   }
-  /* line 177, ../sass/blocks.scss */
+  /* line 179, ../sass/blocks.scss */
+  #boxes-box-social_networks .boxes-box-content a.networks-twitter:hover, #boxes-box-social_networks .boxes-box-content a.networks-twitter:focus, #boxes-box-social_networks .boxes-box-content a.networks-twitter:active {
+    box-shadow: 2px 5px 0px rgba(0, 0, 0, 0.5);
+    margin-top: 0px;
+    margin-bottom: 3px;
+  }
+  /* line 185, ../sass/blocks.scss */
   #boxes-box-social_networks .boxes-box-content a.networks-twitter:after {
     content: " ";
     display: block;
@@ -272,13 +282,13 @@ body.lt-ie9 #boxes-box-social_networks .boxes-box-content a.networks-twitter {
   }
 }
 
-/* line 188, ../sass/blocks.scss */
+/* line 196, ../sass/blocks.scss */
 #block-boxes-footer-text {
   font-size: 0.7em;
   line-height: 1.3em;
 }
 @media all and (min-width: 469px) {
-  /* line 188, ../sass/blocks.scss */
+  /* line 196, ../sass/blocks.scss */
   #block-boxes-footer-text {
     font-size: 0.8em;
   }
