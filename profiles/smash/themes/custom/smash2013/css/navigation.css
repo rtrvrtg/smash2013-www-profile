@@ -318,7 +318,7 @@ li a.active {
     -moz-box-shadow: rgba(0, 0, 0, 0.5) 6px 6px 0px;
     box-shadow: rgba(0, 0, 0, 0.5) 6px 6px 0px;
     z-index: 9999;
-    padding: 0;
+    padding: 0.5em 0;
     min-width: 200px;
   }
   /* line 297, ../sass/navigation.scss */
@@ -354,7 +354,15 @@ li a.active {
   .block-menu-block .menu li > .menu-wrapper .menu-item-group-name {
     display: none;
   }
-  /* line 325, ../sass/navigation.scss */
+  /* line 326, ../sass/navigation.scss */
+  .block-menu-block .menu li > .menu-wrapper .item-list > h3 {
+    margin-top: 0.5em;
+  }
+  /* line 330, ../sass/navigation.scss */
+  .block-menu-block .menu li > .menu-wrapper .item-list:first-child > h3 {
+    margin-top: 0;
+  }
+  /* line 336, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3 {
     text-transform: uppercase;
     color: #3ec1bc;
@@ -368,46 +376,54 @@ li a.active {
     background-position: 4px 0;
     background-repeat: no-repeat;
   }
-  /* line 334, ../sass/navigation.scss */
+  /* line 345, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--maid-caf-- {
     background-image: url(../images/menuicons/menuicons.maidcafe.png);
   }
-  /* line 337, ../sass/navigation.scss */
+  /* line 348, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--art-events {
     background-image: url(../images/menuicons/menuicons.artevents.png);
   }
-  /* line 340, ../sass/navigation.scss */
+  /* line 351, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--cosplay-events {
     background-image: url(../images/menuicons/menuicons.cosplayevents.png);
   }
-  /* line 343, ../sass/navigation.scss */
+  /* line 354, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--gaming-events {
     background-image: url(../images/menuicons/menuicons.gamingevents.png);
   }
-  /* line 346, ../sass/navigation.scss */
+  /* line 357, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--gundam-events {
     background-image: url(../images/menuicons/menuicons.gundamevents.png);
   }
-  /* line 349, ../sass/navigation.scss */
+  /* line 360, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--awesome-events {
     background-image: url(../images/menuicons/menuicons.miscevents.png);
   }
-  /* line 352, ../sass/navigation.scss */
+  /* line 363, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3.event-list-title--panels---workshops {
     background-image: url(../images/menuicons/menuicons.panel.png);
   }
-  /* line 358, ../sass/navigation.scss */
+  /* line 369, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu {
     margin: 0 0 0.5em 0;
   }
-  /* line 361, ../sass/navigation.scss */
+  /* line 372, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu li {
     float: none;
     display: block;
     margin: 0;
     text-align: left;
   }
-  /* line 367, ../sass/navigation.scss */
+  /* line 378, ../sass/navigation.scss */
+  .block-menu-block .menu li > .menu-wrapper .menu li.nolink {
+    margin-top: 0.5em;
+  }
+  /* line 380, ../sass/navigation.scss */
+  .block-menu-block .menu li > .menu-wrapper .menu li.nolink:first-child {
+    margin-top: 0;
+  }
+  /* line 385, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu li a {
     color: white;
     font-size: 0.75em;
@@ -416,16 +432,16 @@ li a.active {
     text-transform: none;
     font-weight: normal;
   }
-  /* line 374, ../sass/navigation.scss */
+  /* line 392, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu li a:hover, .block-menu-block .menu li > .menu-wrapper .menu li a:focus, .block-menu-block .menu li > .menu-wrapper .menu li a:active {
     color: white;
     background-color: #7f54a3;
   }
-  /* line 386, ../sass/navigation.scss */
+  /* line 404, ../sass/navigation.scss */
   .block-menu-block .menu li.menu-mlid-725 > .menu-wrapper, .block-menu-block .menu li.menu-mlid-709 > .menu-wrapper, .block-menu-block .menu li.menu-mlid-704 > .menu-wrapper {
     right: 0;
   }
-  /* line 389, ../sass/navigation.scss */
+  /* line 407, ../sass/navigation.scss */
   .block-menu-block .menu li.menu-mlid-725 > .menu-wrapper:after, .block-menu-block .menu li.menu-mlid-709 > .menu-wrapper:after, .block-menu-block .menu li.menu-mlid-704 > .menu-wrapper:after {
     content: " ";
     display: block;
@@ -436,7 +452,7 @@ li a.active {
     width: 6px;
     height: 6px;
   }
-  /* line 401, ../sass/navigation.scss */
+  /* line 419, ../sass/navigation.scss */
   .block-menu-block .menu li.nolink {
     text-transform: uppercase;
     color: #3ec1bc;
@@ -447,24 +463,24 @@ li a.active {
     background: none;
     min-height: 14px;
   }
-  /* line 409, ../sass/navigation.scss */
+  /* line 427, ../sass/navigation.scss */
   .block-menu-block .menu li:hover > .menu-wrapper {
     visibility: visible;
   }
-  /* line 416, ../sass/navigation.scss */
+  /* line 435, ../sass/navigation.scss */
   .block-menu-block .view .item-list ul {
     margin: 0;
     padding: 0;
   }
-  /* line 420, ../sass/navigation.scss */
-  .block-menu-block .view .item-list ul li a {
+  /* line 441, ../sass/navigation.scss */
+  .block-menu-block .view.view-event-list .item-list ul li a {
     padding-left: 32px;
   }
 }
 /*
  * Main menu and Secondary menu links
  */
-/* line 435, ../sass/navigation.scss */
+/* line 456, ../sass/navigation.scss */
 #secondary-menu {
   float: right;
   /* LTR */

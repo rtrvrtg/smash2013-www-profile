@@ -291,7 +291,7 @@ li a.active {
           background: $color-menu-hov;
           @include box-shadow(rgba(0,0,0,0.5) 6px 6px 0px);
           z-index: 9999;
-          padding: 0;
+          padding: 0.5em 0;
           
           min-width: 200px;
           .menu-item-group {
@@ -320,6 +320,17 @@ li a.active {
           
           .menu-item-group-name {
             display: none;
+          }
+          
+          .item-list {
+            & > h3 {
+              margin-top: 0.5em;
+            }
+            &:first-child {
+              & > h3 {
+                margin-top: 0;
+              }
+            }
           }
           
           h3 {
@@ -363,6 +374,13 @@ li a.active {
               display: block;
               margin: 0;
               text-align: left;
+              
+              &.nolink {
+                margin-top: 0.5em;
+                &:first-child {
+                  margin-top: 0;
+                }
+              }
             
               a {
                 color: white;
@@ -413,11 +431,14 @@ li a.active {
       }
     }
     
-    .view .item-list ul {
-      margin: 0;
-      padding: 0;
-      li {
-        a {
+    .view {
+      .item-list ul {
+        margin: 0;
+        padding: 0;
+      }
+      
+      &.view-event-list {
+        .item-list ul li a {
           padding-left: 32px;
         }
       }
