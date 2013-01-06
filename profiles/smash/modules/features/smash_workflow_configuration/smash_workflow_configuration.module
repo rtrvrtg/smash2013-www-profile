@@ -26,7 +26,7 @@ function _smash_workflow_configuration_nodeform_after($form) {
       break;
     case 'event':
       $access_id['#value'] = array_search('- Events', $access_id['#options']);
-      $hide = true;
+      // $hide = true;
       break;
     case 'guest':
       $access_id['#value'] = array_search('- Guests', $access_id['#options']);

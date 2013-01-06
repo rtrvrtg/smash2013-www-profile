@@ -34,6 +34,25 @@
     @include more-link;
   }
   
+  .field-name-body {
+    ul.dual-column {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      
+      li {
+        list-style: none;
+        padding: 0;
+        display: inline-block;
+        vertical-align: top;
+        min-width: 150px;
+        width: 50%;
+        margin: 0;
+        @include box-sizing(border-box);
+      }
+    }
+  }
+  
   .prefaced-node-sidebar {
     .field-name-field-sidebar-body {
       .view-gallery {
