@@ -1,3 +1,3 @@
 [submodule "profiles/smash/modules/contrib/twitter_cards"]
 	path = profiles/smash/modules/contrib/twitter_cards
-	url = http://git.drupal.org/sandbox/adamelleston/1736082.git
+	url = https://github.com/rtrvrtg/twitter_pull.git
