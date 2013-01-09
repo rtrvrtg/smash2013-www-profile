@@ -30,7 +30,7 @@ function smash_gallery_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'mini';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '20';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
@@ -87,7 +87,7 @@ function smash_gallery_views_default_views() {
   $handler->display->display_options['fields']['field_media_image_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_media_image_1']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_media_image_1']['settings'] = array(
-    'image_style' => 'large',
+    'image_style' => '',
     'image_link' => '',
   );
   /* Field: Colorbox: Colorbox trigger */
@@ -97,11 +97,16 @@ function smash_gallery_views_default_views() {
   $handler->display->display_options['fields']['colorbox']['label'] = '';
   $handler->display->display_options['fields']['colorbox']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['colorbox']['trigger_field'] = 'field_media_image';
-  $handler->display->display_options['fields']['colorbox']['popup'] = '[field_media_image_1]
-[title]
-[body]';
-  $handler->display->display_options['fields']['colorbox']['caption'] = '[title]';
+  $handler->display->display_options['fields']['colorbox']['popup'] = '<figure class="colorbox-content-wrap">
+[field_media_image_1]
+<figcaption>
+<h2>[title]</h2>
+[body]
+</figcaption>
+</figure>';
   $handler->display->display_options['fields']['colorbox']['gid'] = 1;
+  $handler->display->display_options['fields']['colorbox']['width'] = '80%';
+  $handler->display->display_options['fields']['colorbox']['height'] = '80%';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';

@@ -111,3 +111,19 @@
     }
   }
 }
+
+figure.colorbox-content-wrap {
+  text-align: center;
+  
+  img {
+    max-width: 800px;
+    max-height: 800px;
+  }
+  
+  figcaption {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+  }
+}
+

@@ -137,3 +137,19 @@
   text-transform: uppercase;
   font-weight: bold;
 }
+
+/* line 115, ../sass/views-styles.scss */
+figure.colorbox-content-wrap {
+  text-align: center;
+}
+/* line 118, ../sass/views-styles.scss */
+figure.colorbox-content-wrap img {
+  max-width: 800px;
+  max-height: 800px;
+}
+/* line 123, ../sass/views-styles.scss */
+figure.colorbox-content-wrap figcaption {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
