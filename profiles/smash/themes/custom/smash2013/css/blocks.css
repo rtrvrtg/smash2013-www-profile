@@ -196,7 +196,7 @@
   display: inline-block;
   vertical-align: top;
   color: white;
-  background: #7f54a3;
+  background: #7e54a3;
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;
@@ -237,7 +237,7 @@
 #boxes-box-social_networks .boxes-box-content a.networks-twitter {
   margin-top: 10px;
   height: 50px;
-  background: #7f54a3 url(../images/social/twitter.bird.png) no-repeat center left;
+  background: #7e54a3 url(../images/social/twitter.bird.png) no-repeat center left;
   padding-left: 50px;
   position: relative;
 }

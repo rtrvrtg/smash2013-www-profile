@@ -24,7 +24,14 @@
 <?php if (is_array($tweets)): ?>
 <?php foreach ($tweets as $tweet_key => $tweet): ?>
 <span class="tweet-text"><?php 
-  print reset(explode("\n", wordwrap(strip_tags(twitter_pull_add_links($tweet->text)), 80, "\n", TRUE))); 
-?>...</span>
+  $text = @twitter_pull_add_links($tweet->text);
+  $tweet_text = reset(explode("\n", wordwrap(strip_tags($text), 80, "\n", TRUE)));
+  if (!empty($tweet_text)) {
+    print $tweet_text . '...'; 
+  }
+  else {
+    print 'Awaiting tweets...';
+  }
+?></span>
 <?php endforeach; ?>
 <?php endif; ?>

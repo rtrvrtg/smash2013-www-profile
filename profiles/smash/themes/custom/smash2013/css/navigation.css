@@ -213,14 +213,14 @@ li a.active {
 }
 /* line 197, ../sass/navigation.scss */
 .block-menu-block .menu li:hover > a, .block-menu-block .menu li:focus > a, .block-menu-block .menu li:active > a {
-  background-color: #7f54a3;
+  background-color: #7e54a3;
 }
 /* line 201, ../sass/navigation.scss */
 .block-menu-block .menu li.nolink {
   background-color: #282828;
   text-align: left;
   text-transform: uppercase;
-  color: #3ec1bc;
+  color: #3ec1c7;
   font-weight: bold;
   line-height: 1em;
   padding: 9px 6px;
@@ -244,7 +244,7 @@ li a.active {
   min-height: 22px;
   font-size: 1em;
   text-transform: uppercase;
-  color: #3ec1bc;
+  color: #3ec1c7;
   font-weight: bold;
   line-height: 1em;
   padding: 9px 6px;
@@ -253,12 +253,12 @@ li a.active {
 @media all and (min-width: 950px) {
   /* line 232, ../sass/navigation.scss */
   .block-menu-block {
-    background: #7f54a3;
+    background: #7e54a3;
   }
   /* line 235, ../sass/navigation.scss */
   .block-menu-block > .menu-block-wrapper > .menu-toggle-checkbox:checked + * + .menu-wrapper {
     padding-top: 0;
-    background: #7f54a3;
+    background: #7e54a3;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -365,7 +365,7 @@ li a.active {
   /* line 336, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3 {
     text-transform: uppercase;
-    color: #3ec1bc;
+    color: #3ec1c7;
     font-weight: bold;
     line-height: 1em;
     padding: 9px 6px;
@@ -435,7 +435,7 @@ li a.active {
   /* line 392, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu li a:hover, .block-menu-block .menu li > .menu-wrapper .menu li a:focus, .block-menu-block .menu li > .menu-wrapper .menu li a:active {
     color: white;
-    background-color: #7f54a3;
+    background-color: #7e54a3;
   }
   /* line 404, ../sass/navigation.scss */
   .block-menu-block .menu li.menu-mlid-725 > .menu-wrapper, .block-menu-block .menu li.menu-mlid-709 > .menu-wrapper, .block-menu-block .menu li.menu-mlid-704 > .menu-wrapper {
@@ -455,7 +455,7 @@ li a.active {
   /* line 419, ../sass/navigation.scss */
   .block-menu-block .menu li.nolink {
     text-transform: uppercase;
-    color: #3ec1bc;
+    color: #3ec1c7;
     font-weight: bold;
     line-height: 1em;
     padding: 9px 6px;

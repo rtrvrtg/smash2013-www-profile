@@ -233,13 +233,13 @@ body.lt-ie9 .node-home-page .field-name-field-hero a.hero-wrapped .hero-wrapped-
 .node-home-page .field-name-field-hero a.hero-wrapped .hero-wrapped-content h2 {
   margin: 0;
   text-transform: uppercase;
-  color: #e02751;
+  color: #ef397b;
   line-height: 1em;
 }
 /* line 182, ../sass/nodes.scss */
 .node-home-page .field-name-field-hero a.hero-wrapped .hero-wrapped-content .call-to-action {
   display: inline-block;
-  background: #e02751;
+  background: #ef397b;
   color: white;
   margin: 3px 0 0 0;
   -webkit-box-shadow: 3px 3px 0px #6d0428;

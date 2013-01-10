@@ -170,7 +170,13 @@ body {
   }
 }
 
-h1.title, /* The title of the page */
+h1.title { /* The title of the page */
+  margin: 0;
+  color: $color-turq;
+  font-family: $font-header;
+  font-weight: normal;
+}
+
 h2.node-title, /* Title of a piece of content when it is given in a list of content */
 h2.block-title, /* Block title */
 h2.title, /* Comment section heading */
