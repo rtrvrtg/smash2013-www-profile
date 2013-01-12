@@ -174,6 +174,12 @@
             overflow: hidden;
             white-space: nowrap;
             line-height: 50px;
+
+            &.tweet-text {
+              display: inline-block;
+              max-width: 585px;
+            }
+
           }
           
           &:hover, &:focus, &:active {
