@@ -36,15 +36,15 @@ function smash_news_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-news-by_tag_block' => array(
-          'module' => 'views',
-          'delta' => 'news-by_tag_block',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
-        ),
         'views-news-by_date_block' => array(
           'module' => 'views',
           'delta' => 'news-by_date_block',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+        'views-news-by_tag_block' => array(
+          'module' => 'views',
+          'delta' => 'news-by_tag_block',
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),

@@ -13,6 +13,74 @@ function smash_workflow_configuration_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ckeditor_link_autocomplete_menus';
+  $strongarm->value = array(
+    'main-menu' => 'main-menu',
+    '- any -' => 0,
+    'devel' => 0,
+    'management' => 0,
+    'navigation' => 0,
+    'user-menu' => 0,
+  );
+  $export['ckeditor_link_autocomplete_menus'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ckeditor_link_autocomplete_node_types';
+  $strongarm->value = array(
+    '- any -' => '- any -',
+    'article' => 0,
+    'page' => 0,
+    'event' => 0,
+    'gallery_image' => 0,
+    'guest' => 0,
+    'home_page' => 0,
+    'location' => 0,
+    'vendor' => 0,
+    'venue_map' => 0,
+    'webform' => 0,
+  );
+  $export['ckeditor_link_autocomplete_node_types'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ckeditor_link_autocomplete_vocabularies';
+  $strongarm->value = array(
+    '- any -' => 0,
+    2 => 0,
+    3 => 0,
+    1 => 0,
+    4 => 0,
+    5 => 0,
+  );
+  $export['ckeditor_link_autocomplete_vocabularies'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ckeditor_link_limit';
+  $strongarm->value = '10';
+  $export['ckeditor_link_limit'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ckeditor_link_type_name';
+  $strongarm->value = 'Internal path';
+  $export['ckeditor_link_type_name'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ckeditor_link_type_selected';
+  $strongarm->value = 1;
+  $export['ckeditor_link_type_selected'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_page';
   $strongarm->value = 0;
   $export['comment_page'] = $strongarm;
