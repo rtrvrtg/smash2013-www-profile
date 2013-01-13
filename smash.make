@@ -140,6 +140,9 @@ projects[uuid][subdir] = "contrib"
 projects[wysiwyg][version] = "2.2"
 projects[wysiwyg][subdir] = "contrib"
 
+projects[ckeditor_link][version] = "2.x-dev"
+projects[ckeditor_link][subdir] = "contrib"
+
 projects[insert_view][version] = "2.0"
 projects[insert_view][subdir] = "contrib"
 
