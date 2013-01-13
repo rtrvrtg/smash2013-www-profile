@@ -395,7 +395,7 @@ function smash2013_breadcrumb($variables) {
         }
         
         // Skip paths we don't want
-        if ($href_matches[1] == '/news\/category\/all/') {
+        if ($href_matches[1] == '/\/news\/category\/all/') {
           $include = false;
         }
                 
