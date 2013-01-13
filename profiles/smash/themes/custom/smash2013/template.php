@@ -374,6 +374,7 @@ function smash2013_breadcrumb($variables) {
 
   if (!empty($breadcrumb)) {
     $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
+    $page_title = drupal_get_title();
 
     $unique_bc = array();
     
@@ -387,7 +388,14 @@ function smash2013_breadcrumb($variables) {
         $class_matched = preg_match('/class="([^"]*)"/', $value, $class_matches);
         $title = strip_tags($value);
         $href_matched = preg_match('/href="([^"]*)"/', $value, $href_matches);
+        
+        // Skip nolink links
         if ($href_matches[1] == '/%3Cnolink-group%3E' || $href_matches[1] == '/%3Cnolink%3E') {
+          $include = false;
+        }
+        
+        // Skip for matching titles. Particularly for news
+        if ($title == $page_title) {
           $include = false;
         }
       }
@@ -398,7 +406,7 @@ function smash2013_breadcrumb($variables) {
     
     $breadcrumb = $unique_bc;
     
-    array_push($breadcrumb, drupal_get_title());
+    array_push($breadcrumb, $page_title);
 
     $output .= '<div class="breadcrumb">' . implode(' » ', $breadcrumb) . '</div>';
     return $output;
