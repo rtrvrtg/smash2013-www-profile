@@ -79,7 +79,7 @@ li a.active {
 #navigation ul.menu {
   margin: 0;
   padding: 0;
-  text-align: left;
+  text-align: justify;
 }
 /* line 68, ../sass/navigation.scss */
 #navigation ul.links li, #navigation ul.links .item-list,
@@ -204,7 +204,7 @@ li a.active {
   padding: 0.625em 0.25em;
   color: white;
   text-decoration: none;
-  text-align: left;
+  text-align: justify;
   background-color: #282828;
 }
 /* line 193, ../sass/navigation.scss */
@@ -218,7 +218,7 @@ li a.active {
 /* line 201, ../sass/navigation.scss */
 .block-menu-block .menu li.nolink {
   background-color: #282828;
-  text-align: left;
+  text-align: justify;
   text-transform: uppercase;
   color: #3ec1c7;
   font-weight: bold;
@@ -240,7 +240,7 @@ li a.active {
   padding: 0.625em 6px;
   background-color: #282828;
   margin: 0;
-  text-align: left;
+  text-align: justify;
   min-height: 22px;
   font-size: 1em;
   text-transform: uppercase;
@@ -413,7 +413,7 @@ li a.active {
     float: none;
     display: block;
     margin: 0;
-    text-align: left;
+    text-align: justify;
   }
   /* line 378, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu li.nolink {
