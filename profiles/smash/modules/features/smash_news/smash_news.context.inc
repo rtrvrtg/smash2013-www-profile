@@ -29,6 +29,7 @@ function smash_news_context_default_contexts() {
       'values' => array(
         'news' => 'news',
         'news/*' => 'news/*',
+        '~news/newsletter' => '~news/newsletter',
       ),
     ),
   );
