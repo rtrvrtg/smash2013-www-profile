@@ -394,6 +394,11 @@ function smash2013_breadcrumb($variables) {
           $include = false;
         }
         
+        // Skip paths we don't want
+        if ($href_matches[1] == '/news\/category\/all/') {
+          $include = false;
+        }
+                
         // Skip for matching titles. Particularly for news
         if ($title == $page_title) {
           $include = false;
