@@ -17,9 +17,9 @@ function smash_guests_context_default_contexts() {
   $context->description = 'Guest list';
   $context->tag = 'Guests';
   $context->conditions = array(
-    'path' => array(
+    'views' => array(
       'values' => array(
-        'guests' => 'guests',
+        'guest_list:events_page' => 'guest_list:events_page',
       ),
     ),
   );

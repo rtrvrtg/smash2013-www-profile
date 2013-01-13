@@ -111,7 +111,7 @@ function smash_workflow_configuration_field_default_fields() {
           'label' => 'hidden',
           'module' => 'colorbox',
           'settings' => array(
-            'colorbox_caption' => 'none',
+            'colorbox_caption' => 'title',
             'colorbox_caption_custom' => '',
             'colorbox_gallery' => 'post',
             'colorbox_gallery_custom' => '',
@@ -122,7 +122,9 @@ function smash_workflow_configuration_field_default_fields() {
           'weight' => '2',
         ),
       ),
+      'ds_extras_field_template' => '',
       'entity_type' => 'field_collection_item',
+      'fences_wrapper' => 'div',
       'field_name' => 'field_sidebar_image',
       'label' => 'Image',
       'required' => 0,
@@ -131,10 +133,13 @@ function smash_workflow_configuration_field_default_fields() {
         'default_image' => 0,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
+        'imagecrop' => array(
+          'vendor_banner' => 0,
+        ),
         'max_filesize' => '',
         'max_resolution' => '',
         'min_resolution' => '',
-        'title_field' => 0,
+        'title_field' => 1,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
