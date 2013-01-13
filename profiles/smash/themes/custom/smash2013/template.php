@@ -377,16 +377,20 @@ function smash2013_breadcrumb($variables) {
     $page_title = drupal_get_title();
 
     $unique_bc = array();
+    $unique_title = array();
     
     foreach ($breadcrumb as $key => $value) {
       $include = true;
+      $title = strip_tags($value);
       
       if (in_array($value, $unique_bc)) {
         $include = false;
       }
+      else if (in_array($title, $unique_title)) {
+        $include = false;
+      }
       else {      
         $class_matched = preg_match('/class="([^"]*)"/', $value, $class_matches);
-        $title = strip_tags($value);
         $href_matched = preg_match('/href="([^"]*)"/', $value, $href_matches);
         
         // Skip nolink links
@@ -406,6 +410,7 @@ function smash2013_breadcrumb($variables) {
       }
       if ($include) {
         $unique_bc[] = $value;
+        $unique_title[] = $title;
       }
     }
     
