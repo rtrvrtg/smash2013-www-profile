@@ -144,10 +144,12 @@ figure.colorbox-content-wrap {
 }
 /* line 118, ../sass/views-styles.scss */
 figure.colorbox-content-wrap img {
+  width: auto;
+  height: 100%;
   max-width: 800px;
   max-height: 800px;
 }
-/* line 123, ../sass/views-styles.scss */
+/* line 125, ../sass/views-styles.scss */
 figure.colorbox-content-wrap figcaption {
   max-width: 500px;
   margin: 0 auto;

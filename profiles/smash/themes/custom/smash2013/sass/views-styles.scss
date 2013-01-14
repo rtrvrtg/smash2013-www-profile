@@ -116,6 +116,8 @@ figure.colorbox-content-wrap {
   text-align: center;
   
   img {
+    width: auto;
+    height: 100%;
     max-width: 800px;
     max-height: 800px;
   }
