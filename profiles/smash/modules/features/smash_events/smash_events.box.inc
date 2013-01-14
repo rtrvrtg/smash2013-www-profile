@@ -15,13 +15,14 @@ function smash_events_default_box() {
   $box->api_version = 1;
   $box->delta = 'events_2013';
   $box->plugin_key = 'simple';
-  $box->title = 'Upcoming Events';
+  $box->title = 'Previous year\'s events';
   $box->description = 'Events sidebar';
   $box->options = array(
     'body' => array(
-      'value' => '<p>Here\'s a list of some of the events at SMASH! 2013 that are in the works:</p><ul><li>deviantArt Competition</li><li>Themed Art Competition</li><li>AMV Competition</li><li>Fanfiction Competition</li><li>Trivia</li><li>Cosplay Photobooth</li><li>Gaming: Free Play</li><li>Guest Panels</li><li>Gunpla Builders World Cup</li><li>Cosplay Panels</li><li>Madman Industry Panel</li><li>and much more!</li></ul>',
+      'value' => '<p>[view:gallery=block=Events]</p>',
       'format' => 'full_html',
     ),
+    'additional_classes' => '',
   );
   $export['events_2013'] = $box;
 
