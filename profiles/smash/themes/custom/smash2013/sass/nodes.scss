@@ -51,6 +51,23 @@
         @include box-sizing(border-box);
       }
     }
+    
+    ul.contacts-list {
+      li {
+        div {
+          text-align: center;
+          padding: 5px;
+          margin: 5px;
+          @include border-radius(1em);
+          background-color: $color-lightgrey;
+          min-height: 4.5em;
+          
+          strong, a {
+            display: block;
+          }
+        }
+      }
+    }
   }
   
   .prefaced-node-sidebar {
