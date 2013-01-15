@@ -246,7 +246,7 @@ libraries[jquery.imagesloaded][destination] = "libraries"
 libraries[jquery.imagesloaded][download][type] = "git"
 libraries[jquery.imagesloaded][download][url] = "https://github.com/desandro/imagesloaded.git"
 
-libraries[mcapi][directory_name] = "mcapi"
+libraries[mcapi][directory_name] = "mailchimp"
 libraries[mcapi][type] = "library"
 libraries[mcapi][destination] = "libraries"
 libraries[mcapi][download][type] = "get"
