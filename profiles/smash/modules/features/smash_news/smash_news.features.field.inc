@@ -122,7 +122,7 @@ function smash_news_field_default_fields() {
           'label' => 'hidden',
           'module' => 'colorbox',
           'settings' => array(
-            'colorbox_caption' => 'none',
+            'colorbox_caption' => 'alt',
             'colorbox_caption_custom' => '',
             'colorbox_gallery' => 'post',
             'colorbox_gallery_custom' => '',
