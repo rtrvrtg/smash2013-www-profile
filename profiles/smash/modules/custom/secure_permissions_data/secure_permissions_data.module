@@ -1,0 +1,97 @@
+<?php
+
+/**
+ * @file Secure Permissions Data
+ * Module file for secure permissions in code.
+ */
+
+/**
+ * Define site roles in code.
+ *
+ * Create a secure_permissions_data module directory and place this function
+ * in secure_permissions_data.module.
+ *
+ * @return
+ *   An array defining all the roles for the site.
+ */
+function secure_permissions_data_secure_permissions_roles() {
+  return array(
+    'anonymous user',
+    'authenticated user',
+    'staff',
+  );
+}
+
+/**
+ * Define site permissions in code.
+ *
+ * Create a secure_permissions_data module directory and place this function
+ * in secure_permissions_data.module.
+ *
+ * @param $role
+ *   The role for which the permissions are being requested.
+ *
+ * @return
+ *   An array defining all the permissions for the site.
+ */
+function secure_permissions_data_secure_permissions($role) {
+  $permissions = array(
+    'anonymous user' => array(
+      'access content',
+      'use text format filtered_html',
+      'view media',
+    ),
+    'authenticated user' => array(
+      'access ckeditor link',
+      'access content',
+      'bulk upload media',
+      'crop own images',
+      'use text format filtered_html',
+      'view media',
+    ),
+    'staff' => array(
+      'access administration pages',
+      'access all webform results',
+      'access dashboard',
+      'access site in maintenance mode',
+      'access site reports',
+      'access user profiles',
+      'access workbench',
+      'access workbench access by role',
+      'administer menu',
+      'administer menu positions',
+      'administer menu views',
+      'administer redirects',
+      'create article content',
+      'create event content',
+      'create gallery_image content',
+      'create guest content',
+      'create page content',
+      'create url aliases',
+      'create vendor content',
+      'edit boxes',
+      'edit media',
+      'edit own article content',
+      'edit own event content',
+      'edit own gallery_image content',
+      'edit own guest content',
+      'edit own page content',
+      'edit own vendor content',
+      'edit terms in 1',
+      'edit terms in 5',
+      'import media',
+      'search content',
+      'switch shortcut sets',
+      'use advanced search',
+      'use workbench_moderation my drafts tab',
+      'view all unpublished content',
+      'view moderation history',
+      'view moderation messages',
+      'view own unpublished content',
+      'view revisions',
+    ),
+  );
+  if (isset($permissions[$role])) {
+    return $permissions[$role];
+  }
+}
