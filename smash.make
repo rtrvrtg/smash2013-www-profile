@@ -198,6 +198,9 @@ projects[menu_position][patch][] = "http://drupal.org/files/menu_position_read_r
 projects[menu_breadcrumb][version] = "1.3"
 projects[menu_breadcrumb][subdir] = "contrib"
 
+projects[secure_permissions][version] = "1.x-dev"
+projects[secure_permissions][subdir] = "contrib"
+
 projects[boost][version] = "1.x-dev"
 projects[boost][subdir] = "contrib"
 
