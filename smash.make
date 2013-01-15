@@ -59,7 +59,7 @@ projects[link][subdir] = "contrib"
 projects[markdown][version] = "1.1"
 projects[markdown][subdir] = "contrib"
 
-projects[mailchimp][version] = "2.7"
+projects[mailchimp][version] = "2.9"
 projects[mailchimp][subdir] = "contrib"
 
 projects[bulk_media_upload][version] = "1.x-dev"
