@@ -71,6 +71,8 @@
   }
   
   .prefaced-node-sidebar {
+    word-break: hyphenate;
+    
     .field-name-field-sidebar-body {
       .view-gallery {
         @media all and (min-width: $desktop-minimum) {
