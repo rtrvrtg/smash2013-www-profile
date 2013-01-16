@@ -177,7 +177,8 @@
           background: rgba(0,0,0,0.7);
         }
         
-        body.lt-ie9 & {
+        html.lt-ie9 & {
+          font-size: 80%;
           background: url(../images/ie8-hero-wrapped-content.png) repeat top left;
         }
         
@@ -309,9 +310,10 @@
       font-size: 1em;
     }
     
-    body.lt-ie9 & {
+    html.lt-ie9 & {
       display: block;
       float: left;
+      width: 30%;
     }
     
     .field-collection-view {

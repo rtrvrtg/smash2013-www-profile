@@ -159,9 +159,14 @@
         span {
         }
         
-        body.lt-ie9 & {
+        html.lt-ie9 & {
           width: 668px;
           margin-right: -63px;
+          
+          span {
+            display: inline-block;
+            line-height: 50px;
+          }
         }
         
         @media all and (min-width: $desktop-minimum) {
