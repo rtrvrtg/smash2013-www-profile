@@ -224,7 +224,7 @@ libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEd
 
 libraries[colorbox][directory_name] = "colorbox"
 libraries[colorbox][type] = "library"
-libraries[colorbox][destination] = "libraries/colorbox"
+libraries[colorbox][destination] = "libraries"
 libraries[colorbox][download][type] = "get"
 libraries[colorbox][download][url] = "http://www.jacklmoore.com/colorbox/colorbox.zip"
 
