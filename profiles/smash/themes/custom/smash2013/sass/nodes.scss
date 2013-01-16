@@ -169,7 +169,7 @@
         
         @media all and (min-width: $tablet-half) {
           position: absolute;
-          bottom: 25%;
+          bottom: 15%;
           left: 0px;
           width: 290px;
           padding: 20px 10px 20px 60px;
@@ -184,6 +184,7 @@
         
         p {
           margin: 0.5em 0;
+          font-size: 90%;
           
           &:last-child {
             margin-bottom: 0;
