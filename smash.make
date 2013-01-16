@@ -77,7 +77,7 @@ projects[backup_migrate][subdir] = "contrib"
 projects[boxes][version] = "1.0"
 projects[boxes][subdir] = "contrib"
 
-projects[colorbox][version] = "1.4"
+projects[colorbox][version] = "2.0"
 projects[colorbox][subdir] = "contrib"
 
 projects[diff][version] = "3.2"
