@@ -30,7 +30,7 @@ body {
   
   text-rendering: optimizeLegibility;
   
-  &.lt-ie9 {
+  html.lt-ie9 & {
     background: $color-menu-hov url(../images/2013webbg.png) repeat top center;
   }
 
@@ -122,6 +122,10 @@ body {
   line-height: 1em;
   font-family: $base-font-family;
   text-transform: uppercase;
+  
+  html.lt-ie9 & {
+    white-space: nowrap;
+  }
 }
 
 .region-header { /* Wrapper for any blocks placed in the header region */
