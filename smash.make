@@ -80,6 +80,9 @@ projects[diff][subdir] = "contrib"
 projects[entity][version] = "1.0-rc3"
 projects[entity][subdir] = "contrib"
 
+projects[filecache][version] = "1.x-dev"
+projects[filecache][subdir] = "contrib"
+
 projects[imagecrop][version] = "1.x-dev"
 projects[imagecrop][subdir] = "contrib"
 
@@ -119,7 +122,7 @@ projects[token_filter][subdir] = "contrib"
 projects[transliteration][version] = "3.1"
 projects[transliteration][subdir] = "contrib"
 
-projects[twitter_pull][version] = "1.0-dev"
+projects[twitter_pull][version] = "1.x-dev"
 projects[twitter_pull][subdir] = "contrib"
 
 projects[panels][version] = "3.3"
