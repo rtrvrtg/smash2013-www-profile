@@ -1,5 +1,5 @@
 ; SMASH! make file
-core = "7.x"
+core = "7.19"
 api = "2"
 ; comment this out in to use on drupal.org
 projects[drupal][version] = "7.19"
@@ -44,7 +44,7 @@ projects[entityreference][subdir] = "contrib"
 projects[fences][version] = "1.0"
 projects[fences][subdir] = "contrib"
 
-projects[field_collection][version] = "1.0-beta4"
+projects[field_collection][version] = "1.0-beta5"
 projects[field_collection][subdir] = "contrib"
 
 projects[field_group][version] = "1.1"
@@ -56,7 +56,7 @@ projects[field_slideshow][subdir] = "contrib"
 projects[inline_entity_form][version] = "1.1"
 projects[inline_entity_form][subdir] = "contrib"
 
-projects[link][version] = "1.0"
+projects[link][version] = "1.1"
 projects[link][subdir] = "contrib"
 
 projects[markdown][version] = "1.1"
@@ -214,7 +214,7 @@ libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEd
 
 libraries[colorbox][directory_name] = "colorbox"
 libraries[colorbox][type] = "library"
-libraries[colorbox][destination] = "libraries/colorbox"
+libraries[colorbox][destination] = "libraries"
 libraries[colorbox][download][type] = "get"
 libraries[colorbox][download][url] = "http://www.jacklmoore.com/colorbox/colorbox.zip"
 

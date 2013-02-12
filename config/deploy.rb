@@ -154,6 +154,14 @@ END
     end
   end
   
+  # Cleanup install
+  task :cleanup_install, :roles => :web, :on_error => :continue do
+    if is_drupal_installed?
+      # Clean up PLUpload http://drupal.org/node/1189632
+      run "rm -rf #{current_release}/sites/all/libraries/plupload/examples"
+    end
+  end
+  
   # Append caching stuff
   task :setup_files, :roles => :web do
     if is_drupal_installed?
@@ -165,11 +173,10 @@ END
   # Run drush updates
   task :run_updates, :roles => :web do
     if is_drupal_installed?
-      # run "drush -y features-revert-all --root=#{current_release} -l #{url}"
-      # run "drush -y updb --root=#{current_release} -l #{url}"
       drush_do("registry-rebuild -y")
       drush_do("features-revert-all -y")
       drush_do("updb -y")
+      drush_do("cron -y")
     end
   end
   
@@ -199,15 +206,6 @@ namespace :drupal do
   end
 end
 
-namespace :compass do
-  # Build a fresh copy of theme stylesheets if compass is installed
-  task :make_styles, :roles => :web do
-    if app_exists? 'compass'
-      run "cd #{current_release}/profiles/smash/themes/custom/smash2013 && compass compile"
-    end
-  end
-end
-
 
 
 # Run during setup
@@ -218,10 +216,10 @@ after "deploy:cold", "drush:install_site"
 after "deploy:finalize_update", "drush:run_makefile"
 after "deploy:finalize_update", "drupal:create_symlinks"
 after "deploy:finalize_update", "drush:install_site"
+after "deploy:finalize_update", "drush:cleanup_install"
 after "deploy:finalize_update", "drush:run_updates"
 after "deploy:finalize_update", "drush:setup_files"
 after "deploy:finalize_update", "drush:setup_filecache"
-after "deploy:finalize_update", "compass:make_styles"
 
 # Cap the number of checked-out revisions.
 after "deploy", "deploy:cacheclear"
