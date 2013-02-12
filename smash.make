@@ -195,9 +195,9 @@ projects[menu_position][patch][] = "http://drupal.org/files/menu_position_read_r
 
 ; Themes
 ; zen
-projects[zen][type] = "theme"
-projects[zen][version] = "5.1"
-projects[zen][subdir] = "contrib"
+; projects[zen][type] = "theme"
+; projects[zen][version] = "5.1"
+; projects[zen][subdir] = "contrib"
 
 ; Libraries
 libraries[ckeditor][directory_name] = "ckeditor"
