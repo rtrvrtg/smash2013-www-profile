@@ -60,8 +60,9 @@ def symlink_me(full_path, short_path)
   run "cd #{current_release} && #{try_sudo} ln -s #{full_path} #{short_path}"
 end
 
-def set_chmod(full_path, perm = "2775")
-  run "#{try_sudo} chmod #{perm} #{full_path}"
+def set_chmod(full_path, perm = "2775", failure_ok = false)
+  suffix = failure_ok == true ? '; true' : ''
+  run "#{try_sudo} chmod #{perm} #{full_path} #{suffix}"
 end
 
 def is_drupal_installed?
@@ -83,7 +84,7 @@ namespace :deploy do
   desc "Flush the Drupal cache system."
   task :cacheclear, :roles => :web, :on_error => :continue do
     drush_do("cc all")
-    drush_do("php-eval \"apc_clear_cache(); apc_clear_cache('user'); apc_clear_cache('opcode');\"")
+    # drush_do("php-eval \"apc_clear_cache(); apc_clear_cache('user'); apc_clear_cache('opcode');\"")
   end
 end
 
@@ -140,7 +141,7 @@ END
 
     settings_path = "#{shared_path}/sites-default/settings.php"
     if is_drupal_installed? and !remote_file_exists?(settings_path)
-      set_chmod("#{shared_path}/sites-default", "2775")
+      set_chmod("#{shared_path}/sites-default", "2775", true)
       set_chmod(settings_path, "644")
       File.open(settings_path, 'a+') do |f|
         current = File.read(f)
@@ -149,15 +150,14 @@ END
         end
       end
       set_chmod(settings_path, "444")
-      set_chmod("#{shared_path}/sites-default", "2555")
     end
   end
   
   # Append caching stuff
   task :setup_files, :roles => :web do
     if is_drupal_installed?
-      set_ownership "#{shared_path}/sites-default/private", true
-      set_ownership "#{shared_path}/sites-default/files", true
+      set_ownership("#{shared_path}/sites-default/private", true)
+      set_ownership("#{shared_path}/sites-default/files", true)
     end
   end
   
