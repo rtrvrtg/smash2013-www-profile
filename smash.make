@@ -17,17 +17,8 @@ projects[date][subdir] = "contrib"
 projects[devel][version] = "1.3"
 projects[devel][subdir] = "contrib"
 
-projects[migrate][version] = "2.5"
-projects[migrate][subdir] = "contrib"
-
-projects[migrate_extras][version] = "2.5"
-projects[migrate_extras][subdir] = "contrib"
-
-projects[profiler_builder][version] = "1.0-rc2"
+projects[profiler_builder][version] = "1.0-rc3"
 projects[profiler_builder][subdir] = "contrib"
-
-projects[wordpress_migrate][version] = "2.2"
-projects[wordpress_migrate][subdir] = "contrib"
 
 projects[ds][version] = "2.0"
 projects[ds][subdir] = "contrib"
@@ -44,7 +35,7 @@ projects[entityreference][subdir] = "contrib"
 projects[fences][version] = "1.0"
 projects[fences][subdir] = "contrib"
 
-projects[field_collection][version] = "1.x-dev"
+projects[field_collection][version] = "1.0-beta4"
 projects[field_collection][subdir] = "contrib"
 
 projects[field_group][version] = "1.1"
@@ -53,13 +44,16 @@ projects[field_group][subdir] = "contrib"
 projects[field_slideshow][version] = "1.8"
 projects[field_slideshow][subdir] = "contrib"
 
+projects[inline_entity_form][version] = "1.0"
+projects[inline_entity_form][subdir] = "contrib"
+
 projects[link][version] = "1.0"
 projects[link][subdir] = "contrib"
 
 projects[markdown][version] = "1.1"
 projects[markdown][subdir] = "contrib"
 
-projects[mailchimp][version] = "2.9"
+projects[mailchimp][version] = "2.7"
 projects[mailchimp][subdir] = "contrib"
 
 projects[bulk_media_upload][version] = "1.x-dev"
@@ -68,7 +62,7 @@ projects[bulk_media_upload][subdir] = "contrib"
 projects[media][version] = "1.2"
 projects[media][subdir] = "contrib"
 
-projects[plupload][version] = "1.0"
+projects[plupload][version] = "1.1"
 projects[plupload][subdir] = "contrib"
 
 projects[backup_migrate][version] = "2.4"
@@ -77,32 +71,38 @@ projects[backup_migrate][subdir] = "contrib"
 projects[boxes][version] = "1.0"
 projects[boxes][subdir] = "contrib"
 
-projects[colorbox][version] = "2.x-dev"
+projects[colorbox][version] = "1.4"
 projects[colorbox][subdir] = "contrib"
-projects[colorbox][patch][] = "http://drupal.org/files/patch-colorbox-1_3_21.patch"
 
 projects[diff][version] = "3.2"
 projects[diff][subdir] = "contrib"
 
-projects[entity][version] = "1.x-dev"
+projects[entity][version] = "1.0-rc3"
 projects[entity][subdir] = "contrib"
-projects[entity][patch][] = "http://drupal.org/files/entity-node-access-1780646-8.patch"
 
 projects[imagecrop][version] = "1.x-dev"
 projects[imagecrop][subdir] = "contrib"
 
-projects[libraries][version] = "2.0"
+projects[libraries][version] = "1.0"
 projects[libraries][subdir] = "contrib"
 
 projects[menu_block][version] = "2.3"
 projects[menu_block][subdir] = "contrib"
-projects[menu_block][patch][] = "http://drupal.org/files/menu_block_1204064_menu_tree_add_active_path.patch"
+
+projects[menu_breadcrumb][version] = "1.3"
+projects[menu_breadcrumb][subdir] = "contrib"
+
+projects[menu_position][version] = "1.x-dev"
+projects[menu_position][subdir] = "contrib"
 
 projects[pathauto][version] = "1.2"
 projects[pathauto][subdir] = "contrib"
 
 projects[redirect][version] = "1.0-rc1"
 projects[redirect][subdir] = "contrib"
+
+projects[secure_permissions][version] = "1.5"
+projects[secure_permissions][subdir] = "contrib"
 
 projects[special_menu_items][version] = "1.0"
 projects[special_menu_items][subdir] = "contrib"
@@ -119,9 +119,8 @@ projects[token_filter][subdir] = "contrib"
 projects[transliteration][version] = "3.1"
 projects[transliteration][subdir] = "contrib"
 
-projects[twitter_pull][version] = "1.x-dev"
+projects[twitter_pull][version] = "1.0-rc4"
 projects[twitter_pull][subdir] = "contrib"
-projects[twitter_pull][patch][] = http://drupal.org/files/1820002-reroll.patch
 
 projects[panels][version] = "3.3"
 projects[panels][subdir] = "contrib"
@@ -129,25 +128,58 @@ projects[panels][subdir] = "contrib"
 projects[globalredirect][version] = "1.5"
 projects[globalredirect][subdir] = "contrib"
 
-projects[registration][version] = "1.0-beta3"
+projects[registration][version] = "1.0"
 projects[registration][subdir] = "contrib"
 
 projects[rules][version] = "2.2"
 projects[rules][subdir] = "contrib"
 
+projects[smash_basic_config][version] = "0.2"
+projects[smash_basic_config][subdir] = "contrib"
+
+projects[smash_events][version] = "0.4"
+projects[smash_events][subdir] = "contrib"
+
+projects[smash_front_page][version] = "0.3"
+projects[smash_front_page][subdir] = "contrib"
+
+projects[smash_gallery][version] = "0.2"
+projects[smash_gallery][subdir] = "contrib"
+
+projects[smash_guests][version] = "0.2"
+projects[smash_guests][subdir] = "contrib"
+
+projects[smash_layout][version] = "0.1"
+projects[smash_layout][subdir] = "contrib"
+
+projects[smash_locations][version] = "0.2"
+projects[smash_locations][subdir] = "contrib"
+
+projects[smash_news][version] = "0.4"
+projects[smash_news][subdir] = "contrib"
+
+projects[smash_users][version] = "0.1"
+projects[smash_users][subdir] = "contrib"
+
+projects[smash_vendors][version] = "0.4"
+projects[smash_vendors][subdir] = "contrib"
+
+projects[smash_workflow_configuration][version] = "0.4"
+projects[smash_workflow_configuration][subdir] = "contrib"
+
 projects[uuid][version] = "1.x-dev"
 projects[uuid][subdir] = "contrib"
-
-projects[wysiwyg][version] = "2.2"
-projects[wysiwyg][subdir] = "contrib"
 
 projects[ckeditor_link][version] = "2.x-dev"
 projects[ckeditor_link][subdir] = "contrib"
 
+projects[wysiwyg][version] = "2.2"
+projects[wysiwyg][subdir] = "contrib"
+
 projects[insert_view][version] = "2.0"
 projects[insert_view][subdir] = "contrib"
 
-projects[menu_views][version] = "2.x-dev"
+projects[menu_views][version] = "2.0"
 projects[menu_views][subdir] = "contrib"
 
 projects[views][version] = "3.5"
@@ -155,9 +187,6 @@ projects[views][subdir] = "contrib"
 
 projects[views_bulk_operations][version] = "3.1"
 projects[views_bulk_operations][subdir] = "contrib"
-
-projects[admin_views][version] = "1.1"
-projects[admin_views][subdir] = "contrib"
 
 projects[webform][version] = "3.18"
 projects[webform][subdir] = "contrib"
@@ -180,35 +209,16 @@ projects[workbench_moderation][subdir] = "contrib"
 projects[xmlsitemap][version] = "2.0-rc2"
 projects[xmlsitemap][subdir] = "contrib"
 
-projects[crumbs][version] = "1.8"
-projects[crumbs][subdir] = "contrib"
-
-projects[inline_entity_form][version] = "1.0"
-projects[inline_entity_form][subdir] = "contrib"
-
-projects[linkchecker][version] = "1.0"
-projects[linkchecker][subdir] = "contrib"
-
-projects[filecache][version] = "1.x-dev"
-projects[filecache][subdir] = "contrib"
-
-projects[menu_position][version] = "1.x-dev"
-projects[menu_position][subdir] = "contrib"
-projects[menu_position][patch][] = "http://drupal.org/files/menu_position_read_rules-1795202.patch"
-
-projects[menu_breadcrumb][version] = "1.3"
-projects[menu_breadcrumb][subdir] = "contrib"
-
-projects[secure_permissions][version] = "1.x-dev"
-projects[secure_permissions][subdir] = "contrib"
-
-projects[boost][version] = "1.x-dev"
-projects[boost][subdir] = "contrib"
+projects[google_analytics][version] = "1.3"
+projects[google_analytics][subdir] = "contrib"
 
 ; TODO modules without versions
-; projects[twitter_cards][type] = "module"
 ; projects[twitter_cards][version] = "" ; TODO add version
 ; projects[twitter_cards][subdir] = "custom"
+
+; Patches
+projects[twitter_pull][patch][] = "http://drupal.org/files/0001-Making-caching-mechanism-more-configurable-to-deal-w.patch"
+projects[menu_position][patch][] = "http://drupal.org/files/menu_position_read_rules-1795202.patch"
 
 ; Themes
 ; zen

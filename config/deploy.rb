@@ -13,7 +13,7 @@ set :default_stage, "staging"
 require 'capistrano/ext/multistage'
 
 set :shared_path, "#{deploy_to}/shared"
-set :use_sudo, false
+set :use_sudo,    true
  
 set :scm,        :git
 set :branch,     'master'
@@ -40,6 +40,10 @@ def app_exists?(app_name)
   end
 end
 
+def drush_do(task)
+  run "drush #{task} --root=#{current_release} -l #{url}"
+end
+
 def set_ownership(full_path, is_file = false)
   if !remote_file_exists? full_path
     run "#{try_sudo} mkdir #{full_path}"
@@ -50,6 +54,10 @@ def set_ownership(full_path, is_file = false)
     run "#{try_sudo} chown -R smash:www-data #{full_path}"
   end
   set_chmod(full_path)
+end
+
+def symlink_me(full_path, short_path)
+  run "cd #{current_release} && #{try_sudo} ln -s #{full_path} #{short_path}"
 end
 
 def set_chmod(full_path, perm = "2775")
@@ -74,7 +82,8 @@ namespace :deploy do
   
   desc "Flush the Drupal cache system."
   task :cacheclear, :roles => :web do
-    # run "drush cc all --root=#{current_release} -l #{url}"
+    drush_do("cc all")
+    drush_do("php-eval \"apc_clear_cache(); apc_clear_cache('user'); apc_clear_cache('opcode');\"")
   end
 end
 
@@ -99,6 +108,11 @@ namespace :drush do
     run "mkdir #{current_release}/cache"
     set_ownership("#{current_release}/cache");
     set_chmod("#{current_release}/cache");
+    
+    symlink_me('/var/www/smash.org.au/www/shared/public', 'public')
+    symlink_me('/var/www/smash.org.au/www/shared/newsletter', 'newsletter')
+    symlink_me('/var/www/smash.org.au/www/shared/maidcafe', 'maidcafe')
+    symlink_me('/var/www/smash.org.au/www/shared/forums', 'forums')
     
     if !is_drupal_installed?
       set(:db_user, Capistrano::CLI.ui.ask("DB User: ") )
@@ -152,6 +166,8 @@ END
     if is_drupal_installed?
       # run "drush -y features-revert-all --root=#{current_release} -l #{url}"
       # run "drush -y updb --root=#{current_release} -l #{url}"
+      drush_do("features-revert-all -y")
+      drush_do("updb -y")
     end
   end
   
