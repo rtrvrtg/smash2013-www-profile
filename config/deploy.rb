@@ -166,6 +166,7 @@ END
     if is_drupal_installed?
       # run "drush -y features-revert-all --root=#{current_release} -l #{url}"
       # run "drush -y updb --root=#{current_release} -l #{url}"
+      drush_do("registry-rebuild -y")
       drush_do("features-revert-all -y")
       drush_do("updb -y")
     end
