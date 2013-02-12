@@ -119,7 +119,7 @@ projects[token_filter][subdir] = "contrib"
 projects[transliteration][version] = "3.1"
 projects[transliteration][subdir] = "contrib"
 
-projects[twitter_pull][version] = "1.0-rc4"
+projects[twitter_pull][version] = "1.0-dev"
 projects[twitter_pull][subdir] = "contrib"
 
 projects[panels][version] = "3.3"
@@ -184,7 +184,7 @@ projects[google_analytics][subdir] = "contrib"
 ; projects[twitter_cards][subdir] = "custom"
 
 ; Patches
-projects[twitter_pull][patch][] = "http://drupal.org/files/0001-Making-caching-mechanism-more-configurable-to-deal-w.patch"
+; projects[twitter_pull][patch][] = "http://drupal.org/files/0001-Making-caching-mechanism-more-configurable-to-deal-w.patch"
 projects[menu_position][patch][] = "http://drupal.org/files/menu_position_read_rules-1795202.patch"
 
 ; Themes
