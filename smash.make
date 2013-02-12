@@ -5,6 +5,9 @@ api = "2"
 projects[drupal][version] = "7.18"
 
 ; Modules
+projects[admin_views][version] = "1.1"
+projects[admin_views][subdir] = "contrib"
+
 projects[ctools][version] = "1.2"
 projects[ctools][subdir] = "contrib"
 
