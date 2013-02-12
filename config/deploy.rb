@@ -13,7 +13,7 @@ set :default_stage, "staging"
 require 'capistrano/ext/multistage'
 
 set :shared_path, "#{deploy_to}/shared"
-set :use_sudo,    true
+set :use_sudo,    false
  
 set :scm,        :git
 set :branch,     'master'
