@@ -35,7 +35,7 @@ projects[ds][subdir] = "contrib"
 projects[features][version] = "1.0"
 projects[features][subdir] = "contrib"
 
-projects[uuid_features][version] = "1.x-dev"
+projects[uuid_features][version] = "1.0-alpha3"
 projects[uuid_features][subdir] = "contrib"
 
 projects[entityreference][version] = "1.0"
@@ -50,10 +50,10 @@ projects[field_collection][subdir] = "contrib"
 projects[field_group][version] = "1.1"
 projects[field_group][subdir] = "contrib"
 
-projects[field_slideshow][version] = "1.8"
+projects[field_slideshow][version] = "1.81"
 projects[field_slideshow][subdir] = "contrib"
 
-projects[inline_entity_form][version] = "1.0"
+projects[inline_entity_form][version] = "1.1"
 projects[inline_entity_form][subdir] = "contrib"
 
 projects[link][version] = "1.0"
@@ -62,7 +62,7 @@ projects[link][subdir] = "contrib"
 projects[markdown][version] = "1.1"
 projects[markdown][subdir] = "contrib"
 
-projects[mailchimp][version] = "2.7"
+projects[mailchimp][version] = "2.10"
 projects[mailchimp][subdir] = "contrib"
 
 projects[bulk_media_upload][version] = "1.x-dev"
@@ -77,10 +77,10 @@ projects[plupload][subdir] = "contrib"
 projects[backup_migrate][version] = "2.4"
 projects[backup_migrate][subdir] = "contrib"
 
-projects[boxes][version] = "1.0"
+projects[boxes][version] = "1.1"
 projects[boxes][subdir] = "contrib"
 
-projects[colorbox][version] = "1.4"
+projects[colorbox][version] = "2.3"
 projects[colorbox][subdir] = "contrib"
 
 projects[diff][version] = "3.2"
@@ -95,7 +95,7 @@ projects[filecache][subdir] = "contrib"
 projects[imagecrop][version] = "1.x-dev"
 projects[imagecrop][subdir] = "contrib"
 
-projects[libraries][version] = "1.0"
+projects[libraries][version] = "2.0"
 projects[libraries][subdir] = "contrib"
 
 projects[menu_block][version] = "2.3"
@@ -149,7 +149,7 @@ projects[rules][subdir] = "contrib"
 projects[uuid][version] = "1.x-dev"
 projects[uuid][subdir] = "contrib"
 
-projects[ckeditor_link][version] = "2.x-dev"
+projects[ckeditor_link][version] = "2.3"
 projects[ckeditor_link][subdir] = "contrib"
 
 projects[wysiwyg][version] = "2.2"
@@ -158,7 +158,7 @@ projects[wysiwyg][subdir] = "contrib"
 projects[insert_view][version] = "2.0"
 projects[insert_view][subdir] = "contrib"
 
-projects[menu_views][version] = "2.0"
+projects[menu_views][version] = "2.1"
 projects[menu_views][subdir] = "contrib"
 
 projects[views][version] = "3.5"
@@ -176,13 +176,13 @@ projects[webform_conditional][subdir] = "contrib"
 projects[webform_multifile][version] = "1.2"
 projects[webform_multifile][subdir] = "contrib"
 
-projects[workbench][version] = "1.1"
+projects[workbench][version] = "1.2"
 projects[workbench][subdir] = "contrib"
 
-projects[workbench_access][version] = "1.0"
+projects[workbench_access][version] = "1.2"
 projects[workbench_access][subdir] = "contrib"
 
-projects[workbench_moderation][version] = "1.2"
+projects[workbench_moderation][version] = "1.3"
 projects[workbench_moderation][subdir] = "contrib"
 
 projects[xmlsitemap][version] = "2.0-rc2"
