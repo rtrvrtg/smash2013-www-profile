@@ -137,9 +137,6 @@ projects[panels][subdir] = "contrib"
 projects[globalredirect][version] = "1.5"
 projects[globalredirect][subdir] = "contrib"
 
-projects[registration][version] = "1.0"
-projects[registration][subdir] = "contrib"
-
 projects[rules][version] = "2.2"
 projects[rules][subdir] = "contrib"
 
