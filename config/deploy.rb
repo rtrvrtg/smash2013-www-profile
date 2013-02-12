@@ -44,14 +44,15 @@ def drush_do(task)
   run "drush #{task} --root=#{current_release} -l #{url}"
 end
 
-def set_ownership(full_path, is_file = false)
+def set_ownership(full_path, is_file = false, failure_ok = false)
+  suffix = failure_ok == true ? '; true' : ''
   if !remote_file_exists? full_path
     run "#{try_sudo} mkdir #{full_path}"
   end
   if is_file
-    run "#{try_sudo} chown -R smash:www-data #{full_path}"
+    run "#{try_sudo} chown -R smash:www-data #{full_path} #{suffix}"
   else
-    run "#{try_sudo} chown -R smash:www-data #{full_path}"
+    run "#{try_sudo} chown -R smash:www-data #{full_path} #{suffix}"
   end
   set_chmod(full_path)
 end
@@ -156,8 +157,8 @@ END
   # Append caching stuff
   task :setup_files, :roles => :web do
     if is_drupal_installed?
-      set_ownership("#{shared_path}/sites-default/private", true)
-      set_ownership("#{shared_path}/sites-default/files", true)
+      set_ownership("#{shared_path}/sites-default/private", true, true)
+      set_ownership("#{shared_path}/sites-default/files", true, true)
     end
   end
   
