@@ -2,7 +2,7 @@
 core = "7.x"
 api = "2"
 ; comment this out in to use on drupal.org
-projects[drupal][version] = "7.18"
+projects[drupal][version] = "7.19"
 
 ; Modules
 projects[admin_views][version] = "1.1"
@@ -86,7 +86,7 @@ projects[colorbox][subdir] = "contrib"
 projects[diff][version] = "3.2"
 projects[diff][subdir] = "contrib"
 
-projects[entity][version] = "1.0-rc3"
+projects[entity][version] = "1.x-dev"
 projects[entity][subdir] = "contrib"
 
 projects[filecache][version] = "1.x-dev"

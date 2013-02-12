@@ -675,8 +675,8 @@ function smash_front_page_field_default_fields() {
             'public' => 'public',
           ),
           'allowed_types' => array(
-            'audio' => 0,
             0 => 0,
+            'audio' => 0,
             'default' => 0,
             'image' => 'image',
             'video' => 0,
@@ -911,7 +911,6 @@ function smash_front_page_field_default_fields() {
       'locked' => '0',
       'module' => 'field_collection',
       'settings' => array(
-        'hide_blank_items' => TRUE,
         'path' => '',
       ),
       'translatable' => '0',
@@ -974,7 +973,6 @@ function smash_front_page_field_default_fields() {
       'locked' => '0',
       'module' => 'field_collection',
       'settings' => array(
-        'hide_blank_items' => TRUE,
         'path' => '',
       ),
       'translatable' => '0',
@@ -1037,7 +1035,6 @@ function smash_front_page_field_default_fields() {
       'locked' => '0',
       'module' => 'field_collection',
       'settings' => array(
-        'hide_blank_items' => TRUE,
         'path' => '',
       ),
       'translatable' => '0',
