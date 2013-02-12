@@ -81,7 +81,7 @@ namespace :deploy do
   task :restart do ; end
   
   desc "Flush the Drupal cache system."
-  task :cacheclear, :roles => :web do
+  task :cacheclear, :roles => :web, :on_error => :continue do
     drush_do("cc all")
     drush_do("php-eval \"apc_clear_cache(); apc_clear_cache('user'); apc_clear_cache('opcode');\"")
   end
@@ -131,7 +131,7 @@ namespace :drush do
   end
   
   # Append caching stuff
-  task :setup_filecache, :roles => :web do
+  task :setup_filecache, :roles => :web, :on_error => :continue do
     cache_cfg = <<END
 $conf['cache_backends'] = array('sites/all/modules/filecache/filecache.inc');
 $conf['cache_default_class'] = 'DrupalFileCache';
