@@ -11,6 +11,12 @@ projects[admin_views][subdir] = "contrib"
 projects[ctools][version] = "1.2"
 projects[ctools][subdir] = "contrib"
 
+projects[boost][version] = "1.x-dev"
+projects[boost][subdir] = "contrib"
+
+projects[linkchecker][version] = "1.x-dev"
+projects[linkchecker][subdir] = "contrib"
+
 projects[context][version] = "3.0-beta6"
 projects[context][subdir] = "contrib"
 
