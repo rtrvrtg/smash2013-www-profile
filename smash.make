@@ -134,39 +134,6 @@ projects[registration][subdir] = "contrib"
 projects[rules][version] = "2.2"
 projects[rules][subdir] = "contrib"
 
-projects[smash_basic_config][version] = "0.2"
-projects[smash_basic_config][subdir] = "contrib"
-
-projects[smash_events][version] = "0.4"
-projects[smash_events][subdir] = "contrib"
-
-projects[smash_front_page][version] = "0.3"
-projects[smash_front_page][subdir] = "contrib"
-
-projects[smash_gallery][version] = "0.2"
-projects[smash_gallery][subdir] = "contrib"
-
-projects[smash_guests][version] = "0.2"
-projects[smash_guests][subdir] = "contrib"
-
-projects[smash_layout][version] = "0.1"
-projects[smash_layout][subdir] = "contrib"
-
-projects[smash_locations][version] = "0.2"
-projects[smash_locations][subdir] = "contrib"
-
-projects[smash_news][version] = "0.4"
-projects[smash_news][subdir] = "contrib"
-
-projects[smash_users][version] = "0.1"
-projects[smash_users][subdir] = "contrib"
-
-projects[smash_vendors][version] = "0.4"
-projects[smash_vendors][subdir] = "contrib"
-
-projects[smash_workflow_configuration][version] = "0.4"
-projects[smash_workflow_configuration][subdir] = "contrib"
-
 projects[uuid][version] = "1.x-dev"
 projects[uuid][subdir] = "contrib"
 
