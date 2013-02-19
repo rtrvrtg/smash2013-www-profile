@@ -224,59 +224,87 @@
 /* line 143, ../sass/blocks.scss */
 #boxes-box-social_networks .boxes-box-content a.networks-facebook {
   background-image: url(../images/social/facebook.png);
+  background-size: 50px 50px;
 }
-/* line 146, ../sass/blocks.scss */
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* line 143, ../sass/blocks.scss */
+  #boxes-box-social_networks .boxes-box-content a.networks-facebook {
+    background-image: url(../images/social/facebook@2x.png);
+  }
+}
+/* line 151, ../sass/blocks.scss */
 #boxes-box-social_networks .boxes-box-content a.networks-deviantart {
   background-image: url(../images/social/deviantart.png);
+  background-size: 50px 50px;
 }
-/* line 149, ../sass/blocks.scss */
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* line 151, ../sass/blocks.scss */
+  #boxes-box-social_networks .boxes-box-content a.networks-deviantart {
+    background-image: url(../images/social/deviantart@2x.png);
+  }
+}
+/* line 159, ../sass/blocks.scss */
 #boxes-box-social_networks .boxes-box-content a.networks-youtube {
   background-image: url(../images/social/youtube.png);
+  background-size: 50px 50px;
 }
-/* line 152, ../sass/blocks.scss */
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* line 159, ../sass/blocks.scss */
+  #boxes-box-social_networks .boxes-box-content a.networks-youtube {
+    background-image: url(../images/social/youtube@2x.png);
+  }
+}
+/* line 167, ../sass/blocks.scss */
 #boxes-box-social_networks .boxes-box-content a.networks-twitter {
   margin-top: 10px;
   height: 50px;
   background: #7e54a3 url(../images/social/twitter.bird.png) no-repeat center left;
   padding-left: 50px;
   position: relative;
+  background-size: 50px 50px;
 }
-/* line 162, ../sass/blocks.scss */
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* line 167, ../sass/blocks.scss */
+  #boxes-box-social_networks .boxes-box-content a.networks-twitter {
+    background-image: url(../images/social/twitter.bird@2x.png);
+  }
+}
+/* line 182, ../sass/blocks.scss */
 html.lt-ie9 #boxes-box-social_networks .boxes-box-content a.networks-twitter {
   width: 668px;
   margin-right: -63px;
 }
-/* line 166, ../sass/blocks.scss */
+/* line 186, ../sass/blocks.scss */
 html.lt-ie9 #boxes-box-social_networks .boxes-box-content a.networks-twitter span {
   display: inline-block;
   line-height: 50px;
 }
 @media all and (min-width: 950px) {
-  /* line 152, ../sass/blocks.scss */
+  /* line 167, ../sass/blocks.scss */
   #boxes-box-social_networks .boxes-box-content a.networks-twitter {
     margin-top: 3px;
     width: 670px;
     margin-right: -65px;
     text-align: left;
   }
-  /* line 178, ../sass/blocks.scss */
+  /* line 198, ../sass/blocks.scss */
   #boxes-box-social_networks .boxes-box-content a.networks-twitter span {
     overflow: hidden;
     white-space: nowrap;
     line-height: 50px;
   }
-  /* line 183, ../sass/blocks.scss */
+  /* line 203, ../sass/blocks.scss */
   #boxes-box-social_networks .boxes-box-content a.networks-twitter span.tweet-text {
     display: inline-block;
     max-width: 585px;
   }
-  /* line 190, ../sass/blocks.scss */
+  /* line 210, ../sass/blocks.scss */
   #boxes-box-social_networks .boxes-box-content a.networks-twitter:hover, #boxes-box-social_networks .boxes-box-content a.networks-twitter:focus, #boxes-box-social_networks .boxes-box-content a.networks-twitter:active {
     box-shadow: 2px 5px 0px rgba(0, 0, 0, 0.5);
     margin-top: 0px;
     margin-bottom: 3px;
   }
-  /* line 196, ../sass/blocks.scss */
+  /* line 216, ../sass/blocks.scss */
   #boxes-box-social_networks .boxes-box-content a.networks-twitter:after {
     content: " ";
     display: block;
@@ -292,13 +320,13 @@ html.lt-ie9 #boxes-box-social_networks .boxes-box-content a.networks-twitter spa
   }
 }
 
-/* line 207, ../sass/blocks.scss */
+/* line 227, ../sass/blocks.scss */
 #block-boxes-footer-text {
   font-size: 0.7em;
   line-height: 1.3em;
 }
 @media all and (min-width: 469px) {
-  /* line 207, ../sass/blocks.scss */
+  /* line 227, ../sass/blocks.scss */
   #block-boxes-footer-text {
     font-size: 0.8em;
   }

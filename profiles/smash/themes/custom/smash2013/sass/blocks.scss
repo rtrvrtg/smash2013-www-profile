@@ -142,12 +142,27 @@
       }
       &.networks-facebook {
         background-image: url(../images/social/facebook.png);
+        background-size: 50px 50px;
+        
+        @include retina {
+          background-image: url(../images/social/facebook@2x.png);
+        }
       }
       &.networks-deviantart {
         background-image: url(../images/social/deviantart.png);
+        background-size: 50px 50px;
+        
+        @include retina {
+          background-image: url(../images/social/deviantart@2x.png);
+        }
       }
       &.networks-youtube {
         background-image: url(../images/social/youtube.png);
+        background-size: 50px 50px;
+        
+        @include retina {
+          background-image: url(../images/social/youtube@2x.png);
+        }
       }
       &.networks-twitter {
         margin-top: 10px;
@@ -155,6 +170,11 @@
         background: $color-purple url(../images/social/twitter.bird.png) no-repeat center left;
         padding-left: 50px;
         position: relative;
+        background-size: 50px 50px;
+        
+        @include retina {
+          background-image: url(../images/social/twitter.bird@2x.png);
+        }
         
         span {
         }

@@ -90,7 +90,12 @@ li a.active {
     width: 40px;
     height: 40px;
     background: url(../images/menu-toggle.png) no-repeat top left;
+    background-size: 80px 80px;
     z-index: 9999;
+    
+    @include retina {
+      background-image: url(../images/menu-toggle@2x.png);
+    }
     
     top: 0;
     right: 0;
@@ -344,24 +349,59 @@ li a.active {
 
             &.event-list-title--maid-caf-- {
               background-image: url(../images/menuicons/menuicons.maidcafe.png);
+              background-size: 24px 24px;
+              
+              @include retina {
+                background-image: url(../images/menuicons/menuicons.maidcafe@2x.png);
+              }
             }
             &.event-list-title--art-events {
               background-image: url(../images/menuicons/menuicons.artevents.png);
+              background-size: 24px 24px;
+              
+              @include retina {
+                background-image: url(../images/menuicons/menuicons.artevents@2x.png);
+              }
             }
             &.event-list-title--cosplay-events {
               background-image: url(../images/menuicons/menuicons.cosplayevents.png);
+              background-size: 24px 24px;
+              
+              @include retina {
+                background-image: url(../images/menuicons/menuicons.cosplayevents@2x.png);
+              }
             }
             &.event-list-title--gaming-events {
               background-image: url(../images/menuicons/menuicons.gamingevents.png);
+              background-size: 24px 24px;
+              
+              @include retina {
+                background-image: url(../images/menuicons/menuicons.gamingevents@2x.png);
+              }
             }
             &.event-list-title--gundam-events {
               background-image: url(../images/menuicons/menuicons.gundamevents.png);
+              background-size: 24px 24px;
+              
+              @include retina {
+                background-image: url(../images/menuicons/menuicons.gundamevents@2x.png);
+              }
             }
             &.event-list-title--awesome-events {
               background-image: url(../images/menuicons/menuicons.miscevents.png);
+              background-size: 24px 24px;
+              
+              @include retina {
+                background-image: url(../images/menuicons/menuicons.miscevents@2x.png);
+              }
             }
             &.event-list-title--panels---workshops {
               background-image: url(../images/menuicons/menuicons.panel.png);
+              background-size: 24px 24px;
+              
+              @include retina {
+                background-image: url(../images/menuicons/menuicons.panel@2x.png);
+              }
             }
 
           }

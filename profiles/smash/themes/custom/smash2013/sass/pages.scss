@@ -24,14 +24,27 @@ body {
 	url(../images/2013webbg.png) repeat top center,
     $color-menu-hov;
   
+  background-size: 1px 1300px, 100px 113px;
+  
   @media all and (min-width: $desktop-minimum) {
     padding: 10px;
+  }
+  
+  @include retina {
+    background: 
+    url(../images/2013webgradient.png) fixed repeat-x bottom center, 
+    url(../images/2013webbg@2x.png) repeat top center,
+      $color-menu-hov;
   }
   
   text-rendering: optimizeLegibility;
   
   html.lt-ie9 & {
     background: $color-menu-hov url(../images/2013webbg.png) repeat top center;
+    
+    @include retina {
+      background: $color-menu-hov url(../images/2013webbg@2x.png) repeat top center;
+    }
   }
 
 }
@@ -66,7 +79,12 @@ body {
   color: white;
   @media all and (min-width: $desktop-minimum) {
     background: url(../images/skadi-cyrus.png) no-repeat bottom right;
+    background-size: 281px 134px;
     min-height: 134px;
+    
+    @include retina {
+      background-image: url(../images/skadi-cyrus@2x.png);
+    }
   }
 }
 
