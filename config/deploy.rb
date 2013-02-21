@@ -50,7 +50,7 @@ def set_ownership(full_path, is_file = false, failure_ok = false)
     run "#{try_sudo} mkdir #{full_path}"
   end
   if is_file
-    run "#{try_sudo} chown -R smash:www-data #{full_path} #{suffix}"
+    run "#{try_sudo} chown smash:www-data #{full_path} #{suffix}"
   else
     run "#{try_sudo} chown -R smash:www-data #{full_path} #{suffix}"
   end

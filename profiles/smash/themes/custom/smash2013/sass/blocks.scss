@@ -171,6 +171,7 @@
         padding-left: 50px;
         position: relative;
         background-size: 50px 50px;
+        overflow: hidden;
         
         @include retina {
           background-image: url(../images/social/twitter.bird@2x.png);
