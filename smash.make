@@ -1,8 +1,8 @@
 ; SMASH! make file
-core = "7.19"
+core = "7.20"
 api = "2"
 ; comment this out in to use on drupal.org
-projects[drupal][version] = "7.19"
+projects[drupal][version] = "7.20"
 
 ; Modules
 projects[admin_views][version] = "1.1"
