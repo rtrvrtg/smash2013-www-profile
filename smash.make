@@ -100,6 +100,7 @@ projects[libraries][subdir] = "contrib"
 
 projects[menu_block][version] = "2.3"
 projects[menu_block][subdir] = "contrib"
+projects[menu_block][patch][] = http://drupal.org/files/menu_block_1204064_menu_tree_add_active_path.patch
 
 projects[menu_breadcrumb][version] = "1.3"
 projects[menu_breadcrumb][subdir] = "contrib"
