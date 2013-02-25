@@ -29,7 +29,7 @@ projects[devel][subdir] = "contrib"
 projects[profiler_builder][version] = "1.0-rc3"
 projects[profiler_builder][subdir] = "contrib"
 
-projects[ds][version] = "2.0"
+projects[ds][version] = "2.2"
 projects[ds][subdir] = "contrib"
 
 projects[features][version] = "1.0"
@@ -111,7 +111,7 @@ projects[menu_position][subdir] = "contrib"
 projects[pathauto][version] = "1.2"
 projects[pathauto][subdir] = "contrib"
 
-projects[registration][version] = "1.0"
+projects[registration][version] = "1.1"
 projects[registration][subdir] = "contrib"
 
 projects[redirect][version] = "1.0-rc1"
@@ -126,7 +126,7 @@ projects[special_menu_items][subdir] = "contrib"
 projects[strongarm][version] = "2.0"
 projects[strongarm][subdir] = "contrib"
 
-projects[token][version] = "1.4"
+projects[token][version] = "1.5"
 projects[token][subdir] = "contrib"
 
 projects[token_filter][version] = "1.1"
