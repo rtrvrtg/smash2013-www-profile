@@ -293,10 +293,10 @@ html.lt-ie9 #boxes-box-social_networks .boxes-box-content a.networks-twitter spa
     overflow: hidden;
     white-space: nowrap;
     line-height: 50px;
-  }
-  /* line 204, ../sass/blocks.scss */
-  #boxes-box-social_networks .boxes-box-content a.networks-twitter span.tweet-text {
     display: inline-block;
+  }
+  /* line 205, ../sass/blocks.scss */
+  #boxes-box-social_networks .boxes-box-content a.networks-twitter span.tweet-text {
     max-width: 585px;
   }
   /* line 211, ../sass/blocks.scss */

@@ -200,9 +200,9 @@
             overflow: hidden;
             white-space: nowrap;
             line-height: 50px;
+            display: inline-block;
 
             &.tweet-text {
-              display: inline-block;
               max-width: 585px;
             }
 
