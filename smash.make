@@ -95,7 +95,7 @@ projects[filecache][subdir] = "contrib"
 projects[imagecrop][version] = "1.x-dev"
 projects[imagecrop][subdir] = "contrib"
 
-projects[libraries][version] = "2.1"
+projects[libraries][version] = "2.0"
 projects[libraries][subdir] = "contrib"
 
 projects[menu_block][version] = "2.3"
