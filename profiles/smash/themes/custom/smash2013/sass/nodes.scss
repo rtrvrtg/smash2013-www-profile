@@ -164,6 +164,11 @@
       color: black;
       .hero-wrapped-image {
         display: block;
+        img {
+          @media all and (min-width: $desktop-minimum) {
+            width: 100%;
+          }
+        }
         .hero-image-credits {
           display: block;
           text-align: right;
