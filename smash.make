@@ -50,7 +50,7 @@ projects[field_collection][subdir] = "contrib"
 projects[field_group][version] = "1.1"
 projects[field_group][subdir] = "contrib"
 
-projects[field_slideshow][version] = "1.81"
+projects[field_slideshow][version] = "1.82"
 projects[field_slideshow][subdir] = "contrib"
 
 projects[inline_entity_form][version] = "1.1"
@@ -68,7 +68,7 @@ projects[mailchimp][subdir] = "contrib"
 projects[bulk_media_upload][version] = "1.x-dev"
 projects[bulk_media_upload][subdir] = "contrib"
 
-projects[media][version] = "1.2"
+projects[media][version] = "1.3"
 projects[media][subdir] = "contrib"
 
 projects[plupload][version] = "1.1"
@@ -95,7 +95,7 @@ projects[filecache][subdir] = "contrib"
 projects[imagecrop][version] = "1.x-dev"
 projects[imagecrop][subdir] = "contrib"
 
-projects[libraries][version] = "2.0"
+projects[libraries][version] = "2.1"
 projects[libraries][subdir] = "contrib"
 
 projects[menu_block][version] = "2.3"
@@ -162,7 +162,7 @@ projects[insert_view][subdir] = "contrib"
 projects[menu_views][version] = "2.1"
 projects[menu_views][subdir] = "contrib"
 
-projects[views][version] = "3.5"
+projects[views][version] = "3.6"
 projects[views][subdir] = "contrib"
 
 projects[views_bulk_operations][version] = "3.1"
