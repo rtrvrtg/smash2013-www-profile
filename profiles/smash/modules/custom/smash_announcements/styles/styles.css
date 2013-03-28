@@ -1,0 +1,422 @@
+.special-announcement-container {
+	position: fixed;
+	left: 0; 
+	bottom: 0;
+	overflow: hidden;
+	
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	outline: 0px none;
+	
+	-webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.special-announcement-media {
+  display: none;
+}
+
+.special-announcement-container .brick {
+	position: absolute;
+	margin: 2px 0;
+	width: 64px;
+	height: 64px;
+	font-weight: bold;
+	
+  -webkit-transition-duration: 0.3s;
+     -moz-transition-duration: 0.3s;
+      -ms-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+	
+  -webkit-transition-property: left, right, top;
+     -moz-transition-property: left, right, top;
+      -ms-transition-property: left, right, top;
+       -o-transition-property: left, right, top;
+          transition-property: left, right, top;
+  
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  outline: 0px none;
+  
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Webkit keyframes */
+	
+@-webkit-keyframes fall
+{
+    0%   { -webkit-transform: translate(0px, -2000px); }
+    100% { -webkit-transform: translate(0px, 0px); }
+}
+
+@-webkit-keyframes bounce
+{
+    0%   { -webkit-transform: translate(0px, 0px); }
+    40%  { -webkit-transform: translate(0px, 0px); }
+    50%  { -webkit-transform: translate(0px, -20px); }
+    60%  { -webkit-transform: translate(0px, 0px); }
+    100% { -webkit-transform: translate(0px, 0px); }
+}
+
+@-webkit-keyframes shuffle
+{
+    0%   { -webkit-transform: translate(0px, 0px); }
+    25%  { -webkit-transform: translate(-10px, 0px); }
+    75%  { -webkit-transform: translate(10px, 0px); }    
+    100% { -webkit-transform: translate(0px, 0px); }
+}
+
+@-webkit-keyframes shuffledouble
+{
+    0%   { -webkit-transform: translate(0px, 0px); }
+    20%  { -webkit-transform: translate(-10px, 0px); }
+    40%  { -webkit-transform: translate(10px, 0px); }
+    60%  { -webkit-transform: translate(-10px, 0px); }
+    80%  { -webkit-transform: translate(10px, 0px); }
+    100% { -webkit-transform: translate(0px, 0px); }
+}
+
+@-webkit-keyframes wobwob
+{
+    0%   { -webkit-transform: translate(-10px, 0px); }
+    25%  { -webkit-transform: translate(0px, -10px); }
+    50%  { -webkit-transform: translate(10px, 0px); }    
+    75% { -webkit-transform: translate(0px, 10px); }
+    100% { -webkit-transform: translate(-10px, 0px); }
+}
+
+@-webkit-keyframes wobwob2
+{
+    0%   { -webkit-transform: translate(-10px, 0px); }
+    25% { -webkit-transform: translate(0px, 10px); }
+    50%  { -webkit-transform: translate(10px, 0px); }    
+    75%  { -webkit-transform: translate(0px, -10px); }
+    100% { -webkit-transform: translate(-10px, 0px); }
+}
+
+@-webkit-keyframes brrr
+{
+    0%   { -webkit-transform: translate(0px, 0px); }
+    50%  { -webkit-transform: translate(0px, 0px); }
+    51%  { -webkit-transform: translate(10px, 0px); }
+    52%  { -webkit-transform: translate(-10px, 0px); }
+    53%  { -webkit-transform: translate(10px, 0px); }
+    54%  { -webkit-transform: translate(-10px, 0px); }
+    55%  { -webkit-transform: translate(10px, 0px); }
+    56%  { -webkit-transform: translate(-10px, 0px); }
+    57%  { -webkit-transform: translate(10px, 0px); }
+    58%  { -webkit-transform: translate(-10px, 0px); }
+    59%  { -webkit-transform: translate(10px, 0px); }
+    60%  { -webkit-transform: translate(-10px, 0px); }
+    61% { -webkit-transform: translate(0px, 0px); }
+    100% { -webkit-transform: translate(0px, 0px); }
+}
+
+/* Moz keyframes */
+	
+@-moz-keyframes fall
+{
+    0%   { -moz-transform: translate(0px, -2000px); }
+    100% { -moz-transform: translate(0px, 0px); }
+}
+
+@-moz-keyframes bounce
+{
+    0%   { -moz-transform: translate(0px, 0px); }
+    40%  { -moz-transform: translate(0px, 0px); }
+    50%  { -moz-transform: translate(0px, -20px); }
+    60%  { -moz-transform: translate(0px, 0px); }
+    100% { -moz-transform: translate(0px, 0px); }
+}
+
+@-moz-keyframes shuffle
+{
+    0%   { -moz-transform: translate(0px, 0px); }
+    25%  { -moz-transform: translate(-10px, 0px); }
+    75%  { -moz-transform: translate(10px, 0px); }    
+    100% { -moz-transform: translate(0px, 0px); }
+}
+
+@-moz-keyframes shuffledouble
+{
+    0%   { -moz-transform: translate(0px, 0px); }
+    20%  { -moz-transform: translate(-10px, 0px); }
+    40%  { -moz-transform: translate(10px, 0px); }
+    60%  { -moz-transform: translate(-10px, 0px); }
+    80%  { -moz-transform: translate(10px, 0px); }
+    100% { -moz-transform: translate(0px, 0px); }
+}
+
+@-moz-keyframes wobwob
+{
+    0%   { -moz-transform: translate(-10px, 0px); }
+    25%  { -moz-transform: translate(0px, -10px); }
+    50%  { -moz-transform: translate(10px, 0px); }    
+    75% { -moz-transform: translate(0px, 10px); }
+    100% { -moz-transform: translate(-10px, 0px); }
+}
+
+@-moz-keyframes wobwob2
+{
+    0%   { -moz-transform: translate(-10px, 0px); }
+    25% { -moz-transform: translate(0px, 10px); }
+    50%  { -moz-transform: translate(10px, 0px); }    
+    75%  { -moz-transform: translate(0px, -10px); }
+    100% { -moz-transform: translate(-10px, 0px); }
+}
+
+@-moz-keyframes brrr
+{
+    0%   { -moz-transform: translate(0px, 0px); }
+    50%  { -moz-transform: translate(0px, 0px); }
+    51%  { -moz-transform: translate(10px, 0px); }
+    52%  { -moz-transform: translate(-10px, 0px); }
+    53%  { -moz-transform: translate(10px, 0px); }
+    54%  { -moz-transform: translate(-10px, 0px); }
+    55%  { -moz-transform: translate(10px, 0px); }
+    56%  { -moz-transform: translate(-10px, 0px); }
+    57%  { -moz-transform: translate(10px, 0px); }
+    58%  { -moz-transform: translate(-10px, 0px); }
+    59%  { -moz-transform: translate(10px, 0px); }
+    60%  { -moz-transform: translate(-10px, 0px); }
+    61% { -moz-transform: translate(0px, 0px); }
+    100% { -moz-transform: translate(0px, 0px); }
+}
+
+/* Opera keyframes */
+	
+@-o-keyframes fall
+{
+    0%   { -o-transform: translate(0px, -2000px); }
+    100% { -o-transform: translate(0px, 0px); }
+}
+
+@-o-keyframes bounce
+{
+    0%   { -o-transform: translate(0px, 0px); }
+    40%  { -o-transform: translate(0px, 0px); }
+    50%  { -o-transform: translate(0px, -20px); }
+    60%  { -o-transform: translate(0px, 0px); }
+    100% { -o-transform: translate(0px, 0px); }
+}
+
+@-o-keyframes shuffle
+{
+    0%   { -o-transform: translate(0px, 0px); }
+    25%  { -o-transform: translate(-10px, 0px); }
+    75%  { -o-transform: translate(10px, 0px); }    
+    100% { -o-transform: translate(0px, 0px); }
+}
+
+@-o-keyframes shuffledouble
+{
+    0%   { -o-transform: translate(0px, 0px); }
+    20%  { -o-transform: translate(-10px, 0px); }
+    40%  { -o-transform: translate(10px, 0px); }
+    60%  { -o-transform: translate(-10px, 0px); }
+    80%  { -o-transform: translate(10px, 0px); }
+    100% { -o-transform: translate(0px, 0px); }
+}
+
+@-o-keyframes wobwob
+{
+    0%   { -o-transform: translate(-10px, 0px); }
+    25%  { -o-transform: translate(0px, -10px); }
+    50%  { -o-transform: translate(10px, 0px); }    
+    75% { -o-transform: translate(0px, 10px); }
+    100% { -o-transform: translate(-10px, 0px); }
+}
+
+@-o-keyframes wobwob2
+{
+    0%   { -o-transform: translate(-10px, 0px); }
+    25% { -o-transform: translate(0px, 10px); }
+    50%  { -o-transform: translate(10px, 0px); }    
+    75%  { -o-transform: translate(0px, -10px); }
+    100% { -o-transform: translate(-10px, 0px); }
+}
+
+@-o-keyframes brrr
+{
+    0%   { -o-transform: translate(0px, 0px); }
+    50%  { -o-transform: translate(0px, 0px); }
+    51%  { -o-transform: translate(10px, 0px); }
+    52%  { -o-transform: translate(-10px, 0px); }
+    53%  { -o-transform: translate(10px, 0px); }
+    54%  { -o-transform: translate(-10px, 0px); }
+    55%  { -o-transform: translate(10px, 0px); }
+    56%  { -o-transform: translate(-10px, 0px); }
+    57%  { -o-transform: translate(10px, 0px); }
+    58%  { -o-transform: translate(-10px, 0px); }
+    59%  { -o-transform: translate(10px, 0px); }
+    60%  { -o-transform: translate(-10px, 0px); }
+    61% { -o-transform: translate(0px, 0px); }
+    100% { -o-transform: translate(0px, 0px); }
+}
+
+/* Other keyframes */
+	
+@keyframes fall
+{
+    0%   { transform: translate(0px, -2000px); }
+    100% { transform: translate(0px, 0px); }
+}
+
+@keyframes bounce
+{
+    0%   { transform: translate(0px, 0px); }
+    40%  { transform: translate(0px, 0px); }
+    50%  { transform: translate(0px, -20px); }
+    60%  { transform: translate(0px, 0px); }
+    100% { transform: translate(0px, 0px); }
+}
+
+@keyframes shuffle
+{
+    0%   { transform: translate(0px, 0px); }
+    25%  { transform: translate(-10px, 0px); }
+    75%  { transform: translate(10px, 0px); }    
+    100% { transform: translate(0px, 0px); }
+}
+
+@keyframes shuffledouble
+{
+    0%   { transform: translate(0px, 0px); }
+    20%  { transform: translate(-10px, 0px); }
+    40%  { transform: translate(10px, 0px); }
+    60%  { transform: translate(-10px, 0px); }
+    80%  { transform: translate(10px, 0px); }
+    100% { transform: translate(0px, 0px); }
+}
+
+@keyframes wobwob
+{
+    0%   { transform: translate(-10px, 0px); }
+    25%  { transform: translate(0px, -10px); }
+    50%  { transform: translate(10px, 0px); }    
+    75% { transform: translate(0px, 10px); }
+    100% { transform: translate(-10px, 0px); }
+}
+
+@keyframes wobwob2
+{
+    0%   { transform: translate(-10px, 0px); }
+    25% { transform: translate(0px, 10px); }
+    50%  { transform: translate(10px, 0px); }    
+    75%  { transform: translate(0px, -10px); }
+    100% { transform: translate(-10px, 0px); }
+}
+
+@keyframes brrr
+{
+    0%   { transform: translate(0px, 0px); }
+    50%  { transform: translate(0px, 0px); }
+    51%  { transform: translate(10px, 0px); }
+    52%  { transform: translate(-10px, 0px); }
+    53%  { transform: translate(10px, 0px); }
+    54%  { transform: translate(-10px, 0px); }
+    55%  { transform: translate(10px, 0px); }
+    56%  { transform: translate(-10px, 0px); }
+    57%  { transform: translate(10px, 0px); }
+    58%  { transform: translate(-10px, 0px); }
+    59%  { transform: translate(10px, 0px); }
+    60%  { transform: translate(-10px, 0px); }
+    61% { transform: translate(0px, 0px); }
+    100% { transform: translate(0px, 0px); }
+}
+
+/* Stuff */
+	
+.special-announcement-container .brick span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-animation: fall 1s ease-in 1;
+  -moz-animation: fall 1s ease-in 1;
+  -o-animation: fall 1s ease-in 1;
+  animation: fall 1s ease-in 1;
+  z-index: 10;
+  
+  display: block;
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  text-indent: -10000px;
+  
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  outline: 0px none;
+}
+
+.special-announcement-container .brick span.cat1 {
+  background: url(../images/cat1.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.special-announcement-container .brick span.cat2 {
+  background: url(../images/cat2.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.special-announcement-container .brick span.cat3 {
+  background: url(../images/cat3.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.special-announcement-container .brick span.cat4 {
+  background: url(../images/cat4.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.special-announcement-container .brick span.cat5 {
+  background: url(../images/cat5.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.special-announcement-container .brick span.cat6 {
+  background: url(../images/cat6.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.special-announcement-container .brick span.cat7 {
+  background: url(../images/cat7.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.special-announcement-container .brick span.cat8 {
+  background: url(../images/cat8.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.special-announcement-container .brick span.cat9 {
+  background: url(../images/cat9.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.special-announcement-container .brick span.cata {
+  background: url(../images/cata.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.special-announcement-container .brick span.finished {
+  -webkit-animation: bounce 0.5s ease-in-out infinite;
+  -moz-animation: bounce 0.5s infinite;
+  -o-animation: bounce 0.5s ease-in-out infinite;
+  animation: bounce 0.5s ease-in-out infinite;
+}
+
+/* IE is garbage lol */
+
+.special-announcement-container,
+.special-announcement-container .brick,
+.special-announcement-container .brick span {
+  zoom: 1\9;
+}

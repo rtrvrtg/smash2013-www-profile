@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Masonry Gravity</title>
+<meta charset="utf-8" />
+<style>
+body { padding: 0px; min-height: 100%; }
+
+#box {
+	position: fixed;
+	left: 0; 
+	bottom: 0;
+	overflow: hidden;
+}
+
+#playerr { display: none; }
+
+.brick {
+	position: absolute;
+	margin: 2px 0;
+	width: 64px;
+	height: 64px;
+	font-weight: bold;
+	color: #fff;
+	
+  -webkit-transition-duration: 0.3s;
+     -moz-transition-duration: 0.3s;
+      -ms-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+	
+  -webkit-transition-property: left, right, top;
+     -moz-transition-property: left, right, top;
+      -ms-transition-property: left, right, top;
+       -o-transition-property: left, right, top;
+          transition-property: left, right, top;
+	
+	}
+	
+@-webkit-keyframes fall
+{
+    0%   { -webkit-transform: translate(0px, -2000px); }
+    100% { -webkit-transform: translate(0px, 0px); }
+}
+
+@-webkit-keyframes bounce
+{
+    0%   { -webkit-transform: translate(0px, 0px); }
+    40%  { -webkit-transform: translate(0px, 0px); }
+    50%  { -webkit-transform: translate(0px, -20px); }
+    60%  { -webkit-transform: translate(0px, 0px); }
+    100% { -webkit-transform: translate(0px, 0px); }
+}
+
+@-webkit-keyframes shuffle
+{
+    0%   { -webkit-transform: translate(0px, 0px); }
+    25%  { -webkit-transform: translate(-10px, 0px); }
+    75%  { -webkit-transform: translate(10px, 0px); }    
+    100% { -webkit-transform: translate(0px, 0px); }
+}
+
+@-webkit-keyframes shuffledouble
+{
+    0%   { -webkit-transform: translate(0px, 0px); }
+    20%  { -webkit-transform: translate(-10px, 0px); }
+    40%  { -webkit-transform: translate(10px, 0px); }
+    60%  { -webkit-transform: translate(-10px, 0px); }
+    80%  { -webkit-transform: translate(10px, 0px); }
+    100% { -webkit-transform: translate(0px, 0px); }
+}
+
+@-webkit-keyframes wobwob
+{
+    0%   { -webkit-transform: translate(-10px, 0px); }
+    25%  { -webkit-transform: translate(0px, -10px); }
+    50%  { -webkit-transform: translate(10px, 0px); }    
+    75% { -webkit-transform: translate(0px, 10px); }
+    100% { -webkit-transform: translate(-10px, 0px); }
+}
+
+@-webkit-keyframes wobwob2
+{
+    0%   { -webkit-transform: translate(-10px, 0px); }
+    25% { -webkit-transform: translate(0px, 10px); }
+    50%  { -webkit-transform: translate(10px, 0px); }    
+    75%  { -webkit-transform: translate(0px, -10px); }
+    100% { -webkit-transform: translate(-10px, 0px); }
+}
+
+@-webkit-keyframes brrr
+{
+    0%   { -webkit-transform: translate(0px, 0px); }
+    50%  { -webkit-transform: translate(0px, 0px); }
+    51%  { -webkit-transform: translate(10px, 0px); }
+    52%  { -webkit-transform: translate(-10px, 0px); }
+    53%  { -webkit-transform: translate(10px, 0px); }
+    54%  { -webkit-transform: translate(-10px, 0px); }
+    55%  { -webkit-transform: translate(10px, 0px); }
+    56%  { -webkit-transform: translate(-10px, 0px); }
+    57%  { -webkit-transform: translate(10px, 0px); }
+    58%  { -webkit-transform: translate(-10px, 0px); }
+    59%  { -webkit-transform: translate(10px, 0px); }
+    60%  { -webkit-transform: translate(-10px, 0px); }
+    61% { -webkit-transform: translate(0px, 0px); }
+    100% { -webkit-transform: translate(0px, 0px); }
+}
+	
+.brick span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-animation: fall 1s ease-in 1;
+  animation: fall 1s ease-in 1;
+  z-index: 10;
+  
+  display: block;
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  text-indent: -10000px;
+  
+  -webkit-backface-visibility: hidden;
+}
+
+.brick span.cat1 {
+  background: url(cat1.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.brick span.cat2 {
+  background: url(cat2.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.brick span.cat3 {
+  background: url(cat3.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.brick span.cat4 {
+  background: url(cat4.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.brick span.cat5 {
+  background: url(cat5.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.brick span.cat6 {
+  background: url(cat6.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.brick span.cat7 {
+  background: url(cat7.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.brick span.cat8 {
+  background: url(cat8.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.brick span.cat9 {
+  background: url(cat9.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.brick span.cata {
+  background: url(cata.gif) no-repeat top left;
+  background-size: 64px 64px;
+}
+
+.brick span.finished {
+  -moz-animation: bounce 0.5s ease-in-out infinite;
+  -webkit-animation: bounce 0.5s ease-in-out infinite;
+  animation: bounce 0.5s ease-in-out infinite;
+}
+	
+</style>
+</head>
+<body>
+
+<div id="box"></div>
+<div id="playerr"><audio id="meow" src="catrush2.mp3" type="audio/mp3"></audio></div>
+
+<button id="prank">Prank me!</button>
+	
+<button id="append">Append</button>
+
+
+<script src="jquery.min.js"></script>
+<script src="jquery.masonry.js"></script>
+<script src="mediaelement-and-player.min.js"></script>
+<script>
+$(document).ready(function(){
+
+  $('audio,video').mediaelementplayer({
+    loop: true
+  });
+  
+  var prankMe = function() {
+    
+    var playing = true;
+  
+    $('#box').css({
+      position: 'fixed',
+      bottom: '0px',
+      left: '0px',
+      zIndex: '9999',
+      width: window.innerWidth + 'px',
+      height: window.innerHeight + 'px'
+    });
+  
+    // Index with Masonry
+    $('#box').masonry({
+      columnWidth:	70,
+      itemSelector:	'.brick',
+      fromBottom:		true,
+      isFitWidth:   true
+    }, function() {
+      // Nothing
+    });
+    
+    // Scrolling
+    var scrollThrottle;
+    $(window).bind('scroll', function() {
+      // Throttling for IE
+      if (!$.browser.msie) {
+        scrollBox();
+      } else {
+        if (!scrollThrottle) {
+          scrollThrottle = setTimeout(function() {
+            scrollBox();
+            scrollThrottle = null;
+          }, 10);
+        }
+      }
+    });
+    scrollBox();
+    
+    function scrollBox() {
+      if ($('#box').height() < $('#page').height()) {
+        $('#box').css({
+          'top': $('#page').height() - $('#box').height()
+        });
+      }
+    }
+    
+    var possibleCats = ['cat1', 'cat2', 'cat3', 'cat4', 'cat5', 'cat6', 'cat7', 'cat8', 'cat9', 'cata'];
+    var possibleAnimations = ['bounce', 'shuffle', 'brrr', 'wobwob', 'shuffledouble', 'wobwob2'];
+    
+    var makeCat = function() {
+      var newBox = $('<div class="brick"><span></span></div>');
+      var newAnim = possibleAnimations[Math.floor(Math.random() * possibleAnimations.length)];
+      var newCat = possibleCats[Math.floor(Math.random() * possibleCats.length)];
+      newBox.find('span').addClass(newCat).css({
+        '-webkit-animation-name': newAnim
+      });
+      newBox.css({ height: ( Math.round(Math.random() * 64) + 48 ) + 'px' });
+      $('#box').append(newBox).masonry('appended', newBox).masonry('reload');
+      $('#box').scrollTop($('#box').get(0).innerHeight);
+    };
+    
+    $('#append').click(function(){
+      makeCat();
+    });
+    
+    $('#box').delegate('.brick', 'click', function(){
+      $(this).remove();
+      $('#box').masonry('reload');
+      
+      var emptyCheck = function(){
+        if ($('#box').children('.brick').length == 0) {
+          playing = false;
+          $('#meow').get(0).stop();
+        }
+      };
+      
+      // WILL WE MAKE MORE CATS?!?!?!??!?!
+      var catCheck = Math.random();
+      if (catCheck > 0.95) {
+        catLoop(Math.floor(Math.random() * 10), 100, emptyCheck);
+      }
+      else if (catCheck > 0.5) {
+        makeCat();
+        emptyCheck();
+      }
+      else {
+        emptyCheck();
+      }
+    });
+    
+    // @TODO: make universal
+    
+    document.addEventListener('webkitTransitionEnd', function(e) {
+      $(e.srcElement).addClass('finished');
+      setTimeout(function(){
+        $(e.srcElement).removeClass('finished');
+        $(e.srcElement).find('.finished').removeClass('finished');
+      }, 500);
+    }, false);
+    
+    document.addEventListener('webkitAnimationStart', function(e) {
+      $(e.srcElement).removeClass('finished');
+    }, false);
+    
+    document.addEventListener('webkitAnimationEnd', function(e) {
+      $(e.srcElement).addClass('finished');
+    }, false);
+    
+    var winWidth = window.innerWidth / 70;
+    var winHeight = window.innerHeight / 70 / 2;
+    
+    $('#meow').get(0).play();
+    
+    var catLoop = function(maxCats, delay, callback) {
+      callback = callback || function(){};
+      
+      var catCounter = 0;
+      var catInterval = setInterval(function(){
+        makeCat();
+        catCounter++;
+        if (catCounter >= maxCats) {
+          clearInterval(catInterval);
+          callback();
+        }
+      }, delay);
+    };
+    
+    catLoop(winWidth * winHeight, 200);
+  
+  };
+  
+  $('#prank').click(function(){
+    prankMe();
+  });
+
+});
+
+
+</script>
+</body>
+</html>

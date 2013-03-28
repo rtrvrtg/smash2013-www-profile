@@ -126,7 +126,7 @@ function smash_guests_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '6',
+          'weight' => '14',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -213,7 +213,7 @@ function smash_guests_field_default_fields() {
           'label' => 'above',
           'module' => 'entityreference',
           'settings' => array(
-            'link' => FALSE,
+            'link' => 0,
           ),
           'type' => 'entityreference_label',
           'weight' => '1',
@@ -284,7 +284,7 @@ function smash_guests_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
@@ -371,7 +371,7 @@ function smash_guests_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '7',
+          'weight' => '15',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -440,7 +440,7 @@ function smash_guests_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '8',
+          'weight' => '16',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -507,7 +507,7 @@ function smash_guests_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
@@ -559,7 +559,7 @@ function smash_guests_field_default_fields() {
   $fields['node-guest-field_photo'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_photo',
@@ -591,14 +591,19 @@ function smash_guests_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'image',
+          'label' => 'hidden',
+          'module' => 'colorbox',
           'settings' => array(
-            'image_link' => '',
-            'image_style' => '',
+            'colorbox_caption' => 'none',
+            'colorbox_caption_custom' => '',
+            'colorbox_gallery' => 'post',
+            'colorbox_gallery_custom' => '',
+            'colorbox_image_style' => 'large',
+            'colorbox_multivalue_index' => NULL,
+            'colorbox_node_style' => 'gallery_thumb',
           ),
-          'type' => 'image',
-          'weight' => '2',
+          'type' => 'colorbox',
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -607,7 +612,9 @@ function smash_guests_field_default_fields() {
           'weight' => '6',
         ),
       ),
+      'ds_extras_field_template' => '',
       'entity_type' => 'node',
+      'fences_wrapper' => 'div',
       'field_name' => 'field_photo',
       'label' => 'Photo',
       'required' => 0,
@@ -616,6 +623,9 @@ function smash_guests_field_default_fields() {
         'default_image' => 0,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
+        'imagecrop' => array(
+          'vendor_banner' => 0,
+        ),
         'max_filesize' => '',
         'max_resolution' => '',
         'min_resolution' => '',
@@ -684,7 +694,7 @@ function smash_guests_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '9',
+          'weight' => '17',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -750,7 +760,7 @@ function smash_guests_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '10',
+          'weight' => '18',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -819,7 +829,7 @@ function smash_guests_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',

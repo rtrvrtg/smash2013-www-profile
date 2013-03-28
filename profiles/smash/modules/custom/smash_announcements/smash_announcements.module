@@ -1,0 +1,68 @@
+<?php
+
+function smash_announcements_init() {
+  if (drupal_is_front_page()) {
+    $debug = variable_get('smash_announcements_debug', FALSE);
+    $date_ok = date('m') == '04' && date('d') == '01';
+    
+    if ($debug || $date_ok) {
+      _smash_announcements_initiate();
+    }
+  }
+  else {
+    // put extra path matching stuff in  
+    $additional_pages = variable_get('smash_announcements_additional_pages', NULL);
+    if (!empty($additional_pages) && is_array($additional_pages)) {
+      $path = request_path();
+      if (in_array($path, $additional_pages)) {
+        _smash_announcements_initiate();
+      }
+    }
+  }
+}
+
+function _smash_announcements_initiate() {
+  $path = drupal_get_path('module', 'smash_announcements');
+  drupal_add_css($path . '/styles/styles.css');
+  drupal_add_js($path . '/scripts/lib/jquery.masonry.js');
+  drupal_add_js($path . '/scripts/lib/mediaelement-and-player.min.js');
+  drupal_add_js($path . '/scripts/lib/noClickDelay.js');
+  drupal_add_js($path . '/scripts/activate.js');
+  
+  $prep = array('absolute' => TRUE);
+  
+  $img1 = url($path . '/images/cat-hero-1.jpg', $prep);
+  $img2 = url($path . '/images/cat-hero-2.jpg', $prep);
+  $mp3_url = url($path . '/media/catrush2.mp3', $prep);
+  $ogg_url = url($path . '/media/catrush2.ogg', $prep);
+  $js_prefs = array('type' => 'inline', 'scope' => 'footer', 'weight' => 99);
+  
+  $image_list = array(
+    url($path . '/images/cat-hero-1.jpg', $prep),
+    url($path . '/images/cat-hero-2.jpg', $prep),
+    url($path . '/images/cat1.gif', $prep),
+    url($path . '/images/cat2.gif', $prep),
+    url($path . '/images/cat3.gif', $prep),
+    url($path . '/images/cat4.gif', $prep),
+    url($path . '/images/cat5.gif', $prep),
+    url($path . '/images/cat6.gif', $prep),
+    url($path . '/images/cat7.gif', $prep),
+    url($path . '/images/cat8.gif', $prep),
+    url($path . '/images/cat9.gif', $prep),
+    url($path . '/images/cata.gif', $prep),
+  );
+  $images = "'" . implode("','", $image_list) . "'";
+  
+  $code = 'var specialAnnounceURLs = ["' . $img1 . '", "' . $img2 . '"]; ' . "\n" . 
+  'jQuery("body").append("<div class=\"special-announcement-container\"></div>' . 
+  '<div class=\"special-announcement-media\">' . 
+  '<audio class=\"special-announcement-player\">' . 
+  '<source src=\"' . $mp3_url . '\" type=\"audio/mp3\" />'.
+  '<source src=\"' . $ogg_url . '\" type=\"audio/ogg\" />'.
+  '</audio></div>");' . "\n" . 
+  'preloadAnnouncementImages([' . $images . ']);' . "\n" . 
+  'prepAnnouncementDisplay(jQuery, Drupal);';
+  
+  drupal_add_js($code, $js_prefs);
+}
+
