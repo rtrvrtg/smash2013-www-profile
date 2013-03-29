@@ -144,7 +144,7 @@ projects[panels][subdir] = "contrib"
 projects[globalredirect][version] = "1.5"
 projects[globalredirect][subdir] = "contrib"
 
-projects[rules][version] = "2.2"
+projects[rules][version] = "2.3"
 projects[rules][subdir] = "contrib"
 
 projects[uuid][version] = "1.x-dev"
