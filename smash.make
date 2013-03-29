@@ -80,7 +80,7 @@ projects[backup_migrate][subdir] = "contrib"
 projects[boxes][version] = "1.1"
 projects[boxes][subdir] = "contrib"
 
-projects[colorbox][version] = "2.3"
+projects[colorbox][version] = "2.x-dev"
 projects[colorbox][subdir] = "contrib"
 
 projects[diff][version] = "3.2"
