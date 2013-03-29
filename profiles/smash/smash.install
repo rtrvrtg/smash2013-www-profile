@@ -126,3 +126,11 @@ function smash_install() {
   // ignore any other install messages
   drupal_get_messages();
 }
+
+/**
+ * Enable announcements
+ */
+function smash_update_7001() {
+  module_enable(array('smash_announcements'));
+}
+
