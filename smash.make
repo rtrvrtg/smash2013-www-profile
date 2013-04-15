@@ -82,7 +82,6 @@ projects[boxes][subdir] = "contrib"
 
 projects[colorbox][version] = "2.x-dev"
 projects[colorbox][subdir] = "contrib"
-projects[colorbox][patch][] = "http://drupal.org/files/colorbox-master_library_pattern-1955982-1.patch"
 
 projects[diff][version] = "3.2"
 projects[diff][subdir] = "contrib"
