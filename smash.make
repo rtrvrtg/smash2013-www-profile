@@ -193,6 +193,9 @@ projects[xmlsitemap][subdir] = "contrib"
 projects[google_analytics][version] = "1.3"
 projects[google_analytics][subdir] = "contrib"
 
+projects[node_clone][version] = "1.0-rc1"
+projects[node_clone][subdir] = "contrib"
+
 ; TODO modules without versions
 ; projects[twitter_cards][version] = "" ; TODO add version
 ; projects[twitter_cards][subdir] = "custom"
