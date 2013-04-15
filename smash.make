@@ -1,14 +1,14 @@
 ; SMASH! make file
-core = "7.21"
+core = "7.22"
 api = "2"
 ; comment this out in to use on drupal.org
-projects[drupal][version] = "7.21"
+projects[drupal][version] = "7.22"
 
 ; Modules
 projects[admin_views][version] = "1.1"
 projects[admin_views][subdir] = "contrib"
 
-projects[ctools][version] = "1.2"
+projects[ctools][version] = "1.3"
 projects[ctools][subdir] = "contrib"
 
 projects[boost][version] = "1.x-dev"
@@ -26,7 +26,7 @@ projects[date][subdir] = "contrib"
 projects[devel][version] = "1.3"
 projects[devel][subdir] = "contrib"
 
-projects[profiler_builder][version] = "1.0-rc3"
+projects[profiler_builder][version] = "1.0-rc4"
 projects[profiler_builder][subdir] = "contrib"
 
 projects[ds][version] = "2.2"
@@ -74,7 +74,7 @@ projects[media][subdir] = "contrib"
 projects[plupload][version] = "1.1"
 projects[plupload][subdir] = "contrib"
 
-projects[backup_migrate][version] = "2.4"
+projects[backup_migrate][version] = "2.5"
 projects[backup_migrate][subdir] = "contrib"
 
 projects[boxes][version] = "1.1"
@@ -95,7 +95,7 @@ projects[filecache][subdir] = "contrib"
 projects[imagecrop][version] = "1.x-dev"
 projects[imagecrop][subdir] = "contrib"
 
-projects[libraries][version] = "2.0"
+projects[libraries][version] = "2.1"
 projects[libraries][subdir] = "contrib"
 
 projects[menu_block][version] = "2.3"
@@ -162,7 +162,7 @@ projects[insert_view][subdir] = "contrib"
 projects[menu_views][version] = "2.1"
 projects[menu_views][subdir] = "contrib"
 
-projects[views][version] = "3.6"
+projects[views][version] = "3.7"
 projects[views][subdir] = "contrib"
 
 projects[views_bulk_operations][version] = "3.1"
