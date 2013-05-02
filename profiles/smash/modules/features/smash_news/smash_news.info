@@ -35,6 +35,7 @@ features[menu_custom][] = main-menu
 features[menu_links][] = main-menu:news
 features[node][] = article
 features[variable][] = additional_settings__active_tab_article
+features[variable][] = autosave_article
 features[variable][] = comment_anonymous_article
 features[variable][] = comment_article
 features[variable][] = comment_default_mode_article

@@ -14,8 +14,15 @@ function smash_guests_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_guest';
-  $strongarm->value = 'edit-comment';
+  $strongarm->value = 'edit-workflow';
   $export['additional_settings__active_tab_guest'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'autosave_guest';
+  $strongarm->value = 1;
+  $export['autosave_guest'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

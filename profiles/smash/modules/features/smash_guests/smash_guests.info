@@ -42,6 +42,7 @@ features[field][] = node-guest-field_twitter
 features[node][] = guest
 features[taxonomy][] = tags
 features[variable][] = additional_settings__active_tab_guest
+features[variable][] = autosave_guest
 features[variable][] = comment_anonymous_guest
 features[variable][] = comment_default_mode_guest
 features[variable][] = comment_default_per_page_guest

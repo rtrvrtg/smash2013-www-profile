@@ -195,6 +195,9 @@ projects[google_analytics][subdir] = "contrib"
 projects[node_clone][version] = "1.0-rc1"
 projects[node_clone][subdir] = "contrib"
 
+projects[autosave][version] = "2.2"
+projects[autosave][subdir] = "contrib"
+
 ; TODO modules without versions
 ; projects[twitter_cards][version] = "" ; TODO add version
 ; projects[twitter_cards][subdir] = "custom"

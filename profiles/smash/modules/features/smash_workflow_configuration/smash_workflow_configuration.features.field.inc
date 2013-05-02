@@ -116,6 +116,7 @@ function smash_workflow_configuration_field_default_fields() {
             'colorbox_gallery' => 'post',
             'colorbox_gallery_custom' => '',
             'colorbox_image_style' => 'large',
+            'colorbox_multivalue_index' => NULL,
             'colorbox_node_style' => 'gallery_thumb',
           ),
           'type' => 'colorbox',

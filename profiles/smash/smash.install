@@ -134,3 +134,12 @@ function smash_update_7001() {
   module_enable(array('smash_announcements'));
 }
 
+/**
+ * Enable autosaving
+ */
+function smash_update_7002() {
+  module_enable(array('autosave'));
+  module_disable(array('smash_announcements'));
+  variable_set('autosave_hidden', "1");
+  variable_set('autosave_period', "10");
+}
