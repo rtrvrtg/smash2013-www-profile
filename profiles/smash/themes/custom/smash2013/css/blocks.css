@@ -323,6 +323,7 @@ html.lt-ie9 #boxes-box-social_networks .boxes-box-content a.networks-twitter spa
 
 /* line 228, ../sass/blocks.scss */
 #block-boxes-footer-text {
+  clear: both;
   font-size: 0.7em;
   line-height: 1.3em;
 }
@@ -331,4 +332,45 @@ html.lt-ie9 #boxes-box-social_networks .boxes-box-content a.networks-twitter spa
   #block-boxes-footer-text {
     font-size: 0.8em;
   }
+}
+
+/**
+ * Sponsors
+ */
+/* line 241, ../sass/blocks.scss */
+.view-sponsor-list {
+  text-align: center;
+}
+/* line 244, ../sass/blocks.scss */
+.view-sponsor-list .views-row {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 2px 4px 2px;
+}
+/* line 249, ../sass/blocks.scss */
+.view-sponsor-list .views-row a {
+  display: block;
+}
+/* line 252, ../sass/blocks.scss */
+.view-sponsor-list .views-row img {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 257, ../sass/blocks.scss */
+.view-sponsor-list .views-row a, .view-sponsor-list .views-row img {
+  line-height: 100px;
+  max-height: 100px;
+  width: auto;
+}
+/* line 263, ../sass/blocks.scss */
+.view-sponsor-list .views-row.views-row-1 {
+  display: block;
+  float: left;
+  margin: 0 10px 0 0;
+}
+/* line 268, ../sass/blocks.scss */
+.view-sponsor-list .views-row.views-row-1 a, .view-sponsor-list .views-row.views-row-1 img {
+  line-height: 200px;
+  max-height: 200px;
+  width: auto;
 }
