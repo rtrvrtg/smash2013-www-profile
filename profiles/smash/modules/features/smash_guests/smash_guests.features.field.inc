@@ -213,7 +213,7 @@ function smash_guests_field_default_fields() {
           'label' => 'above',
           'module' => 'entityreference',
           'settings' => array(
-            'link' => 0,
+            'link' => FALSE,
           ),
           'type' => 'entityreference_label',
           'weight' => '1',

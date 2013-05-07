@@ -19,9 +19,10 @@ function smash_workflow_configuration_default_box() {
   $box->description = 'Footer';
   $box->options = array(
     'body' => array(
-      'value' => '<p>Welcome to the bottom of the page! You can check out our&nbsp;<a href="/privacy">privacy policy</a>&nbsp;if you like.&nbsp;While you\'re at it, you should also&nbsp;<a href="/contact">contact us</a>.&nbsp;Your choices are essentially limitless. Which is to say, you have 2 choices.<br>This website is Copyright © 2013 by SMASH Inc. SMASH Inc is a non-profit organisation brought to you by the character ス and Couque D\'asses. Gabba gabba we accept you one of SMASH! All we care about is J-Pop, White Canvas and our cats.</p>',
+      'value' => '<p>Welcome to the bottom of the page! You can check out our&nbsp;<a href="/privacy">privacy policy</a>&nbsp;if you like.&nbsp;While you\'re at it, you should also&nbsp;<a href="/contact">contact us</a>.&nbsp;Your choices are essentially limitless. Which is to say, you have 2 choices.<br>This website is Copyright © 2013 by SMASH Inc. SMASH Inc is a non-profit organisation.</p>',
       'format' => 'filtered_html',
     ),
+    'additional_classes' => '',
   );
   $export['footer_text'] = $box;
 

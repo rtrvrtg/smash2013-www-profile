@@ -412,7 +412,7 @@ function smash_locations_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 0,
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -488,7 +488,7 @@ function smash_locations_field_default_fields() {
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => 1,
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
