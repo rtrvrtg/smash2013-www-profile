@@ -1,0 +1,9 @@
+name = Samaranch Map
+core = 7.x
+package = SMASH!
+version = 7.x-0.1
+
+dependencies[] = ctools
+dependencies[] = views
+
+files[] = includes/views/views_plugin_style_samaranch_map.inc
