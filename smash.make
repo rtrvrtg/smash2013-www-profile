@@ -86,7 +86,7 @@ projects[colorbox][subdir] = "contrib"
 projects[diff][version] = "3.2"
 projects[diff][subdir] = "contrib"
 
-projects[entity][version] = "1.x-dev"
+projects[entity][version] = "1.1"
 projects[entity][subdir] = "contrib"
 
 projects[filecache][version] = "1.x-dev"
@@ -147,7 +147,7 @@ projects[globalredirect][subdir] = "contrib"
 projects[rules][version] = "2.3"
 projects[rules][subdir] = "contrib"
 
-projects[uuid][version] = "1.x-dev"
+projects[uuid][version] = "1.0-alpha4"
 projects[uuid][subdir] = "contrib"
 
 projects[ckeditor_link][version] = "2.3"
