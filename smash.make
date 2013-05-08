@@ -198,6 +198,15 @@ projects[node_clone][subdir] = "contrib"
 projects[autosave][version] = "2.2"
 projects[autosave][subdir] = "contrib"
 
+project[boost_custom_expire_rules][version] = "1.0"
+project[boost_custom_expire_rules][subdir] = "contrib"
+
+project[expire][version] = "1.0-beta1"
+project[expire][subdir] = "contrib"
+
+project[httprl][version] = "1.11"
+project[httprl][subdir] = "contrib"
+
 ; TODO modules without versions
 ; projects[twitter_cards][version] = "" ; TODO add version
 ; projects[twitter_cards][subdir] = "custom"
