@@ -210,6 +210,7 @@ projects[httprl][subdir] = "contrib"
 projects[fast_404][version] = "1.3"
 projects[fast_404][subdir] = "contrib"
 projects[fast_404][patch][] = "http://drupal.org/files/1500092-dbtng-enable.patch"
+projects[fast_404][patch][] = "http://drupal.org/files/1875350-mysqli.patch"
 
 ; TODO modules without versions
 ; projects[twitter_cards][version] = "" ; TODO add version
