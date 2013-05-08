@@ -207,6 +207,9 @@ projects[expire][subdir] = "contrib"
 projects[httprl][version] = "1.11"
 projects[httprl][subdir] = "contrib"
 
+projects[fast_404][version] = "1.3"
+projects[fast_404][subdir] = "contrib"
+
 ; TODO modules without versions
 ; projects[twitter_cards][version] = "" ; TODO add version
 ; projects[twitter_cards][subdir] = "custom"
