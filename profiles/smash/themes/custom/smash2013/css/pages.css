@@ -523,8 +523,9 @@ span.field-label {
   margin: 1em 0px 0;
   padding: 0;
   list-style: none;
+  font-size: 150%;
 }
-/* line 406, ../sass/pages.scss */
+/* line 407, ../sass/pages.scss */
 .ticket-options li {
   margin: 0 0;
   padding: 0;
@@ -532,14 +533,15 @@ span.field-label {
   display: block;
 }
 @media all and (min-width: 469px) {
-  /* line 406, ../sass/pages.scss */
+  /* line 407, ../sass/pages.scss */
   .ticket-options li {
     display: inline-block;
+    margin: 0 -4px 0 0;
     vertical-align: top;
     width: 50%;
   }
 }
-/* line 416, ../sass/pages.scss */
+/* line 418, ../sass/pages.scss */
 .ticket-options li a {
   display: block;
   text-align: center;
@@ -565,11 +567,11 @@ span.field-label {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-/* line 430, ../sass/pages.scss */
+/* line 432, ../sass/pages.scss */
 .ticket-options li a strong, .ticket-options li a small {
   display: block;
 }
-/* line 437, ../sass/pages.scss */
+/* line 439, ../sass/pages.scss */
 .ticket-options .ticket-option-inactive a {
   pointer-events: none;
   background-color: #444444;

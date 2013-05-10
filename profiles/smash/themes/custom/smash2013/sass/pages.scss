@@ -402,6 +402,7 @@ span.field-label { /* The inline field label used by the Fences module */
 
 .ticket-options {
   @include clean-list(1em 0px);
+  font-size: 150%;
   
   li {
     @include clean-list;
@@ -409,6 +410,7 @@ span.field-label { /* The inline field label used by the Fences module */
     
     @media all and (min-width: $tablet-half) {
       display: inline-block;
+      margin: 0 -4px 0 0;
       vertical-align: top;
       width: 50%;
     }
