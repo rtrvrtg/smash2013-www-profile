@@ -429,8 +429,9 @@ span.field-label { /* The inline field label used by the Fences module */
       @include box-shadow(3px 3px 0px $color-red-bg);
       @include transition(all 0.1s linear);
       
-      strong, small {
+      strong, small, p {
         display: block;
+        margin: 0.25em 0;
       }
     }
   }

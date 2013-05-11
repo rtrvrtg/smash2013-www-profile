@@ -568,10 +568,11 @@ span.field-label {
   transition: all 0.1s linear;
 }
 /* line 432, ../sass/pages.scss */
-.ticket-options li a strong, .ticket-options li a small {
+.ticket-options li a strong, .ticket-options li a small, .ticket-options li a p {
   display: block;
+  margin: 0.25em 0;
 }
-/* line 439, ../sass/pages.scss */
+/* line 440, ../sass/pages.scss */
 .ticket-options .ticket-option-inactive a {
   pointer-events: none;
   background-color: #444444;
