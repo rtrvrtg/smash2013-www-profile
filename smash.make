@@ -204,10 +204,10 @@ projects[expire][subdir] = "contrib"
 projects[httprl][version] = "1.11"
 projects[httprl][subdir] = "contrib"
 
-projects[replicate][version] = "1.11"
+projects[replicate][version] = "1.0"
 projects[replicate][subdir] = "contrib"
 
-projects[replicate_field_collection][version] = "1.11"
+projects[replicate_field_collection][version] = "1.0"
 projects[replicate_field_collection][subdir] = "contrib"
 
 projects[fast_404][version] = "1.3"
