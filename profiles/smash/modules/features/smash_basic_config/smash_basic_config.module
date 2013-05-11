@@ -386,3 +386,28 @@ function smash_basic_config_views_default_views_alter(&$views) {
     $views['admin_views_node'] = $view;
   }
 }
+
+function smash_basic_config_html_head_alter(&$head_elements) {
+  // dpm($head_elements);
+  // dpm(drupal_is_front_page());
+
+  if (isset($head_elements['twitter_cards_url'])) {
+    if (drupal_is_front_page()) {
+      $head_elements['twitter_cards_url']['#attributes']['content'] = url('<front>', array('absolute' => TRUE));
+    }
+  }
+
+  if (isset($head_elements['twitter_cards_description'])) {
+    if (drupal_is_front_page()) {
+      $head_elements['twitter_cards_description']['#attributes']['content'] = variable_get('site_name', '') . ' | ' . variable_get('site_slogan', '');
+    }
+  }
+
+  if (isset($head_elements['twitter_cards_title'])) {
+    if (drupal_is_front_page()) {
+      $head_elements['twitter_cards_title']['#attributes']['content'] = variable_get('site_name', '');
+    }
+  }
+
+  unset($head_elements['system_meta_generator']);
+}
