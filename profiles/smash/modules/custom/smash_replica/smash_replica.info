@@ -1,0 +1,10 @@
+name = "SMASH Replica"
+package = "SMASH!"
+project = "smash_replica"
+version = "7.x-0.1"
+core = "7.x"
+dependencies[] = "replicate"
+dependencies[] = "replicate_field_collection"
+dependencies[] = "replicate_ui"
+description = "Sets up node replication AND DOES IT PROPERLY."
+

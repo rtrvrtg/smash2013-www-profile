@@ -192,9 +192,6 @@ projects[xmlsitemap][subdir] = "contrib"
 projects[google_analytics][version] = "1.3"
 projects[google_analytics][subdir] = "contrib"
 
-projects[node_clone][version] = "1.0-rc1"
-projects[node_clone][subdir] = "contrib"
-
 projects[autosave][version] = "2.2"
 projects[autosave][subdir] = "contrib"
 
@@ -206,6 +203,12 @@ projects[expire][subdir] = "contrib"
 
 projects[httprl][version] = "1.11"
 projects[httprl][subdir] = "contrib"
+
+projects[replicate][version] = "1.11"
+projects[replicate][subdir] = "contrib"
+
+projects[replicate_field_collection][version] = "1.11"
+projects[replicate_field_collection][subdir] = "contrib"
 
 projects[fast_404][version] = "1.3"
 projects[fast_404][subdir] = "contrib"

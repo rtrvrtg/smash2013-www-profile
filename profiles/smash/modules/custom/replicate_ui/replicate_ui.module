@@ -1,0 +1,46 @@
+<?php 
+
+/**
+ * Implements hook_action_info().
+ * Registers custom replicate actions as Drupal actions.
+ */
+function replicate_ui_action_info() {
+  $actions = array();
+  $files = replicate_ui_load_action_includes();
+  foreach ($files as $filename) {
+    $action_info_fn = 'replicate_ui_'. str_replace('.', '_', basename($filename, '.inc')).'_info';
+    $action_info = call_user_func($action_info_fn);
+    if (is_array($action_info)) {
+      $actions += $action_info;
+    }
+  }
+
+  return $actions;
+}
+
+/**
+ * Loads the replicate actions placed in their own include files (under actions/).
+ *
+ * @return
+ *   An array of containing filenames of the included actions.
+ */
+function replicate_ui_load_action_includes() {
+  static $loaded = FALSE;
+
+  // The list of replicate actions is fairly static, so it's hardcoded for better
+  // performance (hitting the filesystem with file_scan_directory(), and then
+  // caching the result has its cost).
+  $path = drupal_get_path('module', 'replicate_ui') . '/actions/';
+  $files = array(
+    'replicate.action.inc',
+  );
+
+  if (!$loaded) {
+    foreach ($files as $file) {
+      include_once $path . $file;
+    }
+    $loaded = TRUE;
+  }
+
+  return $files;
+}
