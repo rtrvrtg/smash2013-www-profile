@@ -7,9 +7,19 @@ function smash_replica_replicate_entity_node(&$replica) {
   // Clean the custom entity so Drupal will create a new entry
   // and not update the old one when saving.
   $replica->entity_id = NULL;
+  // Clean out UUID ready for a new one.
+  $replica->uuid = NULL;
 
   // Do something specific to this type of entity.
   $wrapper = entity_metadata_wrapper('node', $replica);
   $wrapper->title->set($wrapper->title->value() . ' [CLONE]');
   $wrapper->status->set(0);
+}
+
+/**
+ * Customise all cloned field collections.
+ */
+function smash_replica_replicate_entity_field_collection_item(&$replica) {
+  // Clean out UUID ready for a new one.
+  $replica->uuid = NULL;
 }
