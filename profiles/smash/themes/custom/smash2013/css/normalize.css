@@ -696,7 +696,7 @@ table {
  */
 /* line 671, ../sass/normalize.scss */
 th {
-  text-align: justify;
+  text-align: left;
   /* LTR */
   padding: 0;
   border-bottom: none;

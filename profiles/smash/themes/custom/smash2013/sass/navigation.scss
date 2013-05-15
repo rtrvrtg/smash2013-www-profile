@@ -63,7 +63,7 @@ li a.active {
   ul.menu {
     margin: 0;
     padding: 0;
-    text-align: justify;
+    text-align: left;
 
     li, .item-list {
       list-style-type: none;
@@ -192,7 +192,7 @@ li a.active {
         padding: 0.625em 0.25em;
         color: white;
         text-decoration: none;
-        text-align: justify;
+        text-align: left;
         background-color: $color-menu-hov;
         
         &:hover, &:focus, &:active {
@@ -205,7 +205,7 @@ li a.active {
       
       &.nolink {
         background-color: $color-menu-hov;
-        text-align: justify;
+        text-align: left;
         @include menu-heading-style;
         min-height: 22px;
       }
@@ -224,7 +224,7 @@ li a.active {
     padding: 0.625em 6px;
     background-color: $color-menu-hov;
     margin: 0;
-    text-align: justify;
+    text-align: left;
     min-height: 22px;
     
     font-size: 1em;    
@@ -413,7 +413,7 @@ li a.active {
               float: none;
               display: block;
               margin: 0;
-              text-align: justify;
+              text-align: left;
               
               &.nolink {
                 margin-top: 0.5em;

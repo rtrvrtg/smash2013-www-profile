@@ -32,7 +32,7 @@
 body {
   margin: 0;
   padding: 0;
-  text-align: justify;
+  text-align: left;
   background-color: #282828;
   background: url(../images/2013webgradient.png) fixed repeat-x bottom center, url(../images/2013webbg.png) repeat top center, #282828;
   background-size: 1px 1300px, 100px 113px;
