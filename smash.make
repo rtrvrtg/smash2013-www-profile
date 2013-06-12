@@ -137,7 +137,7 @@ projects[transliteration][subdir] = "contrib"
 
 projects[twitter_pull][version] = "1.x-dev"
 projects[twitter_pull][subdir] = "contrib"
-projects[twitter_pull][patch][] = "https://drupal.org/files/twitter_pull-use_twitter_module_api-7.x-1.x-1781024-70.patch"
+projects[twitter_pull][patch][] = "http://drupal.org/files/twitter_pull-use_twitter_module_api-7.x-1.x-1781024-70.patch"
 
 projects[panels][version] = "3.3"
 projects[panels][subdir] = "contrib"
