@@ -137,6 +137,7 @@ projects[transliteration][subdir] = "contrib"
 
 projects[twitter_pull][version] = "1.x-dev"
 projects[twitter_pull][subdir] = "contrib"
+projects[twitter_pull][patch][] = "https://drupal.org/files/twitter_pull-use_twitter_module_api-7.x-1.x-1781024-70.patch"
 
 projects[panels][version] = "3.3"
 projects[panels][subdir] = "contrib"
@@ -214,6 +215,12 @@ projects[fast_404][version] = "1.3"
 projects[fast_404][subdir] = "contrib"
 projects[fast_404][patch][] = "http://drupal.org/files/1500092-dbtng-enable.patch"
 projects[fast_404][patch][] = "http://drupal.org/files/1875350-mysqli.patch"
+
+projects[twitter][version] = "5.8"
+projects[twitter][subdir] = "contrib"
+
+projects[oauth][version] = "3.1"
+projects[oauth][subdir] = "contrib"
 
 ; TODO modules without versions
 ; projects[twitter_cards][version] = "" ; TODO add version
