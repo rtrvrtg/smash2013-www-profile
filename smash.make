@@ -5,7 +5,7 @@ api = "2"
 projects[drupal][version] = "7.22"
 
 ; Modules
-projects[admin_views][version] = "1.1"
+projects[admin_views][version] = "1.2"
 projects[admin_views][subdir] = "contrib"
 
 projects[ctools][version] = "1.3"
@@ -29,7 +29,7 @@ projects[devel][subdir] = "contrib"
 projects[profiler_builder][version] = "1.0-rc4"
 projects[profiler_builder][subdir] = "contrib"
 
-projects[ds][version] = "2.2"
+projects[ds][version] = "2.3"
 projects[ds][subdir] = "contrib"
 
 projects[features][version] = "1.0"
@@ -53,7 +53,7 @@ projects[field_group][subdir] = "contrib"
 projects[field_slideshow][version] = "1.82"
 projects[field_slideshow][subdir] = "contrib"
 
-projects[inline_entity_form][version] = "1.1"
+projects[inline_entity_form][version] = "1.2"
 projects[inline_entity_form][subdir] = "contrib"
 
 projects[link][version] = "1.1"
@@ -74,7 +74,7 @@ projects[media][subdir] = "contrib"
 projects[plupload][version] = "1.1"
 projects[plupload][subdir] = "contrib"
 
-projects[backup_migrate][version] = "2.5"
+projects[backup_migrate][version] = "2.7"
 projects[backup_migrate][subdir] = "contrib"
 
 projects[boxes][version] = "1.1"
@@ -169,7 +169,7 @@ projects[views][subdir] = "contrib"
 projects[views_bulk_operations][version] = "3.1"
 projects[views_bulk_operations][subdir] = "contrib"
 
-projects[webform][version] = "3.18"
+projects[webform][version] = "3.19"
 projects[webform][subdir] = "contrib"
 
 projects[webform_conditional][version] = "1.0-beta1"
