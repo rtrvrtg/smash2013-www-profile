@@ -1,0 +1,9 @@
+/* line 1, ../sass/layout.scss */
+section.schedule {
+  overflow-x: auto;
+}
+/* line 4, ../sass/layout.scss */
+section.schedule .schedule-column {
+  display: inline-block;
+  border: 1px solid black;
+}

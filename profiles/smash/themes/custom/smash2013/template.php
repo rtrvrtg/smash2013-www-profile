@@ -360,9 +360,21 @@ function smash2013_menu_tree__menu_block($variables) {
     '</div>';
 }
 
+/**
+ * Preprocess views
+ */
 function smash2013_preprocess_views_view(&$vars) {
+  // dpm($vars);
+  if ($vars['view']->name == 'map_locations') {
+    $map_location_nid = $vars['view']->args[0];
+    $map_location_node = node_load($map_location_nid);
+    // dpm($map_location_node);
+  }
 }
 
+/**
+ * Preprocess view list
+ */
 function smash2013_preprocess_views_view_list(&$vars) {
 }
 
@@ -456,3 +468,5 @@ function smash2013_username($variables) {
   }
   return $output;
 }
+
+require_once(__DIR__ . '/template.calendar.php');

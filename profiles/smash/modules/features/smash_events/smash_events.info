@@ -31,6 +31,7 @@ features[field][] = node-event-body
 features[field][] = node-event-field_event_date_time
 features[field][] = node-event-field_event_type
 features[field][] = node-event-field_location
+features[field][] = node-event-field_section
 features[field][] = node-event-field_sidebar_content
 features[node][] = event
 features[taxonomy][] = event_type
