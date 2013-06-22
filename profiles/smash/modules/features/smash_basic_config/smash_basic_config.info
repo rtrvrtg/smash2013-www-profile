@@ -8,6 +8,7 @@ dependencies[] = ctools
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
+features[variable][] = date_format_time_only
 features[variable][] = media__file_extensions
 features[variable][] = site_name
 features[variable][] = site_slogan
