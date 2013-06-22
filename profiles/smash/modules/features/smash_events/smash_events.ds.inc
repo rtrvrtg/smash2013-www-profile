@@ -20,16 +20,26 @@ function smash_events_ds_field_settings_info() {
     'field_event_date_time' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'func' => 'theme_ds_field_expert',
           'lb' => 'When',
+          'lb-cl' => 'block-title',
+          'lb-col' => TRUE,
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'block',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
     'field_location' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'func' => 'theme_ds_field_expert',
           'lb' => 'Where',
+          'lb-cl' => 'block-title',
+          'lb-col' => TRUE,
         ),
       ),
     ),
@@ -62,24 +72,25 @@ function smash_events_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'smash_layout_node_main' => array(
-        0 => 'field_event_date_time',
-        1 => 'field_location',
-        2 => 'body',
+        0 => 'body',
       ),
       'smash_layout_node_sidebar' => array(
+        1 => 'field_event_date_time',
+        2 => 'field_location',
         3 => 'field_sidebar_content',
       ),
     ),
     'fields' => array(
-      'field_event_date_time' => 'smash_layout_node_main',
-      'field_location' => 'smash_layout_node_main',
       'body' => 'smash_layout_node_main',
+      'field_event_date_time' => 'smash_layout_node_sidebar',
+      'field_location' => 'smash_layout_node_sidebar',
       'field_sidebar_content' => 'smash_layout_node_sidebar',
     ),
     'classes' => array(),
     'wrappers' => array(
       'smash_layout_node_main' => 'div',
       'smash_layout_node_sidebar' => 'div',
+      'ds_hidden' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',

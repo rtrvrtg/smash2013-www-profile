@@ -155,3 +155,60 @@ figure.colorbox-content-wrap figcaption {
   margin: 0 auto;
   text-align: left;
 }
+
+/* line 132, ../sass/views-styles.scss */
+.view-schedule {
+  background: #7e54a3;
+  color: white;
+  padding: 10px 0;
+  margin: 0;
+}
+@media all and (min-width: 950px) {
+  /* line 132, ../sass/views-styles.scss */
+  .view-schedule {
+    padding: 10px 40px;
+    margin: 0 -40px;
+  }
+}
+/* line 144, ../sass/views-styles.scss */
+.view-schedule section.schedule {
+  text-align: center;
+}
+/* line 147, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column {
+  border-top: 0px none;
+  border-bottom: 0px none;
+  border-right: 0px none;
+  border-left: 2px solid white;
+  margin: 0;
+}
+/* line 156, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column:first-child {
+  border-left: 0px none;
+}
+/* line 160, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column header {
+  font-family: "ultramagneticRegular", sans-serif;
+  font-weight: normal;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.17em;
+  line-height: 1.28205em;
+}
+/* line 167, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-column-items {
+  margin: 0 10px;
+}
+/* line 171, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item {
+  background: rgba(255, 255, 255, 0.7);
+  width: 100%;
+}
+/* line 175, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item a {
+  display: block;
+  width: 100%;
+  color: black;
+  padding: 10px;
+  box-sizing: border-box;
+}

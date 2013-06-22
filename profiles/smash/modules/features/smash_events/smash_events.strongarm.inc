@@ -112,7 +112,7 @@ function smash_events_strongarm() {
           'weight' => '2',
         ),
         'xmlsitemap' => array(
-          'weight' => '6',
+          'weight' => '5',
         ),
       ),
       'display' => array(),

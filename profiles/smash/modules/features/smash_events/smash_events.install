@@ -13,3 +13,24 @@ function smash_events_update_7000() {
   ));
   
 }
+
+/**
+ * Mark all existing published events as visible in the menu.
+ */
+function smash_events_update_7001() {
+	$q = new EntityFieldQuery();
+  $q->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'event')
+    ->propertyCondition('status', 1);
+
+  $result = $q->execute();
+  if (isset($result['node'])) {
+    $event_nids = array_keys($result['node']);
+    $events = entity_load('node', $event_nids);
+
+    foreach ($events as $event) {
+      $event->field_show_in_menu[LANGUAGE_NONE][0]['value'] = 1;
+      node_save($event);
+    }
+  }
+}

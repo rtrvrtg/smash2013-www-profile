@@ -11,7 +11,7 @@ function smash2013_preprocess_calendar_day(&$vars) {
   error_log('about to re render');
 
   $rows = $view->style_plugin->calendar_build_day();
-  dpm($rows);
+  // dpm($rows);
 
   /*
   // Reprocess results!
@@ -43,7 +43,7 @@ function smash2013_preprocess_calendar_day(&$vars) {
     $styler->addAllDayItem($item);
   }
 
-  dpm($vars);
+  // dpm($vars);
 
   foreach ($rows['items'] as $time => &$items) {
 
@@ -158,10 +158,13 @@ class Smash2013_Schedule_Item {
   }
 
   protected function classes() {
+    $hour = intval($this->hourstamp) == $this->hourstamp ? $this->hourstamp : floor($this->hourstamp) . '-half';
+    $length = intval($this->length) == $this->length ? $this->length : floor($this->length) . '-half';
+
     $classes = array(
       'schedule-item',
-      'item-hourstamp-' . $this->hourstamp,
-      'item-length-' . $this->length,
+      'item-hourstamp-' . $hour,
+      'item-length-' . $length,
     );
     return $classes;
   }

@@ -1,13 +1,42 @@
 $hour-height: 60px;
+$start-time: 9;
+
+@mixin schedule-position ($time) {
+	$floor_time: floor($time);
+	$schedule_selector: item-hourstamp-#{$floor_time};
+	@if (($time * 2) % 2) == 1 {
+		$schedule_selector: item-hourstamp-#{$floor_time}-half;
+	}
+	.#{$schedule_selector} {
+		position: absolute;
+		top: ($time - $start-time) * $hour-height;
+	}
+}
+
+@mixin schedule-height ($time) {
+	$floor_time: floor($time);
+	$schedule_selector: item-length-#{$floor_time};
+	@if (($time * 2) % 2) == 1 {
+		$schedule_selector: item-length-#{$floor_time}-half;
+	}
+	.#{$schedule_selector} {
+		overflow: hidden;
+		height: $time * $hour-height;
+	}
+}
 
 section.schedule {
 	display: block;
 	overflow-x: auto;
+	min-height: 500px;
+	white-space: nowrap;
 
 	.schedule-column {
 		display: inline-block;
 		vertical-align: top;
 		border: 1px solid black;
+		min-height: 500px;
+		min-width: 240px;
 
 		header {
 			display: block;
@@ -18,17 +47,19 @@ section.schedule {
 
 		.schedule-column-items {
 			display: block;
-
-
+			position: relative;
+			white-space: normal;
 		}
+	}
+
+	@for $i from ($start-time * 2) through (24 * 2) {
+		$time: ($i / 2);
+		@include schedule-position($time);
+	}
+
+	@for $i from 0 through (10 * 2) {
+		$time: ($i / 2);
+		@include schedule-height($time);
 	}
 }
 
-/*
-@mixin test($resource: "red"){
-  $updated: unquote($resource);
-  li.#{$updated} a{
-      border-left: 7px solid $updated;
-  }
-}
-*/

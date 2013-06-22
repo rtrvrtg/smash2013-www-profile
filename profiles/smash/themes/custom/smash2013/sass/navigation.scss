@@ -215,7 +215,8 @@ li a.active {
       }
     }
     
-    .view .menu-wrapper > ul {
+    .view .menu-wrapper > ul,
+    .view > .view-content > .item-list > ul {
       margin: 0;
       padding: 0;
     }
