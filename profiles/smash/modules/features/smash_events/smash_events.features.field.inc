@@ -122,7 +122,7 @@ function smash_events_field_default_fields() {
           'label' => 'above',
           'module' => 'date',
           'settings' => array(
-            'format_type' => 'short',
+            'format_type' => 'time_only',
             'fromto' => 'both',
             'multiple_from' => '',
             'multiple_number' => '',
@@ -273,6 +273,9 @@ function smash_events_field_default_fields() {
             ),
           ),
           'sort' => array(
+            'direction' => 'ASC',
+            'field' => 'body:value',
+            'property' => 'nid',
             'type' => 'none',
           ),
           'target_bundles' => array(
@@ -450,10 +453,9 @@ function smash_events_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'list',
           'settings' => array(),
-          'type' => 'list_default',
-          'weight' => 14,
+          'type' => 'hidden',
+          'weight' => '14',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -467,7 +469,7 @@ function smash_events_field_default_fields() {
       'fences_wrapper' => 'no_wrapper',
       'field_name' => 'field_show_in_menu',
       'label' => 'Show in Menu',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
