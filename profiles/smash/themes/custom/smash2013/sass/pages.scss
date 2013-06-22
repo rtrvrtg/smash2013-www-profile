@@ -346,6 +346,32 @@ span.field-label { /* The inline field label used by the Fences module */
   }
 }
 
+@mixin generic-sidebar-block {
+  .sidebar-block {
+    margin: 0;
+
+    .sidebar-block-title, .sidebar-content-title {
+      @include block-title;
+    }
+
+    .field-name-field-sidebar-body, .sidebar-inner {
+      @media all and (min-width: $desktop-minimum) {
+        margin-right: 10px;
+      }
+      
+      *:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .sidebar-inner {
+      @media all and (min-width: $desktop-minimum) {
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
 .region-sidebar-second {
   .block {
     &:first-child {
@@ -356,13 +382,22 @@ span.field-label { /* The inline field label used by the Fences module */
       @include block-title;
     }
   }
+
+  @include generic-sidebar-block;  
+}
+
+.prefaced-node-content {
+  iframe {
+    width: 100%;
+  }
 }
 
 .prefaced-node-sidebar {
   .field-collection-container {
     border: 0px none;
-    .field-collection-view {
+    .field-collection-view, .sidebar-block {
       margin: 0;
+
       .sidebar-content-title {
         @include block-title;
       }
@@ -378,6 +413,8 @@ span.field-label { /* The inline field label used by the Fences module */
       }
     }
   }
+
+  @include generic-sidebar-block;
 }
 
 /*
