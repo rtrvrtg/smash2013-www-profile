@@ -29,7 +29,7 @@ projects[devel][subdir] = "contrib"
 projects[profiler_builder][version] = "1.0-rc4"
 projects[profiler_builder][subdir] = "contrib"
 
-projects[ds][version] = "2.3"
+projects[ds][version] = "2.4"
 projects[ds][subdir] = "contrib"
 
 projects[features][version] = "1.0"
