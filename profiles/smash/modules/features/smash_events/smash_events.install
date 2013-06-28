@@ -55,3 +55,11 @@ function smash_events_update_7002() {
   variable_set('smash_events_page_header', $header);
   variable_set('smash_events_page_footer', $footer);
 }
+
+/**
+ * Set default event date
+ */
+function smash_events_update_7003() {
+  variable_set('smash_events_default_date', '2013-08-10');
+}
+
