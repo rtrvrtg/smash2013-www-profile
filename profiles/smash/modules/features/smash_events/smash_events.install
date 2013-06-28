@@ -34,3 +34,24 @@ function smash_events_update_7001() {
     }
   }
 }
+
+/**
+ * Define view header and footer.
+ */
+function smash_events_update_7002() {
+  $header = "<p>A huge stack of events will be on at SMASH! 2013 — there's something here for everyone! These are the event details we have up at the moment, feel free to explore!</p>";
+
+  $footer = "<p>Here's a list of some of the events at SMASH! 2013 that are in the works:</p>
+<ul class=\"dual-column\">
+<li>Trivia</li>
+<li>Cosplay Photobooth</li>
+<li>Gaming: Free Play</li>
+<li>Guest Panels</li>
+<li>Cosplay Panels</li>
+<li>Madman Industry Panel</li>
+<li>and much more!</li>
+</ul>";
+
+  variable_set('smash_events_page_header', $header);
+  variable_set('smash_events_page_footer', $footer);
+}

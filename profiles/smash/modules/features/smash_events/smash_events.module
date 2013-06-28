@@ -62,3 +62,22 @@ function template_preprocess_smash_events_calendar_item(&$vars) {
 function template_preprocess_smash_events_calendar_group(&$vars) {
   $vars['machine_title'] = preg_replace('/[^a-z0-9]/', '-', strtolower($vars['title']));
 }
+
+function smash_events_views_pre_render(&$view) {
+  if ($view->name == "event_list" && $view->current_display == "events_page") {
+    // dpm($view);
+
+    $header = &$view->header['area']->options['content'];
+    $footer = &$view->footer['area']->options['content'];
+
+    $header_text = variable_get('smash_events_page_header', NULL);
+    $footer_text = variable_get('smash_events_page_footer', NULL);
+
+    if (!is_null($header_text)) {
+      $header = $header_text;
+    }
+    if (!is_null($footer_text)) {
+      $footer = $footer_text;
+    }
+  }
+}
