@@ -342,35 +342,59 @@ html.lt-ie9 #boxes-box-social_networks .boxes-box-content a.networks-twitter spa
   text-align: center;
 }
 /* line 244, ../sass/blocks.scss */
-.view-sponsor-list .views-row {
+.view-sponsor-list .view-content div {
   display: inline-block;
   vertical-align: top;
   margin: 0 2px 4px 2px;
 }
 /* line 249, ../sass/blocks.scss */
-.view-sponsor-list .views-row a {
-  display: block;
-}
-/* line 252, ../sass/blocks.scss */
-.view-sponsor-list .views-row img {
-  display: inline-block;
-  vertical-align: middle;
-}
-/* line 257, ../sass/blocks.scss */
-.view-sponsor-list .views-row a, .view-sponsor-list .views-row img {
-  line-height: 100px;
-  max-height: 100px;
-  width: auto;
-}
-/* line 263, ../sass/blocks.scss */
-.view-sponsor-list .views-row.views-row-1 {
+.view-sponsor-list .view-content div.sticky-True {
   display: block;
   float: left;
   margin: 0 10px 0 0;
 }
-/* line 268, ../sass/blocks.scss */
-.view-sponsor-list .views-row.views-row-1 a, .view-sponsor-list .views-row.views-row-1 img {
-  line-height: 200px;
-  max-height: 200px;
+/* line 255, ../sass/blocks.scss */
+.view-sponsor-list .view-content div a {
+  display: block;
+}
+/* line 258, ../sass/blocks.scss */
+.view-sponsor-list .view-content div img {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 263, ../sass/blocks.scss */
+.view-sponsor-list .view-content div a, .view-sponsor-list .view-content div img {
+  line-height: 50px;
+  max-height: 50px;
   width: auto;
+}
+@media all and (min-width: 950px) {
+  /* line 263, ../sass/blocks.scss */
+  .view-sponsor-list .view-content div a, .view-sponsor-list .view-content div img {
+    line-height: 100px;
+    max-height: 100px;
+  }
+}
+/* line 273, ../sass/blocks.scss */
+.view-sponsor-list .view-content div a.sticky-True {
+  line-height: 50px;
+  max-height: 50px;
+  width: auto;
+}
+@media all and (min-width: 950px) {
+  /* line 273, ../sass/blocks.scss */
+  .view-sponsor-list .view-content div a.sticky-True {
+    line-height: 200px;
+    max-height: 200px;
+  }
+}
+/* line 283, ../sass/blocks.scss */
+.view-sponsor-list .view-content div a.sticky-True img {
+  max-height: 50px;
+}
+@media all and (min-width: 950px) {
+  /* line 283, ../sass/blocks.scss */
+  .view-sponsor-list .view-content div a.sticky-True img {
+    max-height: 200px;
+  }
 }

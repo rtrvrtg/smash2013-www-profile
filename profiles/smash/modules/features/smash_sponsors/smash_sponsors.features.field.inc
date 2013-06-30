@@ -165,7 +165,7 @@ function smash_sponsors_field_default_fields() {
         ),
         'max_filesize' => '',
         'max_resolution' => '',
-        'min_resolution' => '200x200',
+        'min_resolution' => '',
         'title_field' => 0,
         'user_register_form' => FALSE,
       ),
@@ -178,6 +178,7 @@ function smash_sponsors_field_default_fields() {
             'public' => 'public',
           ),
           'allowed_types' => array(
+            0 => 0,
             'audio' => 0,
             'default' => 0,
             'image' => 'image',

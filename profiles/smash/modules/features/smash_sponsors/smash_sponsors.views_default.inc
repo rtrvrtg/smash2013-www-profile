@@ -29,7 +29,20 @@ function smash_sponsors_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'sticky-[sticky]';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  /* Field: Content: Sticky */
+  $handler->display->display_options['fields']['sticky']['id'] = 'sticky';
+  $handler->display->display_options['fields']['sticky']['table'] = 'node';
+  $handler->display->display_options['fields']['sticky']['field'] = 'sticky';
+  $handler->display->display_options['fields']['sticky']['label'] = '';
+  $handler->display->display_options['fields']['sticky']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['sticky']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['sticky']['type'] = 'true-false';
+  $handler->display->display_options['fields']['sticky']['not'] = 0;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -58,18 +71,18 @@ function smash_sponsors_views_default_views() {
   $handler->display->display_options['fields']['field_sponsor_logo']['table'] = 'field_data_field_sponsor_logo';
   $handler->display->display_options['fields']['field_sponsor_logo']['field'] = 'field_sponsor_logo';
   $handler->display->display_options['fields']['field_sponsor_logo']['label'] = '';
-  $handler->display->display_options['fields']['field_sponsor_logo']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_sponsor_logo']['alter']['text'] = '<a href="[field_sponsor_homepage]" title="[title]" rel="external" target="_blank">[field_sponsor_logo]</a>';
+  $handler->display->display_options['fields']['field_sponsor_logo']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_sponsor_logo']['alter']['path'] = '[field_sponsor_homepage]';
+  $handler->display->display_options['fields']['field_sponsor_logo']['alter']['external'] = TRUE;
   $handler->display->display_options['fields']['field_sponsor_logo']['alter']['alt'] = '[title]';
-  $handler->display->display_options['fields']['field_sponsor_logo']['alter']['rel'] = 'external';
-  $handler->display->display_options['fields']['field_sponsor_logo']['alter']['target'] = '_blank';
+  $handler->display->display_options['fields']['field_sponsor_logo']['alter']['link_class'] = 'sticky-[sticky]';
   $handler->display->display_options['fields']['field_sponsor_logo']['element_type'] = '0';
   $handler->display->display_options['fields']['field_sponsor_logo']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_sponsor_logo']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_sponsor_logo']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_sponsor_logo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_sponsor_logo']['settings'] = array(
-    'image_style' => 'sponsor',
+    'image_style' => '',
     'image_link' => '',
   );
   /* Sort criterion: Content: Sticky */

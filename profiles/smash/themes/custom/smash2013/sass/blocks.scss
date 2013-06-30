@@ -241,10 +241,16 @@
 .view-sponsor-list {
   text-align: center;
 
-  .views-row {
+  .view-content div {
     display: inline-block;
     vertical-align: top;
     margin: 0 2px 4px 2px;
+
+    &.sticky-True {
+      display: block;
+      float: left;
+      margin: 0 10px 0 0;
+    }
 
     a {
       display: block;
@@ -255,20 +261,30 @@
     }
 
     a, img {
-      line-height: 100px;
-      max-height: 100px;
+      line-height: 50px;
+      max-height: 50px;
+      @media all and (min-width: $desktop-minimum) {
+        line-height: 100px;
+        max-height: 100px;
+      }
       width: auto;
     }
 
-    &.views-row-1 {
-      display: block;
-      float: left;
-      margin: 0 10px 0 0;
+    a.sticky-True {
+      line-height: 50px;
+      max-height: 50px;
+      width: auto;
 
-      a, img {
+      @media all and (min-width: $desktop-minimum) {
         line-height: 200px;
         max-height: 200px;
-        width: auto;
+      }
+
+      img {
+        max-height: 50px;
+        @media all and (min-width: $desktop-minimum) {
+          max-height: 200px;
+        }
       }
     }
   }

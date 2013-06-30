@@ -19,6 +19,7 @@ features[ctools][] = views:views_default:3.0
 features[features_api][] = api:1
 features[field][] = node-sponsor-field_sponsor_homepage
 features[field][] = node-sponsor-field_sponsor_logo
+features[image][] = sponsor
 features[node][] = sponsor
 features[variable][] = field_bundle_settings_node__sponsor
 features[variable][] = menu_options_sponsor
