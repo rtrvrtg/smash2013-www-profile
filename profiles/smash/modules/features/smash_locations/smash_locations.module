@@ -5,3 +5,17 @@
  */
 
 include_once 'smash_locations.features.inc';
+
+function smash_locations_node_view($node, $view_mode, $langcode) {
+  // dpm($node);
+  // dpm($view_mode);
+  if ($node->type == 'venue_map' && $view_mode == 'full') {
+    $path = drupal_get_path('module', 'smash_locations');
+    drupal_add_css($path . '/stylesheets/location.css');
+    drupal_add_js($path . '/scripts/iscroll-4.2.5.js');
+    drupal_add_js($path . '/scripts/location-map.js');
+
+    unset($node->content['field_section']);
+    $node->content['field_map_image']['#label_display'] = 'hidden';
+  }
+}
