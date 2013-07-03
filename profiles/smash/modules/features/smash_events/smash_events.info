@@ -61,3 +61,4 @@ features[variable][] = workbench_moderation_default_state_event
 features[variable][] = xmlsitemap_settings_node_event
 features[variable][] = xmlsitemap_settings_taxonomy_term_event_type
 features[views_view][] = event_list
+features[views_view][] = schedule
