@@ -132,7 +132,8 @@
       
       &.networks-facebook,
       &.networks-deviantart,
-      &.networks-youtube {
+      &.networks-youtube,
+      &.networks-tumblr {
         width: 50px;
         height: 50px;
         background-position: center center;
@@ -164,8 +165,15 @@
           background-image: url(../images/social/youtube@2x.png);
         }
       }
+      &.networks-tumblr {
+        background-image: url(../images/social/tumblr.png);
+        background-size: 50px 50px;
+        
+        @include retina {
+          background-image: url(../images/social/tumblr@2x.png);
+        }
+      }
       &.networks-twitter {
-        margin-top: 10px;
         height: 50px;
         background: $color-purple url(../images/social/twitter.bird.png) no-repeat center left;
         padding-left: 50px;
@@ -178,25 +186,30 @@
         }
         
         span {
+          display: block;
+          padding-top: 15px;
         }
         
         html.lt-ie9 & {
-          width: 668px;
+          width: 613px;
           margin-right: -63px;
           
           span {
+            padding-top: 0;
             display: inline-block;
             line-height: 50px;
+            vertical-align: middle;
           }
         }
         
         @media all and (min-width: $desktop-minimum) {
           margin-top: 3px;
-          width: 670px;
+          width: 615px;
           margin-right: -65px;
           text-align: left;
           
           span {
+            padding-top: 0;
             overflow: hidden;
             white-space: nowrap;
             line-height: 50px;
