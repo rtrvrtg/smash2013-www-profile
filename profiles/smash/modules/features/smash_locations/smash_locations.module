@@ -6,6 +6,9 @@
 
 include_once 'smash_locations.features.inc';
 
+/**
+ * Implements hook_node_view().
+ */
 function smash_locations_node_view($node, $view_mode, $langcode) {
   // dpm($node);
   // dpm($view_mode);
@@ -18,4 +21,53 @@ function smash_locations_node_view($node, $view_mode, $langcode) {
     unset($node->content['field_section']);
     $node->content['field_map_image']['#label_display'] = 'hidden';
   }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function smash_locations_views_pre_render(&$view) {
+  if ($view->name == 'location_maps' && $view->current_display == 'page') {
+    // dpm($view);
+    $path = drupal_get_path('module', 'smash_locations');
+    drupal_add_css($path . '/stylesheets/location.css');
+    drupal_add_js($path . '/scripts/iscroll-4.2.5.js');
+    drupal_add_js($path . '/scripts/location-list.js');
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function smash_locations_menu() {
+  $items['ajax/smash-locations'] = array(
+    'type' => MENU_CALLBACK,
+    'title' => 'Fetch location',
+    'description' => 'Load location node in popup.',
+    'page callback' => 'smash_locations_popup_load',
+    'access arguments' => array('access content'),
+  );
+  return $items;
+}
+
+/**
+ * Return page ajax popup.
+ */
+function smash_locations_popup_load() {
+  $output = new stdClass;
+
+  $q = new EntityFieldQuery();
+  $result = $q->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'venue_map')
+    ->propertyCondition('status', 1)
+    ->entityCondition('path', trim(check_plain($_GET['path']), '/'))
+    ->execute();
+
+  if (isset($result['node']) && !empty($result['node'])) {
+    $output = reset(array_values($result['node']));
+    $build = node_view(node_load($output->nid), 'full');
+    $output->rendered = drupal_render($build);
+  }
+
+  drupal_json_output($output);
 }
