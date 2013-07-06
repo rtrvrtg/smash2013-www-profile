@@ -186,4 +186,44 @@ figure.colorbox-content-wrap {
   
 }
 
+.view-location-maps {
+  .view-content {
+    ul, li {
+      padding: 0;
+      list-style: none;
+    }
+
+    ul {
+      margin: 0;
+    }
+
+    li {
+      margin: 0.5em 0;
+    }
+
+    a {
+      text-decoration: none;
+      display: block;
+
+      font-family: $font-header;
+      @include adjust-font-size-to($h2-font-size);
+      line-height: 1em;
+
+      padding: 0.5em;
+      margin: 3px 0 0 0;
+
+      background: $color-purple;
+      color: white;
+
+      box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+      @include transition(all 0.1s linear);
+      
+      &:hover, &:focus, &:active {
+        box-shadow: 2px 5px 0px rgba(0, 0, 0, 0.5);
+        margin: 0 0 3px 0;
+      }
+    }
+  }
+}
+
 
