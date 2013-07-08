@@ -8,32 +8,7 @@ function smash2013_preprocess_calendar_day(&$vars) {
   $view = $vars['view'];
   $rows = $vars['rows'];
 
-  error_log('about to re render');
-
   $rows = $view->style_plugin->calendar_build_day();
-  // dpm($rows);
-
-  /*
-  // Reprocess results!
-  $items = array();
-  foreach ($view->result as $row_index => $row) {
-    $view->row_index = $row_index;
-    $rows = $row_plugin->render($row);
-    foreach ($rows as $key => $item) {
-      $item->granularity = $this->date_info->granularity;
-      $rendered_fields = array();
-      $item_start = date_format($item->calendar_start_date, DATE_FORMAT_DATE);
-      $item_end = date_format($item->calendar_end_date, DATE_FORMAT_DATE);
-      $time_start = date_format($item->calendar_start_date, 'H:i:s');
-      $item->rendered_fields = $this->rendered_fields[$row_index];
-      $items[$item_start][$time_start][] = $item;
-    }
-  }
-
-  ksort($items);
-
-  $rows = _smash_2013_calendar_build_day($items);
-  */
 
   $grouping_field = !empty($view->date_info->style_groupby_field) ? ($view->date_info->style_groupby_field) : NULL;
   $vars['scroll_content'] = FALSE;
@@ -43,10 +18,7 @@ function smash2013_preprocess_calendar_day(&$vars) {
     $styler->addAllDayItem($item);
   }
 
-  // dpm($vars);
-
   foreach ($rows['items'] as $time => &$items) {
-
     foreach ($items as &$item) {
       $styler->addItem($item);
     }
@@ -172,6 +144,7 @@ class Smash2013_Schedule_Item {
   public function render() {
     return theme('smash_events_calendar_item', array(
       'item_classes' => $this->classes(),
+      'item_id' => 'schedule-item--' . $this->item->id,
       'rendered_fields' => $this->item->rendered_fields, 
       'item' => $this->item
     ));

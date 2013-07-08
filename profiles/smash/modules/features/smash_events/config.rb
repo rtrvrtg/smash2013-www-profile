@@ -17,11 +17,11 @@ firesass = false
 
 
 # Location of the theme's resources.
-css_dir         = "css"
+css_dir         = "stylesheets"
 sass_dir        = "sass"
 extensions_dir  = "sass-extensions"
 images_dir      = "images"
-javascripts_dir = "js"
+javascripts_dir = "scripts"
 fonts_dir       = "fonts"
 
 

@@ -63,18 +63,19 @@ function smash_events_form_event_node_form_after($form) {
  * Add a default event date - validation.
  */
 function smash_events_form_event_node_form_date_validate(&$form, &$form_state) {
-  $field = $form['#parents'][count($form['#parents']) - 1];
-
-  $state_base = &$form_state['values']['field_event_date_time'][LANGUAGE_NONE][0][$field];
-
   if (empty($form['time']['#value'])) {
-    $form['date']['#value'] = '';
-    $form['date']['#default_value'] = '';
+    $form['#value']['date'] = 
+    $form['date']['#value'] = 
+    $form['date']['#default_value'] =
+    '';
   }
-
-  if (empty($state_base['time'])) {
-    $state_base = NULL;
+  else {
+    $form['#value']['date'] = 
+    $form['date']['#value'] = 
+    $form['date']['#default_value'] = 
+    variable_get('smash_events_default_date');
   }
+  dpm($form);
 }
 
 /**
@@ -109,8 +110,8 @@ function template_preprocess_smash_events_calendar_item(&$vars) {
   $vars['rendered_fields'] = array($item->rendered);
 
   $path = drupal_get_path('module', 'smash_events');
-  drupal_add_css($path . '/css/layout.css');
-  drupal_add_js($path . '/js/schedule.js');
+  drupal_add_css($path . '/stylesheets/layout.css');
+  drupal_add_js($path . '/scripts/schedule.js');
 }
 
 /**

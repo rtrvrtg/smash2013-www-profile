@@ -1,4 +1,4 @@
-$hour-height: 60px;
+$hour-height: 90px;
 $start-time: 9;
 
 @mixin schedule-position ($time) {
@@ -22,6 +22,12 @@ $start-time: 9;
 	.#{$schedule_selector} {
 		overflow: hidden;
 		height: $time * $hour-height;
+
+		.dayview a {
+			height: $time * $hour-height;
+		}
+
+		border-bottom: 1px solid black;
 	}
 }
 
@@ -35,7 +41,7 @@ section.schedule {
 		display: inline-block;
 		vertical-align: top;
 		border: 1px solid black;
-		min-height: 500px;
+		min-height: 900px;
 		min-width: 240px;
 
 		header {
@@ -63,3 +69,21 @@ section.schedule {
 	}
 }
 
+a.schedule-fave-link {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 24px;
+	height: 24px;
+	
+	background: url(../images/star-blank.png) no-repeat center center;
+	background-size: 24px 24px;
+	overflow: hidden;
+	text-indent: -999px;
+
+	&.active {
+		background: url(../images/star-filled.png) no-repeat center center;
+		background-size: 24px 24px;
+	}
+}

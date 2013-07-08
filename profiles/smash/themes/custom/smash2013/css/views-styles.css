@@ -171,62 +171,109 @@ figure.colorbox-content-wrap figcaption {
   }
 }
 /* line 144, ../sass/views-styles.scss */
+.view-schedule .view-schedule-toggle {
+  display: block;
+  border-bottom: 2px solid white;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  line-height: 2em;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 0.5em;
+}
+/* line 153, ../sass/views-styles.scss */
+.view-schedule .view-schedule-toggle a {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.7);
+  color: #7e54a3;
+}
+/* line 160, ../sass/views-styles.scss */
+.view-schedule .view-schedule-toggle a.active {
+  background: #fff;
+}
+/* line 166, ../sass/views-styles.scss */
 .view-schedule section.schedule {
   text-align: center;
 }
-/* line 147, ../sass/views-styles.scss */
+/* line 169, ../sass/views-styles.scss */
 .view-schedule section.schedule .schedule-column {
+  position: relative;
   border-top: 0px none;
   border-bottom: 0px none;
   border-right: 0px none;
   border-left: 2px solid white;
   margin: 0;
 }
-/* line 156, ../sass/views-styles.scss */
+/* line 179, ../sass/views-styles.scss */
 .view-schedule section.schedule .schedule-column:first-child {
   border-left: 0px none;
 }
-/* line 160, ../sass/views-styles.scss */
+/* line 183, ../sass/views-styles.scss */
 .view-schedule section.schedule .schedule-column header {
   font-family: "ultramagneticRegular", sans-serif;
   font-weight: normal;
-  color: white;
   text-transform: uppercase;
   font-size: 1.17em;
   line-height: 1.28205em;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  z-index: 100;
+  color: white;
+  background-color: #7e54a3;
 }
-/* line 167, ../sass/views-styles.scss */
+/* line 201, ../sass/views-styles.scss */
 .view-schedule section.schedule .schedule-column .schedule-column-items {
-  margin: 0 10px;
+  margin: 24px 10px 0 10px;
 }
-/* line 171, ../sass/views-styles.scss */
+/* line 205, ../sass/views-styles.scss */
 .view-schedule section.schedule .schedule-column .schedule-item {
   background: rgba(255, 255, 255, 0.7);
   width: 100%;
+  border-bottom: 1px solid #7e54a3;
 }
-/* line 175, ../sass/views-styles.scss */
-.view-schedule section.schedule .schedule-column .schedule-item a {
+/* line 210, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a {
   display: block;
   width: 100%;
   color: black;
-  padding: 10px;
+  padding: 5px;
   box-sizing: border-box;
 }
+/* line 217, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a:hover, .view-schedule section.schedule .schedule-column .schedule-item .dayview a:focus, .view-schedule section.schedule .schedule-column .schedule-item .dayview a:active {
+  background: rgba(255, 255, 255, 0.95);
+}
+/* line 221, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a strong, .view-schedule section.schedule .schedule-column .schedule-item .dayview a span {
+  white-space: nowrap;
+  line-height: 0.85em;
+}
+/* line 226, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a span {
+  font-size: 0.9em;
+  font-weight: bold;
+}
 
-/* line 191, ../sass/views-styles.scss */
+/* line 240, ../sass/views-styles.scss */
 .view-location-maps .view-content ul, .view-location-maps .view-content li {
   padding: 0;
   list-style: none;
 }
-/* line 196, ../sass/views-styles.scss */
+/* line 245, ../sass/views-styles.scss */
 .view-location-maps .view-content ul {
   margin: 0;
 }
-/* line 200, ../sass/views-styles.scss */
+/* line 249, ../sass/views-styles.scss */
 .view-location-maps .view-content li {
   margin: 0.5em 0;
 }
-/* line 204, ../sass/views-styles.scss */
+/* line 253, ../sass/views-styles.scss */
 .view-location-maps .view-content a {
   text-decoration: none;
   display: block;
@@ -244,7 +291,7 @@ figure.colorbox-content-wrap figcaption {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-/* line 221, ../sass/views-styles.scss */
+/* line 270, ../sass/views-styles.scss */
 .view-location-maps .view-content a:hover, .view-location-maps .view-content a:focus, .view-location-maps .view-content a:active {
   box-shadow: 2px 5px 0px rgba(0, 0, 0, 0.5);
   margin: 0 0 3px 0;

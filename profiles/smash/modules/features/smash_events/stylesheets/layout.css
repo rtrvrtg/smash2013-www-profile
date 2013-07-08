@@ -1,26 +1,26 @@
-/* line 28, ../sass/layout.scss */
+/* line 34, ../sass/layout.scss */
 section.schedule {
   display: block;
   overflow-x: auto;
   min-height: 500px;
   white-space: nowrap;
 }
-/* line 34, ../sass/layout.scss */
+/* line 40, ../sass/layout.scss */
 section.schedule .schedule-column {
   display: inline-block;
   vertical-align: top;
   border: 1px solid black;
-  min-height: 500px;
+  min-height: 900px;
   min-width: 240px;
 }
-/* line 41, ../sass/layout.scss */
+/* line 47, ../sass/layout.scss */
 section.schedule .schedule-column header {
   display: block;
   font-size: 2em;
   font-weight: bold;
   text-align: center;
 }
-/* line 48, ../sass/layout.scss */
+/* line 54, ../sass/layout.scss */
 section.schedule .schedule-column .schedule-column-items {
   display: block;
   position: relative;
@@ -34,255 +34,379 @@ section.schedule .item-hourstamp-9 {
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-9-half {
   position: absolute;
-  top: 30px;
+  top: 45px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-10 {
   position: absolute;
-  top: 60px;
+  top: 90px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-10-half {
   position: absolute;
-  top: 90px;
+  top: 135px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-11 {
   position: absolute;
-  top: 120px;
+  top: 180px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-11-half {
   position: absolute;
-  top: 150px;
+  top: 225px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-12 {
   position: absolute;
-  top: 180px;
+  top: 270px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-12-half {
   position: absolute;
-  top: 210px;
+  top: 315px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-13 {
   position: absolute;
-  top: 240px;
+  top: 360px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-13-half {
   position: absolute;
-  top: 270px;
+  top: 405px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-14 {
   position: absolute;
-  top: 300px;
+  top: 450px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-14-half {
   position: absolute;
-  top: 330px;
+  top: 495px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-15 {
   position: absolute;
-  top: 360px;
+  top: 540px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-15-half {
   position: absolute;
-  top: 390px;
+  top: 585px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-16 {
   position: absolute;
-  top: 420px;
+  top: 630px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-16-half {
   position: absolute;
-  top: 450px;
+  top: 675px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-17 {
   position: absolute;
-  top: 480px;
+  top: 720px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-17-half {
   position: absolute;
-  top: 510px;
+  top: 765px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-18 {
   position: absolute;
-  top: 540px;
+  top: 810px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-18-half {
   position: absolute;
-  top: 570px;
+  top: 855px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-19 {
   position: absolute;
-  top: 600px;
+  top: 900px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-19-half {
   position: absolute;
-  top: 630px;
+  top: 945px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-20 {
   position: absolute;
-  top: 660px;
+  top: 990px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-20-half {
   position: absolute;
-  top: 690px;
+  top: 1035px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-21 {
   position: absolute;
-  top: 720px;
+  top: 1080px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-21-half {
   position: absolute;
-  top: 750px;
+  top: 1125px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-22 {
   position: absolute;
-  top: 780px;
+  top: 1170px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-22-half {
   position: absolute;
-  top: 810px;
+  top: 1215px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-23 {
   position: absolute;
-  top: 840px;
+  top: 1260px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-23-half {
   position: absolute;
-  top: 870px;
+  top: 1305px;
 }
 /* line 10, ../sass/layout.scss */
 section.schedule .item-hourstamp-24 {
   position: absolute;
-  top: 900px;
+  top: 1350px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-0 {
   overflow: hidden;
   height: 0px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-0 .dayview a {
+  height: 0px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-0-half {
   overflow: hidden;
-  height: 30px;
+  height: 45px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-0-half .dayview a {
+  height: 45px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-1 {
   overflow: hidden;
-  height: 60px;
+  height: 90px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-1 .dayview a {
+  height: 90px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-1-half {
   overflow: hidden;
-  height: 90px;
+  height: 135px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-1-half .dayview a {
+  height: 135px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-2 {
   overflow: hidden;
-  height: 120px;
+  height: 180px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-2 .dayview a {
+  height: 180px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-2-half {
   overflow: hidden;
-  height: 150px;
+  height: 225px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-2-half .dayview a {
+  height: 225px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-3 {
   overflow: hidden;
-  height: 180px;
+  height: 270px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-3 .dayview a {
+  height: 270px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-3-half {
   overflow: hidden;
-  height: 210px;
+  height: 315px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-3-half .dayview a {
+  height: 315px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-4 {
   overflow: hidden;
-  height: 240px;
+  height: 360px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-4 .dayview a {
+  height: 360px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-4-half {
   overflow: hidden;
-  height: 270px;
+  height: 405px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-4-half .dayview a {
+  height: 405px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-5 {
   overflow: hidden;
-  height: 300px;
+  height: 450px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-5 .dayview a {
+  height: 450px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-5-half {
   overflow: hidden;
-  height: 330px;
+  height: 495px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-5-half .dayview a {
+  height: 495px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-6 {
   overflow: hidden;
-  height: 360px;
+  height: 540px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-6 .dayview a {
+  height: 540px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-6-half {
   overflow: hidden;
-  height: 390px;
+  height: 585px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-6-half .dayview a {
+  height: 585px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-7 {
   overflow: hidden;
-  height: 420px;
+  height: 630px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-7 .dayview a {
+  height: 630px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-7-half {
   overflow: hidden;
-  height: 450px;
+  height: 675px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-7-half .dayview a {
+  height: 675px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-8 {
   overflow: hidden;
-  height: 480px;
+  height: 720px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-8 .dayview a {
+  height: 720px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-8-half {
   overflow: hidden;
-  height: 510px;
+  height: 765px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-8-half .dayview a {
+  height: 765px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-9 {
   overflow: hidden;
-  height: 540px;
+  height: 810px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-9 .dayview a {
+  height: 810px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-9-half {
   overflow: hidden;
-  height: 570px;
+  height: 855px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-9-half .dayview a {
+  height: 855px;
 }
 /* line 22, ../sass/layout.scss */
 section.schedule .item-length-10 {
   overflow: hidden;
-  height: 600px;
+  height: 900px;
+  border-bottom: 1px solid black;
+}
+/* line 26, ../sass/layout.scss */
+section.schedule .item-length-10 .dayview a {
+  height: 900px;
+}
+
+/* line 72, ../sass/layout.scss */
+a.schedule-fave-link {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: url(../images/star-blank.png) no-repeat center center;
+  background-size: 24px 24px;
+  overflow: hidden;
+  text-indent: -999px;
+}
+/* line 85, ../sass/layout.scss */
+a.schedule-fave-link.active {
+  background: url(../images/star-filled.png) no-repeat center center;
+  background-size: 24px 24px;
 }

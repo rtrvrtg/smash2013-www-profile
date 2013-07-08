@@ -1,7 +1,7 @@
 <?php
 $index = 0;
 ?>
-<article class="<?php print $item_classes; ?>">
+<article class="<?php print $item_classes; ?>" id="<?php print $item_id; ?>">
   <div class="calendar <?php print $item->granularity; ?>view">
     <?php print theme('calendar_stripe_stripe', array('item' => $item)); ?>
     <div class="<?php print $item->date_id ?> contents">
