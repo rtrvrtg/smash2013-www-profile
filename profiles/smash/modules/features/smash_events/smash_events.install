@@ -63,3 +63,10 @@ function smash_events_update_7003() {
   variable_set('smash_events_default_date', '2013-08-10');
 }
 
+/**
+ * Install calendar
+ */
+function smash_events_update_7004() {
+  module_enable(array('calendar'));
+}
+

@@ -71,7 +71,7 @@ projects[bulk_media_upload][subdir] = "contrib"
 projects[media][version] = "1.3"
 projects[media][subdir] = "contrib"
 
-projects[plupload][version] = "1.1"
+projects[plupload][version] = "1.2"
 projects[plupload][subdir] = "contrib"
 
 projects[backup_migrate][version] = "2.7"
@@ -160,7 +160,7 @@ projects[wysiwyg][subdir] = "contrib"
 projects[insert_view][version] = "2.0"
 projects[insert_view][subdir] = "contrib"
 
-projects[menu_views][version] = "2.1"
+projects[menu_views][version] = "2.2"
 projects[menu_views][subdir] = "contrib"
 
 projects[views][version] = "3.7"
@@ -202,7 +202,7 @@ projects[boost_custom_expire_rules][subdir] = "contrib"
 projects[expire][version] = "1.0-beta1"
 projects[expire][subdir] = "contrib"
 
-projects[httprl][version] = "1.11"
+projects[httprl][version] = "1.12"
 projects[httprl][subdir] = "contrib"
 
 projects[replicate][version] = "1.0"
@@ -221,6 +221,9 @@ projects[twitter][subdir] = "contrib"
 
 projects[oauth][version] = "3.1"
 projects[oauth][subdir] = "contrib"
+
+projects[calendar][version] = "3.4"
+projects[calendar][subdir] = "contrib"
 
 ; TODO modules without versions
 ; projects[twitter_cards][version] = "" ; TODO add version
