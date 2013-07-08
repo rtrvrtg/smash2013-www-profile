@@ -53,6 +53,7 @@ Drupal.behaviors.locationMapBehaviour = {
       });
 
       var close = $('<a />', {
+        'class': 'map-container-close',
         href: '#',
         text: 'Close'
       });
@@ -62,6 +63,7 @@ Drupal.behaviors.locationMapBehaviour = {
       });
 
       var zoomIn = $('<a />', {
+        'class': 'map-container-zoomin',
         href: '#',
         text: 'Zoom In'
       });
@@ -73,6 +75,7 @@ Drupal.behaviors.locationMapBehaviour = {
       });
 
       var zoomOut = $('<a />', {
+        'class': 'map-container-zoomout',
         href: '#',
         text: 'Zoom Out'
       });

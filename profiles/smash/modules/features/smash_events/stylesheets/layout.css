@@ -1,11 +1,11 @@
-/* line 34, ../sass/layout.scss */
+/* line 35, ../sass/layout.scss */
 section.schedule {
   display: block;
   overflow-x: auto;
   min-height: 500px;
   white-space: nowrap;
 }
-/* line 40, ../sass/layout.scss */
+/* line 41, ../sass/layout.scss */
 section.schedule .schedule-column {
   display: inline-block;
   vertical-align: top;
@@ -13,14 +13,14 @@ section.schedule .schedule-column {
   min-height: 900px;
   min-width: 240px;
 }
-/* line 47, ../sass/layout.scss */
+/* line 48, ../sass/layout.scss */
 section.schedule .schedule-column header {
   display: block;
   font-size: 2em;
   font-weight: bold;
   text-align: center;
 }
-/* line 54, ../sass/layout.scss */
+/* line 55, ../sass/layout.scss */
 section.schedule .schedule-column .schedule-column-items {
   display: block;
   position: relative;
@@ -186,6 +186,7 @@ section.schedule .item-length-0 {
   overflow: hidden;
   height: 0px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-0 .dayview a {
@@ -196,6 +197,7 @@ section.schedule .item-length-0-half {
   overflow: hidden;
   height: 45px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-0-half .dayview a {
@@ -206,6 +208,7 @@ section.schedule .item-length-1 {
   overflow: hidden;
   height: 90px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-1 .dayview a {
@@ -216,6 +219,7 @@ section.schedule .item-length-1-half {
   overflow: hidden;
   height: 135px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-1-half .dayview a {
@@ -226,6 +230,7 @@ section.schedule .item-length-2 {
   overflow: hidden;
   height: 180px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-2 .dayview a {
@@ -236,6 +241,7 @@ section.schedule .item-length-2-half {
   overflow: hidden;
   height: 225px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-2-half .dayview a {
@@ -246,6 +252,7 @@ section.schedule .item-length-3 {
   overflow: hidden;
   height: 270px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-3 .dayview a {
@@ -256,6 +263,7 @@ section.schedule .item-length-3-half {
   overflow: hidden;
   height: 315px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-3-half .dayview a {
@@ -266,6 +274,7 @@ section.schedule .item-length-4 {
   overflow: hidden;
   height: 360px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-4 .dayview a {
@@ -276,6 +285,7 @@ section.schedule .item-length-4-half {
   overflow: hidden;
   height: 405px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-4-half .dayview a {
@@ -286,6 +296,7 @@ section.schedule .item-length-5 {
   overflow: hidden;
   height: 450px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-5 .dayview a {
@@ -296,6 +307,7 @@ section.schedule .item-length-5-half {
   overflow: hidden;
   height: 495px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-5-half .dayview a {
@@ -306,6 +318,7 @@ section.schedule .item-length-6 {
   overflow: hidden;
   height: 540px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-6 .dayview a {
@@ -316,6 +329,7 @@ section.schedule .item-length-6-half {
   overflow: hidden;
   height: 585px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-6-half .dayview a {
@@ -326,6 +340,7 @@ section.schedule .item-length-7 {
   overflow: hidden;
   height: 630px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-7 .dayview a {
@@ -336,6 +351,7 @@ section.schedule .item-length-7-half {
   overflow: hidden;
   height: 675px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-7-half .dayview a {
@@ -346,6 +362,7 @@ section.schedule .item-length-8 {
   overflow: hidden;
   height: 720px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-8 .dayview a {
@@ -356,6 +373,7 @@ section.schedule .item-length-8-half {
   overflow: hidden;
   height: 765px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-8-half .dayview a {
@@ -366,6 +384,7 @@ section.schedule .item-length-9 {
   overflow: hidden;
   height: 810px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-9 .dayview a {
@@ -376,6 +395,7 @@ section.schedule .item-length-9-half {
   overflow: hidden;
   height: 855px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-9-half .dayview a {
@@ -386,18 +406,26 @@ section.schedule .item-length-10 {
   overflow: hidden;
   height: 900px;
   border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
 /* line 26, ../sass/layout.scss */
 section.schedule .item-length-10 .dayview a {
   height: 900px;
 }
 
-/* line 72, ../sass/layout.scss */
+/* line 73, ../sass/layout.scss */
+.view-schedule.helpful-hint {
+  background-image: url(../images/star-hints.png);
+  background-repeat: no-repeat;
+  background-position: 50% 80px;
+}
+
+/* line 79, ../sass/layout.scss */
 a.schedule-fave-link {
   display: block;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 4px;
+  right: 4px;
   width: 24px;
   height: 24px;
   background: url(../images/star-blank.png) no-repeat center center;
@@ -405,7 +433,7 @@ a.schedule-fave-link {
   overflow: hidden;
   text-indent: -999px;
 }
-/* line 85, ../sass/layout.scss */
+/* line 92, ../sass/layout.scss */
 a.schedule-fave-link.active {
   background: url(../images/star-filled.png) no-repeat center center;
   background-size: 24px 24px;

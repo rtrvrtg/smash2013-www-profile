@@ -28,6 +28,7 @@ $start-time: 9;
 		}
 
 		border-bottom: 1px solid black;
+		box-sizing: border-box;
 	}
 }
 
@@ -69,11 +70,17 @@ section.schedule {
 	}
 }
 
+.view-schedule.helpful-hint {
+	background-image: url(../images/star-hints.png);
+	background-repeat: no-repeat;
+	background-position: 50% 80px;
+}
+
 a.schedule-fave-link {
 	display: block;
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 4px;
+	right: 4px;
 	width: 24px;
 	height: 24px;
 	

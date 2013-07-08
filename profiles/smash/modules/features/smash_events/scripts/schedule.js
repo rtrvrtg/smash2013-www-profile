@@ -54,6 +54,7 @@ var allEvents = $('<a />', {
 });
 allEvents.click(function(e){
   e.preventDefault();
+  $('.view-schedule').removeClass('helpful-hint');
   makeThisActive($(this));
   $('.schedule-column').show();
   $('.view-schedule .schedule-item').show();
@@ -72,6 +73,10 @@ myEvents.click(function(e){
   $('.view-schedule .schedule-column').filter(function(){
     return $(this).find('.schedule-item > a.schedule-fave-link.active').length == 0;
   }).hide();
+
+  if ($('.view-schedule .schedule-item > a.schedule-fave-link.active').length == 0) {
+    $('.view-schedule').addClass('helpful-hint');
+  }
 });
 
 toggler.append(allEvents).append(myEvents);
@@ -89,7 +94,7 @@ $('.schedule-item').each(function(){
   var favelink = $('<a />', {
     href: '#',
     'class': 'schedule-fave-link',
-    'html': '☆', // ★
+    'text': 'Star', 
     'title': 'Mark event for My Schedule'
   });
 

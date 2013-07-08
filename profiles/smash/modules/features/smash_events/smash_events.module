@@ -111,6 +111,7 @@ function template_preprocess_smash_events_calendar_item(&$vars) {
 
   $path = drupal_get_path('module', 'smash_events');
   drupal_add_css($path . '/stylesheets/layout.css');
+  drupal_add_js('misc/jquery.cookie.js');
   drupal_add_js($path . '/scripts/schedule.js');
 }
 
