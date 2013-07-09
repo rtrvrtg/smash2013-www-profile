@@ -75,7 +75,7 @@ function smash_events_form_event_node_form_date_validate(&$form, &$form_state) {
     $form['date']['#default_value'] = 
     variable_get('smash_events_default_date');
   }
-  dpm($form);
+  // dpm($form);
 }
 
 /**
