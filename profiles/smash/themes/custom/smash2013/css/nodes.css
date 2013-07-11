@@ -447,49 +447,54 @@ html.lt-ie9 .node-home-page .field-name-field-further-highlights {
 .node-vendor {
   position: relative;
   min-height: 80px;
+  margin: 1em 0;
 }
-/* line 362, ../sass/nodes.scss */
+/* line 365, ../sass/nodes.scss */
 .node-vendor .vendor-left {
   text-align: center;
 }
-/* line 366, ../sass/nodes.scss */
+/* line 369, ../sass/nodes.scss */
 .node-vendor .vendor-right h2 {
   margin: 0;
 }
-/* line 370, ../sass/nodes.scss */
+/* line 373, ../sass/nodes.scss */
 .node-vendor .vendor-right .field-name-body p:first-child {
   margin-top: 0;
 }
-/* line 373, ../sass/nodes.scss */
+/* line 376, ../sass/nodes.scss */
 .node-vendor .vendor-right .field-name-body p:last-child {
   margin-bottom: 0;
 }
+/* line 382, ../sass/nodes.scss */
+.node-vendor .vendor-right .field-name-field-website-url a {
+  margin-right: 1em;
+}
 @media all and (min-width: 469px) {
-  /* line 379, ../sass/nodes.scss */
+  /* line 388, ../sass/nodes.scss */
   .node-vendor .vendor-left {
     position: absolute;
     top: 0;
     left: 0;
     width: 200px;
   }
-  /* line 385, ../sass/nodes.scss */
+  /* line 394, ../sass/nodes.scss */
   .node-vendor .vendor-right {
     margin-left: 210px;
   }
 }
 
-/* line 391, ../sass/nodes.scss */
+/* line 400, ../sass/nodes.scss */
 .node-article {
   clear: both;
   position: relative;
   overflow: hidden;
 }
-/* line 396, ../sass/nodes.scss */
+/* line 405, ../sass/nodes.scss */
 .node-article .article-left {
   text-align: center;
 }
 @media all and (min-width: 469px) {
-  /* line 403, ../sass/nodes.scss */
+  /* line 412, ../sass/nodes.scss */
   .node-article .article-left {
     position: relative;
     float: left;
@@ -498,60 +503,60 @@ html.lt-ie9 .node-home-page .field-name-field-further-highlights {
     margin-left: -100px;
     width: 100px;
   }
-  /* line 411, ../sass/nodes.scss */
+  /* line 420, ../sass/nodes.scss */
   .node-article .article-right {
     margin-left: 110px;
   }
 }
-/* line 417, ../sass/nodes.scss */
+/* line 426, ../sass/nodes.scss */
 .node-article .field-name-title h2 {
   margin: 0;
 }
-/* line 422, ../sass/nodes.scss */
+/* line 431, ../sass/nodes.scss */
 .node-article .field-name-post-date {
   font-weight: bold;
 }
-/* line 427, ../sass/nodes.scss */
+/* line 436, ../sass/nodes.scss */
 .node-article .field-name-ds-user-picture img {
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
   box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
 }
-/* line 432, ../sass/nodes.scss */
+/* line 441, ../sass/nodes.scss */
 .node-article .field-name-field-image {
   margin: 0 0 10px 0;
   max-width: 100px;
 }
-/* line 436, ../sass/nodes.scss */
+/* line 445, ../sass/nodes.scss */
 .node-article .field-name-field-image img {
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
   box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
 }
-/* line 442, ../sass/nodes.scss */
+/* line 451, ../sass/nodes.scss */
 .node-article .field-name-body *:first-child {
   margin-top: 0;
 }
-/* line 445, ../sass/nodes.scss */
+/* line 454, ../sass/nodes.scss */
 .node-article .field-name-body *:last-child {
   margin-bottom: 0;
 }
-/* line 452, ../sass/nodes.scss */
+/* line 461, ../sass/nodes.scss */
 .node-article .field-name-field-tags .label-above,
 .node-article .field-name-field-tags .label-inline {
   font-weight: bold;
 }
-/* line 455, ../sass/nodes.scss */
+/* line 464, ../sass/nodes.scss */
 .node-article .field-name-field-tags .label-inline {
   display: inline-block;
   margin-right: 5px;
 }
-/* line 459, ../sass/nodes.scss */
+/* line 468, ../sass/nodes.scss */
 .node-article .field-name-field-tags a {
   margin-right: 0.5em;
 }
 
-/* line 469, ../sass/nodes.scss */
+/* line 478, ../sass/nodes.scss */
 .node-guest .field-name-field-homepage a,
 .node-guest .field-name-field-twitter a,
 .node-guest .field-name-field-facebook a {
@@ -561,28 +566,28 @@ html.lt-ie9 .node-home-page .field-name-field-further-highlights {
   background-size: 16px 16px;
   min-height: 13px;
 }
-/* line 478, ../sass/nodes.scss */
+/* line 487, ../sass/nodes.scss */
 .node-guest .field-name-field-homepage a {
   background-image: url(../images/linkicons/hm@1x.png);
 }
-/* line 481, ../sass/nodes.scss */
+/* line 490, ../sass/nodes.scss */
 .node-guest .field-name-field-twitter a {
   background-image: url(../images/linkicons/tw@1x.png);
 }
-/* line 484, ../sass/nodes.scss */
+/* line 493, ../sass/nodes.scss */
 .node-guest .field-name-field-facebook a {
   background-image: url(../images/linkicons/fb@1x.png);
 }
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-  /* line 489, ../sass/nodes.scss */
+  /* line 498, ../sass/nodes.scss */
   .node-guest .field-name-field-homepage a {
     background-image: url(../images/linkicons/hm@2x.png);
   }
-  /* line 492, ../sass/nodes.scss */
+  /* line 501, ../sass/nodes.scss */
   .node-guest .field-name-field-twitter a {
     background-image: url(../images/linkicons/tw@2x.png);
   }
-  /* line 495, ../sass/nodes.scss */
+  /* line 504, ../sass/nodes.scss */
   .node-guest .field-name-field-facebook a {
     background-image: url(../images/linkicons/fb@2x.png);
   }

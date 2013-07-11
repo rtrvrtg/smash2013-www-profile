@@ -359,6 +359,9 @@
 .node-vendor {
   position: relative;
   min-height: 80px;
+
+  margin: 1em 0;
+
   .vendor-left {
     text-align: center;
   }
@@ -372,6 +375,12 @@
       }
       p:last-child {
         margin-bottom: 0;
+      }
+    }
+
+    .field-name-field-website-url {
+      a {
+        margin-right: 1em;
       }
     }
   }
