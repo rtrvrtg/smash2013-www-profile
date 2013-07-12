@@ -27,6 +27,7 @@ features[features_api][] = api:1
 features[field][] = node-vendor-body
 features[field][] = node-vendor-field_image
 features[field][] = node-vendor-field_location
+features[field][] = node-vendor-field_section
 features[field][] = node-vendor-field_vendor_type
 features[field][] = node-vendor-field_website_url
 features[image][] = vendor_banner

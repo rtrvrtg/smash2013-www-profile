@@ -13,3 +13,10 @@ function smash_vendors_update_7000() {
   ));
   
 }
+
+/**
+ * Enable imagecache canvas actions
+ */
+function smash_vendors_update_7001() {
+	module_enable(array('imagecache_actions', 'imagecache_canvasactions'));
+}

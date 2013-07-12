@@ -225,6 +225,9 @@ projects[oauth][subdir] = "contrib"
 projects[calendar][version] = "3.4"
 projects[calendar][subdir] = "contrib"
 
+projects[imagecache_actions][version] = "1.3"
+projects[imagecache_actions][subdir] = "contrib"
+
 ; TODO modules without versions
 ; projects[twitter_cards][version] = "" ; TODO add version
 ; projects[twitter_cards][subdir] = "custom"
