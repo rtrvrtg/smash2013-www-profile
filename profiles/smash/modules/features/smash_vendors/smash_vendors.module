@@ -28,3 +28,58 @@ function smash_vendors_node_view($node, $view_mode) {
   }
 }
 
+function smash_vendors_ds_fields_info_alter(&$fields, $entity_type) {
+  if ($entity_type == 'node') {
+    $fields['title']['function'] = 'smash_vendor_custom_node_title';
+  }
+}
+
+function smash_vendor_custom_node_title($field) {
+  $output = '';
+  $settings = isset($field['formatter_settings']) ? $field['formatter_settings'] : array();
+  $settings += $field['properties']['default'];
+  // Basic string.
+  if (isset($settings['link text'])) {
+    $output = t($settings['link text']);
+  }
+  elseif (isset($field['properties']['entity_render_key']) && isset($field['entity']->{$field['properties']['entity_render_key']})) {
+    if ($field['entity_type'] == 'user' && $field['properties']['entity_render_key'] == 'name') {
+      $output = format_username($field['entity']);
+    }
+    else {
+      $output = $field['entity']->{$field['properties']['entity_render_key']};
+    }
+  }
+
+  if (empty($output)) {
+    return;
+  }
+
+  $output = filter_xss($output, array('em', 'strong'));
+
+  // Link.
+  if ($settings['link']) {
+    if (isset($field['entity']->uri['path'])) {
+      $path = $field['entity']->uri['path'];
+    }
+    else {
+      $uri_info = entity_uri($field['entity_type'], $field['entity']);
+      $path = $uri_info['path'];
+    }
+    $output = l($output, $path, array('html' => TRUE));
+  }
+
+  // Special vendor hax
+  if ($field['bundle'] == 'vendor' && !empty($field['entity']->field_website_url[LANGUAGE_NONE])) {
+    $path = $field['entity']->field_website_url[LANGUAGE_NONE][0]['url'];
+    $output = l($output, $path, array('html' => TRUE));
+  }
+
+  // Wrapper and class.
+  if (!empty($settings['wrapper'])) {
+    $wrapper = check_plain($settings['wrapper']);
+    $class = (!empty($settings['class'])) ? ' class="' . check_plain($settings['class']) . '"' : '';
+    $output = '<' . $wrapper . $class . '>' . $output . '</' . $wrapper . '>';
+  }
+  return $output;
+}
