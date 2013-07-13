@@ -465,36 +465,40 @@ html.lt-ie9 .node-home-page .field-name-field-further-highlights {
 .node-vendor .vendor-right .field-name-body p:last-child {
   margin-bottom: 0;
 }
-/* line 382, ../sass/nodes.scss */
+/* line 381, ../sass/nodes.scss */
+.node-vendor .vendor-right .field-name-field-website-url {
+  overflow: hidden;
+}
+/* line 383, ../sass/nodes.scss */
 .node-vendor .vendor-right .field-name-field-website-url a {
   margin-right: 1em;
 }
 @media all and (min-width: 469px) {
-  /* line 388, ../sass/nodes.scss */
+  /* line 389, ../sass/nodes.scss */
   .node-vendor .vendor-left {
     position: absolute;
     top: 0;
     left: 0;
     width: 200px;
   }
-  /* line 394, ../sass/nodes.scss */
+  /* line 395, ../sass/nodes.scss */
   .node-vendor .vendor-right {
     margin-left: 210px;
   }
 }
 
-/* line 400, ../sass/nodes.scss */
+/* line 401, ../sass/nodes.scss */
 .node-article {
   clear: both;
   position: relative;
   overflow: hidden;
 }
-/* line 405, ../sass/nodes.scss */
+/* line 406, ../sass/nodes.scss */
 .node-article .article-left {
   text-align: center;
 }
 @media all and (min-width: 469px) {
-  /* line 412, ../sass/nodes.scss */
+  /* line 413, ../sass/nodes.scss */
   .node-article .article-left {
     position: relative;
     float: left;
@@ -503,60 +507,60 @@ html.lt-ie9 .node-home-page .field-name-field-further-highlights {
     margin-left: -100px;
     width: 100px;
   }
-  /* line 420, ../sass/nodes.scss */
+  /* line 421, ../sass/nodes.scss */
   .node-article .article-right {
     margin-left: 110px;
   }
 }
-/* line 426, ../sass/nodes.scss */
+/* line 427, ../sass/nodes.scss */
 .node-article .field-name-title h2 {
   margin: 0;
 }
-/* line 431, ../sass/nodes.scss */
+/* line 432, ../sass/nodes.scss */
 .node-article .field-name-post-date {
   font-weight: bold;
 }
-/* line 436, ../sass/nodes.scss */
+/* line 437, ../sass/nodes.scss */
 .node-article .field-name-ds-user-picture img {
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
   box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
 }
-/* line 441, ../sass/nodes.scss */
+/* line 442, ../sass/nodes.scss */
 .node-article .field-name-field-image {
   margin: 0 0 10px 0;
   max-width: 100px;
 }
-/* line 445, ../sass/nodes.scss */
+/* line 446, ../sass/nodes.scss */
 .node-article .field-name-field-image img {
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
   box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
 }
-/* line 451, ../sass/nodes.scss */
+/* line 452, ../sass/nodes.scss */
 .node-article .field-name-body *:first-child {
   margin-top: 0;
 }
-/* line 454, ../sass/nodes.scss */
+/* line 455, ../sass/nodes.scss */
 .node-article .field-name-body *:last-child {
   margin-bottom: 0;
 }
-/* line 461, ../sass/nodes.scss */
+/* line 462, ../sass/nodes.scss */
 .node-article .field-name-field-tags .label-above,
 .node-article .field-name-field-tags .label-inline {
   font-weight: bold;
 }
-/* line 464, ../sass/nodes.scss */
+/* line 465, ../sass/nodes.scss */
 .node-article .field-name-field-tags .label-inline {
   display: inline-block;
   margin-right: 5px;
 }
-/* line 468, ../sass/nodes.scss */
+/* line 469, ../sass/nodes.scss */
 .node-article .field-name-field-tags a {
   margin-right: 0.5em;
 }
 
-/* line 478, ../sass/nodes.scss */
+/* line 479, ../sass/nodes.scss */
 .node-guest .field-name-field-homepage a,
 .node-guest .field-name-field-twitter a,
 .node-guest .field-name-field-facebook a {
@@ -566,28 +570,28 @@ html.lt-ie9 .node-home-page .field-name-field-further-highlights {
   background-size: 16px 16px;
   min-height: 13px;
 }
-/* line 487, ../sass/nodes.scss */
+/* line 488, ../sass/nodes.scss */
 .node-guest .field-name-field-homepage a {
   background-image: url(../images/linkicons/hm@1x.png);
 }
-/* line 490, ../sass/nodes.scss */
+/* line 491, ../sass/nodes.scss */
 .node-guest .field-name-field-twitter a {
   background-image: url(../images/linkicons/tw@1x.png);
 }
-/* line 493, ../sass/nodes.scss */
+/* line 494, ../sass/nodes.scss */
 .node-guest .field-name-field-facebook a {
   background-image: url(../images/linkicons/fb@1x.png);
 }
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-  /* line 498, ../sass/nodes.scss */
+  /* line 499, ../sass/nodes.scss */
   .node-guest .field-name-field-homepage a {
     background-image: url(../images/linkicons/hm@2x.png);
   }
-  /* line 501, ../sass/nodes.scss */
+  /* line 502, ../sass/nodes.scss */
   .node-guest .field-name-field-twitter a {
     background-image: url(../images/linkicons/tw@2x.png);
   }
-  /* line 504, ../sass/nodes.scss */
+  /* line 505, ../sass/nodes.scss */
   .node-guest .field-name-field-facebook a {
     background-image: url(../images/linkicons/fb@2x.png);
   }
