@@ -17,9 +17,9 @@ function smash_workflow_configuration_default_rules_configuration() {
       "ON" : [ "node_insert" ],
       "DO" : [
         { "mail" : {
-            "to" : "sebastian.hidalgo@smash.org.au\\r\\ngeoffrey.roberts@smash.org.au",
-            "subject" : "[SMASH! Website] Content got updated: [node:content-type] [node:title]",
-            "message" : "A content node on the SMASH! site got updated.\\r\\n\\r\\nNode Title: [node:title]\\r\\nNode Type: [node:content-type]\\r\\nNode ID: [node:nid]\\r\\nRevision ID: [node:vid]\\r\\nStatus: [node:status]\\r\\nAuthor: [node:author]\\r\\nChange date: [node:changed]\\r\\n\\r\\nURL: [node:url]\\r\\nEdit this node right away: [node:edit-url]\\r\\n\\r\\nLog message (if any): [node:log]\\r\\n",
+            "to" : "sebastian.hidalgo@smash.org.au, geoffrey.roberts@smash.org.au",
+            "subject" : "[SMASH! Website] Content got created: [node:content-type] [node:title]",
+            "message" : "A content node on the SMASH! site got created.\\r\\n\\r\\nNode Title: [node:title]\\r\\nNode Type: [node:content-type]\\r\\nNode ID: [node:nid]\\r\\nRevision ID: [node:vid]\\r\\nStatus: [node:status]\\r\\nAuthor: [node:author]\\r\\nChange date: [node:changed]\\r\\n\\r\\nURL: [node:url]\\r\\nEdit this node right away: [node:edit-url]\\r\\n\\r\\nLog message (if any): [node:log]\\r\\n",
             "language" : [ "" ]
           }
         }
@@ -34,7 +34,7 @@ function smash_workflow_configuration_default_rules_configuration() {
       "ON" : [ "node_update" ],
       "DO" : [
         { "mail" : {
-            "to" : "sebastian.hidalgo@smash.org.au\\r\\ngeoffrey.roberts@smash.org.au",
+            "to" : "sebastian.hidalgo@smash.org.au, geoffrey.roberts@smash.org.au",
             "subject" : "[SMASH! Website] Content got updated: [node:content-type] [node:title]",
             "message" : "A content node on the SMASH! site got updated.\\r\\n\\r\\nNode Title: [node:title]\\r\\nNode Type: [node:content-type]\\r\\nNode ID: [node:nid]\\r\\nRevision ID: [node:vid]\\r\\nStatus: [node:status]\\r\\nAuthor: [node:author]\\r\\nChange date: [node:changed]\\r\\n\\r\\nURL: [node:url]\\r\\nEdit this node right away: [node:edit-url]\\r\\n\\r\\nLog message (if any): [node:log]\\r\\n",
             "language" : [ "" ]
