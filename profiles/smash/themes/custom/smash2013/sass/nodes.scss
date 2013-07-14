@@ -381,7 +381,51 @@
     .field-name-field-website-url {
       overflow: hidden;
       a {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
         margin-right: 1em;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 16px 16px;
+        min-height: 13px;
+        background-image: url(../images/linkicons/hm@1x.png);
+        overflow: hidden;
+        text-indent: -1000px;
+      }
+
+      a.svlink-twitter {
+        background-image: url(../images/linkicons/tw@1x.png);
+      }
+      a.svlink-facebook {
+        background-image: url(../images/linkicons/fb@1x.png);
+      }
+      a.svlink-tumblr {
+        background-image: url(../images/linkicons/tm@1x.png);
+      }
+      a.svlink-deviantart {
+        background-image: url(../images/linkicons/da@1x.png);
+      }
+      a.svlink-etsy {
+        background-image: url(../images/linkicons/et@1x.png);
+      }
+      
+      @include retina {
+        a {
+          background-image: url(../images/linkicons/hm@2x.png);
+        }
+        a.svlink-twitter {
+          background-image: url(../images/linkicons/tw@2x.png);
+        }
+        a.svlink-facebook {
+          background-image: url(../images/linkicons/fb@2x.png);
+        }
+        a.svlink-deviantart {
+          background-image: url(../images/linkicons/da@2x.png);
+        }
+        a.svlink-etsy {
+          background-image: url(../images/linkicons/et@2x.png);
+        }
       }
     }
   }

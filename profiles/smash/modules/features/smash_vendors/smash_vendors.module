@@ -30,11 +30,11 @@ function smash_vendors_node_view($node, $view_mode) {
 
 function smash_vendors_ds_fields_info_alter(&$fields, $entity_type) {
   if ($entity_type == 'node') {
-    $fields['title']['function'] = 'smash_vendor_custom_node_title';
+    $fields['title']['function'] = 'smash_vendors_custom_node_title';
   }
 }
 
-function smash_vendor_custom_node_title($field) {
+function smash_vendors_custom_node_title($field) {
   $output = '';
   $settings = isset($field['formatter_settings']) ? $field['formatter_settings'] : array();
   $settings += $field['properties']['default'];
@@ -82,4 +82,85 @@ function smash_vendor_custom_node_title($field) {
     $output = '<' . $wrapper . $class . '>' . $output . '</' . $wrapper . '>';
   }
   return $output;
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function smash_vendors_field_formatter_info() {
+  return array(
+    'smash_vendors_link' => array(
+      'label' => t('Custom vendor link'),
+      'field types' => array('link_field'),
+      'multiple values' => FIELD_BEHAVIOR_DEFAULT,
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function smash_vendors_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $elements = array();
+  foreach ($items as $delta => $item) {
+    $elements[$delta] = array(
+      '#theme' => 'svlink_formatter_' . $display['type'],
+      '#element' => $item,
+      '#field' => $instance,
+      '#display' => $display,
+    );
+  }
+  return $elements;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function smash_vendors_theme() {
+  return array(
+    'svlink_formatter_smash_vendors_link' => array(
+      'variables' => array('element' => NULL),
+    ),
+  );
+}
+
+/**
+ * Formats a link.
+ */
+function theme_svlink_formatter_smash_vendors_link($vars) {
+  $link_options = $vars['element'];
+  unset($link_options['title']);
+  unset($link_options['url']);
+
+  if (isset($link_options['attributes']['class'])) {
+    $link_options['attributes']['class'] = array($link_options['attributes']['class']);
+  }
+
+  if (strpos($vars['element']['url'], 'twitter.com') !== FALSE) {
+    $link_options['attributes']['class'][] = 'svlink-twitter';
+  }
+  if (strpos($vars['element']['url'], 'facebook.com') !== FALSE) {
+    $link_options['attributes']['class'][] = 'svlink-facebook';
+  }
+  if (strpos($vars['element']['url'], 'tumblr.com') !== FALSE) {
+    $link_options['attributes']['class'][] = 'svlink-tumblr';
+  }
+  if (strpos($vars['element']['url'], 'deviantart.com') !== FALSE) {
+    $link_options['attributes']['class'][] = 'svlink-deviantart';
+  }
+  if (strpos($vars['element']['url'], 'etsy.com') !== FALSE) {
+    $link_options['attributes']['class'][] = 'svlink-etsy';
+  }
+
+  // Display a normal link if both title and URL are available.
+  if (!empty($vars['element']['title']) && !empty($vars['element']['url'])) {
+    return l($vars['element']['title'], $vars['element']['url'], $link_options);
+  }
+  // If only a title, display the title.
+  elseif (!empty($vars['element']['title'])) {
+    return check_plain($vars['element']['title']);
+  }
+  elseif (!empty($vars['element']['url'])) {
+    return l($vars['element']['title'], $vars['element']['url'], $link_options);
+  }
 }

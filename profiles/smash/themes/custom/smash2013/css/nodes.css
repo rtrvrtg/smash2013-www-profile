@@ -471,34 +471,86 @@ html.lt-ie9 .node-home-page .field-name-field-further-highlights {
 }
 /* line 383, ../sass/nodes.scss */
 .node-vendor .vendor-right .field-name-field-website-url a {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
   margin-right: 1em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 16px 16px;
+  min-height: 13px;
+  background-image: url(../images/linkicons/hm@1x.png);
+  overflow: hidden;
+  text-indent: -1000px;
+}
+/* line 397, ../sass/nodes.scss */
+.node-vendor .vendor-right .field-name-field-website-url a.svlink-twitter {
+  background-image: url(../images/linkicons/tw@1x.png);
+}
+/* line 400, ../sass/nodes.scss */
+.node-vendor .vendor-right .field-name-field-website-url a.svlink-facebook {
+  background-image: url(../images/linkicons/fb@1x.png);
+}
+/* line 403, ../sass/nodes.scss */
+.node-vendor .vendor-right .field-name-field-website-url a.svlink-tumblr {
+  background-image: url(../images/linkicons/tm@1x.png);
+}
+/* line 406, ../sass/nodes.scss */
+.node-vendor .vendor-right .field-name-field-website-url a.svlink-deviantart {
+  background-image: url(../images/linkicons/da@1x.png);
+}
+/* line 409, ../sass/nodes.scss */
+.node-vendor .vendor-right .field-name-field-website-url a.svlink-etsy {
+  background-image: url(../images/linkicons/et@1x.png);
+}
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* line 414, ../sass/nodes.scss */
+  .node-vendor .vendor-right .field-name-field-website-url a {
+    background-image: url(../images/linkicons/hm@2x.png);
+  }
+  /* line 417, ../sass/nodes.scss */
+  .node-vendor .vendor-right .field-name-field-website-url a.svlink-twitter {
+    background-image: url(../images/linkicons/tw@2x.png);
+  }
+  /* line 420, ../sass/nodes.scss */
+  .node-vendor .vendor-right .field-name-field-website-url a.svlink-facebook {
+    background-image: url(../images/linkicons/fb@2x.png);
+  }
+  /* line 423, ../sass/nodes.scss */
+  .node-vendor .vendor-right .field-name-field-website-url a.svlink-deviantart {
+    background-image: url(../images/linkicons/da@2x.png);
+  }
+  /* line 426, ../sass/nodes.scss */
+  .node-vendor .vendor-right .field-name-field-website-url a.svlink-etsy {
+    background-image: url(../images/linkicons/et@2x.png);
+  }
 }
 @media all and (min-width: 469px) {
-  /* line 389, ../sass/nodes.scss */
+  /* line 433, ../sass/nodes.scss */
   .node-vendor .vendor-left {
     position: absolute;
     top: 0;
     left: 0;
     width: 200px;
   }
-  /* line 395, ../sass/nodes.scss */
+  /* line 439, ../sass/nodes.scss */
   .node-vendor .vendor-right {
     margin-left: 210px;
   }
 }
 
-/* line 401, ../sass/nodes.scss */
+/* line 445, ../sass/nodes.scss */
 .node-article {
   clear: both;
   position: relative;
   overflow: hidden;
 }
-/* line 406, ../sass/nodes.scss */
+/* line 450, ../sass/nodes.scss */
 .node-article .article-left {
   text-align: center;
 }
 @media all and (min-width: 469px) {
-  /* line 413, ../sass/nodes.scss */
+  /* line 457, ../sass/nodes.scss */
   .node-article .article-left {
     position: relative;
     float: left;
@@ -507,60 +559,60 @@ html.lt-ie9 .node-home-page .field-name-field-further-highlights {
     margin-left: -100px;
     width: 100px;
   }
-  /* line 421, ../sass/nodes.scss */
+  /* line 465, ../sass/nodes.scss */
   .node-article .article-right {
     margin-left: 110px;
   }
 }
-/* line 427, ../sass/nodes.scss */
+/* line 471, ../sass/nodes.scss */
 .node-article .field-name-title h2 {
   margin: 0;
 }
-/* line 432, ../sass/nodes.scss */
+/* line 476, ../sass/nodes.scss */
 .node-article .field-name-post-date {
   font-weight: bold;
 }
-/* line 437, ../sass/nodes.scss */
+/* line 481, ../sass/nodes.scss */
 .node-article .field-name-ds-user-picture img {
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
   box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
 }
-/* line 442, ../sass/nodes.scss */
+/* line 486, ../sass/nodes.scss */
 .node-article .field-name-field-image {
   margin: 0 0 10px 0;
   max-width: 100px;
 }
-/* line 446, ../sass/nodes.scss */
+/* line 490, ../sass/nodes.scss */
 .node-article .field-name-field-image img {
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
   box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 0px;
 }
-/* line 452, ../sass/nodes.scss */
+/* line 496, ../sass/nodes.scss */
 .node-article .field-name-body *:first-child {
   margin-top: 0;
 }
-/* line 455, ../sass/nodes.scss */
+/* line 499, ../sass/nodes.scss */
 .node-article .field-name-body *:last-child {
   margin-bottom: 0;
 }
-/* line 462, ../sass/nodes.scss */
+/* line 506, ../sass/nodes.scss */
 .node-article .field-name-field-tags .label-above,
 .node-article .field-name-field-tags .label-inline {
   font-weight: bold;
 }
-/* line 465, ../sass/nodes.scss */
+/* line 509, ../sass/nodes.scss */
 .node-article .field-name-field-tags .label-inline {
   display: inline-block;
   margin-right: 5px;
 }
-/* line 469, ../sass/nodes.scss */
+/* line 513, ../sass/nodes.scss */
 .node-article .field-name-field-tags a {
   margin-right: 0.5em;
 }
 
-/* line 479, ../sass/nodes.scss */
+/* line 523, ../sass/nodes.scss */
 .node-guest .field-name-field-homepage a,
 .node-guest .field-name-field-twitter a,
 .node-guest .field-name-field-facebook a {
@@ -570,28 +622,28 @@ html.lt-ie9 .node-home-page .field-name-field-further-highlights {
   background-size: 16px 16px;
   min-height: 13px;
 }
-/* line 488, ../sass/nodes.scss */
+/* line 532, ../sass/nodes.scss */
 .node-guest .field-name-field-homepage a {
   background-image: url(../images/linkicons/hm@1x.png);
 }
-/* line 491, ../sass/nodes.scss */
+/* line 535, ../sass/nodes.scss */
 .node-guest .field-name-field-twitter a {
   background-image: url(../images/linkicons/tw@1x.png);
 }
-/* line 494, ../sass/nodes.scss */
+/* line 538, ../sass/nodes.scss */
 .node-guest .field-name-field-facebook a {
   background-image: url(../images/linkicons/fb@1x.png);
 }
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-  /* line 499, ../sass/nodes.scss */
+  /* line 543, ../sass/nodes.scss */
   .node-guest .field-name-field-homepage a {
     background-image: url(../images/linkicons/hm@2x.png);
   }
-  /* line 502, ../sass/nodes.scss */
+  /* line 546, ../sass/nodes.scss */
   .node-guest .field-name-field-twitter a {
     background-image: url(../images/linkicons/tw@2x.png);
   }
-  /* line 505, ../sass/nodes.scss */
+  /* line 549, ../sass/nodes.scss */
   .node-guest .field-name-field-facebook a {
     background-image: url(../images/linkicons/fb@2x.png);
   }
