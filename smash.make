@@ -3,6 +3,7 @@ core = "7.22"
 api = "2"
 ; comment this out in to use on drupal.org
 projects[drupal][version] = "7.22"
+projects[drupal][patch][] = "https://drupal.org/files/entity_node_access-1780646-179.patch"
 
 ; Modules
 projects[admin_views][version] = "1.2"
