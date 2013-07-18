@@ -122,33 +122,31 @@ $('.schedule-item').each(function(){
 /* Lol scroller */
 
 var adjustHeaders = function() {
-  $('.schedule-column').each(function(){
-    var header = $('> header', this);
+  var header = $('section.schedule .schedule-hour-marker');
 
-    if (header.css('position') == 'fixed') {
-      header.width($(this).width()).css({
-        left: (2 + $(this).offset().left) + 'px'
-      });
-    }
-    else {
-      header.width('100%').css({
-        left: 0
-      });
-    }
-  });
+  if (header.css('position') == 'fixed') {
+    header.css({
+      left: $('section.schedule').offset().left - $('section.schedule').scrollLeft()
+    });
+  }
+  else {
+    header.css({
+      left: 0
+    });
+  }
 };
 
 $(window).scroll(function(){
   var schedulePosition = $('section.schedule').offset().top;
   var currentScroll = $(window).scrollTop();
 
-  var headers = $('section.schedule .schedule-column header');
+  var headers = $('section.schedule .schedule-hour-marker');
   if (currentScroll >= schedulePosition) {
-    headers.css('position', 'fixed');
+    $('section.schedule').addClass('scrolled');
     adjustHeaders();
   }
   else {
-    headers.css('position', 'absolute');
+    $('section.schedule').removeClass('scrolled');
     adjustHeaders();
   }
 });
@@ -156,6 +154,7 @@ $(window).scroll(function(){
 $('section.schedule').scroll(function(){
   adjustHeaders();
 });
+
 
 });
 })(jQuery, Drupal, document, window);

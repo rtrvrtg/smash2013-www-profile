@@ -117,6 +117,7 @@ projects[registration][subdir] = "contrib"
 
 projects[redirect][version] = "1.0-rc1"
 projects[redirect][subdir] = "contrib"
+projects[redirect][patch][] = "http://drupal.org/files/redirect_loop_detection-1796596-68-reroll.patch"
 
 projects[secure_permissions][version] = "1.5"
 projects[secure_permissions][subdir] = "contrib"

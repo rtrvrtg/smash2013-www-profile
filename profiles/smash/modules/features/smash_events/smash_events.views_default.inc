@@ -234,6 +234,7 @@ function smash_events_views_default_views() {
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -262,6 +263,18 @@ function smash_events_views_default_views() {
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_event_date_time']['field_api_classes'] = TRUE;
+  /* Field: Content: Schedule Block */
+  $handler->display->display_options['fields']['field_schedule_block']['id'] = 'field_schedule_block';
+  $handler->display->display_options['fields']['field_schedule_block']['table'] = 'field_data_field_schedule_block';
+  $handler->display->display_options['fields']['field_schedule_block']['field'] = 'field_schedule_block';
+  $handler->display->display_options['fields']['field_schedule_block']['label'] = '';
+  $handler->display->display_options['fields']['field_schedule_block']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_schedule_block']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_schedule_block']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_schedule_block']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_schedule_block']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_schedule_block']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_schedule_block']['type'] = 'list_key';
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -270,6 +283,7 @@ function smash_events_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<strong class="event-title">[title]</strong> <span class="event-time">[field_event_date_time]</span>';
   $handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['nothing']['alter']['path'] = '[path]';
+  $handler->display->display_options['fields']['nothing']['alter']['link_class'] = 'event-type-[field_schedule_block]';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Contextual filter: Content: Event Date/Time -  start date (field_event_date_time) */
   $handler->display->display_options['arguments']['field_event_date_time_value']['id'] = 'field_event_date_time_value';

@@ -31,6 +31,15 @@
 ?>
 
 <section class="schedule">
+  <header class="schedule-hour-marker">
+  	<ul>
+  	<?php
+  	for ($i = 9; $i <= 18; $i++) {
+  		print "<li>" . $i . ":00</li>";
+  	}
+  	?>
+  	</ul>
+  </header>
   <?php foreach ($rendered_groups as $group): ?>
     <?php print $group; ?>
   <?php endforeach; ?>

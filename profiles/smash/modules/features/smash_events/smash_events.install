@@ -70,3 +70,34 @@ function smash_events_update_7004() {
   module_enable(array('calendar'));
 }
 
+/**
+ * Set up schedule styles
+ */
+function smash_events_update_7005() {
+  $q = new EntityFieldQuery();
+  $q->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'event');
+
+  $mapping = array(
+    714 => 'art',
+    713 => 'competition',
+    715 => 'cosplay',
+    716 => 'games',
+    717 => 'gundam',
+    710 => 'maidcafe',
+    718 => 'panel',
+  );
+
+  $result = $q->execute();
+  if (isset($result['node'])) {
+    $event_nids = array_keys($result['node']);
+    $events = entity_load('node', $event_nids);
+
+    foreach ($events as $event) {
+      $section = $event->field_event_type[LANGUAGE_NONE][0]['tid'];
+      $event->field_schedule_block[LANGUAGE_NONE][0]['value'] = $mapping[$section];
+      node_save($event);
+    }
+  }
+}
+

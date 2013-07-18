@@ -359,17 +359,15 @@ html.lt-ie9 #boxes-box-social_networks .boxes-box-content a.networks-twitter spa
 .view-sponsor-list {
   text-align: center;
 }
-/* line 257, ../sass/blocks.scss */
+/* line 258, ../sass/blocks.scss */
+.view-sponsor-list .view-header p {
+  margin-bottom: 0;
+}
+/* line 263, ../sass/blocks.scss */
 .view-sponsor-list .view-content div {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   margin: 0 2px 4px 2px;
-}
-/* line 262, ../sass/blocks.scss */
-.view-sponsor-list .view-content div.sticky-True {
-  display: block;
-  float: left;
-  margin: 0 10px 0 0;
 }
 /* line 268, ../sass/blocks.scss */
 .view-sponsor-list .view-content div a {
@@ -382,8 +380,8 @@ html.lt-ie9 #boxes-box-social_networks .boxes-box-content a.networks-twitter spa
 }
 /* line 276, ../sass/blocks.scss */
 .view-sponsor-list .view-content div a, .view-sponsor-list .view-content div img {
-  line-height: 50px;
-  max-height: 50px;
+  line-height: 80px;
+  max-height: 80px;
   width: auto;
 }
 @media all and (min-width: 950px) {
@@ -393,26 +391,15 @@ html.lt-ie9 #boxes-box-social_networks .boxes-box-content a.networks-twitter spa
     max-height: 100px;
   }
 }
-/* line 286, ../sass/blocks.scss */
-.view-sponsor-list .view-content div a.sticky-True {
-  line-height: 50px;
-  max-height: 50px;
-  width: auto;
+/* line 287, ../sass/blocks.scss */
+.view-sponsor-list .view-content div.sticky-True a.sticky-True, .view-sponsor-list .view-content div.sticky-True img {
+  line-height: 100px;
+  max-height: 100px;
 }
 @media all and (min-width: 950px) {
-  /* line 286, ../sass/blocks.scss */
-  .view-sponsor-list .view-content div a.sticky-True {
-    line-height: 200px;
-    max-height: 200px;
-  }
-}
-/* line 296, ../sass/blocks.scss */
-.view-sponsor-list .view-content div a.sticky-True img {
-  max-height: 50px;
-}
-@media all and (min-width: 950px) {
-  /* line 296, ../sass/blocks.scss */
-  .view-sponsor-list .view-content div a.sticky-True img {
-    max-height: 200px;
+  /* line 287, ../sass/blocks.scss */
+  .view-sponsor-list .view-content div.sticky-True a.sticky-True, .view-sponsor-list .view-content div.sticky-True img {
+    line-height: 150px;
+    max-height: 150px;
   }
 }

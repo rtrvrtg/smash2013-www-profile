@@ -156,7 +156,7 @@ figure.colorbox-content-wrap figcaption {
   text-align: left;
 }
 
-/* line 132, ../sass/views-styles.scss */
+/* line 135, ../sass/views-styles.scss */
 .view-schedule {
   background: #7e54a3;
   color: white;
@@ -164,13 +164,13 @@ figure.colorbox-content-wrap figcaption {
   margin: 0;
 }
 @media all and (min-width: 950px) {
-  /* line 132, ../sass/views-styles.scss */
+  /* line 135, ../sass/views-styles.scss */
   .view-schedule {
     padding: 10px 40px;
     margin: 0 -40px;
   }
 }
-/* line 144, ../sass/views-styles.scss */
+/* line 147, ../sass/views-styles.scss */
 .view-schedule .view-schedule-toggle {
   display: block;
   border-bottom: 2px solid white;
@@ -181,7 +181,7 @@ figure.colorbox-content-wrap figcaption {
   overflow: hidden;
   margin-bottom: 0.5em;
 }
-/* line 153, ../sass/views-styles.scss */
+/* line 156, ../sass/views-styles.scss */
 .view-schedule .view-schedule-toggle a {
   float: left;
   width: 50%;
@@ -189,91 +189,228 @@ figure.colorbox-content-wrap figcaption {
   background: rgba(255, 255, 255, 0.7);
   color: #7e54a3;
 }
-/* line 160, ../sass/views-styles.scss */
+/* line 163, ../sass/views-styles.scss */
 .view-schedule .view-schedule-toggle a.active {
   background: #fff;
 }
-/* line 166, ../sass/views-styles.scss */
+/* line 169, ../sass/views-styles.scss */
 .view-schedule section.schedule {
   text-align: center;
 }
-/* line 169, ../sass/views-styles.scss */
+/* line 172, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-hour-marker {
+  background: black;
+  color: white;
+  font-family: "ultramagneticRegular", sans-serif;
+  font-weight: normal;
+  padding-left: 80px;
+  z-index: 100;
+}
+/* line 181, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-hour-marker ul {
+  display: block;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  white-space: nowrap;
+}
+/* line 188, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-hour-marker ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-left: 1px solid white;
+  box-sizing: border-box;
+  width: 300px;
+  background: black;
+  height: 30px;
+  line-height: 30px;
+}
+/* line 204, ../sass/views-styles.scss */
+.view-schedule section.schedule.scrolled {
+  padding-top: 30px;
+}
+/* line 207, ../sass/views-styles.scss */
+.view-schedule section.schedule.scrolled .schedule-hour-marker {
+  position: fixed;
+  top: 0;
+}
+/* line 213, ../sass/views-styles.scss */
 .view-schedule section.schedule .schedule-column {
   position: relative;
-  border-top: 0px none;
+  border-top: 2px solid white;
   border-bottom: 0px none;
   border-right: 0px none;
-  border-left: 2px solid white;
-  margin: 0;
-}
-/* line 179, ../sass/views-styles.scss */
-.view-schedule section.schedule .schedule-column:first-child {
   border-left: 0px none;
+  margin: 0;
+  min-height: 120px;
+  min-width: 2700px;
 }
-/* line 183, ../sass/views-styles.scss */
+/* line 226, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column:first-child {
+  border-top: 0px none;
+}
+/* line 230, ../sass/views-styles.scss */
 .view-schedule section.schedule .schedule-column header {
   font-family: "ultramagneticRegular", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
   font-size: 1.17em;
   line-height: 1.28205em;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 24px;
-  z-index: 100;
+  display: table-cell;
+  width: 80px;
+  height: 120px;
+  text-align: center;
+  vertical-align: middle;
   color: white;
   background-color: #7e54a3;
 }
-/* line 201, ../sass/views-styles.scss */
-.view-schedule section.schedule .schedule-column .schedule-column-items {
-  margin: 24px 10px 0 10px;
+/* line 247, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column header p {
+  margin: 0;
+  display: inline;
 }
-/* line 205, ../sass/views-styles.scss */
+/* line 253, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-column-items {
+  margin: 0 10px 0 10px;
+  display: table-cell;
+}
+/* line 258, ../sass/views-styles.scss */
 .view-schedule section.schedule .schedule-column .schedule-item {
   background: rgba(255, 255, 255, 0.7);
-  width: 100%;
   border-bottom: 1px solid #7e54a3;
 }
-/* line 210, ../sass/views-styles.scss */
-.view-schedule section.schedule .schedule-column .schedule-item .dayview a {
-  display: block;
+/* line 262, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .calendar {
   width: 100%;
+}
+/* line 266, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a {
+  display: table-cell;
   color: black;
   padding: 5px;
   box-sizing: border-box;
+  height: 120px;
+  vertical-align: middle;
+  border-right: 1px solid #7e54a3;
 }
-/* line 217, ../sass/views-styles.scss */
+/* line 278, ../sass/views-styles.scss */
 .view-schedule section.schedule .schedule-column .schedule-item .dayview a:hover, .view-schedule section.schedule .schedule-column .schedule-item .dayview a:focus, .view-schedule section.schedule .schedule-column .schedule-item .dayview a:active {
   background: rgba(255, 255, 255, 0.95);
 }
-/* line 221, ../sass/views-styles.scss */
+/* line 282, ../sass/views-styles.scss */
 .view-schedule section.schedule .schedule-column .schedule-item .dayview a strong, .view-schedule section.schedule .schedule-column .schedule-item .dayview a span {
-  white-space: nowrap;
   line-height: 0.85em;
 }
-/* line 226, ../sass/views-styles.scss */
+/* line 286, ../sass/views-styles.scss */
 .view-schedule section.schedule .schedule-column .schedule-item .dayview a span {
   font-size: 0.9em;
   font-weight: bold;
 }
+/* line 291, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-competition {
+  background: rgba(229, 78, 47, 0.7);
+  color: white;
+}
+/* line 295, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-competition:hover, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-competition:focus, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-competition:active {
+  background: #e54e2f;
+}
+/* line 300, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-panel {
+  background: rgba(53, 148, 73, 0.7);
+  color: white;
+}
+/* line 304, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-panel:hover, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-panel:focus, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-panel:active {
+  background: #359449;
+}
+/* line 309, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-concert {
+  background: rgba(85, 47, 58, 0.7);
+  color: white;
+}
+/* line 313, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-concert:hover, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-concert:focus, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-concert:active {
+  background: #552f3a;
+}
+/* line 318, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-cosplay {
+  background: rgba(8, 161, 242, 0.7);
+  color: white;
+}
+/* line 322, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-cosplay:hover, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-cosplay:focus, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-cosplay:active {
+  background: #08a1f2;
+}
+/* line 327, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-gundam {
+  background: rgba(255, 109, 68, 0.7);
+  color: white;
+}
+/* line 331, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-gundam:hover, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-gundam:focus, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-gundam:active {
+  background: #ff6d44;
+}
+/* line 336, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-screening {
+  background: rgba(24, 75, 128, 0.7);
+  color: white;
+}
+/* line 340, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-screening:hover, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-screening:focus, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-screening:active {
+  background: #184b80;
+}
+/* line 345, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-break {
+  background: rgba(139, 142, 133, 0.7);
+  color: white;
+}
+/* line 349, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-break:hover, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-break:focus, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-break:active {
+  background: #8b8e85;
+}
+/* line 354, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-maidcafe {
+  background: rgba(104, 124, 140, 0.7);
+  color: white;
+}
+/* line 358, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-maidcafe:hover, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-maidcafe:focus, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-maidcafe:active {
+  background: #687c8c;
+}
+/* line 363, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-art {
+  background: rgba(55, 228, 229, 0.7);
+}
+/* line 366, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-art:hover, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-art:focus, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-art:active {
+  background: #37e4e5;
+}
+/* line 371, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-guest {
+  background: rgba(237, 200, 94, 0.7);
+}
+/* line 374, ../sass/views-styles.scss */
+.view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-guest:hover, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-guest:focus, .view-schedule section.schedule .schedule-column .schedule-item .dayview a.event-type-guest:active {
+  background: #edc85e;
+}
 
-/* line 240, ../sass/views-styles.scss */
+/* line 388, ../sass/views-styles.scss */
 .view-location-maps .view-content ul, .view-location-maps .view-content li {
   padding: 0;
   list-style: none;
 }
-/* line 245, ../sass/views-styles.scss */
+/* line 393, ../sass/views-styles.scss */
 .view-location-maps .view-content ul {
   margin: 0;
 }
-/* line 249, ../sass/views-styles.scss */
+/* line 397, ../sass/views-styles.scss */
 .view-location-maps .view-content li {
   margin: 0.5em 0;
 }
-/* line 253, ../sass/views-styles.scss */
+/* line 401, ../sass/views-styles.scss */
 .view-location-maps .view-content a {
   text-decoration: none;
   display: block;
@@ -291,7 +428,7 @@ figure.colorbox-content-wrap figcaption {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-/* line 270, ../sass/views-styles.scss */
+/* line 418, ../sass/views-styles.scss */
 .view-location-maps .view-content a:hover, .view-location-maps .view-content a:focus, .view-location-maps .view-content a:active {
   box-shadow: 2px 5px 0px rgba(0, 0, 0, 0.5);
   margin: 0 0 3px 0;
