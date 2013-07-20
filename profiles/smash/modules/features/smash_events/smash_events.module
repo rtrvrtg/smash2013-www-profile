@@ -46,15 +46,20 @@ function smash_events_form_event_node_form_after($form) {
 
   $default_date = strtotime(variable_get('smash_events_default_date') . ' 12:00:00');
 
+  /*
   $event_time['value']['date']['#prefix'] = '<div class="element-invisible">';
   $event_time['value2']['date']['#prefix'] = '<div class="element-invisible">';
   $event_time['value']['date']['#suffix'] = '</div>';
   $event_time['value2']['date']['#suffix'] = '</div>';
+  */
   $event_time['value']['date']['#value'] = date('m/d/Y', $default_date);
   $event_time['value2']['date']['#value'] = date('m/d/Y', $default_date);
 
   array_unshift($event_time['value']['#element_validate'], 'smash_events_form_event_node_form_date_validate');
   array_unshift($event_time['value2']['#element_validate'], 'smash_events_form_event_node_form_date_validate');
+
+  $path = drupal_get_path('module', 'smash_events');
+  $form['#attached']['js'][] = $path . '/scripts/editor.js';
 
   return $form;
 }
