@@ -122,38 +122,76 @@ $('.schedule-item').each(function(){
 /* Lol scroller */
 
 var adjustHeaders = function() {
-  var header = $('section.schedule .schedule-hour-marker');
+  var sched = $('section.schedule');
+  var hourMarker = $('.schedule-hour-marker', sched);
+  var scheduleHeader = $('.schedule-column > header', sched);
 
-  if (header.css('position') == 'fixed') {
-    header.css({
+  if (sched.hasClass('scrolled-vert')) {
+    hourMarker.css({
       left: $('section.schedule').offset().left - $('section.schedule').scrollLeft()
     });
   }
   else {
-    header.css({
+    hourMarker.css({
       left: 0
     });
   }
+
+  var scrollingHorz = sched.hasClass('scrolled-horz'), 
+  border = 2;
+  scheduleHeader.each(function(){
+    if (scrollingHorz) {
+      $(this).css({
+        top: $(this).parent().offset().top - $(window).scrollTop() + border,
+        left: $('section.schedule').offset().left
+      });
+    }
+    else {
+      $(this).css({
+        top: '',
+        left: ''
+      });
+    }
+  });
 };
 
-$(window).scroll(function(){
+var windowScroll = function(){
   var schedulePosition = $('section.schedule').offset().top;
   var currentScroll = $(window).scrollTop();
 
-  var headers = $('section.schedule .schedule-hour-marker');
-  if (currentScroll >= schedulePosition) {
-    $('section.schedule').addClass('scrolled');
-    adjustHeaders();
-  }
-  else {
-    $('section.schedule').removeClass('scrolled');
-    adjustHeaders();
-  }
-});
+  var isVertScroll = $('section.schedule').hasClass('scrolled-vert');
+  var scrollOverThresh = currentScroll >= schedulePosition;
 
-$('section.schedule').scroll(function(){
+  if (scrollOverThresh && !isVertScroll) {
+    $('section.schedule').addClass('scrolled-vert');
+  }
+  else if (!scrollOverThresh && isVertScroll) {
+    $('section.schedule').removeClass('scrolled-vert');
+  }
+
   adjustHeaders();
-});
+};
+
+var scheduleScroll = function(){
+  var sched = $('section.schedule');
+  var isHorzScroll = sched.hasClass('scrolled-horz');
+  var scrollOverThresh = sched.scrollLeft() > 0;
+
+  if (scrollOverThresh && !isHorzScroll) {
+    sched.addClass('scrolled-horz');
+  }
+  else if (!scrollOverThresh && isHorzScroll) {
+    sched.removeClass('scrolled-horz');
+  }
+
+  adjustHeaders();
+};
+
+$(window).scroll(windowScroll);
+window.addEventListener("touchmove", windowScroll, false);
+
+$('section.schedule').scroll(scheduleScroll);
+$('section.schedule').get(0).addEventListener("touchmove", scheduleScroll, false);
 
 
 });

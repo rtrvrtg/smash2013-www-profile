@@ -176,7 +176,7 @@ $schedule-header-width: 80px;
 
       padding-left: 80px;
 
-      z-index: 100;
+      z-index: 101;
 
       ul {
         display: block;
@@ -201,15 +201,6 @@ $schedule-header-width: 80px;
       }
     }
 
-    &.scrolled {
-      padding-top: 30px;
-
-      .schedule-hour-marker {
-        position: fixed;
-        top: 0;
-      }
-    }
-
     .schedule-column {
 
       position: relative;
@@ -219,6 +210,7 @@ $schedule-header-width: 80px;
       border-left: 0px none;
 
       margin: 0;
+      padding-left: 80px;
 
       min-height: $schedule-row-height;
       min-width: 2700px;
@@ -233,20 +225,24 @@ $schedule-header-width: 80px;
         text-transform: uppercase;
         @include adjust-font-size-to( $h3-font-size );
         
-        display: table-cell;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
 
         width: $schedule-header-width;
         height: $schedule-row-height;
-
-        text-align: center;
-        vertical-align: middle;
 
         color: white;
         background-color: $color-purple;
 
         p {
-          margin: 0;
-          display: inline;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin: -1em 0 0 0;
+          max-width: 80px;
+          text-align:L center;
         }
       }
 
@@ -289,98 +285,118 @@ $schedule-header-width: 80px;
           }
 
           &.event-type-competition {
-            background: rgba(229, 78, 47, 0.7);
+            background: rgba(220, 59, 112, 1);
             color: white;
 
             &:hover, &:focus, &:active {
-              background: rgba(229, 78, 47, 1);
+              background: rgba(220, 59, 112, 0.7);
             }
           }
 
           &.event-type-panel {
-            background: rgba(53, 148, 73, 0.7);
+            background: rgba(130, 191, 65, 1);
             color: white;
 
             &:hover, &:focus, &:active {
-              background: rgba(53, 148, 73, 1);
+              background: rgba(130, 191, 65, 0.7);
             }
           }
 
           &.event-type-concert {
-            background: rgba(85, 47, 58, 0.7);
+            background: rgba(156, 79, 143, 1);
             color: white;
 
             &:hover, &:focus, &:active {
-              background: rgba(85, 47, 58, 1);
+              background: rgba(156, 79, 143, 0.7);
             }
           }
 
           &.event-type-cosplay {
-            background: rgba(8, 161, 242, 0.7);
+            background: rgba(8, 176, 233, 1);
             color: white;
 
             &:hover, &:focus, &:active {
-              background: rgba(8, 161, 242, 1);
+              background: rgba(8, 176, 233, 0.7);
             }
           }
 
           &.event-type-gundam {
-            background: rgba(255, 109, 68, 0.7);
+            background: rgba(225, 96, 73, 1);
             color: white;
 
             &:hover, &:focus, &:active {
-              background: rgba(255, 109, 68, 1);
+              background: rgba(225, 96, 73, 0.7);
             }
           }
 
           &.event-type-screening {
-            background: rgba(24, 75, 128, 0.7);
+            background: rgba(64, 97, 159, 1);
             color: white;
 
             &:hover, &:focus, &:active {
-              background: rgba(24, 75, 128, 1);
+              background: rgba(64, 97, 159, 0.7);
             }
           }
 
           &.event-type-break {
-            background: rgba(139, 142, 133, 0.7);
+            background: rgba(202, 204, 203, 1);
             color: white;
 
             &:hover, &:focus, &:active {
-              background: rgba(139, 142, 133, 1);
+              background: rgba(202, 204, 203, 0.7);
             }
           }
 
           &.event-type-maidcafe {
-            background: rgba(104, 124, 140, 0.7);
+            background: rgba(127, 143, 187, 1);
             color: white;
 
             &:hover, &:focus, &:active {
-              background: rgba(104, 124, 140, 1);
+              background: rgba(127, 143, 187, 0.7);
             }
           }
 
           &.event-type-art {
-            background: rgba(55, 228, 229, 0.7);
+            background: rgba(5, 173, 173, 1);
 
             &:hover, &:focus, &:active {
-              background: rgba(55, 228, 229, 1);
+              background: rgba(5, 173, 173, 0.7);
             }
           }
 
           &.event-type-guest {
-            background: rgba(237, 200, 94, 0.7);
+            background: rgba(254, 218, 28, 1);
 
             &:hover, &:focus, &:active {
-              background: rgba(237, 200, 94, 1);
+              background: rgba(254, 218, 28, 0.7);
             }
           }
         }
       }
+    }
 
+    &.scrolled-vert {
+      padding-top: 30px;
+
+      .schedule-hour-marker {
+        position: fixed;
+        top: 0;
+      }
+    }
+
+    &.scrolled-horz {
+      .schedule-column {
+        header {
+          position: fixed;
+          left: 0;
+          z-index: 100;
+        }
+        .schedule-column-items {
+          padding-left: 80px;
+        }
+      }
     }
   }
-  
 }
 
 .view-location-maps {

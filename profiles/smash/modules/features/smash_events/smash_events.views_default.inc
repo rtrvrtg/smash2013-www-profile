@@ -285,6 +285,7 @@ function smash_events_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['path'] = '[path]';
   $handler->display->display_options['fields']['nothing']['alter']['link_class'] = 'event-type-[field_schedule_block]';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_wrapper_type'] = '0';
   /* Contextual filter: Content: Event Date/Time -  start date (field_event_date_time) */
   $handler->display->display_options['arguments']['field_event_date_time_value']['id'] = 'field_event_date_time_value';
   $handler->display->display_options['arguments']['field_event_date_time_value']['table'] = 'field_data_field_event_date_time';

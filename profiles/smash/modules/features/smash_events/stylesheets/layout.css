@@ -3,22 +3,23 @@ section.schedule {
   display: block;
   overflow-x: auto;
   min-height: 500px;
+  -webkit-overflow-scrolling: touch;
 }
-/* line 40, ../sass/layout.scss */
+/* line 41, ../sass/layout.scss */
 section.schedule .schedule-column {
   display: block;
   border: 1px solid black;
 }
-/* line 44, ../sass/layout.scss */
+/* line 45, ../sass/layout.scss */
 section.schedule .schedule-column header {
-  display: block;
+  display: table-cell;
   font-size: 2em;
   font-weight: bold;
   text-align: center;
 }
-/* line 51, ../sass/layout.scss */
+/* line 52, ../sass/layout.scss */
 section.schedule .schedule-column .schedule-column-items {
-  display: block;
+  display: table-cell;
   position: relative;
   white-space: normal;
 }
@@ -409,19 +410,19 @@ section.schedule .item-length-10 .dayview a {
   width: 3000px;
 }
 
-/* line 69, ../sass/layout.scss */
+/* line 70, ../sass/layout.scss */
 .view-schedule.helpful-hint {
   background-image: url(../images/star-hints.png);
   background-repeat: no-repeat;
   background-position: 50% 80px;
 }
 
-/* line 75, ../sass/layout.scss */
+/* line 76, ../sass/layout.scss */
 a.schedule-fave-link {
   display: block;
   position: absolute;
   top: 4px;
-  right: 4px;
+  left: 4px;
   width: 24px;
   height: 24px;
   background: url(../images/star-blank.png) no-repeat center center;
@@ -429,7 +430,7 @@ a.schedule-fave-link {
   overflow: hidden;
   text-indent: -999px;
 }
-/* line 88, ../sass/layout.scss */
+/* line 89, ../sass/layout.scss */
 a.schedule-fave-link.active {
   background: url(../images/star-filled.png) no-repeat center center;
   background-size: 24px 24px;

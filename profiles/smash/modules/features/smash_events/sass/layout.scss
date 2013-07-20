@@ -1,4 +1,4 @@
-$hour-width: 240px;
+$hour-width: 300px;
 $start-time: 9;
 
 @mixin schedule-position ($time) {
@@ -36,6 +36,7 @@ section.schedule {
 	display: block;
 	overflow-x: auto;
 	min-height: 500px;
+	-webkit-overflow-scrolling: touch;
 
 	.schedule-column {
 		display: block;
