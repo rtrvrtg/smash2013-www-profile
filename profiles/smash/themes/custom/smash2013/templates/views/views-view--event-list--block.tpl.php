@@ -36,7 +36,7 @@
       $split = explode('<!-- splitpoint -->', $rows);
       $parts = array();
       $cols = 3;
-      $count = floor(count($split) / $cols);
+      $count = ceil(count($split) / $cols);
       $iter = 0;
       $index = 0;
       foreach ($split as $part) {
