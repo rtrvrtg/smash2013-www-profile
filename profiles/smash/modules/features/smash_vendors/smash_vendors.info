@@ -15,6 +15,7 @@ dependencies[] = inline_entity_form
 dependencies[] = link
 dependencies[] = list
 dependencies[] = options
+dependencies[] = smash_events
 dependencies[] = smash_workflow_configuration
 dependencies[] = strongarm
 dependencies[] = taxonomy

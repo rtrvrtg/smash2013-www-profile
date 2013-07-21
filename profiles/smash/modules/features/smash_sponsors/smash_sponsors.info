@@ -13,6 +13,7 @@ dependencies[] = link
 dependencies[] = list
 dependencies[] = media
 dependencies[] = node
+dependencies[] = smash_events
 dependencies[] = strongarm
 dependencies[] = views
 features[ctools][] = strongarm:strongarm:1

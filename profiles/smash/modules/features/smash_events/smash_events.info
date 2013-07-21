@@ -37,6 +37,7 @@ features[field][] = node-event-field_schedule_block
 features[field][] = node-event-field_section
 features[field][] = node-event-field_show_in_menu
 features[field][] = node-event-field_sidebar_content
+features[field][] = node-event-field_vendors_sponsors
 features[node][] = event
 features[taxonomy][] = event_type
 features[user_permission][] = create event content

@@ -103,6 +103,9 @@ function smash_events_theme($existing, $type, $theme, $path) {
       ),
       'template' => 'templates/smash-events-calendar-item',
     ),
+    'eventlink_formatter_smash_events_sponsor' => array(
+      'variables' => array('element' => NULL),
+    ),
   );
 }
 
@@ -148,4 +151,59 @@ function smash_events_views_pre_render(&$view) {
       $footer = $footer_text;
     }
   }
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function smash_events_field_formatter_info() {
+  return array(
+    'smash_events_sponsor' => array(
+      'label' => t('Sponsor/Vendor logo link'),
+      'field types' => array('link_field'),
+      'multiple values' => FIELD_BEHAVIOR_DEFAULT,
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function smash_events_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $elements = array();
+  foreach ($items as $delta => $item) {
+
+    $title = $entity->title;
+    if (isset($item['text'])) {
+      $title = $item['text'];
+    }
+    if (isset($entity->field_image) && isset($entity->field_image[LANGUAGE_NONE])) {
+      $title = theme('image_style', array(
+        'style_name' => 'vendor',
+        'path' => $entity->field_image[LANGUAGE_NONE][0]['uri'],
+      ));
+      // $title = $item['text']; 
+    }
+    if (isset($entity->field_sponsor_logo) && isset($entity->field_sponsor_logo[LANGUAGE_NONE])) {
+      $title = theme('image_style', array(
+        'style_name' => 'sponsor',
+        'path' => $entity->field_sponsor_logo[LANGUAGE_NONE][0]['uri'],
+      ));
+    }
+
+    $elements[$delta] = array(
+      '#theme' => 'link',
+      '#path' => $item['url'],
+      '#text' => $title,
+      '#options' => array(
+        'html' => TRUE,
+        'attributes' => array(
+          'title' => $entity->title,
+          'class' => array(),
+        ),
+      ),
+    );
+
+  }
+  return $elements;
 }

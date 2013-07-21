@@ -68,6 +68,13 @@ function smash_events_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_vendors_sponsors' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
+    ),
   );
   $export['node|event|default'] = $ds_fieldsetting;
 
@@ -91,6 +98,7 @@ function smash_events_ds_layout_settings_info() {
     'regions' => array(
       'smash_layout_node_main' => array(
         0 => 'body',
+        4 => 'field_vendors_sponsors',
       ),
       'smash_layout_node_sidebar' => array(
         1 => 'field_event_date_time',
@@ -103,6 +111,7 @@ function smash_events_ds_layout_settings_info() {
       'field_event_date_time' => 'smash_layout_node_sidebar',
       'field_location' => 'smash_layout_node_sidebar',
       'field_sidebar_content' => 'smash_layout_node_sidebar',
+      'field_vendors_sponsors' => 'smash_layout_node_main',
     ),
     'classes' => array(),
     'wrappers' => array(
