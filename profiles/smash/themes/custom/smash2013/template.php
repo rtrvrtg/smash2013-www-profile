@@ -280,8 +280,8 @@ function smash2013_menu_link(array $variables) {
 function _smash_2013_prep_toggler($seed) {
   $var_stack = md5($seed);
   $id = drupal_html_id('menu-tree--' . $var_stack);
-  $label = '<input id="' . $id . '" class="menu-toggle-checkbox" type="checkbox" />' . 
-    '<label for="' . $id . '" class="menu-toggle-label" onclick="">' . t('Toggle menu') . '</label>';
+  $label = '<input id="' . $id . '" class="menu-toggle-checkbox" type="checkbox" value="1" />' . 
+    '<label for="' . $id . '" class="menu-toggle-label">' . t('Toggle menu') . '</label>';
   return array($id, $label);
 }
 

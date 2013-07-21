@@ -72,5 +72,38 @@ if (newsByTag.length > 0) {
   }).insertAfter(ul);
 }
 
+var forceRedraw = function(element){
+  if (!element) { return; }
+
+  var n = document.createTextNode(' ');
+  var disp = element.style.display;  // don't worry about previous display style
+
+  element.appendChild(n);
+  element.style.display = 'none';
+
+  setTimeout(function(){
+      element.style.display = disp;
+      n.parentNode.removeChild(n);
+  },20); // you can play with this timeout to make it as short as possible
+}
+
+var menuLabels = $('#navigation label');
+menuLabels.bind('click', function(e){
+  e.preventDefault();
+
+  var forId = $(this).attr('for');
+  var targetInput = $('#' + forId);
+  
+  var current = !!targetInput.attr('checked');
+  if (current) {
+    targetInput.removeClass('active').removeAttr('checked');
+  }
+  else {
+    targetInput.addClass('active').attr('checked', 'checked');
+  }
+
+  forceRedraw(targetInput.parent().get(0));
+});
+
 });
 })(jQuery, Drupal, this, this.document);
