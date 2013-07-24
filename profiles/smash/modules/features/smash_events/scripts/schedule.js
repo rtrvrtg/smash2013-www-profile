@@ -121,80 +121,153 @@ $('.schedule-item').each(function(){
 
 /* Detect overlap */
 
-var isOverlapping = function(a,b) {
-    var al = a.offset().left;
-    var ar = a.offset().left + a.width();
-    var bl = b.offset().left;
-    var br = b.offset().left + b.width();
+var columnItems = $('.schedule-column .schedule-column-items', '.view-schedule');
+var colHeight = 120;
 
-    var at = a.offset().top;
-    var ab = a.offset().top + a.height();
-    var bt = b.offset().top;
-    var bb = b.offset().top + b.height();
+var getElemPosition = function(a) {
+  return {
+    l: a.offset().left,
+    r: a.offset().left + a.width(),
+    t: a.offset().top,
+    b: a.offset().top + a.height()
+  }
+};
 
-    if(bl>ar || br<al) return false; //overlap not possible
-    if(bt>ab || bb<at) return false; //overlap not possible
+var isOverlapping = function(aPos, bPos) {
+  if (bPos.l > aPos.r || bPos.r < aPos.l) return false;
+  if (bPos.t > aPos.b || bPos.b < aPos.t) return false;
 
-    if(bl>al && bl<ar) return true;
-    if(br>al && br<ar) return true;
+  var horzOverlap = false, vertOverlap = false;
 
-    if(bt>at && bt<ab) return true;
-    if(bb>at && bb<ab) return true;
+  if (bPos.l >= aPos.l && bPos.l < aPos.r) horzOverlap = true;
+  if (!horzOverlap && bPos.r >= aPos.l && bPos.r < aPos.r) horzOverlap = true;
+  if (!horzOverlap && bPos.l < aPos.l && bPos.r >= aPos.r) horzOverlap = true;
+  if (!horzOverlap && aPos.l < bPos.l && aPos.r >= bPos.r) horzOverlap = true;
 
-    return false;
+  if (bPos.t >= aPos.t && bPos.t < aPos.b) vertOverlap = true;
+  if (!vertOverlap && bPos.b >= aPos.t && bPos.b < aPos.b) vertOverlap = true;
+  if (!vertOverlap && bPos.t < aPos.t && bPos.b >= aPos.b) vertOverlap = true;
+  if (!vertOverlap && aPos.t < bPos.t && aPos.b >= bPos.b) vertOverlap = true;
+
+  // console.log(horzOverlap + ',' + vertOverlap);
+
+  return horzOverlap && vertOverlap;
 };
 
 var getCurrentTop = function(elem){
   var currentTop = parseInt(elem.css('top'), 10);
   if (isNaN(currentTop)) currentTop = 0;
-  return currentTop;
+  return +(currentTop);
 };
 
-var getOverlapBands = function(a, siblings) {
-  var bands = {};
+var getPositionBands = function(items) {
+  var bands = {
+    0: {}
+  };
 
-  siblings.each(function(){
-    var b = $(this);
+  items.each(function(){
+    var pos = getElemPosition($(this));
+    var top = getCurrentTop($(this));
 
-    var height = getCurrentTop(b);
-    var isOverlap = isOverlapping(a, b);
-    if (!bands[height]) {
-      bands[height] = isOverlap;
+    if (typeof(bands[top]) == 'undefined') {
+      bands[top] = [];
     }
+    bands[top][this.id] = pos;
   });
+
+  // console.log(JSON.stringify(bands));
 
   return bands;
 };
 
-var columnItems = $('.schedule-column .schedule-column-items', '.view-schedule');
-var colHeight = 120;
+var getOverlapBands = function(a, siblings) {
+  var bands = getPositionBands(siblings);
+  var overlapBands = {};
+  var aPos = getElemPosition(a);
+
+  var getPotentialPosition = function(aPos, delta, a) {
+    var newPos = {
+      l: aPos.l,
+      r: aPos.r,
+      t: aPos.t,
+      b: aPos.b
+    };
+
+    newPos.t = +(getCurrentTop(a)) + +(delta);
+    newPos.b = newPos.t + +(colHeight);
+    return newPos;
+  };
+
+  for (var i in bands) {
+    var aPos = getPotentialPosition(getElemPosition(a), i, a);
+
+    var rowOverlap = false;
+    for (var j in bands[i]) {
+      
+      var bPos = bands[i][j];
+      
+      bPos.t = +(getCurrentTop($('#' + j)));
+      bPos.b = +(bPos.t) + colHeight;
+
+      var hasOverlap = isOverlapping(aPos, bPos);
+
+      // console.log(hasOverlap.toString());
+
+      if (hasOverlap) {
+        rowOverlap = true;
+        break;
+      }
+    }
+    overlapBands[i] = rowOverlap;
+  }
+
+  // console.log(a.attr('id') + ',' + a.text());
+  // console.log(JSON.stringify(overlapBands));
+
+  return overlapBands;
+};
 
 columnItems.each(function(){
   var column = $(this);
+  var columnContainer = column.parent();
   var items = $('> .schedule-item', column);
   if (items.length <= 1) return;
+
+  items.sort(function(a, b){
+    return $(b).width() > $(a).width() ? 1 : -1;
+  });
 
   items.each(function(){
     var a = $(this);
 
     var overlapBands = getOverlapBands(a, items.not(a));
 
-    var free = null;
+    var free = -1;
+    var top = 0;
     for (var i in overlapBands) {
+      if (i > top) {
+        top = +(i);
+      }
       if (overlapBands[i] == false) {
         free = i;
+        break;
       }
     }
 
-    if (free !== null) {
+    // console.log(a.attr('id'));
+
+    if (free > -1) {
+      // console.log('moving to ' + free);
       a.css({
         top: free + 'px'
       });
     }
     else {
-      column.parent().height(column.parent().height() + 120);
+      // console.log('incrementing parent height');
+      var oldHeight = columnContainer.height();
+      columnContainer.height(oldHeight + colHeight);
       a.css({
-        top: (getCurrentTop(a) + colHeight) + 'px'
+        top: oldHeight + 'px'
       });
     }
   });
