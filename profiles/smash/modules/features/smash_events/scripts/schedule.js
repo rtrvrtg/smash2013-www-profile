@@ -119,6 +119,85 @@ $('.schedule-item').each(function(){
 
 });
 
+/* Detect overlap */
+
+var isOverlapping = function(a,b) {
+    var al = a.offset().left;
+    var ar = a.offset().left + a.width();
+    var bl = b.offset().left;
+    var br = b.offset().left + b.width();
+
+    var at = a.offset().top;
+    var ab = a.offset().top + a.height();
+    var bt = b.offset().top;
+    var bb = b.offset().top + b.height();
+
+    if(bl>ar || br<al) return false; //overlap not possible
+    if(bt>ab || bb<at) return false; //overlap not possible
+
+    if(bl>al && bl<ar) return true;
+    if(br>al && br<ar) return true;
+
+    if(bt>at && bt<ab) return true;
+    if(bb>at && bb<ab) return true;
+
+    return false;
+};
+
+var getCurrentTop = function(elem){
+  var currentTop = +(elem.css('top'));
+  if (isNaN(currentTop)) currentTop = 0;
+  return currentTop;
+};
+
+var getOverlapBands = function(a, siblings) {
+  var bands = {};
+
+  siblings.each(function(){
+    var b = $(this);
+
+    var height = getCurrentTop(b);
+    var isOverlap = isOverlapping(a, b);
+    if (!bands[height]) {
+      bands[height] = isOverlap;
+    }
+  });
+
+  return bands;
+};
+
+var columnItems = $('.schedule-column .schedule-column-items', '.view-schedule');
+
+columnItems.each(function(){
+  var items = $('> .schedule-item', this);
+  var column = $(this);
+
+  items.each(function(){
+    var a = $(this);
+
+    var overlapBands = getOverlapBands(a, items.not(a));
+
+    var free = null;
+    for (var i in overlapBands) {
+      if (overlapBands[i] == false) {
+        free = i;
+      }
+    }
+
+    if (free !== null) {
+      a.css({
+        top: free + 'px'
+      });
+    }
+    else {
+      column.parent().height(column.parent().height() + 120);
+      a.css({
+        top: (getCurrentTop(a) + 120) + 'px'
+      });
+    }
+  });
+});
+
 /* Lol scroller */
 
 var adjustHeaders = function() {
