@@ -145,7 +145,7 @@ var isOverlapping = function(a,b) {
 };
 
 var getCurrentTop = function(elem){
-  var currentTop = +(elem.css('top'));
+  var currentTop = parseInt(elem.css('top'), 10);
   if (isNaN(currentTop)) currentTop = 0;
   return currentTop;
 };
@@ -167,10 +167,12 @@ var getOverlapBands = function(a, siblings) {
 };
 
 var columnItems = $('.schedule-column .schedule-column-items', '.view-schedule');
+var colHeight = 120;
 
 columnItems.each(function(){
-  var items = $('> .schedule-item', this);
   var column = $(this);
+  var items = $('> .schedule-item', column);
+  if (items.length <= 1) return;
 
   items.each(function(){
     var a = $(this);
@@ -192,7 +194,7 @@ columnItems.each(function(){
     else {
       column.parent().height(column.parent().height() + 120);
       a.css({
-        top: (getCurrentTop(a) + 120) + 'px'
+        top: (getCurrentTop(a) + colHeight) + 'px'
       });
     }
   });
