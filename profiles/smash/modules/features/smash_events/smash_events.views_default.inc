@@ -325,6 +325,7 @@ function smash_events_views_default_views() {
   $handler->display->display_options['fields']['field_event_date_time']['field'] = 'field_event_date_time';
   $handler->display->display_options['fields']['field_event_date_time']['label'] = '';
   $handler->display->display_options['fields']['field_event_date_time']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_event_date_time']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_event_date_time']['element_type'] = '0';
   $handler->display->display_options['fields']['field_event_date_time']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_date_time']['element_wrapper_type'] = '0';

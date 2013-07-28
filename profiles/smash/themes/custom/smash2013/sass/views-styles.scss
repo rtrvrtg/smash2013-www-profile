@@ -129,8 +129,9 @@ figure.colorbox-content-wrap {
   }
 }
 
-$schedule-row-height: 120px;
+$schedule-row-height: 80px;
 $schedule-header-width: 80px;
+$schedule-hour-width: 300px;
 
 .view-schedule {
 
@@ -192,7 +193,7 @@ $schedule-header-width: 80px;
           list-style: none;
           border-left: 1px solid white;
           box-sizing: border-box;
-          width: 300px;
+          width: $schedule-hour-width;
           background: black;
 
           height: 30px;
@@ -213,7 +214,7 @@ $schedule-header-width: 80px;
       padding-left: 80px;
 
       min-height: $schedule-row-height;
-      min-width: 2700px;
+      min-width: $schedule-hour-width * 10;
       
       &:first-child {
         border-top: 0px none;
@@ -277,10 +278,11 @@ $schedule-header-width: 80px;
 
           strong, span {
             line-height: 0.85em;
+            max-width: $schedule-hour-width - 60px;
           }
 
           span {
-            font-size: 0.9em;
+            font-size: 0.85em;
             font-weight: bold;
           }
 

@@ -122,7 +122,7 @@ $('.schedule-item').each(function(){
 /* Detect overlap */
 
 var columnItems = $('.schedule-column .schedule-column-items', '.view-schedule');
-var colHeight = 120;
+var colHeight = 80;
 
 var getElemPosition = function(a) {
   return {
@@ -149,8 +149,6 @@ var isOverlapping = function(aPos, bPos) {
   if (!vertOverlap && bPos.t < aPos.t && bPos.b >= aPos.b) vertOverlap = true;
   if (!vertOverlap && aPos.t < bPos.t && aPos.b >= bPos.b) vertOverlap = true;
 
-  // console.log(horzOverlap + ',' + vertOverlap);
-
   return horzOverlap && vertOverlap;
 };
 
@@ -174,8 +172,6 @@ var getPositionBands = function(items) {
     }
     bands[top][this.id] = pos;
   });
-
-  // console.log(JSON.stringify(bands));
 
   return bands;
 };
@@ -211,8 +207,6 @@ var getOverlapBands = function(a, siblings) {
 
       var hasOverlap = isOverlapping(aPos, bPos);
 
-      // console.log(hasOverlap.toString());
-
       if (hasOverlap) {
         rowOverlap = true;
         break;
@@ -220,9 +214,6 @@ var getOverlapBands = function(a, siblings) {
     }
     overlapBands[i] = rowOverlap;
   }
-
-  // console.log(a.attr('id') + ',' + a.text());
-  // console.log(JSON.stringify(overlapBands));
 
   return overlapBands;
 };
@@ -254,16 +245,12 @@ columnItems.each(function(){
       }
     }
 
-    // console.log(a.attr('id'));
-
     if (free > -1) {
-      // console.log('moving to ' + free);
       a.css({
         top: free + 'px'
       });
     }
     else {
-      // console.log('incrementing parent height');
       var oldHeight = columnContainer.height();
       columnContainer.height(oldHeight + colHeight);
       a.css({
@@ -273,7 +260,56 @@ columnItems.each(function(){
   });
 });
 
-/* Lol scroller */
+/* Inside scroller */
+
+var adjustText = function(elem) {
+  var textMargin = 30;
+  var view = $('.event-title, .event-time', elem);
+
+  var schedWidth = $('section.schedule').width();
+  var schedScroll = $('section.schedule').scrollLeft();
+  var maxScroll = parseInt(elem.closest('.schedule-column').css('width'), 10) - schedWidth;
+  var leftMargin = parseInt(elem.closest('.schedule-item').css('left'), 10);
+  var rightMargin = maxScroll - leftMargin - elem.width();
+
+  var currentScrollRatio = (schedScroll - leftMargin) / (maxScroll - leftMargin);
+  if (currentScrollRatio < 0) currentScrollRatio = 0;
+  if (currentScrollRatio > 1) currentScrollRatio = 1;
+
+  view.each(function(){
+    var currentView = $(this);
+    
+    var maxX = elem.width() - currentView.width() - (textMargin * 2);
+
+    var currentX = currentScrollRatio * maxX;
+
+    var cssParams = {
+      position: 'absolute',
+      left: (textMargin + Math.floor(currentX)) + 'px'
+    };
+    var pos = 'bottom';
+    if (currentView.hasClass('event-title')) {
+      pos = 'top';
+    }
+    cssParams[pos] = '10px';
+    currentView.css(cssParams);
+  });
+};
+
+var textReady = false;
+var adjustAllText = function() {
+  var links = columnItems.find('.dayview a');
+  if (!textReady) {
+    links.css({ position: 'relative' });
+    textReady = true;
+  }
+
+  links.each(function(){
+    adjustText($(this));
+  });
+};
+
+/* Outside scroller */
 
 var adjustHeaders = function() {
   var sched = $('section.schedule');
@@ -307,6 +343,8 @@ var adjustHeaders = function() {
       });
     }
   });
+
+  adjustAllText();
 };
 
 var windowScroll = function(){
