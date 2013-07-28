@@ -131,6 +131,16 @@ function template_preprocess_smash_events_calendar_group(&$vars) {
 }
 
 /**
+ * Implements hook_views_pre_view().
+ * Sets up arguments for events page view.
+ */
+function smash_events_views_pre_view(&$view) {
+  if ($view->name == "schedule") {
+    $view->args[0] = variable_get('smash_events_default_date');
+  }
+}
+
+/**
  * Implements hook_views_pre_render().
  * Sets up variable areas for events page view.
  */
