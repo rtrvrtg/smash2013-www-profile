@@ -302,7 +302,7 @@ var adjustAllText = function() {
   if (!textReady) {
     var longColumnItems = columnItems.find('.schedule-item')
       .not('.item-length-1, .item-length-0-half, .item-length-0-1q, .item-length-0-3q');
-    longColumnItems.find('.dayview a').addClass('.long-links').css({ position: 'relative' });
+    longColumnItems.find('.dayview a').addClass('long-links').css({ position: 'relative' });
     textReady = true;
   }
 
