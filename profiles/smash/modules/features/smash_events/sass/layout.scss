@@ -69,7 +69,7 @@ section.schedule {
 	}
 
 	@for $i from ($start-time * 4) through (24 * 4) {
-		$time: ($i / 2);
+		$time: ($i / 4);
 		@include schedule-position($time);
 	}
 
