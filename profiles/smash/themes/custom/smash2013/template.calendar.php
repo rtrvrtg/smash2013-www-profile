@@ -131,7 +131,20 @@ class Smash2013_Schedule_Item {
 
   protected function classes() {
     $hour = intval($this->hourstamp) == $this->hourstamp ? $this->hourstamp : floor($this->hourstamp) . '-half';
-    $length = intval($this->length) == $this->length ? $this->length : floor($this->length) . '-half';
+
+    $length_int = floor($this->length);
+    $remainder = $this->length - $length_int;
+    
+    $length = $this->length;
+    if ($remainder == 0.25) {
+      $length = $length_int . '-1q';
+    }
+    elseif ($remainder == 0.5) {
+      $length = $length_int . '-half';
+    }
+    elseif ($remainder == 0.75) {
+      $length = $length_int . '-3q';
+    }
 
     $classes = array(
       'schedule-item',

@@ -122,12 +122,14 @@ $('.schedule-item').each(function(){
 /* Detect overlap */
 
 var columnItems = $('.schedule-column .schedule-column-items', '.view-schedule');
+var longColumnItems = columnItems.not('.item-length-1, .item-length-0-half, .item-length-0-1q, .item-length-0-3q')
+
 var colHeight = 80;
 
 var getElemPosition = function(a) {
   return {
     l: a.offset().left,
-    r: a.offset().left + a.width(),
+    r: a.offset().left + a.width() - 1,
     t: a.offset().top,
     b: a.offset().top + a.height()
   }
@@ -298,7 +300,7 @@ var adjustText = function(elem) {
 
 var textReady = false;
 var adjustAllText = function() {
-  var links = columnItems.find('.dayview a');
+  var links = longColumnItems.find('.dayview a');
   if (!textReady) {
     links.css({ position: 'relative' });
     textReady = true;

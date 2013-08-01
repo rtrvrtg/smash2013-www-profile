@@ -7,6 +7,12 @@ $start-time: 9;
 	@if (($time * 2) % 2) == 1 {
 		$schedule_selector: item-hourstamp-#{$floor_time}-half;
 	}
+	@if (($time * 4) % 4) == 1 {
+		$schedule_selector: item-hourstamp-#{$floor_time}-1q;
+	}
+	@if (($time * 4) % 4) == 3 {
+		$schedule_selector: item-hourstamp-#{$floor_time}-3q;
+	}
 	.#{$schedule_selector} {
 		position: absolute;
 		left: ($time - $start-time) * $hour-width;
@@ -18,6 +24,12 @@ $start-time: 9;
 	$schedule_selector: item-length-#{$floor_time};
 	@if (($time * 2) % 2) == 1 {
 		$schedule_selector: item-length-#{$floor_time}-half;
+	}
+	@if (($time * 4) % 4) == 1 {
+		$schedule_selector: item-length-#{$floor_time}-1q;
+	}
+	@if (($time * 4) % 4) == 3 {
+		$schedule_selector: item-length-#{$floor_time}-3q;
 	}
 	.#{$schedule_selector} {
 		overflow: hidden;
@@ -56,13 +68,13 @@ section.schedule {
 		}
 	}
 
-	@for $i from ($start-time * 2) through (24 * 2) {
+	@for $i from ($start-time * 4) through (24 * 4) {
 		$time: ($i / 2);
 		@include schedule-position($time);
 	}
 
-	@for $i from 0 through (10 * 2) {
-		$time: ($i / 2);
+	@for $i from 0 through (10 * 4) {
+		$time: ($i / 4);
 		@include schedule-height($time);
 	}
 }
