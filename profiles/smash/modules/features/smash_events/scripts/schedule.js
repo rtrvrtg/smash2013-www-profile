@@ -122,7 +122,6 @@ $('.schedule-item').each(function(){
 /* Detect overlap */
 
 var columnItems = $('.schedule-column .schedule-column-items', '.view-schedule');
-var longColumnItems = columnItems.not('.item-length-1, .item-length-0-half, .item-length-0-1q, .item-length-0-3q')
 
 var colHeight = 80;
 
@@ -300,13 +299,14 @@ var adjustText = function(elem) {
 
 var textReady = false;
 var adjustAllText = function() {
-  var links = longColumnItems.find('.dayview a');
   if (!textReady) {
-    links.css({ position: 'relative' });
+    var longColumnItems = columnItems.find('.schedule-item')
+      .not('.item-length-1, .item-length-0-half, .item-length-0-1q, .item-length-0-3q');
+    longColumnItems.find('.dayview a').addClass('.long-links').css({ position: 'relative' });
     textReady = true;
   }
 
-  links.each(function(){
+  columnItems.find('.dayview a.long-links').each(function(){
     adjustText($(this));
   });
 };
