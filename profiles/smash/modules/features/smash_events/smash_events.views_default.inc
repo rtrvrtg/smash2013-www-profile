@@ -138,27 +138,6 @@ function smash_events_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<p>A huge stack of events will be on at SMASH! 2013 — there\'s something here for everyone! These are the event details we have up at the moment, feel free to explore!</p>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Global: Text area */
-  $handler->display->display_options['footer']['area']['id'] = 'area';
-  $handler->display->display_options['footer']['area']['table'] = 'views';
-  $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area']['content'] = '<p>Here\'s a list of some of the events at SMASH! 2013 that are in the works:</p>
-<ul class="dual-column">
-<li>deviantArt Competition</li>
-<li>Themed Art Competition</li>
-<li>AMV Competition</li>
-<li>Fanfiction Competition</li>
-<li>Trivia</li>
-<li>Cosplay Photobooth</li>
-<li>Gaming: Free Play</li>
-<li>Guest Panels</li>
-<li>Gunpla Builders World Cup</li>
-<li>Cosplay Panels</li>
-<li>Madman Industry Panel</li>
-<li>and much more!</li>
-</ul>';
-  $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
