@@ -230,6 +230,9 @@ projects[calendar][subdir] = "contrib"
 projects[imagecache_actions][version] = "1.4"
 projects[imagecache_actions][subdir] = "contrib"
 
+projects[scheduler][version] = "1.1"
+projects[scheduler][subdir] = "contrib"
+
 ; TODO modules without versions
 ; projects[twitter_cards][version] = "" ; TODO add version
 ; projects[twitter_cards][subdir] = "custom"
