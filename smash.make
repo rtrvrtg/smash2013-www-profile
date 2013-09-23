@@ -1,8 +1,8 @@
 ; SMASH! make file
-core = "7.22"
+core = "7.23"
 api = "2"
 ; comment this out in to use on drupal.org
-projects[drupal][version] = "7.22"
+projects[drupal][version] = "7.23"
 #projects[drupal][patch][] = "http://drupal.org/files/entity_node_access-1780646-179.patch"
 
 ; Modules
@@ -18,7 +18,7 @@ projects[boost][subdir] = "contrib"
 projects[linkchecker][version] = "1.x-dev"
 projects[linkchecker][subdir] = "contrib"
 
-projects[context][version] = "3.0-beta6"
+projects[context][version] = "3.0-beta7"
 projects[context][subdir] = "contrib"
 
 projects[date][version] = "2.6"
@@ -30,7 +30,7 @@ projects[devel][subdir] = "contrib"
 projects[profiler_builder][version] = "1.0-rc4"
 projects[profiler_builder][subdir] = "contrib"
 
-projects[ds][version] = "2.4"
+projects[ds][version] = "2.6"
 projects[ds][subdir] = "contrib"
 
 projects[features][version] = "1.0"
@@ -48,22 +48,22 @@ projects[fences][subdir] = "contrib"
 projects[field_collection][version] = "1.0-beta5"
 projects[field_collection][subdir] = "contrib"
 
-projects[field_group][version] = "1.1"
+projects[field_group][version] = "1.2"
 projects[field_group][subdir] = "contrib"
 
 projects[field_slideshow][version] = "1.82"
 projects[field_slideshow][subdir] = "contrib"
 
-projects[inline_entity_form][version] = "1.2"
+projects[inline_entity_form][version] = "1.3"
 projects[inline_entity_form][subdir] = "contrib"
 
 projects[link][version] = "1.1"
 projects[link][subdir] = "contrib"
 
-projects[markdown][version] = "1.1"
+projects[markdown][version] = "1.2"
 projects[markdown][subdir] = "contrib"
 
-projects[mailchimp][version] = "2.10"
+projects[mailchimp][version] = "2.12"
 projects[mailchimp][subdir] = "contrib"
 
 projects[bulk_media_upload][version] = "1.x-dev"
@@ -87,7 +87,7 @@ projects[colorbox][subdir] = "contrib"
 projects[diff][version] = "3.2"
 projects[diff][subdir] = "contrib"
 
-projects[entity][version] = "1.1"
+projects[entity][version] = "1.2"
 projects[entity][subdir] = "contrib"
 
 projects[filecache][version] = "1.x-dev"
@@ -103,7 +103,7 @@ projects[menu_block][version] = "2.3"
 projects[menu_block][subdir] = "contrib"
 projects[menu_block][patch][] = http://drupal.org/files/menu_block_1204064_menu_tree_add_active_path.patch
 
-projects[menu_breadcrumb][version] = "1.3"
+projects[menu_breadcrumb][version] = "1.4"
 projects[menu_breadcrumb][subdir] = "contrib"
 
 projects[menu_position][version] = "1.x-dev"
@@ -227,7 +227,7 @@ projects[oauth][subdir] = "contrib"
 projects[calendar][version] = "3.4"
 projects[calendar][subdir] = "contrib"
 
-projects[imagecache_actions][version] = "1.3"
+projects[imagecache_actions][version] = "1.4"
 projects[imagecache_actions][subdir] = "contrib"
 
 ; TODO modules without versions
@@ -241,7 +241,7 @@ projects[menu_position][patch][] = "http://drupal.org/files/menu_position_read_r
 ; Themes
 ; zen
 ; projects[zen][type] = "theme"
-; projects[zen][version] = "5.1"
+; projects[zen][version] = "5.4"
 ; projects[zen][subdir] = "contrib"
 
 ; Libraries
