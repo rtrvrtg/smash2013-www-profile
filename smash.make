@@ -27,7 +27,7 @@ projects[date][subdir] = "contrib"
 projects[devel][version] = "1.3"
 projects[devel][subdir] = "contrib"
 
-projects[profiler_builder][version] = "1.0-rc4"
+projects[profiler_builder][version] = "1.0"
 projects[profiler_builder][subdir] = "contrib"
 
 projects[ds][version] = "2.6"
@@ -72,7 +72,7 @@ projects[bulk_media_upload][subdir] = "contrib"
 projects[media][version] = "1.3"
 projects[media][subdir] = "contrib"
 
-projects[plupload][version] = "1.2"
+projects[plupload][version] = "1.3"
 projects[plupload][subdir] = "contrib"
 
 projects[backup_migrate][version] = "2.7"
@@ -147,10 +147,10 @@ projects[panels][subdir] = "contrib"
 projects[globalredirect][version] = "1.5"
 projects[globalredirect][subdir] = "contrib"
 
-projects[rules][version] = "2.3"
+projects[rules][version] = "2.5"
 projects[rules][subdir] = "contrib"
 
-projects[uuid][version] = "1.0-alpha4"
+projects[uuid][version] = "1.0-alpha5"
 projects[uuid][subdir] = "contrib"
 
 projects[ckeditor_link][version] = "2.3"
