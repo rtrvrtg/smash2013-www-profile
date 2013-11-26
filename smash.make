@@ -112,7 +112,7 @@ projects[menu_position][subdir] = "contrib"
 projects[pathauto][version] = "1.2"
 projects[pathauto][subdir] = "contrib"
 
-projects[registration][version] = "1.2"
+projects[registration][version] = "1.1"
 projects[registration][subdir] = "contrib"
 
 projects[redirect][version] = "1.0-rc1"
