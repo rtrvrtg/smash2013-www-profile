@@ -1,0 +1,9 @@
+name = Leaflet Custom Maps
+description = Display maps and images that aren't world maps, using Leaflet and Drupal.
+core = 7.x
+dependencies[] = leaflet
+
+files[] = includes/LeafletCustomMap.php
+
+;files[] = leaflet_views.views.inc
+;files[] = leaflet_views_plugin_style.inc

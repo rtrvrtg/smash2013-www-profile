@@ -135,7 +135,7 @@ $schedule-hour-width: 300px;
 
 .view-schedule {
 
-  background: $color-purple;
+  background: $colour-theme-primary;
   color: white;
   padding: 10px 0;
   margin: 0;
@@ -159,7 +159,7 @@ $schedule-hour-width: 300px;
       width: 50%;
       box-sizing: border-box;
       background: rgba(255, 255, 255, 0.7);
-      color: $color-purple;
+      color: $colour-theme-primary;
 
       &.active {
         background: #fff;
@@ -235,7 +235,7 @@ $schedule-hour-width: 300px;
         height: $schedule-row-height;
 
         color: white;
-        background-color: $color-purple;
+        background-color: $colour-theme-primary;
 
         p {
           position: absolute;
@@ -254,7 +254,7 @@ $schedule-hour-width: 300px;
 
       .schedule-item {
         background: rgba(255, 255, 255, 0.7);
-        border-bottom: 1px solid $color-purple;
+        border-bottom: 1px solid $colour-theme-primary;
 
         .calendar {
           width: 100%;
@@ -270,7 +270,7 @@ $schedule-hour-width: 300px;
 
           vertical-align: middle;
 
-          border-right: 1px solid $color-purple;
+          border-right: 1px solid $colour-theme-primary;
 
           &:hover, &:focus, &:active {
             background: rgba(255, 255, 255, 0.95);
@@ -427,7 +427,7 @@ $schedule-hour-width: 300px;
       padding: 0.5em;
       margin: 3px 0 0 0;
 
-      background: $color-purple;
+      background: $colour-theme-primary;
       color: white;
 
       box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);

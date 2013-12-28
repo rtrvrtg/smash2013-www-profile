@@ -35,7 +35,7 @@ function smash_basic_config_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_slogan';
-  $strongarm->value = 'Saturday, August 10 • Sydney Convention Centre';
+  $strongarm->value = 'Sat August 9 - Sun August 10, 2014 • Rosehill Gardens';
   $export['site_slogan'] = $strongarm;
 
   return $export;

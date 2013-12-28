@@ -117,7 +117,7 @@
       display: inline-block;
       vertical-align: top;
       color: white;
-      background: $color-purple;
+      background: $colour-theme-primary;
       box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
       @include transition(all 0.1s linear);
       margin-top: 3px;
@@ -175,7 +175,7 @@
       }
       &.networks-twitter {
         height: 50px;
-        background: $color-purple url(../images/social/twitter.bird.png) no-repeat center left;
+        background: $colour-theme-primary url(../images/social/twitter.bird.png) no-repeat center left;
         padding-left: 50px;
         position: relative;
         background-size: 50px 50px;

@@ -200,7 +200,7 @@ li a.active {
         }
       }
       &:hover > a, &:focus > a, &:active > a {
-        background-color: $color-purple;
+        background-color: $colour-theme-primary;
       }
       
       &.nolink {
@@ -236,11 +236,11 @@ li a.active {
 @media all and (min-width: $desktop-minimum) {
 
   .block-menu-block {
-    background: $color-purple;
+    background: $colour-theme-primary;
     
     > .menu-block-wrapper > .menu-toggle-checkbox:checked + * + .menu-wrapper {
       padding-top: 0;
-      background: $color-purple;
+      background: $colour-theme-primary;
       @include box-shadow(none);
     }
     
@@ -432,7 +432,7 @@ li a.active {
                 font-weight: normal;
                 &:hover, &:focus, &:active {
                   color: white;
-                  background-color: $color-purple;
+                  background-color: $colour-theme-primary;
                 }
               }
             
