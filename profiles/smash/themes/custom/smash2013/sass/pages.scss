@@ -105,8 +105,13 @@ body {
 
   img {
     vertical-align: bottom;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     max-width: 100%;
+
+    margin-left: -5px;
+    @media all and (min-width: $desktop-minimum) {
+      margin-left: -10px;
+    }
   }
 }
 
@@ -141,9 +146,11 @@ body {
   margin: 0.5em 0;
   clear: left;
   font-size: 0.8em;
+  color: $color-turq;
+  font-weight: bold;
   @media all and (min-width: $desktop-minimum) {
     margin: 0;
-    font-size: 0.95em;
+    font-size: 1.2em;
     letter-spacing: 0.05em;
     white-space: nowrap;
   }
@@ -152,7 +159,6 @@ body {
   text-transform: uppercase;
   
   html.lt-ie9 & {
-    white-space: nowrap;
     width: 500px;
   }
 }
@@ -205,7 +211,7 @@ body {
 
 h1.title { /* The title of the page */
   margin: 0;
-  color: $color-turq;
+  color: $colour-title-secondary;
   font-family: $font-header;
   font-weight: normal;
 }
@@ -471,8 +477,8 @@ span.field-label { /* The inline field label used by the Fences module */
       text-decoration: none;
       @include border-radius(1em);
       color: white;
-      background-color: $color-red;
-      @include box-shadow(3px 3px 0px $color-red-bg);
+      background-color: $colour-title-primary;
+      @include box-shadow(3px 3px 0px $colour-title-primary-bg);
       @include transition(all 0.1s linear);
       
       strong, small, p {

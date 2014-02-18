@@ -149,19 +149,117 @@
   .field-collection-container {
     border: 0px none;
   }
-  .field-name-field-hero {
-    @media all and (min-width: $desktop-minimum) {
-      margin: -1.5em -40px 0 -40px;
+  .jquery-countdown {
+    font-family: $ultramag;
+    background: $color-turq;
+    color: white;
+    margin: 0;
+    padding: 0.5em 0 0.25em 0;
+    border-top: 1px solid $color-turq;
+    border-bottom: 1px solid $color-turq;
+    border-left: 0 none;
+    border-right: 0 none;
+
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
+
+    @include no-margins(0em, 1em, 0em, 0em);
+
+    .countdown_section {
+      text-transform: uppercase;
+      font-weight: normal;
+      line-height: 1em;
+
+      .countdown_amount {
+        font-size: 1.5em;
+        line-height: 1em;
+        @media all and (min-width: $tablet-half) {
+          font-size: 2.25em;
+        }
+        @media all and (min-width: $desktop-minimum) {
+          font-size: 3em;
+        }
+      }
     }
+
+    .countdown_descr {
+      padding-top: 0.25em;
+      font-size: 1em;
+      font-weight: normal;
+      text-transform: uppercase; 
+    }
+  }
+
+  iframe.twitter-timeline {
+    margin: 1em auto;
+    display: block;
+  }
+
+  .flexslider {
+    margin: 0;
+    padding: 0;
+    border: 0px none;
+    border-radius: 0;
+    box-shadow: none;
+
+    ul {
+      display: block;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    .flex-control-nav {
+      max-height: 133px;
+      margin: 0;
+      text-align: center;
+      bottom: -5px;
+
+      li {
+        float: none;  
+      }
+    }
+
+    .flex-direction-nav {
+      .flex-prev, .flex-next {
+        top: 20%;
+        padding-top: 20px;
+        height: 80px;
+        width: 100px;
+        text-align: center;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.5);
+        line-height: 2em;
+
+        &:before {
+          display: block;
+        }
+
+        &:active {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .field-name-field-hero {
+    @include no-margins;
+
     .field-collection-view {
       margin: 0;
+      padding-top: 0;
     }
     
-    a.hero-wrapped {
+    .hero-wrapped {
       display: block;
       position: relative;
       text-decoration: none;
       color: black;
+
       .hero-wrapped-image {
         display: block;
         img {
@@ -172,10 +270,37 @@
         .hero-image-credits {
           display: block;
           text-align: right;
-          font-size: 0.6em;
-          padding: 0 1em;
+          font-size: 0.5em;
+          padding: 0.25em 1em;
         }
       }
+
+      .field-name-field-hero-video {
+        video {
+          width: 100% !important;
+          height: 100% !important;
+        }
+
+        .mejs-container {
+          width: 100% !important;
+          height: 100% !important;
+          min-height: 180px;
+
+          @media all and (min-width: $tablet-minimum) {
+            min-height: 270px;
+          }
+          @media all and (min-width: $tablet-half) {
+            min-height: 405px;
+          }
+
+          @media all and (min-width: $desktop-minimum) {
+            width: 948px !important;
+            height: 533px !important;
+            min-height: 533px;
+          }
+        }
+      }
+
       .hero-wrapped-content {
         display: block;
         color: black;
@@ -208,16 +333,16 @@
         h2 {
           margin: 0;
           text-transform: uppercase;
-          color: $color-red;
+          color: $colour-title-primary;
           line-height: 1em;
         }
         
         .call-to-action {
           display: inline-block;
-          background: $color-red;
+          background: $colour-title-primary;
           color: white;
           margin: 3px 0 0 0;
-          @include box-shadow(3px 3px 0px $color-red-bg);
+          @include box-shadow(3px 3px 0px $colour-title-primary-bg);
           text-transform: uppercase;
           @include border-radius(1em);
           padding: 0.25em 1em;
@@ -232,124 +357,15 @@
       &:hover, &:focus, &:active {
         .hero-wrapped-content .call-to-action {
           margin: 0 0 3px 0;
-          @include box-shadow(3px 6px 0px $color-red-bg);
+          @include box-shadow(3px 6px 0px $colour-title-primary-bg);
         }
       }
-    }
-  }
-  .field-name-feature-wrapper {
-    font-size: 0.8em;
-    @media all and (min-width: $tablet-half) {
-      font-size: 1em;
-    }
-    a.feature-wrapped {
-      position: relative;
-      min-height: 79px;
-      color: black;
-      .feature-wrapped-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 60px;
-        height: 40px;
-        @media all and (min-width: $desktop-minimum) {
-          width: 120px;
-          height: 79px;
-        }
-        img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 60px;
-          @media all and (min-width: $desktop-minimum) {
-            width: 120px;
+
+      &.hero-video {
+        @media all and (min-width: $tablet-half) {
+          .hero-wrapped-content {
+            display: none;
           }
-          &.feature-wrapped-image-inactive {
-            visibility: visible;
-          }
-          &.feature-wrapped-image-active {
-            visibility: hidden;
-          }
-        }
-      }
-      
-      .feature-wrapped-text {
-        margin-left: 70px;
-        @media all and (min-width: $desktop-minimum) {
-          margin-left: 130px;
-        }
-        display: inline-block;
-        vertical-align: top;
-        p {
-          margin: 0;
-        }
-        h2 {
-          line-height: 1em;
-          margin: 0.25em 0 0 0;
-          color: $color-menu-hov;
-        }
-      }
-      
-      display: block;
-      overflow: hidden;
-      
-      &:hover, &:focus, &:active {
-        .feature-wrapped-image {
-          img {
-            &.feature-wrapped-image-inactive {
-              visibility: hidden;
-            }
-            &.feature-wrapped-image-active {
-              visibility: visible;
-            }
-          }
-        }
-      }
-    }
-  }
-  .field-name-field-further-highlights {
-    display: block;
-    font-size: 0.8em;
-    
-    @media all and (min-width: $tablet-half) {
-      display: inline-block;
-      vertical-align: top;
-      width: 30%;
-    }
-    
-    @media all and (min-width: $desktop-minimum) {
-      display: inline-block;
-      vertical-align: top;
-      width: 33%;
-      font-size: 1em;
-    }
-    
-    html.lt-ie9 & {
-      display: block;
-      float: left;
-      width: 30%;
-    }
-    
-    .field-collection-view {
-      margin: 0 10px;
-      border: 0px none;
-    }
-    .field-name-field-further-highlights-title {
-      margin: 0;
-      text-transform: uppercase;
-      color: #e02751;
-    }
-    .field-name-field-further-highlights-link {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      li {
-        list-style: none;
-        padding: 0;
-        a {
-          color: $color-menu-hov;
-          text-decoration: none;
         }
       }
     }

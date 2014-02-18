@@ -155,23 +155,23 @@ body {
  */
 
 a:link {
-  color: $color-red;
+  color: $colour-title-primary;
   text-decoration: none;
 }
 
 a:visited {
-  color: $color-red;
+  color: $colour-title-primary;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: $color-red-bg;
+  color: $colour-title-primary-bg;
   text-decoration: none;
 }
 
 a:active {
-  color: $color-red-bg;
+  color: $colour-title-primary-bg;
   text-decoration: underline;
 }
 

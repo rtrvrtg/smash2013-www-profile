@@ -112,126 +112,145 @@
   
   .boxes-box-content {
     text-align: center;
-    a {
-      text-decoration: none;
-      display: inline-block;
-      vertical-align: top;
+
+    #twitter-latest {
       color: white;
       background: $colour-theme-primary;
+      box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
+      padding: 0.5em;
+
+      @include no-margins(0.5em, 1em);
+      overflow: hidden;
+
+      ul {
+        display: block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          display: block;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      div.user {
+        float: left;
+        margin-right: 10px;
+        text-align: center;
+        padding: 0;
+
+        @media all and (min-width: $desktop-minimum) {
+          padding: 0;
+        }
+
+        span[data-scribe="element:name"] {
+          display: none;
+        }
+
+        span[data-scribe="element:screen_name"] {
+          display: block;
+          font-family: $ultramag;
+        }
+      }
+
+      p.tweet {
+        margin: 0;
+      }
+
+      .timePosted {
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.8em;
+      }
+
+      p.interact {
+        display: none;
+      }
+
+      a {
+        color: white;
+
+        &.twitter_reply_icon,
+        &.twitter_retweet_icon,
+        &.twitter_fav_icon {
+          display: none;
+        }
+      }
+    }
+
+    > p > a {
+      @include box-sizing(border-box);
+
+      position: relative;
+      text-decoration: none;
+
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+
+      color: white;
+      background: $colour-theme-primary;
+
       box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
       @include transition(all 0.1s linear);
+
       margin-top: 3px;
       margin-bottom: 0px;
       margin-right: 5px;
+
+      line-height: 1em;
+
+      overflow: hidden;
+      text-indent: -9999px;
+
+      border: 3px solid $colour-theme-primary;
+      width: 50px;
+      height: 50px;
       
       &:hover, &:focus, &:active {
-        box-shadow: 2px 5px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.5);
         margin-top: 0px;
         margin-bottom: 3px;
       }
-      
-      &.networks-facebook,
-      &.networks-deviantart,
-      &.networks-youtube,
-      &.networks-tumblr {
+
+      &:before {
+        @include icomoon;
+
+        font-size: 44px;
         width: 50px;
-        height: 50px;
-        background-position: center center;
-        background-repeat: no-repeat;
-        overflow: hidden;
-        text-indent: -10000px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
       }
+
       &.networks-facebook {
-        background-image: url(../images/social/facebook.png);
-        background-size: 50px 50px;
-        
-        @include retina {
-          background-image: url(../images/social/facebook@2x.png);
+        &:before {
+          content: "\e603";
         }
       }
       &.networks-deviantart {
-        background-image: url(../images/social/deviantart.png);
-        background-size: 50px 50px;
-        
-        @include retina {
-          background-image: url(../images/social/deviantart@2x.png);
+        &:before {
+          content: "\e601";
         }
       }
       &.networks-youtube {
-        background-image: url(../images/social/youtube.png);
-        background-size: 50px 50px;
-        
-        @include retina {
-          background-image: url(../images/social/youtube@2x.png);
+        &:before {
+          content: "\e604";
         }
       }
       &.networks-tumblr {
-        background-image: url(../images/social/tumblr.png);
-        background-size: 50px 50px;
-        
-        @include retina {
-          background-image: url(../images/social/tumblr@2x.png);
+        &:before {
+          content: "\e600";
         }
       }
       &.networks-twitter {
-        height: 50px;
-        background: $colour-theme-primary url(../images/social/twitter.bird.png) no-repeat center left;
-        padding-left: 50px;
-        position: relative;
-        background-size: 50px 50px;
-        overflow: hidden;
-        
-        @include retina {
-          background-image: url(../images/social/twitter.bird@2x.png);
-        }
-        
-        span {
-          display: block;
-          padding-top: 15px;
-        }
-        
-        html.lt-ie9 & {
-          width: 613px;
-          margin-right: -63px;
-          
-          span {
-            padding-top: 0;
-            display: inline-block;
-            line-height: 50px;
-            vertical-align: middle;
-          }
-        }
-        
-        @media all and (min-width: $desktop-minimum) {
-          margin-top: 3px;
-          width: 615px;
-          margin-right: -65px;
-          text-align: left;
-          
-          span {
-            padding-top: 0;
-            overflow: hidden;
-            white-space: nowrap;
-            line-height: 50px;
-            display: inline-block;
-
-            &.tweet-text {
-              max-width: 585px;
-            }
-
-          }
-          
-          &:hover, &:focus, &:active {
-            box-shadow: 2px 5px 0px rgba(0, 0, 0, 0.5);
-            margin-top: 0px;
-            margin-bottom: 3px;
-          }
-          
-          &:after {
-            @include br-corner-elem;
-            top: 50px;
-            right: 0;
-          }
+        &:before {
+          content: "\e602";
         }
       }
     }

@@ -105,5 +105,10 @@ menuLabels.bind('click', function(e){
   forceRedraw(targetInput.parent().get(0));
 });
 
+var getTweet = function(){
+  twitterFetcher.fetch('433171194980732929', 'twitter-latest', 1, true);
+};
+getTweet();
+
 });
 })(jQuery, Drupal, this, this.document);

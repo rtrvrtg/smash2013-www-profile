@@ -39,13 +39,14 @@ $legacy-support-for-ie8: true;
 //
 
 @import "font_ultramagnetic";
+@import "font_icomoon";
 
 // Compass' vertical_rhythm extension is a powerful tool to set up a vertical
 // rhythm for your entire page. You can see some of its mixins and functions in
 // use in the normalize.scss file.
 // @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
 
-$base-font-size:   16px; // The font size set on the root html element.
+$base-font-size:   18px; // The font size set on the root html element.
 $base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
 
 $h1-font-size: 2    * $base-font-size;
@@ -122,7 +123,7 @@ $font-monospace:   $courier;
 
 @mixin menu-heading-style {
   text-transform: uppercase;
-  color: $color-turq;
+  color: $colour-title-secondary;
   font-weight: bold;
   line-height: 1em;
   padding: 9px 6px;
@@ -170,6 +171,9 @@ $color-header:    #600;
 $color-bgheader:  $colour-darkgrey;
 
 $colour-theme-primary: $colour-theme-wasabi;
+$colour-title-primary: $colour-theme-pink;
+$colour-title-primary-bg: darken($colour-theme-pink, 50%);
+$colour-title-secondary: $colour-theme-blue;
 
 $color-purple:    #7e54a3;
 $color-menu-hov:  #282828;
@@ -193,7 +197,7 @@ $desktop-minimum: 950px;
 
 $phone-maximum: $tablet-minimum - 1;
 $tablet-maximum: $desktop-minimum - 1;
-$tablet-half: ($tablet-maximum - $tablet-minimum);
+$tablet-half: (($tablet-maximum - $tablet-minimum)/2 + $tablet-minimum);
 
 
 //

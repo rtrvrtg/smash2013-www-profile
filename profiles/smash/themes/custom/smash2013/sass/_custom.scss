@@ -64,3 +64,36 @@
     @content;
   }  
 }
+
+@mixin icomoon {
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  speak: none;
+  color: white;
+  text-indent: 0;
+  text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.5);
+}
+
+@mixin no-margins($vmargins: 0, $vmarginl: 0, $vmargins2: false, $vmarginl2: false) {
+  $smallmargin: -10px;
+  $largemargin: -40px;
+
+  @if $vmargins2 {
+    margin: $vmargins $smallmargin $vmargins2 $smallmargin;
+  } @else {
+    margin: $vmargins $smallmargin;
+  }
+  @media all and (min-width: $desktop-minimum) {
+    @if $vmarginl2 {
+      margin: $vmarginl $largemargin $vmarginl2 $largemargin;
+    } @else {
+      margin: $vmarginl $largemargin;
+    }
+  }
+}

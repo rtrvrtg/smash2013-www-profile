@@ -229,6 +229,8 @@ function smash2013_preprocess_block(&$variables, $hook) {
 function smash2013_menu_link(array $variables) {
   $element = $variables['element'];
   $sub_menu = '';
+
+  // dpm($element);
   
   if ($element['#href'] == '<nolink-group>') {
     
@@ -263,6 +265,9 @@ function smash2013_menu_link(array $variables) {
     
     $text_item = '<div class="menu-item-group-name">' . $title . '</div>';
     return '<div class="menu-item-group ' . $group_class . '">' . $text_item . $sub_menu . '</div>';
+  }
+  else if ($element['#href'] == '<nolink-group>') {
+    $element['#attributes']['class'][] = "group-single-heading";
   }
   else {
     if ($element['#below']) {

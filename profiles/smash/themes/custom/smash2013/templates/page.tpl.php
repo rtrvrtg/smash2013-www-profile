@@ -83,7 +83,9 @@
         </a>
         </h1>
         <?php if ($site_slogan): ?>
-          <h2 id="site-slogan"><?php print $site_slogan; ?></h2>
+          <h2 id="site-slogan">
+            <?php print str_replace(array("•", "|", ";", ":"), "<br />", $site_slogan); ?>
+          </h2>
         <?php endif; ?>
       </hgroup>
     <?php endif; ?>
@@ -94,6 +96,7 @@
   <div id="main">
 
     <div id="content" class="column" role="main">
+      <?php print render($page['content_prefix']); ?>
       <header class="content-header">
         <?php print render($page['highlighted']); ?>
         <?php if (!empty($breadcrumb)): ?>

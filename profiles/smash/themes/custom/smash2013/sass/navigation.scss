@@ -48,6 +48,7 @@ li a.active {
   /* overflow: hidden; */ /* Sometimes you want to prevent overlapping with main div. */
   
   padding: 0;
+  font-size: 16px;
   
   .block {
     margin-bottom: 0;
@@ -85,17 +86,28 @@ li a.active {
   .menu-toggle-label {
     float: right;
     overflow: hidden;
-    text-indent: -1000px;
     position: absolute;
     width: 40px;
     height: 40px;
-    background: url(../images/menu-toggle.png) no-repeat top left;
-    background-size: 80px 80px;
-    z-index: 9999;
-    
-    @include retina {
-      background-image: url(../images/menu-toggle@2x.png);
+
+    background: $colour-theme-primary;
+    @include border-radius(20px);
+
+    &:before {
+      @include box-sizing(border-box);
+      display: block;
+      width: 40px;
+      height: 40px;
+      padding: 5px;
+
+      content: "\e605";
+      font-size: 30px;
+      text-align: center;
+
+      @include icomoon;
     }
+
+    z-index: 9999;
     
     top: 0;
     right: 0;
@@ -117,15 +129,34 @@ li a.active {
 
   @media all and (max-width: $tablet-maximum) {
     #block-menu-block-1 {
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       width: 100%;
-      max-width: 320px;
       z-index: 9998;
+
+      overflow: auto;
       
       .contextual-links-wrapper {
         display: none;
+      }
+
+      min-height: 48px;
+      max-height: 200px;
+      @media all and (min-height: 400px) {
+        max-height: 300px;
+      }
+      @media all and (min-height: 500px) {
+        max-height: 400px;
+      }
+      @media all and (min-height: 600px) {
+        max-height: 500px;
+      }
+      @media all and (min-height: 800px) {
+        max-height: 600px;
+      }
+      @media all and (min-height: 1000px) {
+        max-height: 800px;
       }
     }
   }
@@ -138,11 +169,16 @@ li a.active {
         display: none;
         
         .menu-toggle-label {
-          background-color: rgba(40, 40, 40, 0.7);
-          background-position: bottom left;
+          @include border-radius(0);
+
+          &:before {
+            content: "\e607";
+          }
         }
         .menu-toggle-checkbox:checked + .menu-toggle-label {
-          background-position: bottom right;
+          &:before {
+            content: "\e608";
+          }
         }
       }
       &:checked ~ .menu-wrapper,
@@ -151,7 +187,9 @@ li a.active {
       }
       
       &:checked + .menu-toggle-label {
-        background-position: top right;
+        &:before {
+          content: "\e606";
+        }
       }
     }
   }
@@ -162,7 +200,7 @@ li a.active {
   > .menu-block-wrapper > .menu-toggle-checkbox:checked + * + .menu-wrapper {
     background-color: #111;
     padding-top: 42px;
-    @include box-shadow(rgba(0,0,0,0.5) -6px 6px 0px);
+    @include box-shadow(rgba(0,0,0,0.5) -6px 6px 2px);
   }
   
   .menu {
@@ -183,7 +221,7 @@ li a.active {
       margin: 0;
       padding: 0;
       list-style: none;
-      border-top: 1px solid #45146e;
+      border-top: 1px solid $colour-theme-primary;
       clear: both;
       color: white;
       
@@ -202,12 +240,13 @@ li a.active {
       &:hover > a, &:focus > a, &:active > a {
         background-color: $colour-theme-primary;
       }
-      
-      &.nolink {
+
+      > span.menu__link {
+        display: block;
         background-color: $color-menu-hov;
         text-align: left;
         @include menu-heading-style;
-        min-height: 22px;
+        font-size: 1em;
       }
       
       .menu-wrapper {
@@ -441,8 +480,8 @@ li a.active {
         }
         
         &.menu-mlid-725 > .menu-wrapper,
-        &.menu-mlid-709 > .menu-wrapper,
-        &.menu-mlid-704 > .menu-wrapper {
+        &.menu-mlid-719 > .menu-wrapper,
+        &.menu__item.last > .menu-wrapper {
           right: 0;
           
           &:after {
@@ -462,6 +501,9 @@ li a.active {
           font-size: 0.9em;
           background: none;
           min-height: 14px;
+        }
+
+        > span.menu__link {
         }
         
         &:hover {
