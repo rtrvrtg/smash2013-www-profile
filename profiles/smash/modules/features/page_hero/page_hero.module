@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Code for the Page Hero feature.
+ */
+
+include_once 'page_hero.features.inc';
+
+function page_hero_views_pre_view(&$view) {
+  if ($view->name == "page_hero") {
+    $filters = $view->display_handler->get_option('filters');
+    $filters['field_hero_url_url']['value'] = current_path();
+    $view->display_handler->set_option('filters', $filters);
+  }
+}
+
+

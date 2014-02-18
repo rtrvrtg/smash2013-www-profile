@@ -26,23 +26,39 @@ function _leaflet_custom_load_all() {
 }
 
 /**
- * Loads a single custom maps.
+ * Loads a single custom map.
  */
-function _leaflet_custom_load_one($entity_id) {
+function _leaflet_custom_load_one($entity_id = null, $properties = array(), $fields = array()) {
   $query = new EntityFieldQuery();
   $query
     ->entityCondition('entity_type', 'leaflet_custom_map', '=')
-    ->entityCondition('bundle', 'leaflet_custom_map', '=')
-    ->propertyCondutuib('id', $entity_id);
+    ->entityCondition('bundle', 'leaflet_custom_map', '=');
+
+  if (!is_null($entity_id)) {
+    $query->propertyCondition('id', $entity_id);
+  }
+
+  if (!empty($properties)) {
+    foreach ($properties as $propname => $propvalue) {
+      $query->propertyCondition($propname, $propvalue);
+    }
+  }
+  if (!empty($fields)) {
+    foreach ($fields as $fname => $fvalue) {
+      $query->fieldCondition($fname, $fvalue);
+    }
+  }
   
   $results = $query->execute();
   $maps = array();
 
   if(!empty($results)) {
     $maps = entity_load('leaflet_custom_map', array_keys($results['leaflet_custom_map']));
+    return reset($maps);
   }
-
-  return reset($maps);
+  else {
+    return null;
+  }
 }
 
 /**
@@ -52,8 +68,7 @@ function _leaflet_custom_load_one($entity_id) {
  */
 function leaflet_custom_leaflet_map_info() {
   global $language;
-
-  // $langcode = $language->language;
+  
   $langcode = LANGUAGE_NONE;
 
   $map_info = array();
@@ -117,15 +132,25 @@ function leaflet_custom_leaflet_map_prebuild_alter(&$settings) {
       );
     }
   }
+}
 
-  /*
-  if (isset($settings['map']['leaflet_custom_map_entity_id'])) {
-    $entity_id = $settings['map']['leaflet_custom_map_entity_id']);
-    $map_entity = _leaflet_custom_load_one($entity_id);
-
-    if (!empty($entity_id)) {
-
+/**
+ * Create new custom map type
+ */
+function leaflet_custom_create_map_entity($base = array()) {
+  $entity_type = "leaflet_custom_map";
+  $entity = entity_create($entity_type, array('type' => "leaflet_custom_map"));
+  $wrapper = entity_metadata_wrapper($entity_type, $entity);
+  if (!empty($base['properties'])) {
+    foreach ($base['properties'] as $propname => $propvalue) {
+      $wrapper->{$propname} = $propvalue;
     }
   }
-  */
+  if (!empty($base['content'])) {
+    foreach ($base['content'] as $contname => $contvalue) {
+      $wrapper->{$contname}->set($contvalue);
+    }
+  }
+  $wrapper->save();
+  return $wrapper;
 }

@@ -32,12 +32,45 @@ function smash_front_page_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'field_hero';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'wrapped_hero' => array(
-      'weight' => '4',
+    'wrapped_frontpage_hero' => array(
+      'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
+    ),
+    'field_hero_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
+    ),
+    'field_hero_link' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
+    ),
+    'field_hero_title' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
     ),
     'field_hero_blurb' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
+    ),
+    'field_hero_video' => array(
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_minimal',
@@ -95,10 +128,7 @@ function smash_front_page_ds_custom_fields_info() {
   $ds_field->properties = array(
     'code' => array(
       'value' => '<a href="[field_collection_item:field-hero-link:url]" class="hero-wrapped">
-<span class="hero-wrapped-image">
-<img src="[field_collection_item:field_hero_image]" />
-<span class="hero-image-credits">Photo credits: [field_collection_item:field-photo-credits]</span>
-</span>
+<span class="hero-wrapped-image"><img src="[field_collection_item:field_hero_image:homepage_full]" /><span class="hero-image-credits">Photo credits: [field_collection_item:field-photo-credits]</span></span>
 <span class="hero-wrapped-content">
 <h2>[field_collection_item:field-hero-title]</h2>
 [field_collection_item:field_hero_blurb]
@@ -167,22 +197,24 @@ function smash_front_page_ds_layout_settings_info() {
   $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_hidden' => array(
-        0 => 'field_hero_image',
-        1 => 'field_hero_link',
-        2 => 'field_hero_title',
-        3 => 'field_hero_blurb',
-      ),
       'ds_content' => array(
-        4 => 'wrapped_hero',
+        0 => 'wrapped_frontpage_hero',
+      ),
+      'ds_hidden' => array(
+        1 => 'field_hero_image',
+        2 => 'field_hero_link',
+        3 => 'field_hero_title',
+        4 => 'field_hero_blurb',
+        5 => 'field_hero_video',
       ),
     ),
     'fields' => array(
+      'wrapped_frontpage_hero' => 'ds_content',
       'field_hero_image' => 'ds_hidden',
       'field_hero_link' => 'ds_hidden',
       'field_hero_title' => 'ds_hidden',
       'field_hero_blurb' => 'ds_hidden',
-      'wrapped_hero' => 'ds_content',
+      'field_hero_video' => 'ds_hidden',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -192,6 +224,8 @@ function smash_front_page_ds_layout_settings_info() {
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
     'layout_attributes_merge' => 0,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
   );
   $export['field_collection_item|field_hero|default'] = $ds_layout;
 

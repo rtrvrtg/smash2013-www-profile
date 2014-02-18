@@ -48,6 +48,7 @@ function smash_sponsors_image_default_styles() {
         'weight' => '1',
       ),
     ),
+    'label' => 'sponsor',
   );
 
   return $styles;

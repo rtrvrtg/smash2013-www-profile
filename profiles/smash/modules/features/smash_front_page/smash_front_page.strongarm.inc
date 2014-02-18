@@ -116,6 +116,41 @@ function smash_front_page_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'jquery_countdown_description';
+  $strongarm->value = 'Until @event_name';
+  $export['jquery_countdown_description'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'jquery_countdown_event_name';
+  $strongarm->value = 'SMASH! 2014 Begins';
+  $export['jquery_countdown_event_name'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'jquery_countdown_exp_txt';
+  $strongarm->value = 'SMASH! 2014 has begun!';
+  $export['jquery_countdown_exp_txt'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'jquery_countdown_msg_format';
+  $strongarm->value = '%days %hours %minutes %seconds';
+  $export['jquery_countdown_msg_format'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'jquery_countdown_target';
+  $strongarm->value = '2014-08-09 09:00';
+  $export['jquery_countdown_target'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_home_page';
   $strongarm->value = array();
   $export['menu_options_home_page'] = $strongarm;

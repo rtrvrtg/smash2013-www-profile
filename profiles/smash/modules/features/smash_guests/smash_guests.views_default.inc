@@ -32,7 +32,7 @@ function smash_guests_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
-      'field' => 'field_event_type',
+      'field' => 'field_guest_year',
       'rendered' => 1,
       'rendered_strip' => 1,
     ),
@@ -84,12 +84,36 @@ function smash_guests_views_default_views() {
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Year (field_guest_year) */
+  $handler->display->display_options['arguments']['field_guest_year_value']['id'] = 'field_guest_year_value';
+  $handler->display->display_options['arguments']['field_guest_year_value']['table'] = 'field_data_field_guest_year';
+  $handler->display->display_options['arguments']['field_guest_year_value']['field'] = 'field_guest_year_value';
+  $handler->display->display_options['arguments']['field_guest_year_value']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_guest_year_value']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_guest_year_value']['default_argument_options']['argument'] = '2014';
+  $handler->display->display_options['arguments']['field_guest_year_value']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_guest_year_value']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_guest_year_value']['summary_options']['items_per_page'] = '25';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'events_page');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Guests';
+  $handler->display->display_options['title'] = 'Previous Guests at SMASH!';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_guest_year',
+      'rendered' => 1,
+      'rendered_strip' => 1,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
@@ -114,6 +138,7 @@ function smash_guests_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_type'] = '0';
   /* Field: Content: Teaser */
@@ -126,7 +151,42 @@ function smash_guests_views_default_views() {
   $handler->display->display_options['fields']['field_teaser']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_teaser']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_teaser']['field_api_classes'] = TRUE;
-  $handler->display->display_options['path'] = 'guests';
+  /* Field: Content: Year */
+  $handler->display->display_options['fields']['field_guest_year']['id'] = 'field_guest_year';
+  $handler->display->display_options['fields']['field_guest_year']['table'] = 'field_data_field_guest_year';
+  $handler->display->display_options['fields']['field_guest_year']['field'] = 'field_guest_year';
+  $handler->display->display_options['fields']['field_guest_year']['label'] = '';
+  $handler->display->display_options['fields']['field_guest_year']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_guest_year']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['field_guest_year']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_guest_year']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_guest_year']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_guest_year']['settings'] = array(
+    'thousand_separator' => '',
+    'prefix_suffix' => 1,
+  );
+  $handler->display->display_options['fields']['field_guest_year']['field_api_classes'] = TRUE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Family Name (field_family_name) */
+  $handler->display->display_options['sorts']['field_family_name_value']['id'] = 'field_family_name_value';
+  $handler->display->display_options['sorts']['field_family_name_value']['table'] = 'field_data_field_family_name';
+  $handler->display->display_options['sorts']['field_family_name_value']['field'] = 'field_family_name_value';
+  /* Sort criterion: Content: Given Name (field_given_name) */
+  $handler->display->display_options['sorts']['field_given_name_value']['id'] = 'field_given_name_value';
+  $handler->display->display_options['sorts']['field_given_name_value']['table'] = 'field_data_field_given_name';
+  $handler->display->display_options['sorts']['field_given_name_value']['field'] = 'field_given_name_value';
+  /* Sort criterion: Content: Year (field_guest_year) */
+  $handler->display->display_options['sorts']['field_guest_year_value']['id'] = 'field_guest_year_value';
+  $handler->display->display_options['sorts']['field_guest_year_value']['table'] = 'field_data_field_guest_year';
+  $handler->display->display_options['sorts']['field_guest_year_value']['field'] = 'field_guest_year_value';
+  $handler->display->display_options['sorts']['field_guest_year_value']['order'] = 'DESC';
+  $handler->display->display_options['path'] = 'guests/previous';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'Previous Guests';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
   $export['guest_list'] = $view;
 
   return $export;

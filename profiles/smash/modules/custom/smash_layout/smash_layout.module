@@ -142,8 +142,13 @@ function smash_layout_tokens($type, $tokens, array $data = array(), array $optio
       switch ($name) {
         case 'tweet':
           $replacements[$original] = '';
+
           if (function_exists('twitter_pull_render')) {
-            $replacements[$original] = twitter_pull_render('@smashcon', 'smashcon', 1);
+            $tweets = twitter_pull_retrieve('@smashcon', 1, FALSE, TRUE);
+
+            $tweet = reset($tweets);
+
+            $replacements[$original] = $tweet->text;
           }
           break;
       }

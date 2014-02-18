@@ -12,9 +12,10 @@ function smash_workflow_configuration_default_rules_configuration() {
   $items['rules_someone_created_something'] = entity_import('rules_config', '{ "rules_someone_created_something" : {
       "LABEL" : "Someone created something",
       "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
       "TAGS" : [ "Content" ],
       "REQUIRES" : [ "rules" ],
-      "ON" : [ "node_insert" ],
+      "ON" : { "node_insert" : [] },
       "DO" : [
         { "mail" : {
             "to" : "sebastian.hidalgo@smash.org.au, geoffrey.roberts@smash.org.au",
@@ -29,9 +30,10 @@ function smash_workflow_configuration_default_rules_configuration() {
   $items['rules_someone_updated_something'] = entity_import('rules_config', '{ "rules_someone_updated_something" : {
       "LABEL" : "Someone updated something",
       "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
       "TAGS" : [ "Content" ],
       "REQUIRES" : [ "rules" ],
-      "ON" : [ "node_update" ],
+      "ON" : { "node_update" : [] },
       "DO" : [
         { "mail" : {
             "to" : "sebastian.hidalgo@smash.org.au, geoffrey.roberts@smash.org.au",

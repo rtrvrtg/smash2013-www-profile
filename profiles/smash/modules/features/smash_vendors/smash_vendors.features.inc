@@ -81,6 +81,7 @@ function smash_vendors_image_default_styles() {
         'weight' => '2',
       ),
     ),
+    'label' => 'vendor_banner',
   );
 
   return $styles;

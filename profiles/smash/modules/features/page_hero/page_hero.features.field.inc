@@ -1,119 +1,23 @@
 <?php
 /**
  * @file
- * smash_sponsors.features.field.inc
+ * page_hero.features.field.inc
  */
 
 /**
  * Implements hook_field_default_fields().
  */
-function smash_sponsors_field_default_fields() {
+function page_hero_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-sponsor-field_order'.
-  $fields['node-sponsor-field_order'] = array(
+  // Exported field: 'node-page_hero-field_hero_url'.
+  $fields['node-page_hero-field_hero_url'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_order',
-      'foreign keys' => array(),
-      'indexes' => array(
-        'value' => array(
-          0 => 'value',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'list',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => 'Top',
-          1 => '1',
-          2 => '2',
-          3 => '3',
-          4 => '4',
-          5 => '5',
-          6 => '6',
-          7 => '7',
-          8 => '8',
-          9 => '9',
-          10 => '10',
-          11 => '11',
-          12 => '12',
-          13 => '13',
-          14 => '14',
-          15 => '15',
-          16 => '16',
-          17 => '17',
-          18 => '18',
-          19 => '19',
-          20 => '20',
-          99 => 'Bottom',
-        ),
-        'allowed_values_function' => '',
-      ),
-      'translatable' => '0',
-      'type' => 'list_integer',
-    ),
-    'field_instance' => array(
-      'bundle' => 'sponsor',
-      'default_value' => array(
-        0 => array(
-          'value' => '99',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'list',
-          'settings' => array(),
-          'type' => 'list_default',
-          'weight' => '2',
-        ),
-        'logo' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '10',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'ds_extras_field_template' => '',
-      'entity_type' => 'node',
-      'fences_wrapper' => 'div',
-      'field_name' => 'field_order',
-      'label' => 'Order',
-      'required' => 1,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '1',
-      ),
-      'workbench_access_field' => 0,
-    ),
-  );
-
-  // Exported field: 'node-sponsor-field_sponsor_homepage'.
-  $fields['node-sponsor-field_sponsor_homepage'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_sponsor_homepage',
+      'field_name' => 'field_hero_url',
       'foreign keys' => array(),
       'indexes' => array(),
       'locked' => '0',
@@ -137,24 +41,17 @@ function smash_sponsors_field_default_fields() {
       'type' => 'link_field',
     ),
     'field_instance' => array(
-      'bundle' => 'sponsor',
+      'bundle' => 'page_hero',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Specify the URLs at which this image should appear.',
       'display' => array(
         'default' => array(
           'label' => 'above',
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => '0',
-        ),
-        'logo' => array(
-          'label' => 'hidden',
-          'module' => 'smash_events',
-          'settings' => array(),
-          'type' => 'smash_events_sponsor',
-          'weight' => '0',
+          'weight' => 1,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -163,12 +60,12 @@ function smash_sponsors_field_default_fields() {
           'weight' => 0,
         ),
       ),
-      'ds_extras_field_template' => 'theme_ds_field_minimal',
+      'ds_extras_field_template' => '',
       'entity_type' => 'node',
       'fences_wrapper' => 'no_wrapper',
-      'field_name' => 'field_sponsor_homepage',
-      'label' => 'Sponsor Homepage',
-      'required' => 0,
+      'field_name' => 'field_hero_url',
+      'label' => 'Hero URL',
+      'required' => 1,
       'settings' => array(
         'attributes' => array(
           'class' => '',
@@ -187,27 +84,27 @@ function smash_sponsors_field_default_fields() {
         'title_value' => '',
         'url' => 0,
         'user_register_form' => FALSE,
-        'validate_url' => 0,
+        'validate_url' => 1,
       ),
       'widget' => array(
         'active' => 0,
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '3',
+        'weight' => '32',
       ),
       'workbench_access_field' => 0,
     ),
   );
 
-  // Exported field: 'node-sponsor-field_sponsor_logo'.
-  $fields['node-sponsor-field_sponsor_logo'] = array(
+  // Exported field: 'node-page_hero-field_page_hero_image'.
+  $fields['node-page_hero-field_page_hero_image'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_sponsor_logo',
+      'field_name' => 'field_page_hero_image',
       'foreign keys' => array(
         'fid' => array(
           'columns' => array(
@@ -231,9 +128,9 @@ function smash_sponsors_field_default_fields() {
       'type' => 'image',
     ),
     'field_instance' => array(
-      'bundle' => 'sponsor',
+      'bundle' => 'page_hero',
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Specify which image you want to display.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -243,13 +140,7 @@ function smash_sponsors_field_default_fields() {
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => '1',
-        ),
-        'logo' => array(
-          'label' => 'hidden',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '1',
+          'weight' => 2,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -258,20 +149,17 @@ function smash_sponsors_field_default_fields() {
           'weight' => 0,
         ),
       ),
-      'ds_extras_field_template' => 'theme_ds_field_minimal',
+      'ds_extras_field_template' => '',
       'entity_type' => 'node',
-      'fences_wrapper' => 'no_wrapper',
-      'field_name' => 'field_sponsor_logo',
-      'label' => 'Sponsor Logo',
+      'fences_wrapper' => 'div',
+      'field_name' => 'field_page_hero_image',
+      'label' => 'Hero Image',
       'required' => 1,
       'settings' => array(
         'alt_field' => 0,
         'default_image' => 0,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
-        'imagecrop' => array(
-          'vendor_banner' => 0,
-        ),
         'max_filesize' => '',
         'max_resolution' => '',
         'min_resolution' => '',
@@ -285,18 +173,19 @@ function smash_sponsors_field_default_fields() {
           'allowed_schemes' => array(
             'private' => 'private',
             'public' => 'public',
+            'vimeo' => 0,
+            'youtube' => 0,
           ),
           'allowed_types' => array(
             'audio' => 0,
             'default' => 0,
-            0 => 0,
             'image' => 'image',
             'video' => 0,
           ),
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '2',
+        'weight' => '33',
       ),
       'workbench_access_field' => 0,
     ),
@@ -304,9 +193,10 @@ function smash_sponsors_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Order');
-  t('Sponsor Homepage');
-  t('Sponsor Logo');
+  t('Hero Image');
+  t('Hero URL');
+  t('Specify the URLs at which this image should appear.');
+  t('Specify which image you want to display.');
 
   return $fields;
 }

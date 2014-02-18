@@ -35,7 +35,8 @@ function smash_workflow_configuration_default_box() {
   $box->description = 'Social Networks';
   $box->options = array(
     'body' => array(
-      'value' => '<p><a class="networks-facebook" href="http://www.facebook.com/smashcon/">We are on Facebook. </a> <a class="networks-youtube" href="http://www.youtube.com/smashconvention/#p/u/"> We are also on YouTube. </a> <a class="networks-deviantart" href="http://smashcon.deviantart.com/"> We also have a DeviantArt account. </a> <a class="networks-tumblr" href="http://smashcon.tumblr.com/"> Hit us up on our Tumblr. </a> <a class="networks-twitter" href="http://twitter.com/smashcon/"> <span>@smashcon</span> [smash-layout:tweet]</a></p>',
+      'value' => '<div id="twitter-latest"></div>
+<p><a class="networks-facebook" href="http://www.facebook.com/smashcon/">We are on Facebook. </a> <a class="networks-youtube" href="http://www.youtube.com/smashconvention/#p/u/"> We are also on YouTube. </a> <a class="networks-deviantart" href="http://smashcon.deviantart.com/"> We also have a DeviantArt account. </a> <a class="networks-tumblr" href="http://smashcon.tumblr.com/"> Hit us up on our Tumblr. </a> <a class="networks-twitter" href="http://twitter.com/smashcon/">@smashcon on Twitter.</a></p>',
       'format' => 'full_html',
     ),
     'additional_classes' => '',

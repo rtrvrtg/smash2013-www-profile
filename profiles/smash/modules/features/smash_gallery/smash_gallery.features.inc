@@ -37,6 +37,7 @@ function smash_gallery_image_default_styles() {
         'weight' => '1',
       ),
     ),
+    'label' => 'gallery_thumb',
   );
 
   return $styles;

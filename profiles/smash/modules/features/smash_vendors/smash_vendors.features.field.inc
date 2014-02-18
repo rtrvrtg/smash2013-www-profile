@@ -145,7 +145,7 @@ function smash_vendors_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'vendor_banner',
+            'image_style' => '',
           ),
           'type' => 'image',
           'weight' => '0',
@@ -176,7 +176,7 @@ function smash_vendors_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'preview_image_style' => 'vendor_banner',
+          'preview_image_style' => '',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',

@@ -5,3 +5,75 @@
  */
 
 include_once 'smash_front_page.features.inc';
+
+function smash_front_page_ds_fields_info($entity_type) {
+  $fields = array();
+
+  $fields['field_collection_item']['wrapped_frontpage_hero'] = array(
+    'title' => t('Wrapped Front Page Hero'),
+    'field_type' => DS_FIELD_TYPE_FUNCTION,
+    'function' => 'smash_front_page_ds_field_wrapped_frontpage_hero',
+  );
+
+  if (isset($fields[$entity_type])) {
+    return array($entity_type => $fields[$entity_type]);
+  }
+  return;
+}
+
+function smash_front_page_ds_field_wrapped_frontpage_hero($field) {
+  $entity = &$field['entity'];
+  return theme('wrapped_frontpage_hero', array('entity' => $entity));
+}
+
+function smash_front_page_theme($existing, $type, $theme, $path){
+  return array(
+    'wrapped_frontpage_hero' => array(
+      'variables' => array('entity' => null),
+      'path'      => drupal_get_path('module', 'smash_front_page') . '/templates',
+      'template'  => "wrapped-frontpage-hero",
+    )
+  );
+}
+
+function template_preprocess_wrapped_frontpage_hero(&$variables) {
+  $entity = &$variables['entity'];
+  $trep = array('field_collection_item' => $entity);
+  $variables['link_url'] = token_replace('[field_collection_item:field-hero-link:url]', $trep);
+  $variables['image'] = token_replace('[field_collection_item:field_hero_image:homepage_full]', $trep);
+  $variables['credits'] = token_replace('[field_collection_item:field-photo-credits]', $trep);
+  $variables['title'] = token_replace('[field_collection_item:field-hero-title]', $trep);
+  $variables['blurb'] = token_replace('[field_collection_item:field_hero_blurb]', $trep);
+
+  $video_token = "[field_collection_item:field-hero-video]";
+  $variables['video'] = token_replace($video_token, $trep);
+  $variables['uses_video'] = $variables['video'] != $video_token;
+  if ($variables['uses_video']) {
+    $video_rendered = field_view_field('field_collection_item', $entity, 'field_hero_video', array(
+      'label' => 'hidden',
+      'type' => 'mediaelement_video',
+    ));
+    // dpm($video_rendered);
+
+    $video_rendered[0]['#attributes']['type'] = "video/youtube";
+    unset($video_rendered[0]['#attributes']['width']);
+    unset($video_rendered[0]['#attributes']['height']);
+    $video_rendered[0]['#settings']['width'] = "100%";
+    $video_rendered[0]['#settings']['height'] = "100%";
+
+    $ident = "." . $video_rendered[0]['#attributes']['class'];
+
+    // unset($video_rendered[0]['#attached']['js'][0]['data']['mediaelement'][$ident]['opts']);
+
+    $video_rendered[0]['#attached']['js'][0]['data']['mediaelement'][$ident]['opts']['enableAutosize'] = "true";
+    $video_rendered[0]['#attached']['js'][0]['data']['mediaelement'][$ident]['opts']['videoWidth'] = '100%';
+    $video_rendered[0]['#attached']['js'][0]['data']['mediaelement'][$ident]['opts']['videoHeight'] = '100%';
+
+    $video_markup = drupal_render($video_rendered);
+    // $video_markup = preg_replace("/(width|height)=\"[^\"]+\"/", "", $video_markup);
+
+    // dpm($video_markup);
+
+    $variables['video_rendered'] = $video_markup;
+  }
+}

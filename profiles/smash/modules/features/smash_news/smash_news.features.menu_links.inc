@@ -18,11 +18,11 @@ function smash_news_menu_default_menu_links() {
     'link_title' => 'News',
     'options' => array(),
     'module' => 'system',
-    'hidden' => '0',
+    'hidden' => '1',
     'external' => '0',
     'has_children' => '1',
     'expanded' => '0',
-    'weight' => '-49',
+    'weight' => '-48',
   );
   // Translatables
   // Included for use with string extractors like potx.
