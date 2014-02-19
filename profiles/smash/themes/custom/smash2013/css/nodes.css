@@ -415,18 +415,18 @@ html.lt-ie9 .node-home-page .field-name-field-hero .hero-wrapped .hero-wrapped-c
 .node-home-page .field-name-field-hero .hero-wrapped .hero-wrapped-content h2 {
   margin: 0;
   text-transform: uppercase;
-  color: #e776a4;
+  color: #df68a6;
   line-height: 1em;
 }
 /* line 340, ../sass/nodes.scss */
 .node-home-page .field-name-field-hero .hero-wrapped .hero-wrapped-content .call-to-action {
   display: inline-block;
-  background: #e776a4;
+  background: #df68a6;
   color: white;
   margin: 3px 0 0 0;
-  -webkit-box-shadow: 3px 3px 0px #500e29;
-  -moz-box-shadow: 3px 3px 0px #500e29;
-  box-shadow: 3px 3px 0px #500e29;
+  -webkit-box-shadow: 3px 3px 0px #3b0d25;
+  -moz-box-shadow: 3px 3px 0px #3b0d25;
+  box-shadow: 3px 3px 0px #3b0d25;
   text-transform: uppercase;
   -webkit-border-radius: 1em;
   -moz-border-radius: 1em;
@@ -446,9 +446,9 @@ html.lt-ie9 .node-home-page .field-name-field-hero .hero-wrapped .hero-wrapped-c
 /* line 358, ../sass/nodes.scss */
 .node-home-page .field-name-field-hero .hero-wrapped:hover .hero-wrapped-content .call-to-action, .node-home-page .field-name-field-hero .hero-wrapped:focus .hero-wrapped-content .call-to-action, .node-home-page .field-name-field-hero .hero-wrapped:active .hero-wrapped-content .call-to-action {
   margin: 0 0 3px 0;
-  -webkit-box-shadow: 3px 6px 0px #500e29;
-  -moz-box-shadow: 3px 6px 0px #500e29;
-  box-shadow: 3px 6px 0px #500e29;
+  -webkit-box-shadow: 3px 6px 0px #3b0d25;
+  -moz-box-shadow: 3px 6px 0px #3b0d25;
+  box-shadow: 3px 6px 0px #3b0d25;
 }
 @media all and (min-width: 714.5px) {
   /* line 366, ../sass/nodes.scss */

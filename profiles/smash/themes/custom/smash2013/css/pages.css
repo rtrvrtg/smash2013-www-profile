@@ -261,7 +261,7 @@ html.lt-ie9 #site-slogan {
 h1.title {
   /* The title of the page */
   margin: 0;
-  color: #79a3d7;
+  color: #ed7c56;
   font-family: "ultramagneticRegular", sans-serif;
   font-weight: normal;
 }
@@ -443,7 +443,7 @@ span.field-label {
   padding: 10px 10px 2px 5px;
   text-transform: uppercase;
   color: white;
-  background: #98b454;
+  background: #97c94d;
   min-height: 1em;
   font-size: 1.17em;
   line-height: 2.2792em;
@@ -483,7 +483,7 @@ span.field-label {
   padding: 10px 10px 2px 5px;
   text-transform: uppercase;
   color: white;
-  background: #98b454;
+  background: #97c94d;
   min-height: 1em;
   font-size: 1.17em;
   line-height: 2.2792em;
@@ -549,7 +549,7 @@ span.field-label {
   padding: 10px 10px 2px 5px;
   text-transform: uppercase;
   color: white;
-  background: #98b454;
+  background: #97c94d;
   min-height: 1em;
   font-size: 1.17em;
   line-height: 2.2792em;
@@ -599,7 +599,7 @@ span.field-label {
   padding: 10px 10px 2px 5px;
   text-transform: uppercase;
   color: white;
-  background: #98b454;
+  background: #97c94d;
   min-height: 1em;
   font-size: 1.17em;
   line-height: 2.2792em;
@@ -703,10 +703,10 @@ span.field-label {
   -o-border-radius: 1em;
   border-radius: 1em;
   color: white;
-  background-color: #e776a4;
-  -webkit-box-shadow: 3px 3px 0px #500e29;
-  -moz-box-shadow: 3px 3px 0px #500e29;
-  box-shadow: 3px 3px 0px #500e29;
+  background-color: #df68a6;
+  -webkit-box-shadow: 3px 3px 0px #3b0d25;
+  -moz-box-shadow: 3px 3px 0px #3b0d25;
+  box-shadow: 3px 3px 0px #3b0d25;
   -webkit-transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;
   -o-transition: all 0.1s linear;

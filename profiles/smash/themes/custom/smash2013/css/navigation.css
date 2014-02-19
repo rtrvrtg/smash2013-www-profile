@@ -114,7 +114,7 @@ li a.active {
   position: absolute;
   width: 40px;
   height: 40px;
-  background: #98b454;
+  background: #97c94d;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
@@ -270,7 +270,7 @@ li a.active {
   margin: 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid #98b454;
+  border-top: 1px solid #97c94d;
   clear: both;
   color: white;
 }
@@ -289,7 +289,7 @@ li a.active {
 }
 /* line 240, ../sass/navigation.scss */
 .block-menu-block .menu li:hover > a, .block-menu-block .menu li:focus > a, .block-menu-block .menu li:active > a {
-  background-color: #98b454;
+  background-color: #97c94d;
 }
 /* line 244, ../sass/navigation.scss */
 .block-menu-block .menu li > span.menu__link {
@@ -297,7 +297,7 @@ li a.active {
   background-color: #282828;
   text-align: left;
   text-transform: uppercase;
-  color: #79a3d7;
+  color: #ed7c56;
   font-weight: bold;
   line-height: 1em;
   padding: 9px 6px;
@@ -322,7 +322,7 @@ li a.active {
   min-height: 22px;
   font-size: 1em;
   text-transform: uppercase;
-  color: #79a3d7;
+  color: #ed7c56;
   font-weight: bold;
   line-height: 1em;
   padding: 9px 6px;
@@ -331,12 +331,12 @@ li a.active {
 @media all and (min-width: 950px) {
   /* line 277, ../sass/navigation.scss */
   .block-menu-block {
-    background: #98b454;
+    background: #97c94d;
   }
   /* line 280, ../sass/navigation.scss */
   .block-menu-block > .menu-block-wrapper > .menu-toggle-checkbox:checked + * + .menu-wrapper {
     padding-top: 0;
-    background: #98b454;
+    background: #97c94d;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -443,7 +443,7 @@ li a.active {
   /* line 381, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper h3 {
     text-transform: uppercase;
-    color: #79a3d7;
+    color: #ed7c56;
     font-weight: bold;
     line-height: 1em;
     padding: 9px 6px;
@@ -520,7 +520,7 @@ li a.active {
   /* line 472, ../sass/navigation.scss */
   .block-menu-block .menu li > .menu-wrapper .menu li a:hover, .block-menu-block .menu li > .menu-wrapper .menu li a:focus, .block-menu-block .menu li > .menu-wrapper .menu li a:active {
     color: white;
-    background-color: #98b454;
+    background-color: #97c94d;
   }
   /* line 484, ../sass/navigation.scss */
   .block-menu-block .menu li.menu-mlid-725 > .menu-wrapper, .block-menu-block .menu li.menu-mlid-719 > .menu-wrapper, .block-menu-block .menu li.menu__item.last > .menu-wrapper {
@@ -540,7 +540,7 @@ li a.active {
   /* line 499, ../sass/navigation.scss */
   .block-menu-block .menu li.nolink {
     text-transform: uppercase;
-    color: #79a3d7;
+    color: #ed7c56;
     font-weight: bold;
     line-height: 1em;
     padding: 9px 6px;

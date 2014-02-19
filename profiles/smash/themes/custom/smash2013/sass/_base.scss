@@ -161,9 +161,9 @@ $font-monospace:   $courier;
 $colour-darkgrey:        #1C181B;
 $colour-lightgrey:       lighten(#929292, 25%);
 
-$colour-theme-wasabi: #98B454;
-$colour-theme-pink: #E776A4;
-$colour-theme-blue: #79A3D7;
+$colour-theme-wasabi: #97C94D;
+$colour-theme-pink: #DF68A6;
+$colour-theme-orange: #ED7C56;
 
 $color-wrapbg:    $colour-darkgrey;
 $color-bg:        white;
@@ -173,7 +173,7 @@ $color-bgheader:  $colour-darkgrey;
 $colour-theme-primary: $colour-theme-wasabi;
 $colour-title-primary: $colour-theme-pink;
 $colour-title-primary-bg: darken($colour-theme-pink, 50%);
-$colour-title-secondary: $colour-theme-blue;
+$colour-title-secondary: $colour-theme-orange;
 
 $color-purple:    #7e54a3;
 $color-menu-hov:  #282828;

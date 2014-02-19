@@ -169,26 +169,26 @@ body {
  */
 /* line 157, ../sass/normalize.scss */
 a:link {
-  color: #e776a4;
+  color: #df68a6;
   text-decoration: none;
 }
 
 /* line 162, ../sass/normalize.scss */
 a:visited {
-  color: #e776a4;
+  color: #df68a6;
   text-decoration: none;
 }
 
 /* line 168, ../sass/normalize.scss */
 a:hover,
 a:focus {
-  color: #500e29;
+  color: #3b0d25;
   text-decoration: none;
 }
 
 /* line 173, ../sass/normalize.scss */
 a:active {
-  color: #500e29;
+  color: #3b0d25;
   text-decoration: underline;
 }
 
