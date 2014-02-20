@@ -195,15 +195,14 @@ body.uses-smash-layout #content .content-header {
     margin-right: -316px;
   }
 
-  /* line 172, ../../sass/layouts/responsive-sidebars.scss */
-  .prefaced-node-content {
+  /* line 173, ../../sass/layouts/responsive-sidebars.scss */
+  .has-main-and-sidebar .prefaced-node-content {
     float: left;
     width: 66%;
     margin-right: 1%;
   }
-
-  /* line 177, ../../sass/layouts/responsive-sidebars.scss */
-  .prefaced-node-sidebar {
+  /* line 178, ../../sass/layouts/responsive-sidebars.scss */
+  .has-main-and-sidebar .prefaced-node-sidebar {
     float: left;
     width: 33%;
   }
@@ -211,14 +210,14 @@ body.uses-smash-layout #content .content-header {
   /*
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 187, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 189, ../../sass/layouts/responsive-sidebars.scss */
   .sidebar-second #content {
     /* Span 2 columns, starting in 1st column from left. */
     float: left;
     width: 66%;
     margin-right: 1%;
   }
-  /* line 193, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 195, ../../sass/layouts/responsive-sidebars.scss */
   .sidebar-second .region-sidebar-second {
     /* Span 1 column, starting in 3rd column from left. */
     float: left;
@@ -228,7 +227,7 @@ body.uses-smash-layout #content .content-header {
   /*
    * The layout when there are two sidebars.
    */
-  /* line 204, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 206, ../../sass/layouts/responsive-sidebars.scss */
   .two-sidebars #content {
     /* Span 2 columns, starting in 2nd column from left. */
     float: left;
@@ -236,7 +235,7 @@ body.uses-smash-layout #content .content-header {
     margin-left: 316px;
     margin-right: -948px;
   }
-  /* line 208, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 210, ../../sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-first {
     /* Span 1 column, starting in 1st column from left. */
     float: left;
@@ -244,7 +243,7 @@ body.uses-smash-layout #content .content-header {
     margin-left: 0px;
     margin-right: -316px;
   }
-  /* line 212, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 214, ../../sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-second {
     /* Start a new row and span all 3 columns. */
     float: left;
@@ -255,7 +254,7 @@ body.uses-smash-layout #content .content-header {
     padding-right: 0;
     clear: left;
   }
-  /* line 217, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 219, ../../sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-second .block {
     padding-left: 5px;
     padding-right: 5px;
@@ -265,7 +264,7 @@ body.uses-smash-layout #content .content-header {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 220, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 222, ../../sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     /* Span 1 column, starting in the 1st column from left. */
     float: left;
@@ -274,7 +273,7 @@ body.uses-smash-layout #content .content-header {
     margin-right: -316px;
     clear: left;
   }
-  /* line 224, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 226, ../../sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     /* Span 1 column, starting in the 2nd column from left. */
     float: left;
@@ -282,7 +281,7 @@ body.uses-smash-layout #content .content-header {
     margin-left: 316px;
     margin-right: -632px;
   }
-  /* line 227, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 229, ../../sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     /* Span 1 column, starting in the 3rd column from left. */
     float: left;
@@ -298,7 +297,7 @@ body.uses-smash-layout #content .content-header {
   /*
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 245, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 247, ../../sass/layouts/responsive-sidebars.scss */
   .sidebar-first #content {
     /* Span 4 columns, starting in 2nd column from left. */
     float: left;
@@ -306,7 +305,7 @@ body.uses-smash-layout #content .content-header {
     margin-left: 237px;
     margin-right: -1185px;
   }
-  /* line 249, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 251, ../../sass/layouts/responsive-sidebars.scss */
   .sidebar-first .region-sidebar-first {
     /* Span 1 column, starting in 1st column from left. */
     float: left;
@@ -315,16 +314,15 @@ body.uses-smash-layout #content .content-header {
     margin-right: -237px;
   }
 
-  /* line 254, ../../sass/layouts/responsive-sidebars.scss */
-  .prefaced-node-content {
+  /* line 257, ../../sass/layouts/responsive-sidebars.scss */
+  .has-main-and-sidebar .prefaced-node-content {
     float: left;
     width: 711px;
     margin-left: 0px;
     margin-right: -711px;
   }
-
-  /* line 257, ../../sass/layouts/responsive-sidebars.scss */
-  .prefaced-node-sidebar {
+  /* line 260, ../../sass/layouts/responsive-sidebars.scss */
+  .has-main-and-sidebar .prefaced-node-sidebar {
     float: left;
     width: 237px;
     margin-left: 711px;
@@ -334,7 +332,7 @@ body.uses-smash-layout #content .content-header {
   /*
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 266, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 270, ../../sass/layouts/responsive-sidebars.scss */
   .sidebar-second #content {
     /* Span 4 columns, starting in 1st column from left. */
     float: left;
@@ -342,7 +340,7 @@ body.uses-smash-layout #content .content-header {
     margin-left: 0px;
     margin-right: -711px;
   }
-  /* line 270, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 274, ../../sass/layouts/responsive-sidebars.scss */
   .sidebar-second .region-sidebar-second {
     /* Span 1 column, starting in 5th column from left. */
     float: left;
@@ -354,7 +352,7 @@ body.uses-smash-layout #content .content-header {
   /*
    * The layout when there are two sidebars.
    */
-  /* line 280, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 284, ../../sass/layouts/responsive-sidebars.scss */
   .two-sidebars #content {
     /* Span 3 columns, starting in 2nd column from left. */
     float: left;
@@ -362,7 +360,7 @@ body.uses-smash-layout #content .content-header {
     margin-left: 237px;
     margin-right: -948px;
   }
-  /* line 284, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 288, ../../sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-first {
     /* Span 1 column, starting in 1st column from left. */
     float: left;
@@ -370,7 +368,7 @@ body.uses-smash-layout #content .content-header {
     margin-left: 0px;
     margin-right: -237px;
   }
-  /* line 288, ../../sass/layouts/responsive-sidebars.scss */
+  /* line 292, ../../sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-second {
     /* Span 1 column, starting in 5th column from left. */
     float: left;

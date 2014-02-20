@@ -662,3 +662,26 @@ html.lt-ie9 .node-home-page .field-name-field-hero .hero-wrapped .hero-wrapped-c
     background-image: url(../images/linkicons/fb@2x.png);
   }
 }
+
+/* SPECIAL FORMATTING! */
+/* line 576, ../sass/nodes.scss */
+body.page-title-sponsors .node .field-name-body h3 {
+  clear: both;
+}
+/* line 580, ../sass/nodes.scss */
+body.page-title-sponsors .node .field-name-body p {
+  margin-top: 0;
+}
+/* line 584, ../sass/nodes.scss */
+body.page-title-sponsors .node .field-name-body .media-image {
+  display: block;
+  margin: 0px auto;
+}
+@media all and (min-width: 714.5px) {
+  /* line 584, ../sass/nodes.scss */
+  body.page-title-sponsors .node .field-name-body .media-image {
+    float: left;
+    margin: 0 1em 1em 0;
+    width: 250px;
+  }
+}

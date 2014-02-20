@@ -128,15 +128,15 @@ function smash2013_preprocess_maintenance_page(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("html" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function smash2013_preprocess_html(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
 
-  // The body tag's classes are controlled by the $classes_array variable. To
-  // remove a class from $classes_array, use array_diff().
-  //$variables['classes_array'] = array_diff($variables['classes_array'], array('class-to-remove'));
+function smash2013_preprocess_html(&$variables, $hook) {
+  // dpm($variables);
+  if (isset($variables['head_title_array']) && isset($variables['head_title_array']['title'])) {
+    $prepared_title = strtolower($variables['head_title_array']['title']);
+    $prepared_title = preg_replace("/[^a-z0-9-]+/", "-", $prepared_title);
+    $variables['classes_array'][] = "page-title-" . $prepared_title;
+  }
 }
-// */
 
 /**
  * Override or insert variables into the page templates.
@@ -146,9 +146,10 @@ function smash2013_preprocess_html(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
+/*
 function smash2013_preprocess_page(&$variables, $hook) {
-  // dpm($variables);
 }
+*/
 
 /**
  * Override or insert variables into the node templates.
