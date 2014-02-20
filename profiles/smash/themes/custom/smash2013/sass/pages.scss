@@ -79,7 +79,7 @@ body {
   color: white;
   @media all and (min-width: $desktop-minimum) {
     background: url(../images/skadi-cyrus.png) no-repeat bottom right;
-    background-size: 281px 134px;
+    background-size: 398px 190px;
     min-height: 134px;
     
     @include retina {
@@ -89,18 +89,20 @@ body {
 }
 
 #logo { /* Wrapping link for logo */
-  float: left; /* LTR */
-  margin: 0;
+  display: block;
+  margin: 0 auto;
   padding: 0;
   width: 100%;
-  max-width: 180px;
+  max-width: 240px;
 
   @media all and (min-width: $tablet-half) {
-    max-width: 240px;
+    max-width: 480px;
   }
 
   @media all and (min-width: $desktop-minimum) {
-    max-width: 300px;
+    float: left;
+    margin: 0;
+    max-width: 600px;
   }
 
   img {
@@ -108,17 +110,27 @@ body {
     margin-bottom: 0px;
     max-width: 100%;
 
-    margin-left: -5px;
     @media all and (min-width: $desktop-minimum) {
-      margin-left: -10px;
+      margin-left: -5px;
     }
   }
 }
 
 #logo-region { /* Wrapper for website name and slogan */
   float: left;
-  width: 75%;
-  max-width: 361px;
+  width: 100%;
+  text-align: center;
+
+  padding-bottom: 0px;
+  @media all and (min-width: $tablet-half) {
+    padding-bottom: 10px;
+  }
+  @media all and (min-width: $desktop-minimum) {
+    width: 75%;
+    max-width: 600px;
+    padding-bottom: 20px;
+    text-align: left;
+  }
 }
 
 #site-name { /* The name of the website */
@@ -126,6 +138,9 @@ body {
   font-size: 2em;
   line-height: 1.5em;
   
+  @media all and (min-width: $tablet-half) {
+    margin-top: 10px;
+  }
   @media all and (min-width: $desktop-minimum) {
     margin-top: 20px;
   }
@@ -146,8 +161,11 @@ body {
   margin: 0.5em 0;
   clear: left;
   font-size: 0.8em;
-  color: $color-turq;
+  color: $colour-title-secondary;
   font-weight: bold;
+  @media all and (min-width: $tablet-minimum) {
+    font-size: 1em;
+  }
   @media all and (min-width: $desktop-minimum) {
     margin: 0;
     font-size: 1.2em;

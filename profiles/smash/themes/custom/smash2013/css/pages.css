@@ -102,7 +102,7 @@ html.lt-ie9 body {
   /* line 78, ../sass/pages.scss */
   #header {
     background: url(../images/skadi-cyrus.png) no-repeat bottom right;
-    background-size: 281px 134px;
+    background-size: 398px 190px;
     min-height: 134px;
   }
 }
@@ -116,86 +116,114 @@ html.lt-ie9 body {
 /* line 91, ../sass/pages.scss */
 #logo {
   /* Wrapping link for logo */
-  float: left;
-  /* LTR */
-  margin: 0;
+  display: block;
+  margin: 0 auto;
   padding: 0;
   width: 100%;
-  max-width: 180px;
+  max-width: 240px;
 }
 @media all and (min-width: 714.5px) {
   /* line 91, ../sass/pages.scss */
   #logo {
-    max-width: 240px;
+    max-width: 480px;
   }
 }
 @media all and (min-width: 950px) {
   /* line 91, ../sass/pages.scss */
   #logo {
-    max-width: 300px;
+    float: left;
+    margin: 0;
+    max-width: 600px;
   }
 }
-/* line 106, ../sass/pages.scss */
+/* line 108, ../sass/pages.scss */
 #logo img {
   vertical-align: bottom;
   margin-bottom: 0px;
   max-width: 100%;
-  margin-left: -5px;
 }
 @media all and (min-width: 950px) {
-  /* line 106, ../sass/pages.scss */
+  /* line 108, ../sass/pages.scss */
   #logo img {
-    margin-left: -10px;
+    margin-left: -5px;
   }
 }
 
-/* line 118, ../sass/pages.scss */
+/* line 119, ../sass/pages.scss */
 #logo-region {
   /* Wrapper for website name and slogan */
   float: left;
-  width: 75%;
-  max-width: 361px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 0px;
+}
+@media all and (min-width: 714.5px) {
+  /* line 119, ../sass/pages.scss */
+  #logo-region {
+    padding-bottom: 10px;
+  }
+}
+@media all and (min-width: 950px) {
+  /* line 119, ../sass/pages.scss */
+  #logo-region {
+    width: 75%;
+    max-width: 600px;
+    padding-bottom: 20px;
+    text-align: left;
+  }
 }
 
-/* line 124, ../sass/pages.scss */
+/* line 136, ../sass/pages.scss */
 #site-name {
   /* The name of the website */
   margin: 0;
   font-size: 2em;
   line-height: 1.5em;
 }
+@media all and (min-width: 714.5px) {
+  /* line 136, ../sass/pages.scss */
+  #site-name {
+    margin-top: 10px;
+  }
+}
 @media all and (min-width: 950px) {
-  /* line 124, ../sass/pages.scss */
+  /* line 136, ../sass/pages.scss */
   #site-name {
     margin-top: 20px;
   }
 }
-/* line 134, ../sass/pages.scss */
+/* line 149, ../sass/pages.scss */
 #site-name a:link,
 #site-name a:visited {
   color: #000;
   text-decoration: none;
 }
-/* line 140, ../sass/pages.scss */
+/* line 155, ../sass/pages.scss */
 #site-name a:hover,
 #site-name a:focus {
   text-decoration: underline;
 }
 
-/* line 145, ../sass/pages.scss */
+/* line 160, ../sass/pages.scss */
 #site-slogan {
   /* The slogan (or tagline) of a website */
   margin: 0.5em 0;
   clear: left;
   font-size: 0.8em;
-  color: #3ec1c7;
+  color: #ed7c56;
   font-weight: bold;
   line-height: 1em;
   font-family: "Myriad Pro", Myriad, Verdana, Arial, sans-serif;
   text-transform: uppercase;
 }
+@media all and (min-width: 480px) {
+  /* line 160, ../sass/pages.scss */
+  #site-slogan {
+    font-size: 1em;
+  }
+}
 @media all and (min-width: 950px) {
-  /* line 145, ../sass/pages.scss */
+  /* line 160, ../sass/pages.scss */
   #site-slogan {
     margin: 0;
     font-size: 1.2em;
@@ -203,12 +231,12 @@ html.lt-ie9 body {
     white-space: nowrap;
   }
 }
-/* line 161, ../sass/pages.scss */
+/* line 179, ../sass/pages.scss */
 html.lt-ie9 #site-slogan {
   width: 500px;
 }
 
-/* line 166, ../sass/pages.scss */
+/* line 184, ../sass/pages.scss */
 .region-header {
   /* Wrapper for any blocks placed in the header region */
   clear: both;
@@ -218,12 +246,12 @@ html.lt-ie9 #site-slogan {
 /*
  * Main (container for everything else)
  */
-/* line 174, ../sass/pages.scss */
+/* line 192, ../sass/pages.scss */
 #main-wrapper {
   background: white;
 }
 @media all and (min-width: 950px) {
-  /* line 174, ../sass/pages.scss */
+  /* line 192, ../sass/pages.scss */
   #main-wrapper {
     -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 10px;
     -moz-box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 10px;
@@ -234,22 +262,22 @@ html.lt-ie9 #site-slogan {
 /*
  * Content
  */
-/* line 194, ../sass/pages.scss */
+/* line 212, ../sass/pages.scss */
 #breadcrumb-area {
   margin: 0.5em 0;
   font-size: 0.8em;
 }
 
-/* line 199, ../sass/pages.scss */
+/* line 217, ../sass/pages.scss */
 .breadcrumb {
   /* The path to the current page in the form of a list of links */
 }
-/* line 200, ../sass/pages.scss */
+/* line 218, ../sass/pages.scss */
 .breadcrumb ol {
   margin: 0;
   padding: 0;
 }
-/* line 204, ../sass/pages.scss */
+/* line 222, ../sass/pages.scss */
 .breadcrumb li {
   display: inline;
   list-style-type: none;
@@ -257,7 +285,7 @@ html.lt-ie9 #site-slogan {
   padding: 0;
 }
 
-/* line 212, ../sass/pages.scss */
+/* line 230, ../sass/pages.scss */
 h1.title {
   /* The title of the page */
   margin: 0;
@@ -266,7 +294,7 @@ h1.title {
   font-weight: normal;
 }
 
-/* line 223, ../sass/pages.scss */
+/* line 241, ../sass/pages.scss */
 h2.node-title,
 h2.block-title,
 h2.title,
@@ -279,37 +307,37 @@ h3.title {
   font-weight: normal;
 }
 
-/* line 230, ../sass/pages.scss */
+/* line 248, ../sass/pages.scss */
 tr.even {
   /* Some tables have rows marked even or odd. */
   /* background-color: #eee; */
   /* Drupal core uses a #eee background */
 }
 
-/* line 234, ../sass/pages.scss */
+/* line 252, ../sass/pages.scss */
 tr.odd {
   /* background-color: #eee; */
   /* Drupal core uses a #eee background */
 }
 
-/* line 238, ../sass/pages.scss */
+/* line 256, ../sass/pages.scss */
 div.messages {
   /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
   margin: 1.5em 0;
   /* Drupal core uses "6px 0" margin */
 }
-/* line 241, ../sass/pages.scss */
+/* line 259, ../sass/pages.scss */
 div.messages ul {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-/* line 247, ../sass/pages.scss */
+/* line 265, ../sass/pages.scss */
 div.status {
   /* Normal priority messages */
 }
 
-/* line 251, ../sass/pages.scss */
+/* line 269, ../sass/pages.scss */
 div.warning,
 tr.warning {
   /* Medium priority messages */
@@ -317,53 +345,53 @@ tr.warning {
   /* Drupal core uses: 1px solid #f0c020 */
 }
 
-/* line 256, ../sass/pages.scss */
+/* line 274, ../sass/pages.scss */
 div.error,
 tr.error {
   /* High priority messages. See also the .error declaration below. */
 }
 
-/* line 259, ../sass/pages.scss */
+/* line 277, ../sass/pages.scss */
 .error {
   /* Errors that are separate from div.messages status messages. */
   /* color: #e55; */
   /* Drupal core uses a #e55 background */
 }
 
-/* line 263, ../sass/pages.scss */
+/* line 281, ../sass/pages.scss */
 .warning {
   /* Warnings that are separate from div.messages status messages. */
   /* color: #e09010; */
   /* Drupal core uses a #e09010 background */
 }
 
-/* line 267, ../sass/pages.scss */
+/* line 285, ../sass/pages.scss */
 .tabs {
   /* See also the tabs.css file. */
 }
 
-/* line 270, ../sass/pages.scss */
+/* line 288, ../sass/pages.scss */
 .region-help {
   /* Help text on a page */
 }
 
-/* line 273, ../sass/pages.scss */
+/* line 291, ../sass/pages.scss */
 .more-help-link {
   /* Link to more help */
 }
 
-/* line 276, ../sass/pages.scss */
+/* line 294, ../sass/pages.scss */
 .region-content {
   /* Wrapper for the actual page content */
 }
 
-/* line 279, ../sass/pages.scss */
+/* line 297, ../sass/pages.scss */
 ul.inline {
   /* List of links generated by theme_links() */
   display: inline;
   padding: 0;
 }
-/* line 283, ../sass/pages.scss */
+/* line 301, ../sass/pages.scss */
 ul.inline li {
   display: inline;
   list-style-type: none;
@@ -371,35 +399,35 @@ ul.inline li {
   /* LTR */
 }
 
-/* line 289, ../sass/pages.scss */
+/* line 307, ../sass/pages.scss */
 span.field-label {
   /* The inline field label used by the Fences module */
   padding: 0 1em 0 0;
   /* LTR */
 }
 
-/* line 293, ../sass/pages.scss */
+/* line 311, ../sass/pages.scss */
 .item-list .pager {
   /* A list of page numbers when more than 1 page of content is available */
   padding: 0;
 }
-/* line 296, ../sass/pages.scss */
+/* line 314, ../sass/pages.scss */
 .item-list .pager li {
   /* Each page number in the pager list */
   padding: 0 0.5em;
 }
 
-/* line 301, ../sass/pages.scss */
+/* line 319, ../sass/pages.scss */
 .feed-icon {
   /* The link to the RSS or Atom feed for the current list of content */
 }
 
-/* line 304, ../sass/pages.scss */
+/* line 322, ../sass/pages.scss */
 .more-link {
   /* Aggregator, blog, and forum more link */
 }
 
-/* line 307, ../sass/pages.scss */
+/* line 325, ../sass/pages.scss */
 .more-info-link {
   display: block;
   margin: 0px auto;
@@ -430,11 +458,11 @@ span.field-label {
  * Remember to NOT add padding or margin to your .region-sidebar-second
  * (see the layout.css file.)
  */
-/* line 392, ../sass/pages.scss */
+/* line 410, ../sass/pages.scss */
 .region-sidebar-second .block:first-child {
   margin-top: 1em;
 }
-/* line 396, ../sass/pages.scss */
+/* line 414, ../sass/pages.scss */
 .region-sidebar-second .block .block-title {
   position: relative;
   -webkit-box-sizing: content-box;
@@ -450,12 +478,12 @@ span.field-label {
   line-height: 1em;
 }
 @media all and (min-width: 950px) {
-  /* line 396, ../sass/pages.scss */
+  /* line 414, ../sass/pages.scss */
   .region-sidebar-second .block .block-title {
     margin: 0 5px 0.2em 0;
     width: 100%;
   }
-  /* line 356, ../sass/pages.scss */
+  /* line 374, ../sass/pages.scss */
   .region-sidebar-second .block .block-title:after {
     content: " ";
     display: block;
@@ -470,11 +498,11 @@ span.field-label {
     right: 0;
   }
 }
-/* line 365, ../sass/pages.scss */
+/* line 383, ../sass/pages.scss */
 .region-sidebar-second .sidebar-block {
   margin: 0;
 }
-/* line 368, ../sass/pages.scss */
+/* line 386, ../sass/pages.scss */
 .region-sidebar-second .sidebar-block .sidebar-block-title, .region-sidebar-second .sidebar-block .sidebar-content-title {
   position: relative;
   -webkit-box-sizing: content-box;
@@ -490,12 +518,12 @@ span.field-label {
   line-height: 1em;
 }
 @media all and (min-width: 950px) {
-  /* line 368, ../sass/pages.scss */
+  /* line 386, ../sass/pages.scss */
   .region-sidebar-second .sidebar-block .sidebar-block-title, .region-sidebar-second .sidebar-block .sidebar-content-title {
     margin: 0 5px 0.2em 0;
     width: 100%;
   }
-  /* line 356, ../sass/pages.scss */
+  /* line 374, ../sass/pages.scss */
   .region-sidebar-second .sidebar-block .sidebar-block-title:after, .region-sidebar-second .sidebar-block .sidebar-content-title:after {
     content: " ";
     display: block;
@@ -511,36 +539,36 @@ span.field-label {
   }
 }
 @media all and (min-width: 950px) {
-  /* line 372, ../sass/pages.scss */
+  /* line 390, ../sass/pages.scss */
   .region-sidebar-second .sidebar-block .field-name-field-sidebar-body, .region-sidebar-second .sidebar-block .sidebar-inner {
     margin-right: 10px;
   }
 }
-/* line 377, ../sass/pages.scss */
+/* line 395, ../sass/pages.scss */
 .region-sidebar-second .sidebar-block .field-name-field-sidebar-body *:first-child, .region-sidebar-second .sidebar-block .sidebar-inner *:first-child {
   margin-top: 0;
 }
 @media all and (min-width: 950px) {
-  /* line 382, ../sass/pages.scss */
+  /* line 400, ../sass/pages.scss */
   .region-sidebar-second .sidebar-block .sidebar-inner {
     padding-bottom: 10px;
   }
 }
 
-/* line 405, ../sass/pages.scss */
+/* line 423, ../sass/pages.scss */
 .prefaced-node-content iframe {
   width: 100%;
 }
 
-/* line 411, ../sass/pages.scss */
+/* line 429, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container {
   border: 0px none;
 }
-/* line 413, ../sass/pages.scss */
+/* line 431, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view, .prefaced-node-sidebar .field-collection-container .sidebar-block {
   margin: 0;
 }
-/* line 416, ../sass/pages.scss */
+/* line 434, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view .sidebar-content-title, .prefaced-node-sidebar .field-collection-container .sidebar-block .sidebar-content-title {
   position: relative;
   -webkit-box-sizing: content-box;
@@ -556,12 +584,12 @@ span.field-label {
   line-height: 1em;
 }
 @media all and (min-width: 950px) {
-  /* line 416, ../sass/pages.scss */
+  /* line 434, ../sass/pages.scss */
   .prefaced-node-sidebar .field-collection-container .field-collection-view .sidebar-content-title, .prefaced-node-sidebar .field-collection-container .sidebar-block .sidebar-content-title {
     margin: 0 5px 0.2em 0;
     width: 100%;
   }
-  /* line 356, ../sass/pages.scss */
+  /* line 374, ../sass/pages.scss */
   .prefaced-node-sidebar .field-collection-container .field-collection-view .sidebar-content-title:after, .prefaced-node-sidebar .field-collection-container .sidebar-block .sidebar-content-title:after {
     content: " ";
     display: block;
@@ -577,20 +605,20 @@ span.field-label {
   }
 }
 @media all and (min-width: 950px) {
-  /* line 420, ../sass/pages.scss */
+  /* line 438, ../sass/pages.scss */
   .prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-body, .prefaced-node-sidebar .field-collection-container .sidebar-block .field-name-field-sidebar-body {
     margin-right: 10px;
   }
 }
-/* line 425, ../sass/pages.scss */
+/* line 443, ../sass/pages.scss */
 .prefaced-node-sidebar .field-collection-container .field-collection-view .field-name-field-sidebar-body *:first-child, .prefaced-node-sidebar .field-collection-container .sidebar-block .field-name-field-sidebar-body *:first-child {
   margin-top: 0;
 }
-/* line 365, ../sass/pages.scss */
+/* line 383, ../sass/pages.scss */
 .prefaced-node-sidebar .sidebar-block {
   margin: 0;
 }
-/* line 368, ../sass/pages.scss */
+/* line 386, ../sass/pages.scss */
 .prefaced-node-sidebar .sidebar-block .sidebar-block-title, .prefaced-node-sidebar .sidebar-block .sidebar-content-title {
   position: relative;
   -webkit-box-sizing: content-box;
@@ -606,12 +634,12 @@ span.field-label {
   line-height: 1em;
 }
 @media all and (min-width: 950px) {
-  /* line 368, ../sass/pages.scss */
+  /* line 386, ../sass/pages.scss */
   .prefaced-node-sidebar .sidebar-block .sidebar-block-title, .prefaced-node-sidebar .sidebar-block .sidebar-content-title {
     margin: 0 5px 0.2em 0;
     width: 100%;
   }
-  /* line 356, ../sass/pages.scss */
+  /* line 374, ../sass/pages.scss */
   .prefaced-node-sidebar .sidebar-block .sidebar-block-title:after, .prefaced-node-sidebar .sidebar-block .sidebar-content-title:after {
     content: " ";
     display: block;
@@ -627,17 +655,17 @@ span.field-label {
   }
 }
 @media all and (min-width: 950px) {
-  /* line 372, ../sass/pages.scss */
+  /* line 390, ../sass/pages.scss */
   .prefaced-node-sidebar .sidebar-block .field-name-field-sidebar-body, .prefaced-node-sidebar .sidebar-block .sidebar-inner {
     margin-right: 10px;
   }
 }
-/* line 377, ../sass/pages.scss */
+/* line 395, ../sass/pages.scss */
 .prefaced-node-sidebar .sidebar-block .field-name-field-sidebar-body *:first-child, .prefaced-node-sidebar .sidebar-block .sidebar-inner *:first-child {
   margin-top: 0;
 }
 @media all and (min-width: 950px) {
-  /* line 382, ../sass/pages.scss */
+  /* line 400, ../sass/pages.scss */
   .prefaced-node-sidebar .sidebar-block .sidebar-inner {
     padding-bottom: 10px;
   }
@@ -646,7 +674,7 @@ span.field-label {
 /*
  * Footer
  */
-/* line 439, ../sass/pages.scss */
+/* line 457, ../sass/pages.scss */
 #footer {
   clear: both;
   color: #888888;
@@ -655,7 +683,7 @@ span.field-label {
 /*
  * Page bottom
  */
-/* line 448, ../sass/pages.scss */
+/* line 466, ../sass/pages.scss */
 .region-bottom {
   /* Wrapper for any blocks placed in the page bottom region */
 }
@@ -663,14 +691,14 @@ span.field-label {
 /*
  * Ticketing
  */
-/* line 455, ../sass/pages.scss */
+/* line 473, ../sass/pages.scss */
 .ticket-options {
   margin: 1em 0px 0;
   padding: 0;
   list-style: none;
   font-size: 150%;
 }
-/* line 459, ../sass/pages.scss */
+/* line 477, ../sass/pages.scss */
 .ticket-options li {
   margin: 0 0;
   padding: 0;
@@ -678,7 +706,7 @@ span.field-label {
   display: block;
 }
 @media all and (min-width: 714.5px) {
-  /* line 459, ../sass/pages.scss */
+  /* line 477, ../sass/pages.scss */
   .ticket-options li {
     display: inline-block;
     margin: 0 -4px 0 0;
@@ -686,7 +714,7 @@ span.field-label {
     width: 50%;
   }
 }
-/* line 470, ../sass/pages.scss */
+/* line 488, ../sass/pages.scss */
 .ticket-options li a {
   display: block;
   text-align: center;
@@ -712,12 +740,12 @@ span.field-label {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-/* line 484, ../sass/pages.scss */
+/* line 502, ../sass/pages.scss */
 .ticket-options li a strong, .ticket-options li a small, .ticket-options li a p {
   display: block;
   margin: 0.25em 0;
 }
-/* line 492, ../sass/pages.scss */
+/* line 510, ../sass/pages.scss */
 .ticket-options .ticket-option-inactive a {
   pointer-events: none;
   background-color: #444444;
