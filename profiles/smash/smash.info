@@ -1,11 +1,13 @@
 ; Packaging information for smash
-name = "SMASH!"
-description = "Sydney Manga and Anime Show"
+name = "SMASH! Sydney Manga and Anime Show"
+description = "Sat August 9 - Sun August 10, 2014 • Rosehill Gardens"
 exclusive = "1"
 core = "7.x"
 ; ----------
 ; Dependencies
 ; ----------
+; Administration
+dependencies[] = admin_views
 ; Chaos tool suite
 dependencies[] = ctools
 dependencies[] = ctools_custom_content
@@ -17,10 +19,7 @@ dependencies[] = context_layouts
 dependencies[] = context_ui
 ; Core
 dependencies[] = block
-dependencies[] = comment
 dependencies[] = contextual
-dependencies[] = dashboard
-dependencies[] = dblog
 dependencies[] = field
 dependencies[] = field_sql_storage
 dependencies[] = field_ui
@@ -36,8 +35,8 @@ dependencies[] = options
 dependencies[] = overlay
 dependencies[] = path
 dependencies[] = rdf
-dependencies[] = search
 dependencies[] = shortcut
+dependencies[] = syslog
 dependencies[] = system
 dependencies[] = taxonomy
 dependencies[] = text
@@ -45,6 +44,7 @@ dependencies[] = toolbar
 dependencies[] = update
 dependencies[] = user
 ; Date/Time
+dependencies[] = calendar
 dependencies[] = date
 dependencies[] = date_api
 dependencies[] = date_context
@@ -55,13 +55,26 @@ dependencies[] = date_views
 dependencies[] = ds
 dependencies[] = ds_extras
 dependencies[] = ds_ui
+; ECK
+dependencies[] = eck
+; Entity
+dependencies[] = replicate
+dependencies[] = replicate_field_collection
+dependencies[] = replicate_ui
 ; Fields
 dependencies[] = entityreference
 dependencies[] = fences
 dependencies[] = field_collection
 dependencies[] = field_group
 dependencies[] = field_slideshow
+dependencies[] = geofield
+dependencies[] = inline_entity_form
 dependencies[] = link
+; FlexSlider
+dependencies[] = flexslider
+dependencies[] = flexslider_field_collection
+; Image
+dependencies[] = imagecache_token
 ; Input filters
 dependencies[] = markdown
 ; MailChimp
@@ -69,49 +82,62 @@ dependencies[] = mailchimp
 ; Media
 dependencies[] = bulk_media_upload
 dependencies[] = file_entity
+dependencies[] = imagecache_actions
+dependencies[] = imagecache_canvasactions
 dependencies[] = media
 dependencies[] = media_internet
+dependencies[] = media_vimeo
+dependencies[] = media_youtube
 dependencies[] = plupload
 ; Other
+dependencies[] = autosave
 dependencies[] = backup_migrate
 dependencies[] = boxes
 dependencies[] = colorbox
-dependencies[] = diff
 dependencies[] = entity
 dependencies[] = entity_token
+dependencies[] = fast_404
+dependencies[] = geophp
 dependencies[] = imagecrop
+dependencies[] = leaflet
+dependencies[] = leaflet_demo
+dependencies[] = leaflet_more_maps
+dependencies[] = leaflet_views
 dependencies[] = libraries
+dependencies[] = mediaelement
 dependencies[] = menu_block
+dependencies[] = menu_breadcrumb
+dependencies[] = menu_position
 dependencies[] = pathauto
 dependencies[] = redirect
+dependencies[] = secure_permissions
 dependencies[] = special_menu_items
 dependencies[] = strongarm
 dependencies[] = token
 dependencies[] = token_filter
 dependencies[] = transliteration
 dependencies[] = twitter_cards
-dependencies[] = twitter_pull
 ; Panels
 dependencies[] = panels
 ; Path management
 dependencies[] = globalredirect
-; Registration
-dependencies[] = registration
+; Performance and scalability
+dependencies[] = boost_crawler
+dependencies[] = boost_custom_expire_rules
+dependencies[] = expire
+dependencies[] = httprl
 ; Rules
 dependencies[] = rules
-dependencies[] = rules_admin
 ; SMASH!
-dependencies[] = smash_basic_config
-dependencies[] = smash_events
-dependencies[] = smash_guests
 dependencies[] = smash_layout
-dependencies[] = smash_locations
-dependencies[] = smash_news
-dependencies[] = smash_vendors
-dependencies[] = smash_workflow_configuration
+dependencies[] = smash_replica
+; Statistics
+dependencies[] = googleanalytics
 ; UUID
 dependencies[] = uuid
 ; User interface
+dependencies[] = ckeditor_link
+dependencies[] = jquery_countdown
 dependencies[] = wysiwyg
 ; Views
 dependencies[] = insert_view
@@ -133,10 +159,21 @@ dependencies[] = xmlsitemap_engines
 dependencies[] = xmlsitemap_menu
 dependencies[] = xmlsitemap_node
 dependencies[] = xmlsitemap_taxonomy
-; menu
-dependencies[] = crumbs
 ; Features
 dependencies[] = features
+dependencies[] = leaflet_custom
+dependencies[] = page_hero
+dependencies[] = smash_basic_config
+dependencies[] = smash_events
+dependencies[] = smash_front_page
+dependencies[] = smash_gallery
+dependencies[] = smash_guests
+dependencies[] = smash_locations
+dependencies[] = smash_news
+dependencies[] = smash_sponsors
+dependencies[] = smash_users
+dependencies[] = smash_vendors
+dependencies[] = smash_workflow_configuration
 dependencies[] = uuid_features
 
 ; ----------
@@ -241,12 +278,6 @@ variables[entityreference:base-tables][node][0] = 'node'
 variables[entityreference:base-tables][node][1] = 'nid'
 variables[entityreference:base-tables][redirect][0] = 'redirect'
 variables[entityreference:base-tables][redirect][1] = 'rid'
-variables[entityreference:base-tables][registration][0] = 'registration'
-variables[entityreference:base-tables][registration][1] = 'registration_id'
-variables[entityreference:base-tables][registration_type][0] = 'registration_type'
-variables[entityreference:base-tables][registration_type][1] = 'id'
-variables[entityreference:base-tables][registration_state][0] = 'registration_state'
-variables[entityreference:base-tables][registration_state][1] = 'registration_state_id'
 variables[entityreference:base-tables][file][0] = 'file_managed'
 variables[entityreference:base-tables][file][1] = 'fid'
 variables[entityreference:base-tables][taxonomy_term][0] = 'taxonomy_term_data'
@@ -448,11 +479,6 @@ variables[rules_empty_sets][field_collection_item_update] = 1
 variables[rules_empty_sets][field_collection_item_presave] = 2
 variables[rules_empty_sets][field_collection_item_delete] = 3
 variables[rules_empty_sets][field_collection_item_view] = 4
-variables[rules_empty_sets][registration_insert] = 5
-variables[rules_empty_sets][registration_update] = 6
-variables[rules_empty_sets][registration_presave] = 7
-variables[rules_empty_sets][registration_delete] = 8
-variables[rules_empty_sets][registration_view] = 9
 variables[rules_empty_sets][workbench_moderation_after_unpublishing_live_content] = 10
 variables[rules_empty_sets][workbench_moderation_after_moderation_transition] = 11
 variables[rules_empty_sets][node_insert] = 12

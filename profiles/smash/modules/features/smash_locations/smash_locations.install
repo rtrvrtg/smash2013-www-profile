@@ -4,7 +4,7 @@
  * Add Ushijima's test map type if it exists
  */
 function smash_locations_update_7001() {
-	$check_existence = _leaflet_custom_load_one(null, array("title", "1129 Ushijima"));
+	$check_existence = _leaflet_custom_load_one(null, array("title" => "1129 Ushijima"));
 
 	if (is_null($check_existence)) {
 		$new = leaflet_custom_create_map_entity(array(
