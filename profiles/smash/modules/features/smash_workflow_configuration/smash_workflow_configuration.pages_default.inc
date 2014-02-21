@@ -56,10 +56,11 @@ function smash_workflow_configuration_default_page_manager_handlers() {
   );
   $display->cache = array();
   $display->title = '';
+  $display->uuid = 'b65837cd-98c7-41f3-a21c-02a706c91af9';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-250496c9-af80-4510-b143-4c2ef2379bb7';
     $pane->panel = 'left';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
@@ -79,10 +80,11 @@ function smash_workflow_configuration_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
+    $pane->uuid = '250496c9-af80-4510-b143-4c2ef2379bb7';
+    $display->content['new-250496c9-af80-4510-b143-4c2ef2379bb7'] = $pane;
+    $display->panels['left'][0] = 'new-250496c9-af80-4510-b143-4c2ef2379bb7';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-0609baed-153a-4c7e-b0db-bc9cbe6a38d3';
     $pane->panel = 'left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
@@ -107,10 +109,11 @@ function smash_workflow_configuration_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['left'][1] = 'new-2';
+    $pane->uuid = '0609baed-153a-4c7e-b0db-bc9cbe6a38d3';
+    $display->content['new-0609baed-153a-4c7e-b0db-bc9cbe6a38d3'] = $pane;
+    $display->panels['left'][1] = 'new-0609baed-153a-4c7e-b0db-bc9cbe6a38d3';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-55050313-7880-492b-ab03-53bf39b32c0d';
     $pane->panel = 'right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_sidebar_content';
@@ -141,10 +144,11 @@ function smash_workflow_configuration_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['right'][0] = 'new-3';
+    $pane->uuid = '55050313-7880-492b-ab03-53bf39b32c0d';
+    $display->content['new-55050313-7880-492b-ab03-53bf39b32c0d'] = $pane;
+    $display->panels['right'][0] = 'new-55050313-7880-492b-ab03-53bf39b32c0d';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-250496c9-af80-4510-b143-4c2ef2379bb7';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context'] = $handler;
 

@@ -115,7 +115,7 @@
 
     #twitter-latest {
       color: white;
-      background: $colour-theme-primary;
+      background: darken($colour-theme-primary, 10%);
       box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
       padding: 0.5em;
 
@@ -251,6 +251,11 @@
       &.networks-twitter {
         &:before {
           content: "\e602";
+        }
+      }
+      &.networks-flickr {
+        &:before {
+          content: "\e609";
         }
       }
     }

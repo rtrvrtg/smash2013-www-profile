@@ -200,7 +200,7 @@
 /* line 116, ../sass/blocks.scss */
 #boxes-box-social_networks .boxes-box-content #twitter-latest {
   color: white;
-  background: #97c94d;
+  background: #7dae35;
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
   padding: 0.5em;
   margin: 0.5em -10px;
@@ -344,15 +344,19 @@
 #boxes-box-social_networks .boxes-box-content > p > a.networks-twitter:before {
   content: "\e602";
 }
+/* line 257, ../sass/blocks.scss */
+#boxes-box-social_networks .boxes-box-content > p > a.networks-flickr:before {
+  content: "\e609";
+}
 
-/* line 260, ../sass/blocks.scss */
+/* line 265, ../sass/blocks.scss */
 #block-boxes-footer-text {
   clear: both;
   font-size: 0.7em;
   line-height: 1.3em;
 }
 @media all and (min-width: 714.5px) {
-  /* line 260, ../sass/blocks.scss */
+  /* line 265, ../sass/blocks.scss */
   #block-boxes-footer-text {
     font-size: 0.8em;
   }
@@ -361,49 +365,49 @@
 /**
  * Sponsors
  */
-/* line 273, ../sass/blocks.scss */
+/* line 278, ../sass/blocks.scss */
 .view-sponsor-list {
   text-align: center;
 }
-/* line 277, ../sass/blocks.scss */
+/* line 282, ../sass/blocks.scss */
 .view-sponsor-list .view-header p {
   margin-bottom: 0;
 }
-/* line 282, ../sass/blocks.scss */
+/* line 287, ../sass/blocks.scss */
 .view-sponsor-list .view-content div {
   display: inline-block;
   vertical-align: middle;
   margin: 0 2px 4px 2px;
 }
-/* line 287, ../sass/blocks.scss */
+/* line 292, ../sass/blocks.scss */
 .view-sponsor-list .view-content div a {
   display: block;
 }
-/* line 290, ../sass/blocks.scss */
+/* line 295, ../sass/blocks.scss */
 .view-sponsor-list .view-content div img {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 295, ../sass/blocks.scss */
+/* line 300, ../sass/blocks.scss */
 .view-sponsor-list .view-content div a, .view-sponsor-list .view-content div img {
   line-height: 80px;
   max-height: 80px;
   width: auto;
 }
 @media all and (min-width: 950px) {
-  /* line 295, ../sass/blocks.scss */
+  /* line 300, ../sass/blocks.scss */
   .view-sponsor-list .view-content div a, .view-sponsor-list .view-content div img {
     line-height: 100px;
     max-height: 100px;
   }
 }
-/* line 306, ../sass/blocks.scss */
+/* line 311, ../sass/blocks.scss */
 .view-sponsor-list .view-content div.sticky-True a.sticky-True, .view-sponsor-list .view-content div.sticky-True img {
   line-height: 100px;
   max-height: 100px;
 }
 @media all and (min-width: 950px) {
-  /* line 306, ../sass/blocks.scss */
+  /* line 311, ../sass/blocks.scss */
   .view-sponsor-list .view-content div.sticky-True a.sticky-True, .view-sponsor-list .view-content div.sticky-True img {
     line-height: 150px;
     max-height: 150px;

@@ -117,6 +117,7 @@ function smash_news_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['title_enable'] = TRUE;
   $handler->display->display_options['arguments']['date_argument']['title'] = '%1';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
   $handler->display->display_options['arguments']['date_argument']['granularity'] = 'day';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'node.created' => 'node.created',
