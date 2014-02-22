@@ -34,6 +34,7 @@ features[field][] = node-vendor-field_section
 features[field][] = node-vendor-field_vendor_type
 features[field][] = node-vendor-field_website_url
 features[image][] = vendor_banner
+features[image][] = vendor_tile
 features[node][] = vendor
 features[taxonomy][] = vendor_type
 features[variable][] = additional_settings__active_tab_vendor

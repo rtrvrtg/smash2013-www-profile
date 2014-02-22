@@ -134,7 +134,7 @@ projects[geophp][subdir] = "contrib"
 projects[imagecrop][version] = "1.x-dev"
 projects[imagecrop][subdir] = "contrib"
 
-projects[leaflet][version] = "1.1"
+projects[leaflet][version] = "1.x-dev"
 projects[leaflet][subdir] = "contrib"
 
 projects[leaflet_more_maps][version] = "1.8"
@@ -333,4 +333,5 @@ libraries[flexslider][download][url] = "https://github.com/woothemes/FlexSlider/
 projects[redirect][patch][] = "http://drupal.org/files/redirect_loop_detection-1796596-68-reroll.patch"
 projects[menu_block][patch][] = http://drupal.org/files/menu_block_1204064_menu_tree_add_active_path.patch
 projects[menu_position][patch][] = "http://drupal.org/files/menu_position_read_rules-1795202.patch"
+projects[leaflet][patch][] = "https://drupal.org/files/issues/2178231-18-leaflet_entity_views.patch"
 

@@ -106,7 +106,7 @@ function leaflet_custom_leaflet_map_info() {
           'earth' => array(
             'options' => array(
               'tms' => TRUE,
-              'continuousWorld' => TRUE,
+              'continuousWorld' => FALSE,
               'noWrap' => TRUE,
             ),
           ),
