@@ -130,14 +130,14 @@ audio:not([controls]) {
  */
 /* line 119, ../sass/normalize.scss */
 html {
-  font-size: 112.5%;
+  font-size: 100%;
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
   -ms-text-size-adjust: 100%;
   /* 2 */
   /* Establishes a vertical rhythm unit using $base-line-height. */
-  line-height: 1.33333em;
+  line-height: 1.5em;
 }
 
 /*
@@ -232,50 +232,50 @@ h1, h2, .sidebar-content-title {
 /* line 216, ../sass/normalize.scss */
 h1 {
   /* Sets the font-size and line-height while keeping a proper vertical rhythm. */
-  font-size: 2em;
-  line-height: 1.33333em;
+  font-size: 2.5em;
+  line-height: 1.2em;
   /* Sets 1 unit of vertical rhythm on the top and bottom margins. */
-  margin-top: 0.66667em;
+  margin-top: 0.6em;
   margin-bottom: 0em;
 }
 
 /* line 225, ../sass/normalize.scss */
 h2 {
-  font-size: 1.5em;
-  line-height: 1.77778em;
-  margin-top: 0.88889em;
+  font-size: 2em;
+  line-height: 1.5em;
+  margin-top: 0.75em;
   margin-bottom: 0em;
 }
 
 /* line 231, ../sass/normalize.scss */
 h3 {
-  font-size: 1.17em;
-  line-height: 2.2792em;
-  margin-top: 1.1396em;
+  font-size: 1.5em;
+  line-height: 2em;
+  margin-top: 1em;
   margin-bottom: 0em;
 }
 
 /* line 237, ../sass/normalize.scss */
 h4 {
-  font-size: 1em;
-  line-height: 1.33333em;
-  margin-top: 1.33333em;
+  font-size: 1.25em;
+  line-height: 1.2em;
+  margin-top: 1.2em;
   margin-bottom: 0em;
 }
 
 /* line 243, ../sass/normalize.scss */
 h5 {
-  font-size: 0.83em;
-  line-height: 1.60643em;
-  margin-top: 1.60643em;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
   margin-bottom: 0em;
 }
 
 /* line 249, ../sass/normalize.scss */
 h6 {
-  font-size: 0.75em;
-  line-height: 1.77778em;
-  margin-top: 1.77778em;
+  font-size: 0.85em;
+  line-height: 1.76471em;
+  margin-top: 1.76471em;
   margin-bottom: 0em;
 }
 
@@ -290,7 +290,7 @@ hr {
   height: 1px;
   border: 1px solid #666;
   padding-bottom: -1px;
-  margin: 1.33333em 0;
+  margin: 1.5em 0;
 }
 
 /*
@@ -315,7 +315,7 @@ strong {
 /* line 293, ../sass/normalize.scss */
 blockquote {
   /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
-  margin: 1.33333em 30px;
+  margin: 1.5em 30px;
 }
 
 /*
@@ -342,7 +342,7 @@ mark {
 p,
 pre {
   /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
-  margin: 1.33333em 0;
+  margin: 1.5em 0;
 }
 
 /*
@@ -359,7 +359,7 @@ var {
   font-family: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
   /* The $font-monospace value ends with ", serif". */
   font-size: 1em;
-  line-height: 1.33333em;
+  line-height: 1.5em;
 }
 
 /*
@@ -432,7 +432,7 @@ ol,
 ul,
 .item-list ul {
   /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
-  margin: 1.33333em 0;
+  margin: 1.5em 0;
 }
 
 /* line 416, ../sass/normalize.scss */
@@ -536,17 +536,17 @@ fieldset {
   margin: 0 2px;
   /* Apply borders and padding that keep the vertical rhythm. */
   border-top-style: solid;
-  border-top-width: 0.05556em;
-  padding-top: 0.41111em;
+  border-top-width: 0.0625em;
+  padding-top: 0.4625em;
   border-bottom-style: solid;
-  border-bottom-width: 0.05556em;
-  padding-bottom: 0.81111em;
+  border-bottom-width: 0.0625em;
+  padding-bottom: 0.9125em;
   border-left-style: solid;
-  border-left-width: 0.05556em;
-  padding-left: 0.81111em;
+  border-left-width: 0.0625em;
+  padding-left: 0.9125em;
   border-right-style: solid;
-  border-right-width: 0.05556em;
-  padding-right: 0.81111em;
+  border-right-width: 0.0625em;
+  padding-right: 0.9125em;
 }
 
 /*
@@ -693,8 +693,8 @@ table {
   /* width: 100%; */
   /* Prevent cramped-looking tables */
   /* Add vertical rhythm margins. */
-  margin-top: 1.33333em;
-  margin-bottom: 1.33333em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 /*

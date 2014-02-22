@@ -182,8 +182,8 @@ figure.colorbox-content-wrap figcaption {
   display: block;
   border-bottom: 2px solid white;
   text-transform: uppercase;
-  font-size: 1.5em;
-  line-height: 1.77778em;
+  font-size: 2em;
+  line-height: 1.5em;
   text-align: center;
   overflow: hidden;
   margin-bottom: 0.5em;
@@ -255,8 +255,8 @@ figure.colorbox-content-wrap figcaption {
   font-family: "ultramagneticRegular", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
-  font-size: 1.17em;
-  line-height: 2.2792em;
+  font-size: 1.5em;
+  line-height: 2em;
   display: block;
   position: absolute;
   top: 0;
@@ -439,8 +439,8 @@ figure.colorbox-content-wrap figcaption {
   text-decoration: none;
   display: block;
   font-family: "ultramagneticRegular", sans-serif;
-  font-size: 1.5em;
-  line-height: 1.77778em;
+  font-size: 2em;
+  line-height: 1.5em;
   line-height: 1em;
   padding: 0.5em;
   margin: 3px 0 0 0;
@@ -461,4 +461,72 @@ figure.colorbox-content-wrap figcaption {
 /* line 447, ../sass/views-styles.scss */
 .view-id-guest_list.view-display-id-events_page .views-row .field-name-field-teaser p {
   margin-top: 0;
+}
+
+/* line 460, ../sass/views-styles.scss */
+.view-vendors.view-display-id-page > .view-content h4 {
+  margin-top: 0.5em;
+  clear: both;
+}
+@media all and (min-width: 714.5px) {
+  /* line 460, ../sass/views-styles.scss */
+  .view-vendors.view-display-id-page > .view-content h4 {
+    margin-top: 1em;
+  }
+}
+/* line 467, ../sass/views-styles.scss */
+.view-vendors.view-display-id-page > .view-content .views-row {
+  float: left;
+  position: relative;
+  line-height: 0;
+  width: 50%;
+}
+@media all and (min-width: 480px) {
+  /* line 467, ../sass/views-styles.scss */
+  .view-vendors.view-display-id-page > .view-content .views-row {
+    width: 33%;
+  }
+}
+@media all and (min-width: 950px) {
+  /* line 467, ../sass/views-styles.scss */
+  .view-vendors.view-display-id-page > .view-content .views-row {
+    width: 25%;
+  }
+}
+/* line 480, ../sass/views-styles.scss */
+.view-vendors.view-display-id-page > .view-content .views-row a {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 2em 0.5em 0 0.5em;
+  z-index: 5;
+  background: black;
+  color: white;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  font-family: "ultramagneticRegular", sans-serif;
+  line-height: 1em;
+  font-size: 1.5em;
+}
+/* line 502, ../sass/views-styles.scss */
+.view-vendors.view-display-id-page > .view-content .views-row a:hover, .view-vendors.view-display-id-page > .view-content .views-row a:focus, .view-vendors.view-display-id-page > .view-content .views-row a:active {
+  opacity: 0.6;
+  color: white;
+}
+
+/* line 514, ../sass/views-styles.scss */
+.leaflet .map-icon img {
+  width: 24px !important;
+  height: 24px !important;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
 }

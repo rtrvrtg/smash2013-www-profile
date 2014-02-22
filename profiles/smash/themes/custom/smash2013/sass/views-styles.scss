@@ -450,3 +450,71 @@ $schedule-hour-width: 300px;
     }
   }
 }
+
+.view-vendors.view-display-id-page {
+  > .view-header {
+    .views-row {
+    }
+  }
+  > .view-content {
+    h4 {
+      margin-top: 0.5em;
+      @media all and (min-width: $tablet-half) {
+        margin-top: 1em;
+      }
+      clear: both;
+    }
+    .views-row {
+      float: left;
+      position: relative;
+      line-height: 0;
+      width: 50%;
+
+      @media all and (min-width: $tablet-minimum) {
+        width: 33%;
+      }
+      @media all and (min-width: $desktop-minimum) {
+        width: 25%;
+      }
+
+      a {
+        @include box-sizing(border-box);
+
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+
+        padding: 2em 0.5em 0 0.5em;
+
+        z-index: 5;
+
+        background: black;
+        color: white;
+
+        opacity: 0;
+        @include transition(opacity 0.2s ease);
+
+        font-family: $ultramag;
+        line-height: 1em;
+        font-size: 1.5em;
+
+        &:hover, &:focus, &:active {
+          opacity: 0.6;
+
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.leaflet {
+  .map-icon {
+    img {
+      width: 24px !important;
+      height: 24px !important;
+      @include border-radius(2px);
+    }
+  }
+}
