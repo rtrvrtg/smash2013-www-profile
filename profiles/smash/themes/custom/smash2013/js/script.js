@@ -105,6 +105,18 @@ menuLabels.bind('click', function(e){
   forceRedraw(targetInput.parent().get(0));
 });
 
+var menuSize = function(){
+  var target = $('#block-menu-block-1');
+  target.css('max-height', window.innerHeight + "px");
+};
+$(window).resize(function(){
+  menuSize();  
+});
+$(window).bind('orientationchange', function(){
+  menuSize();  
+});
+menuSize();
+
 var getTweet = function(){
   twitterFetcher.fetch('433171194980732929', 'twitter-latest', 1, true);
 };
