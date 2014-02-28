@@ -1,0 +1,4 @@
+name = SMASH Locations Custom Data
+core = 7.x
+package = SMASH!
+dependencies[] = smash_locations
