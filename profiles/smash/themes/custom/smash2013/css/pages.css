@@ -41,8 +41,8 @@ body {
   padding: 0;
   text-align: left;
   background-color: #282828;
-  background: url(../images/2013webgradient.png) fixed repeat-x bottom center, url(../images/2013webbg.png) repeat top center, #282828;
-  background-size: 1px 1300px, 100px 113px;
+  background: url(../images/2013webgradient.png) fixed repeat-x bottom center, url(../images/2014webbg.png) repeat top center, #282828;
+  background-size: 1px 1300px, 30px 30px;
   text-rendering: optimizeLegibility;
 }
 @media all and (min-width: 950px) {
@@ -54,7 +54,7 @@ body {
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   /* line 17, ../sass/pages.scss */
   body {
-    background: url(../images/2013webgradient.png) fixed repeat-x bottom center, url(../images/2013webbg@2x.png) repeat top center, #282828;
+    background: url(../images/2013webgradient.png) fixed repeat-x bottom center, url(../images/2014webbg@2x.png) repeat top center, #282828;
   }
 }
 /* line 42, ../sass/pages.scss */

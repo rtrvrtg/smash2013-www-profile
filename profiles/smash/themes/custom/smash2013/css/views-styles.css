@@ -521,7 +521,7 @@ figure.colorbox-content-wrap figcaption {
 }
 
 /* line 514, ../sass/views-styles.scss */
-.leaflet .map-icon img {
+.leaflet-container .map-icon img {
   width: 24px !important;
   height: 24px !important;
   -webkit-border-radius: 2px;

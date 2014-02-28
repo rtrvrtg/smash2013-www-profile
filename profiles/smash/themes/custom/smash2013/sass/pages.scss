@@ -21,10 +21,10 @@ body {
   background-color: $color-menu-hov;
   background: 
 	url(../images/2013webgradient.png) fixed repeat-x bottom center, 
-	url(../images/2013webbg.png) repeat top center,
+	url(../images/2014webbg.png) repeat top center,
     $color-menu-hov;
   
-  background-size: 1px 1300px, 100px 113px;
+  background-size: 1px 1300px, 30px 30px;
   
   @media all and (min-width: $desktop-minimum) {
     padding: 10px;
@@ -33,7 +33,7 @@ body {
   @include retina {
     background: 
     url(../images/2013webgradient.png) fixed repeat-x bottom center, 
-    url(../images/2013webbg@2x.png) repeat top center,
+    url(../images/2014webbg@2x.png) repeat top center,
       $color-menu-hov;
   }
   
