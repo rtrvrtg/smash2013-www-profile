@@ -78,12 +78,12 @@ body {
 #header {
   color: white;
   @media all and (min-width: $desktop-minimum) {
-    background: url(../images/skadi-cyrus.png) no-repeat bottom right;
+    background: url(../images/skadi-cyrus.2014.png) no-repeat bottom right;
     background-size: 398px 190px;
     min-height: 134px;
     
     @include retina {
-      background-image: url(../images/skadi-cyrus@2x.png);
+      background-image: url(../images/skadi-cyrus.2014@2x.png);
     }
   }
 }

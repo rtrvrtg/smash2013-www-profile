@@ -101,7 +101,7 @@ html.lt-ie9 body {
 @media all and (min-width: 950px) {
   /* line 78, ../sass/pages.scss */
   #header {
-    background: url(../images/skadi-cyrus.png) no-repeat bottom right;
+    background: url(../images/skadi-cyrus.2014.png) no-repeat bottom right;
     background-size: 398px 190px;
     min-height: 134px;
   }
@@ -109,7 +109,7 @@ html.lt-ie9 body {
 @media all and (min-width: 950px) and (-webkit-min-device-pixel-ratio: 1.25), all and (min-width: 950px) and (min-resolution: 120dpi) {
   /* line 78, ../sass/pages.scss */
   #header {
-    background-image: url(../images/skadi-cyrus@2x.png);
+    background-image: url(../images/skadi-cyrus.2014@2x.png);
   }
 }
 
