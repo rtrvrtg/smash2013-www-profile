@@ -4,6 +4,8 @@
  * Add Ushijima's test map type if it doesn't exist
  */
 function smash_locations_update_7001() {
+	module_enable(array('leaflet_custom'));
+
 	$check_existence = _leaflet_custom_load_one(null, array("title" => "1129 Ushijima"));
 
 	if (is_null($check_existence)) {
@@ -37,6 +39,8 @@ function smash_locations_update_7001() {
  * Add precinct map
  */
 function smash_locations_update_7002() {
+	module_enable(array('leaflet_custom'));
+	
 	$check_existence = _leaflet_custom_load_one(null, array("title" => "Rosehill Precinct Map"));
 
 	if (is_null($check_existence)) {
