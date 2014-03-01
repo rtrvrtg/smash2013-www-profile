@@ -328,6 +328,14 @@ libraries[flexslider][destination] = "libraries"
 libraries[flexslider][download][type] = "get"
 libraries[flexslider][download][url] = "https://github.com/woothemes/FlexSlider/archive/version/2.2.zip"
 
+; Leaflet
+libraries[leaflet][directory_name] = "leaflet"
+libraries[leaflet][type] = "library"
+libraries[leaflet][destination] = "libraries"
+libraries[leaflet][download][type] = "get"
+libraries[leaflet][download][url] = "http://leaflet-cdn.s3.amazonaws.com/build/leaflet-0.7.2.zip"
+
+
 ; +++++ Patches +++++
 
 projects[redirect][patch][] = "http://drupal.org/files/redirect_loop_detection-1796596-68-reroll.patch"
