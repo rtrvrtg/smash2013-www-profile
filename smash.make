@@ -15,6 +15,9 @@ projects[ctools][subdir] = "contrib"
 projects[context][version] = "3.2"
 projects[context][subdir] = "contrib"
 
+projects[context_date][version] = "1.0-beta1"
+projects[context_date][subdir] = "contrib"
+
 projects[calendar][version] = "3.4"
 projects[calendar][subdir] = "contrib"
 

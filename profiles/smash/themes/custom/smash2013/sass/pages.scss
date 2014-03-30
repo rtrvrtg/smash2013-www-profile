@@ -27,7 +27,7 @@ body {
   background-size: 1px 1300px, 30px 30px;
   
   @media all and (min-width: $desktop-minimum) {
-    padding: 10px;
+    padding: 0 10px 10px 10px;
   }
   
   @include retina {
@@ -40,10 +40,10 @@ body {
   text-rendering: optimizeLegibility;
   
   html.lt-ie9 & {
-    background: $color-menu-hov url(../images/2013webbg.png) repeat top center;
+    background: $color-menu-hov url(../images/2014webbg.png) repeat top center;
     
     @include retina {
-      background: $color-menu-hov url(../images/2013webbg@2x.png) repeat top center;
+      background: $color-menu-hov url(../images/2014webbg@2x.png) repeat top center;
     }
   }
 
@@ -84,6 +84,13 @@ body {
     
     @include retina {
       background-image: url(../images/skadi-cyrus.2014@2x.png);
+    }
+
+    body.annual-promo-event-1 & {
+      background: url(../images/skadi-cyrus.2014.promo1.png) no-repeat bottom right;
+      @include retina {
+        background-image: url(../images/skadi-cyrus.2014.promo1@2x.png);
+      }
     }
   }
 }
