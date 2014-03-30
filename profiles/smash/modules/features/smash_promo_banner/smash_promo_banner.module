@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Promo Banner feature.
+ */
+
+include_once 'smash_promo_banner.features.inc';

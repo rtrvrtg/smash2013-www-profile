@@ -1,0 +1,11 @@
+name = Promo Banner
+description = Promo Banner
+core = 7.x
+package = SMASH!
+version = 7.x-1.0
+project = smash_promo_banner
+dependencies[] = context
+dependencies[] = context_date
+features[context][] = annual_promo_1
+features[ctools][] = context:context:3
+features[features_api][] = api:1
