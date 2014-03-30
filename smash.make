@@ -1,5 +1,5 @@
 ; SMASH! make file
-core = "7.24"
+core = "7.26"
 api = "2"
 ; comment this out in to use on drupal.org
 projects[drupal][version] = "7.26"

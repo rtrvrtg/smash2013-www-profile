@@ -171,6 +171,7 @@ dependencies[] = smash_guests
 dependencies[] = smash_locations
 dependencies[] = smash_locations_custom
 dependencies[] = smash_news
+dependencies[] = smash_promo_banner
 dependencies[] = smash_sponsors
 dependencies[] = smash_users
 dependencies[] = smash_vendors

@@ -158,3 +158,10 @@ function smash_update_7004() {
   module_enable(array('twitter'));
 }
 
+/**
+ *
+ */
+function smash_update_7005() {
+  module_enable(array('smash_promo_banner'));
+}
+

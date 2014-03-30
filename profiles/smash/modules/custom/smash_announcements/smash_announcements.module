@@ -1,6 +1,7 @@
 <?php
 
 function smash_announcements_init() {
+  /*
   if (drupal_is_front_page()) {
     $debug = variable_get('smash_announcements_debug', FALSE);
     $date_ok = date('m') == '04' && date('d') == '01';
@@ -19,6 +20,7 @@ function smash_announcements_init() {
       }
     }
   }
+  */
 }
 
 function _smash_announcements_initiate() {
