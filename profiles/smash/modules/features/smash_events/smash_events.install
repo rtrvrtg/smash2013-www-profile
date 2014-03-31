@@ -110,3 +110,15 @@ function smash_events_update_7006() {
   variable_set('smash_events_page_header', $header);
   variable_set('smash_events_page_footer', '');
 }
+
+
+/**
+ * Define view header and footer.
+ */
+function smash_events_update_7007() {
+  $header = "<p>A huge stack of events will be on at SMASH! 2014 — there's something here for everyone! These are the event details we have up at the moment, feel free to explore!</p>";
+
+  variable_set('smash_events_page_header', $header);
+  variable_set('smash_events_page_footer', '');
+}
+
