@@ -1,8 +1,8 @@
 ; SMASH! make file
-core = "7.26"
+core = "7.28"
 api = "2"
 ; comment this out in to use on drupal.org
-projects[drupal][version] = "7.26"
+projects[drupal][version] = "7.28"
 #projects[drupal][patch][] = "http://drupal.org/files/entity_node_access-1780646-179.patch"
 
 ; Modules
@@ -224,7 +224,7 @@ projects[insert_view][subdir] = "contrib"
 projects[menu_views][version] = "2.2"
 projects[menu_views][subdir] = "contrib"
 
-projects[views][version] = "3.7"
+projects[views][version] = "3.8"
 projects[views][subdir] = "contrib"
 
 projects[views_bulk_operations][version] = "3.2"
@@ -276,7 +276,7 @@ projects[replicate_ui][subdir] = "contrib"
 ; projects[omega][subdir] = "contrib"
 
 ; projects[zen][type] = "theme"
-; projects[zen][version] = "5.4"
+; projects[zen][version] = "5.5"
 ; projects[zen][subdir] = "contrib"
 
 ; +++++ Libraries +++++

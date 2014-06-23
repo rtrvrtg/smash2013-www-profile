@@ -161,7 +161,7 @@ body.uses-smash-layout #content .content-header {
 @media all and (min-width: 950px) {
   /* line 140, ../../sass/layouts/responsive-sidebars.scss */
   #main {
-    padding-top: 40px;
+    padding-top: 80px;
     /* Move all the children of #main down to make room. */
     position: relative;
   }
@@ -169,9 +169,9 @@ body.uses-smash-layout #content .content-header {
   /* line 144, ../../sass/layouts/responsive-sidebars.scss */
   #navigation {
     position: absolute;
-    top: 0;
+    top: 40px;
     /* Move the navbar up inside #main's padding. */
-    height: 40px;
+    height: 80px;
     width: 948px;
   }
 }

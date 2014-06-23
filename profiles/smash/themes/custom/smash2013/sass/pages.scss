@@ -77,22 +77,6 @@ body {
 
 #header {
   color: white;
-  @media all and (min-width: $desktop-minimum) {
-    background: url(../images/skadi-cyrus.2014.png) no-repeat bottom right;
-    background-size: 398px 190px;
-    min-height: 134px;
-    
-    @include retina {
-      background-image: url(../images/skadi-cyrus.2014@2x.png);
-    }
-
-    body.annual-promo-event-1 & {
-      background: url(../images/skadi-cyrus.2014.promo1.png) no-repeat bottom right;
-      @include retina {
-        background-image: url(../images/skadi-cyrus.2014.promo1@2x.png);
-      }
-    }
-  }
 }
 
 #logo { /* Wrapping link for logo */
@@ -109,34 +93,52 @@ body {
   @media all and (min-width: $desktop-minimum) {
     float: left;
     margin: 0;
-    max-width: 600px;
+    max-width: 650px;
   }
 
   img {
     vertical-align: bottom;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
     max-width: 100%;
+
+    @media all and (min-width: $tablet-half) {
+      margin-bottom: 10px;
+    }
 
     @media all and (min-width: $desktop-minimum) {
       margin-left: -5px;
+      margin-bottom: 0px;
     }
   }
 }
 
 #logo-region { /* Wrapper for website name and slogan */
-  float: left;
   width: 100%;
-  text-align: center;
-
   padding-bottom: 0px;
-  @media all and (min-width: $tablet-half) {
-    padding-bottom: 10px;
-  }
+
   @media all and (min-width: $desktop-minimum) {
-    width: 75%;
-    max-width: 600px;
-    padding-bottom: 20px;
-    text-align: left;
+    background: url(../images/skadi-cyrus.2014.png) no-repeat bottom right;
+    background-size: 314px 150px;
+    min-height: 150px;
+    
+    @include retina {
+      background-image: url(../images/skadi-cyrus.2014@2x.png);
+    }
+
+    body.annual-promo-event-1 & {
+      background: url(../images/skadi-cyrus.2014.promo1.png) no-repeat bottom right;
+      @include retina {
+        background-image: url(../images/skadi-cyrus.2014.promo1@2x.png);
+      }
+    }
+  }
+
+  &:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 1px;
   }
 }
 
@@ -165,26 +167,44 @@ body {
 }
 
 #site-slogan { /* The slogan (or tagline) of a website */
-  margin: 0.5em 0;
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  margin: 0;
   clear: left;
-  font-size: 0.8em;
-  color: $colour-title-secondary;
+  
+  color: white;
+  background: #e73965;
+
   font-weight: bold;
+  text-align: center;
+  font-family: $font-header;
+  text-transform: uppercase;
+  line-height: 2em;
+
+  font-size: 0.8em;
+
   @media all and (min-width: $tablet-minimum) {
     font-size: 1em;
   }
+
   @media all and (min-width: $desktop-minimum) {
     margin: 0;
     font-size: 1.2em;
     letter-spacing: 0.05em;
-    white-space: nowrap;
+    line-height: 40px;
+
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
-  line-height: 1em;
-  font-family: $base-font-family;
-  text-transform: uppercase;
-  
-  html.lt-ie9 & {
-    width: 500px;
+
+  a, a:hover, a:active, a:focus, a:visited {
+    display: block;
+    color: white;
+    text-decoration: none;
   }
 }
 

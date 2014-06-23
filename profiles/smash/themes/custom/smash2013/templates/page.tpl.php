@@ -82,11 +82,6 @@
           <span class="element-hidden"><?php print $site_name; ?></span>
         </a>
         </h1>
-        <?php if ($site_slogan): ?>
-          <h2 id="site-slogan">
-            <?php print str_replace(array("•", "|", ";", ":"), "<br />", $site_slogan); ?>
-          </h2>
-        <?php endif; ?>
       </hgroup>
     <?php endif; ?>
     <?php print render($page['header']); ?>
@@ -94,6 +89,12 @@
   </header>
   <div id="main-wrapper">
   <div id="main">
+
+    <?php if ($site_slogan): ?>
+      <h2 id="site-slogan">
+        <a href="/details/location"><?php print $site_slogan; ?></a>
+      </h2>
+    <?php endif; ?>
 
     <div id="content" class="column" role="main">
       <?php print render($page['content_prefix']); ?>

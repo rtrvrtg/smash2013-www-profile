@@ -159,9 +159,7 @@ li a.active {
         max-height: 800px;
       }
     }
-  }
-  
-  @media all and (max-width: $tablet-maximum) {
+    
     .menu-toggle-checkbox {
       display: none;
       

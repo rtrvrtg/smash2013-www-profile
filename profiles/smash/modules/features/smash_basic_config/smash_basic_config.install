@@ -1,0 +1,5 @@
+<?php
+
+function smash_basic_config_update_7001(){
+	variable_set('site_slogan', 'AUGUST 9-10 WEEKEND, 2014 • ROSEHILL GARDENS, SYDNEY');
+}
