@@ -226,6 +226,7 @@ projects[menu_views][subdir] = "contrib"
 
 projects[views][version] = "3.8"
 projects[views][subdir] = "contrib"
+projects[views][patch][] = "https://gist.githubusercontent.com/rtrvrtg/4f89ad213e6e1e5fcd89/raw/69a7151253eb51c52b356a491cbbc28b875d3381/gistfile1.txt"
 
 projects[views_bulk_operations][version] = "3.2"
 projects[views_bulk_operations][subdir] = "contrib"

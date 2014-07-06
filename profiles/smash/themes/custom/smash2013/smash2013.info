@@ -79,6 +79,8 @@ stylesheets[all][] = css/print.css
 
 scripts[] = js/twitterFetcher/twitterFetcher_v10_min.js
 scripts[] = js/script.js
+scripts[] = js/jquery.ba-throttle-debounce.min.js
+scripts[] = js/jquery.stickyheader.js
 
 
 
