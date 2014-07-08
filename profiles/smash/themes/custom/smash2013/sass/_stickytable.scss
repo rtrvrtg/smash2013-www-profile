@@ -9,12 +9,17 @@
 	    width: 100%;
 	    background: #fff;
 
+	    font-size: 0.9em;
+
 	    thead {
 	    	th {
 	    		text-align: center;
 	    		padding: 0.25em;
 
 	    		background: #eee;
+	    		font-family: $ultramag;
+	    		font-weight: normal;
+	    		letter-spacing: -0.05em;
 
 	    		&:first-child {
 					text-align: right;	    		
@@ -32,9 +37,14 @@
 	    		padding: 0.25em;
 
 	    		background: #eee;
+	    		font-family: $ultramag;
+	    		font-weight: normal;
+	    		letter-spacing: -0.05em;
 	    	}
 	    	td {
 	    		text-align: center;
+	    		min-width: 120px;
+	    		font-weight: bold;
 	    	}
 	    }
 	}
@@ -73,20 +83,117 @@
 		td,
 		th {
 			box-sizing: border-box;
-			min-width: 120px;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
 
 			position: relative;
 
 			a {
 				display: block;
 				text-align: center;
+				
 				box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
 
 				position: absolute;
 				top: 0;
 				bottom: 0;
-				left: 0;
+				left: 1px;
 				right: 0;
+
+				padding: 0.25em;
+
+				color: white;
+
+				transition: box-shadow .125s ease-in-out;
+
+				&:hover {
+					z-index: 2;
+					box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.4);
+				}
+
+				&:focus, &:active {
+					z-index: 2;
+					box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.6);
+					text-decoration: none;
+				}
+
+				&.art,
+				&[href*="/events/art-events/"] {
+					background: #00ADAD;
+				}
+
+				&.awesome,
+				&[href*="/events/awesome-events/"] {
+					background: #88ff33;
+				}
+
+				&.bjd,
+				&[href*="/events/bjd-events/"] {
+					background: #E16049;
+				}
+
+				&.cosplay,
+				&[href*="/events/cosplay-events/"] {
+					background: #00A3DB;
+				}
+
+				&.gundam,
+				&[href*="/events/gundam-events/"] {
+					background: #E16049;
+				}
+
+				&.maid,
+				&[href*="/events/maid-café/"],
+				&[href*="/events/maid-caf%C3%A9/"] {
+					background: #7F8FBB;
+				}
+
+				&.screening {
+					background: #3F619F;
+				}
+
+				&.screening2 {
+					background: #6F82B3;
+				}
+
+				&.game-comp {
+					background: #EA8B2E;
+				}
+
+				&.game-play {
+					background: #F1AB62;
+				}
+
+				&.spare {
+					background: #CACCCB;
+				}
+
+				&.trivia {
+					background: #EA8B2E;
+				}
+
+				&.awards {
+					background: #DC3B70;
+				}
+
+				&.performance {
+					background: #FF0004;
+				}
+
+				&.guest {
+					background: #FEDA1B;
+					color: black;
+				}
+
+				&.karaoke {
+					background: #9B4F8F;
+				}
+
+				&.karaoke2 {
+					background: #B27AA8;
+				}
 			}
 		}
 	}

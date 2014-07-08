@@ -1,0 +1,23 @@
+@include font-face(
+    'ptsans', 
+    font-files(
+        'ptsans/wf/ptsans_regular_macroman/PTS55F-webfont.woff', woff,
+        'ptsans/wf/ptsans_regular_macroman/PTS55F-webfont.ttf', ttf,
+        'ptsans/wf/ptsans_regular_macroman/PTS55F-webfont.svg', svg
+    ),
+    'ptsans/wf/ptsans_regular_macroman/PTS55F-webfont.eot', 
+    'normal',
+    'normal'
+);
+
+@include font-face(
+    'ptsansnarrow', 
+    font-files(
+        'ptsans/wf/ptsansnarrow_regular_macroman/PTN57F-webfont.woff', woff,
+        'ptsans/wf/ptsansnarrow_regular_macroman/PTN57F-webfont.ttf', ttf,
+        'ptsans/wf/ptsansnarrow_regular_macroman/PTN57F-webfont.svg', svg
+    ),
+    'ptsans/wf/ptsansnarrow_regular_macroman/PTN57F-webfont.eot', 
+    'normal',
+    'normal'
+);

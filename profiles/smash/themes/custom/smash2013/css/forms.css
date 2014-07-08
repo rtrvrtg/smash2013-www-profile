@@ -28,6 +28,22 @@
   src: url('../fonts/icomoon/fonts/icomoon.eot?#iefix') format('eot'), url('../fonts/icomoon/fonts/icomoon.woff') format('woff'), url('../fonts/icomoon/fonts/icomoon.ttf') format('truetype'), url('../fonts/icomoon/fonts/icomoon.svg#icomoon') format('svg');
 }
 
+@font-face {
+  font-family: "ptsans";
+  src: url('../fonts/ptsans/wf/ptsans_regular_macroman/PTS55F-webfont.eot');
+  src: url('../fonts/ptsans/wf/ptsans_regular_macroman/PTS55F-webfont.eot?#iefix') format('eot'), url('../fonts/ptsans/wf/ptsans_regular_macroman/PTS55F-webfont.woff') format('woff'), url('../fonts/ptsans/wf/ptsans_regular_macroman/PTS55F-webfont.ttf') format('truetype'), url('../fonts/ptsans/wf/ptsans_regular_macroman/PTS55F-webfont.svg') format('svg');
+  font-weight: "normal";
+  font-style: "normal";
+}
+
+@font-face {
+  font-family: "ptsansnarrow";
+  src: url('../fonts/ptsans/wf/ptsansnarrow_regular_macroman/PTN57F-webfont.eot');
+  src: url('../fonts/ptsans/wf/ptsansnarrow_regular_macroman/PTN57F-webfont.eot?#iefix') format('eot'), url('../fonts/ptsans/wf/ptsansnarrow_regular_macroman/PTN57F-webfont.woff') format('woff'), url('../fonts/ptsans/wf/ptsansnarrow_regular_macroman/PTN57F-webfont.ttf') format('truetype'), url('../fonts/ptsans/wf/ptsansnarrow_regular_macroman/PTN57F-webfont.svg') format('svg');
+  font-weight: "normal";
+  font-style: "normal";
+}
+
 /* line 13, ../sass/forms.scss */
 input[type="text"],
 input[type="password"],

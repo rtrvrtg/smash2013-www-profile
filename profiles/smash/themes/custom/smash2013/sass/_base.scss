@@ -40,6 +40,7 @@ $legacy-support-for-ie8: true;
 
 @import "font_ultramagnetic";
 @import "font_icomoon";
+@import "font_ptsans";
 
 // Compass' vertical_rhythm extension is a powerful tool to set up a vertical
 // rhythm for your entire page. You can see some of its mixins and functions in
@@ -77,7 +78,7 @@ $tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
 $helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 $lucida:          "Lucida Sans", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-$myriad:          "Myriad Pro", Myriad, Verdana, Arial, sans-serif;
+$myriad:          "Myriad Pro", Myriad, "ptsans", Verdana, Arial, sans-serif;
 $ultramag:        "ultramagneticRegular", sans-serif;
 
 // For an explanation of why "sans-serif" is at the end of this list, see
