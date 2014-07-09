@@ -47,53 +47,65 @@
   font-style: "normal";
 }
 
-/* line 1, ../sass/_stickytable.scss */
+/* line 16, ../sass/_stickytable.scss */
 .sticky-table-component {
   margin: 0 auto;
   padding: 0;
   max-width: 920px;
   overflow: hidden;
 }
-/* line 7, ../sass/_stickytable.scss */
+/* line 22, ../sass/_stickytable.scss */
 .sticky-table-component table {
   border-collapse: collapse;
   width: 100%;
-  background: #fff;
-  font-size: 0.9em;
+  background: white;
 }
-/* line 15, ../sass/_stickytable.scss */
+/* line 28, ../sass/_stickytable.scss */
 .sticky-table-component table thead th {
   text-align: center;
-  padding: 0.25em;
-  background: #eee;
+  background: #111;
+  color: white;
   font-family: "ultramagneticRegular", sans-serif;
   font-weight: normal;
   letter-spacing: -0.05em;
+  padding: 0.5em 0.25em;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
-/* line 24, ../sass/_stickytable.scss */
+/* line 32, ../sass/_stickytable.scss */
 .sticky-table-component table thead th:first-child {
   text-align: right;
 }
-/* line 31, ../sass/_stickytable.scss */
+/* line 39, ../sass/_stickytable.scss */
 .sticky-table-component table tbody tr {
   border-top: 1px solid #eee;
 }
-/* line 35, ../sass/_stickytable.scss */
+/* line 43, ../sass/_stickytable.scss */
 .sticky-table-component table tbody th {
   text-align: right;
-  padding: 0.25em;
-  background: #eee;
+  background: #111;
+  color: white;
   font-family: "ultramagneticRegular", sans-serif;
   font-weight: normal;
   letter-spacing: -0.05em;
+  padding: 0.5em 0.25em;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
-/* line 44, ../sass/_stickytable.scss */
+/* line 47, ../sass/_stickytable.scss */
+.sticky-table-component table tbody th .bracket {
+  font-size: 0.6em;
+  font-weight: normal;
+}
+/* line 52, ../sass/_stickytable.scss */
 .sticky-table-component table tbody td {
   text-align: center;
   min-width: 120px;
   font-weight: bold;
 }
-/* line 52, ../sass/_stickytable.scss */
+/* line 60, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap {
   overflow-x: auto;
   overflow-y: hidden;
@@ -101,7 +113,7 @@
   margin: 0;
   width: 100%;
 }
-/* line 61, ../sass/_stickytable.scss */
+/* line 69, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap .sticky-thead,
 .sticky-table-component .sticky-wrap .sticky-col,
 .sticky-table-component .sticky-wrap .sticky-intersect {
@@ -109,24 +121,23 @@
   position: absolute;
   top: 0;
   left: 0;
-  transition: all .125s ease-in-out;
   z-index: 50;
   width: auto;
   margin: 0;
 }
-/* line 72, ../sass/_stickytable.scss */
+/* line 79, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap .sticky-thead {
   box-shadow: 0 0.25em 0.1em -0.1em rgba(0, 0, 0, 0.125);
   z-index: 100;
   width: 100%;
   /* Force stretch */
 }
-/* line 78, ../sass/_stickytable.scss */
+/* line 85, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap .sticky-intersect {
   opacity: 1;
   z-index: 150;
 }
-/* line 84, ../sass/_stickytable.scss */
+/* line 91, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td,
 .sticky-table-component .sticky-wrap th {
   box-sizing: border-box;
@@ -134,11 +145,13 @@
   -webkit-box-sizing: border-box;
   position: relative;
 }
-/* line 91, ../sass/_stickytable.scss */
+/* line 98, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a,
 .sticky-table-component .sticky-wrap th a {
   display: block;
   text-align: center;
+  font-family: "ultramagneticRegular", sans-serif;
+  font-weight: normal;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -151,13 +164,13 @@
   color: white;
   transition: box-shadow .125s ease-in-out;
 }
-/* line 111, ../sass/_stickytable.scss */
+/* line 121, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a:hover,
 .sticky-table-component .sticky-wrap th a:hover {
   z-index: 2;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.4);
 }
-/* line 116, ../sass/_stickytable.scss */
+/* line 126, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a:focus, .sticky-table-component .sticky-wrap td a:active,
 .sticky-table-component .sticky-wrap th a:focus,
 .sticky-table-component .sticky-wrap th a:active {
@@ -165,98 +178,108 @@
   box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
-/* line 123, ../sass/_stickytable.scss */
+/* line 133, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a.art, .sticky-table-component .sticky-wrap td a[href*="/events/art-events/"],
 .sticky-table-component .sticky-wrap th a.art,
 .sticky-table-component .sticky-wrap th a[href*="/events/art-events/"] {
   background: #00ADAD;
 }
-/* line 128, ../sass/_stickytable.scss */
+/* line 138, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a.awesome, .sticky-table-component .sticky-wrap td a[href*="/events/awesome-events/"],
 .sticky-table-component .sticky-wrap th a.awesome,
 .sticky-table-component .sticky-wrap th a[href*="/events/awesome-events/"] {
   background: #88ff33;
 }
-/* line 133, ../sass/_stickytable.scss */
+/* line 143, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a.bjd, .sticky-table-component .sticky-wrap td a[href*="/events/bjd-events/"],
 .sticky-table-component .sticky-wrap th a.bjd,
 .sticky-table-component .sticky-wrap th a[href*="/events/bjd-events/"] {
   background: #E16049;
 }
-/* line 138, ../sass/_stickytable.scss */
+/* line 147, ../sass/_stickytable.scss */
+.sticky-table-component .sticky-wrap td a.bjd2,
+.sticky-table-component .sticky-wrap th a.bjd2 {
+  background: #E98B70;
+}
+/* line 152, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a.cosplay, .sticky-table-component .sticky-wrap td a[href*="/events/cosplay-events/"],
 .sticky-table-component .sticky-wrap th a.cosplay,
 .sticky-table-component .sticky-wrap th a[href*="/events/cosplay-events/"] {
   background: #00A3DB;
 }
-/* line 143, ../sass/_stickytable.scss */
+/* line 157, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a.gundam, .sticky-table-component .sticky-wrap td a[href*="/events/gundam-events/"],
 .sticky-table-component .sticky-wrap th a.gundam,
 .sticky-table-component .sticky-wrap th a[href*="/events/gundam-events/"] {
   background: #E16049;
 }
-/* line 149, ../sass/_stickytable.scss */
+/* line 163, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a.maid, .sticky-table-component .sticky-wrap td a[href*="/events/maid-café/"], .sticky-table-component .sticky-wrap td a[href*="/events/maid-caf%C3%A9/"],
 .sticky-table-component .sticky-wrap th a.maid,
 .sticky-table-component .sticky-wrap th a[href*="/events/maid-café/"],
 .sticky-table-component .sticky-wrap th a[href*="/events/maid-caf%C3%A9/"] {
   background: #7F8FBB;
 }
-/* line 153, ../sass/_stickytable.scss */
+/* line 167, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a.screening,
 .sticky-table-component .sticky-wrap th a.screening {
   background: #3F619F;
 }
-/* line 157, ../sass/_stickytable.scss */
+/* line 171, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a.screening2,
 .sticky-table-component .sticky-wrap th a.screening2 {
   background: #6F82B3;
 }
-/* line 161, ../sass/_stickytable.scss */
+/* line 175, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a.game-comp,
 .sticky-table-component .sticky-wrap th a.game-comp {
   background: #EA8B2E;
 }
-/* line 165, ../sass/_stickytable.scss */
+/* line 179, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a.game-play,
 .sticky-table-component .sticky-wrap th a.game-play {
   background: #F1AB62;
 }
-/* line 169, ../sass/_stickytable.scss */
+/* line 183, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a.spare,
 .sticky-table-component .sticky-wrap th a.spare {
   background: #CACCCB;
 }
-/* line 173, ../sass/_stickytable.scss */
+/* line 187, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a.trivia,
 .sticky-table-component .sticky-wrap th a.trivia {
   background: #EA8B2E;
 }
-/* line 177, ../sass/_stickytable.scss */
+/* line 191, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a.awards,
 .sticky-table-component .sticky-wrap th a.awards {
   background: #DC3B70;
 }
-/* line 181, ../sass/_stickytable.scss */
+/* line 195, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a.performance,
 .sticky-table-component .sticky-wrap th a.performance {
-  background: #FF0004;
+  background: #82BF41;
 }
-/* line 185, ../sass/_stickytable.scss */
+/* line 199, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a.guest,
 .sticky-table-component .sticky-wrap th a.guest {
   background: #FEDA1B;
   color: black;
 }
-/* line 190, ../sass/_stickytable.scss */
+/* line 204, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a.karaoke,
 .sticky-table-component .sticky-wrap th a.karaoke {
   background: #9B4F8F;
 }
-/* line 194, ../sass/_stickytable.scss */
+/* line 208, ../sass/_stickytable.scss */
 .sticky-table-component .sticky-wrap td a.karaoke2,
 .sticky-table-component .sticky-wrap th a.karaoke2 {
   background: #B27AA8;
+}
+/* line 212, ../sass/_stickytable.scss */
+.sticky-table-component .sticky-wrap td a.panel,
+.sticky-table-component .sticky-wrap th a.panel {
+  background: #82BF41;
 }
 
 /* line 12, ../sass/nodes.scss */

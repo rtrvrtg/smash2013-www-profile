@@ -1,3 +1,18 @@
+@mixin sticky-table-header {
+	background: #111;
+	color: white;
+
+	font-family: $ultramag;
+	font-weight: normal;
+	letter-spacing: -0.05em;
+
+	padding: 0.5em 0.25em;
+
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
 .sticky-table-component {
 	margin: 0 auto;
 	padding: 0;
@@ -7,19 +22,12 @@
 	table {
 	    border-collapse: collapse;
 	    width: 100%;
-	    background: #fff;
-
-	    font-size: 0.9em;
+	    background: white;
 
 	    thead {
 	    	th {
 	    		text-align: center;
-	    		padding: 0.25em;
-
-	    		background: #eee;
-	    		font-family: $ultramag;
-	    		font-weight: normal;
-	    		letter-spacing: -0.05em;
+	    		@include sticky-table-header;
 
 	    		&:first-child {
 					text-align: right;	    		
@@ -34,12 +42,12 @@
 
 	    	th {
 	    		text-align: right;
-	    		padding: 0.25em;
+	    		@include sticky-table-header;
 
-	    		background: #eee;
-	    		font-family: $ultramag;
-	    		font-weight: normal;
-	    		letter-spacing: -0.05em;
+	    		.bracket {
+	    			font-size: 0.6em;
+	    			font-weight: normal;
+	    		}
 	    	}
 	    	td {
 	    		text-align: center;
@@ -63,7 +71,6 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			transition: all .125s ease-in-out;
 			z-index: 50;
 			width: auto;
 			margin: 0;
@@ -91,6 +98,9 @@
 			a {
 				display: block;
 				text-align: center;
+
+				font-family: $ultramag;
+				font-weight: normal;
 				
 				box-sizing: border-box;
 				-moz-box-sizing: border-box;
@@ -132,6 +142,10 @@
 				&.bjd,
 				&[href*="/events/bjd-events/"] {
 					background: #E16049;
+				}
+
+				&.bjd2 {
+					background: #E98B70;
 				}
 
 				&.cosplay,
@@ -179,7 +193,7 @@
 				}
 
 				&.performance {
-					background: #FF0004;
+					background: #82BF41;
 				}
 
 				&.guest {
@@ -193,6 +207,10 @@
 
 				&.karaoke2 {
 					background: #B27AA8;
+				}
+
+				&.panel {
+					background: #82BF41;
 				}
 			}
 		}

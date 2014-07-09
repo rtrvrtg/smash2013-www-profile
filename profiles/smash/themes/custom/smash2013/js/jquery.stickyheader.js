@@ -56,8 +56,14 @@
 						// Set width of sticky table head
 						$stickyHead.width($t.width());
 
+						$stickyInsct.width($stickyCol.width()).height($stickyHead.height());
+
 						// Set width of sticky table col
-						$stickyCol.find('th').add($stickyInsct.find('th')).width($t.find('thead th').width())
+						$stickyCol.find('th').add(
+							$stickyInsct.find('th')
+						).width(
+							$t.find('thead th').width()
+						)
 					},
 					repositionStickyHead = function () {
 						// Return value of calculated allowance

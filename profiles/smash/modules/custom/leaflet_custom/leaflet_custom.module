@@ -92,6 +92,7 @@ function leaflet_custom_leaflet_map_info() {
         'fadeAnimation' => TRUE,
         'zoomAnimation' => TRUE,
         'closePopupOnClick' => TRUE,
+        'crs' => 'L.CRS.Simple',
       ),
       'layers' => array(
         'earth' => array(

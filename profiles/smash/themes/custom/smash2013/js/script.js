@@ -125,8 +125,6 @@ getTweet();
 var stupidFirefoxTrick = function(){
   var items = $('.sticky-table-component table').find('th, td');
 
-  alert('gogogo ' + items.length);
-
   items.each(function(){
     $(this).children().css('position', 'relative')
       .width($(this).width()).height($(this).height());
