@@ -34,6 +34,14 @@ function smash_locations_node_info() {
       'title_label' => t('Name'),
       'help' => '',
     ),
+    'map_location' => array(
+      'name' => t('Map Location'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'venue_map' => array(
       'name' => t('Venue Map'),
       'base' => 'node_content',
