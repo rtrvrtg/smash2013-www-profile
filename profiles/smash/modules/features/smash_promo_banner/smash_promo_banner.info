@@ -2,6 +2,7 @@ name = Promo Banner
 description = Promo Banner
 core = 7.x
 package = SMASH!
+php = 5.2.4
 version = 7.x-1.0
 project = smash_promo_banner
 dependencies[] = context
