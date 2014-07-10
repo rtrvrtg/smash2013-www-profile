@@ -139,6 +139,8 @@ projects[imagecrop][subdir] = "contrib"
 
 projects[leaflet][version] = "1.x-dev"
 projects[leaflet][subdir] = "contrib"
+projects[leaflet][patch][] = "https://gist.githubusercontent.com/rtrvrtg/5eee67eb3a519eccc341/raw/f1f40cc6691d07ef565d64e22db622addec9dbcb/gistfile1.txt"
+projects[leaflet][patch][] = "https://gist.githubusercontent.com/rtrvrtg/f539b8d2d9807a1672f6/raw/c34a1b7422a1cd52d3ebce97ff5192f8e3c6b7a1/gistfile1.txt"
 
 projects[leaflet_more_maps][version] = "1.8"
 projects[leaflet_more_maps][subdir] = "contrib"
@@ -337,7 +339,7 @@ libraries[leaflet][directory_name] = "leaflet"
 libraries[leaflet][type] = "library"
 libraries[leaflet][destination] = "libraries"
 libraries[leaflet][download][type] = "get"
-libraries[leaflet][download][url] = "http://leaflet-cdn.s3.amazonaws.com/build/leaflet-0.7.2.zip"
+libraries[leaflet][download][url] = "http://leaflet-cdn.s3.amazonaws.com/build/leaflet-0.7.3.zip"
 
 
 ; +++++ Patches +++++

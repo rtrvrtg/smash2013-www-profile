@@ -94,6 +94,11 @@ function leaflet_custom_leaflet_map_info() {
         'closePopupOnClick' => TRUE,
         'crs' => 'L.CRS.Simple',
       ),
+      'center' => array(
+        'force' => TRUE,
+        'lat' => 128, 
+        'long' => 128
+      ),
       'layers' => array(
         'earth' => array(
           'urlTemplate' => $map_entity->field_url_template[$langcode][0]['value'],
@@ -106,9 +111,8 @@ function leaflet_custom_leaflet_map_info() {
         'layers' => array(
           'earth' => array(
             'options' => array(
+              'continuousWorld' => TRUE,
               'tms' => TRUE,
-              'continuousWorld' => FALSE,
-              'noWrap' => TRUE,
             ),
           ),
         ),
