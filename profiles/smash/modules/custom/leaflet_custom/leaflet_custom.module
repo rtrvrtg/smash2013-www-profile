@@ -97,7 +97,7 @@ function leaflet_custom_leaflet_map_info() {
       'center' => array(
         'force' => TRUE,
         'lat' => 128, 
-        'long' => 128
+        'lon' => 128
       ),
       'layers' => array(
         'earth' => array(
