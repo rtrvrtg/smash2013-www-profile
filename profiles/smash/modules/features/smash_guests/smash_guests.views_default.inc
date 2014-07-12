@@ -120,7 +120,7 @@ function smash_guests_views_default_views() {
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<p>Since 2008, SMASH! has been committed to bringing the best possible talent from across the world to discuss the anime industry, meet with fans and share their experiences. In the past we\'ve been honoured to have been joined by guests such as Shinichi \'Nabeshin\' Watanabe, Hidenobu Kiuchi, Shin-Ichiro Miki, Sakura Tange, Yuko Miyamura and Tiffany Grant. In 2013, we\'re back again with more amazing guests to join us in celebrating our seventh year!</p>';
+  $handler->display->display_options['header']['area']['content'] = '<p>Since 2008, SMASH! has been committed to bringing the best possible talent from across the world to discuss the anime industry, meet with fans and share their experiences. In the past we\'ve been honoured to have been joined by guests such as Shinichi \'Nabeshin\' Watanabe, Hidenobu Kiuchi, Shin-Ichiro Miki, Sakura Tange, Yuko Miyamura and Tiffany Grant. In 2014, we\'re back again with more amazing guests to join us in celebrating our eighth year!</p>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */

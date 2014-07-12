@@ -12,21 +12,6 @@ function smash_front_page_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
-  $ds_fieldsetting->id = 'field_collection_item|field_features|default';
-  $ds_fieldsetting->entity_type = 'field_collection_item';
-  $ds_fieldsetting->bundle = 'field_features';
-  $ds_fieldsetting->view_mode = 'default';
-  $ds_fieldsetting->settings = array(
-    'feature_wrapper' => array(
-      'weight' => '4',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
-  );
-  $export['field_collection_item|field_features|default'] = $ds_fieldsetting;
-
-  $ds_fieldsetting = new stdClass();
-  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'field_collection_item|field_hero|default';
   $ds_fieldsetting->entity_type = 'field_collection_item';
   $ds_fieldsetting->bundle = 'field_hero';
@@ -148,45 +133,6 @@ function smash_front_page_ds_custom_fields_info() {
  */
 function smash_front_page_ds_layout_settings_info() {
   $export = array();
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'field_collection_item|field_features|default';
-  $ds_layout->entity_type = 'field_collection_item';
-  $ds_layout->bundle = 'field_features';
-  $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_1col';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_hidden' => array(
-        0 => 'field_feature_image_inactive',
-        1 => 'field_feature_image_active',
-        2 => 'field_feature_title',
-        3 => 'field_feature_blurb',
-        5 => 'field_feature_link',
-      ),
-      'ds_content' => array(
-        4 => 'feature_wrapper',
-      ),
-    ),
-    'fields' => array(
-      'field_feature_image_inactive' => 'ds_hidden',
-      'field_feature_image_active' => 'ds_hidden',
-      'field_feature_title' => 'ds_hidden',
-      'field_feature_blurb' => 'ds_hidden',
-      'feature_wrapper' => 'ds_content',
-      'field_feature_link' => 'ds_hidden',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-      'ds_hidden' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 0,
-  );
-  $export['field_collection_item|field_features|default'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
