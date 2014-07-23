@@ -4,8 +4,6 @@ $(document).ready(function(){
 
 	var fields = $('input[name="field_event_date_time[und][0][value][date]"], input[name="field_event_date_time[und][0][value2][date]"]');
 
-	fields.parent().hide();
-
 	var updateField = function(){
 		if ($(this).val().indexOf('-') >= 0) {
 			var parts = $(this).val().split('-');
