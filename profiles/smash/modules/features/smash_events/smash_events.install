@@ -122,3 +122,10 @@ function smash_events_update_7007() {
   variable_set('smash_events_page_footer', '');
 }
 
+/**
+ * Set default event date 2014
+ */
+function smash_events_update_7008() {
+  variable_set('smash_events_default_date', '2014-08-09');
+}
+
