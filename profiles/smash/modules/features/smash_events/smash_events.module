@@ -45,35 +45,17 @@ function smash_events_form_event_node_form_after($form) {
   $event_time['show_todate']['#checked'] = TRUE;
 
   $default_date = strtotime(variable_get('smash_events_default_date') . ' 12:00:00');
-  $event_time['value']['date']['#value'] = date('m/d/Y', $default_date);
-  $event_time['value2']['date']['#value'] = date('m/d/Y', $default_date);
-
-  array_unshift($event_time['value']['#element_validate'], 'smash_events_form_event_node_form_date_validate');
-  array_unshift($event_time['value2']['#element_validate'], 'smash_events_form_event_node_form_date_validate');
+  if (empty($event_time['value']['date']['#default_value'])) {
+    $event_time['value2']['date']['#default_value'] = date('m/d/Y', $default_date);  
+  }
+  if (empty($event_time['value']['date']['#default_value'])) {
+    $event_time['value2']['date']['#default_value'] = date('m/d/Y', $default_date);  
+  }
 
   $path = drupal_get_path('module', 'smash_events');
   $form['#attached']['js'][] = $path . '/scripts/editor.js';
 
   return $form;
-}
-
-/**
- * Add a default event date - validation.
- */
-function smash_events_form_event_node_form_date_validate(&$form, &$form_state) {
-  if (empty($form['time']['#value'])) {
-    $form['#value']['date'] = 
-    $form['date']['#value'] = 
-    $form['date']['#default_value'] =
-    '';
-  }
-  else {
-    $form['#value']['date'] = 
-    $form['date']['#value'] = 
-    $form['date']['#default_value'] = 
-    variable_get('smash_events_default_date');
-  }
-  // dpm($form);
 }
 
 /**
