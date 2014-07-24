@@ -122,7 +122,7 @@ function smash_events_field_default_fields() {
           'label' => 'above',
           'module' => 'date',
           'settings' => array(
-            'format_type' => 'short',
+            'format_type' => 'long',
             'fromto' => 'both',
             'multiple_from' => '',
             'multiple_number' => '',
