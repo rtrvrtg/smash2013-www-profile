@@ -1,8 +1,8 @@
 ; SMASH! make file
-core = "7.28"
+core = "7.30"
 api = "2"
 ; comment this out in to use on drupal.org
-projects[drupal][version] = "7.28"
+projects[drupal][version] = "7.30"
 #projects[drupal][patch][] = "http://drupal.org/files/entity_node_access-1780646-179.patch"
 
 ; Modules
@@ -332,7 +332,7 @@ libraries[flexslider][directory_name] = "flexslider"
 libraries[flexslider][type] = "library"
 libraries[flexslider][destination] = "libraries"
 libraries[flexslider][download][type] = "get"
-libraries[flexslider][download][url] = "https://github.com/woothemes/FlexSlider/archive/version/2.2.zip"
+libraries[flexslider][download][url] = "https://github.com/woothemes/FlexSlider/archive/version/2.2.2.zip"
 
 ; Leaflet
 libraries[leaflet][directory_name] = "leaflet"
