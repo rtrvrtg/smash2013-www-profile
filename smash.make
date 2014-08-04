@@ -296,7 +296,7 @@ libraries[colorbox][directory_name] = "colorbox"
 libraries[colorbox][type] = "library"
 libraries[colorbox][destination] = "libraries"
 libraries[colorbox][download][type] = "get"
-libraries[colorbox][download][url] = "https://github.com/jackmoore/colorbox/archive/master.zip"
+libraries[colorbox][download][url] = "https://github.com/jackmoore/colorbox/archive/1.5.11.zip"
 
 ; Plupload
 libraries[plupload][directory_name] = "plupload"
