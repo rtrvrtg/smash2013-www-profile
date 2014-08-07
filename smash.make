@@ -1,8 +1,8 @@
 ; SMASH! make file
-core = "7.30"
+core = "7.31"
 api = "2"
 ; comment this out in to use on drupal.org
-projects[drupal][version] = "7.30"
+projects[drupal][version] = "7.31"
 #projects[drupal][patch][] = "http://drupal.org/files/entity_node_access-1780646-179.patch"
 
 ; Modules
