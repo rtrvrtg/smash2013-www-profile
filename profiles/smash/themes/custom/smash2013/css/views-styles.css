@@ -169,8 +169,8 @@ figure.colorbox-content-wrap {
 figure.colorbox-content-wrap img {
   width: auto !important;
   height: 100% !important;
-  max-width: 800px !important;
-  max-height: 800px !important;
+  max-width: 800px;
+  max-height: 800px;
 }
 /* line 125, ../sass/views-styles.scss */
 figure.colorbox-content-wrap figcaption {
