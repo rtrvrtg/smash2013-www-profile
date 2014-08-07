@@ -167,10 +167,10 @@ figure.colorbox-content-wrap {
 }
 /* line 118, ../sass/views-styles.scss */
 figure.colorbox-content-wrap img {
-  width: auto;
-  height: 100%;
-  max-width: 800px;
-  max-height: 800px;
+  width: auto !important;
+  height: 100% !important;
+  max-width: 800px !important;
+  max-height: 800px !important;
 }
 /* line 125, ../sass/views-styles.scss */
 figure.colorbox-content-wrap figcaption {
