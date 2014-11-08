@@ -21,7 +21,7 @@ projects[context_date][subdir] = "contrib"
 projects[calendar][version] = "3.4"
 projects[calendar][subdir] = "contrib"
 
-projects[date][version] = "2.7"
+projects[date][version] = "2.8"
 projects[date][subdir] = "contrib"
 
 projects[devel][version] = "1.4"
